@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 6887751133805305141}
   - component: {fileID: 2049394017529226691}
   m_Layer: 5
-  m_Name: Team Member
+  m_Name: Team Member (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 5784622010466492514}
   - component: {fileID: 333518212333129120}
   - component: {fileID: 6849265534983943618}
+  - component: {fileID: 7989111053786023613}
   m_Layer: 5
   m_Name: Team Button
   m_TagString: Untagged
@@ -318,8 +319,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 966692802498686395}
-  - {fileID: 8774494772122686254}
   - {fileID: 1956732076015670830}
+  - {fileID: 8774494772122686254}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -409,3 +410,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7989111053786023613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785714161316387122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c00a3b42aa14b4ab33fe3aee9c3ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teamName: {fileID: 474860163689221649}
+  _teamMemberImages:
+  - {fileID: 8834432464306613087}
+  - {fileID: 2049394017529226691}
+  _button: {fileID: 6849265534983943618}
