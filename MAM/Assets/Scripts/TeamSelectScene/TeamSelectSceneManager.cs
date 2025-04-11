@@ -1,11 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 // ReSharper disable All
-public class TeamSelectSceneManager : MonoBehaviour
+public class TeamSelectSceneManager: MonoBehaviour
 {
-    [FormerlySerializedAs("_teamList")]
     [Header("UI")] 
     [SerializeField] private TeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
     [SerializeField] private StudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
