@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e432bc5d0919e458e46bb283b2ea25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _demoNextSceneButton: {fileID: 0}
 --- !u!1 &3154278042214563232
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3269cf14e5d506c4e834d20546a7e445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startDataTable: {fileID: 11400000, guid: 0108d0dd765e9174f97ea4d20c303978, type: 2}
   _students: []
 --- !u!1 &9007426234712317101
 GameObject:

@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bfd512a4cd17940856828f5af7b229, type: 3}
+  m_Name: StudentStartDataTable
+  m_EditorClassIdentifier: 
+  URL_ID: 1geUI-yXY5iO3cqlfqMH_vRGQ5TQjIyalk7tYtBUhAVA
+  URL_SHEET: 0
+  StudentStartDataList:
+  - ID: student1
+    Name: "\uAE40\uBBFC\uAC00"
+    MBTI: INFJ
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student2
+    Name: "\uAE40\uC724\uB3C4"
+    MBTI: INFJ
+    FavRestaurant: "\uD574\uB2F4\uAC00"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student3
+    Name: "\uAE40\uC218\uBC94"
+    MBTI: INFP
+    FavRestaurant: "\uD574\uB2F4\uAC00"
+    AffinityType: 0
+    CSharpSkill: 6
+    UnitySkill: 3
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student4
+    Name: "\uAE40\uC815\uD0DC"
+    MBTI: ESTJ
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student5
+    Name: "\uAE40\uC624\uD604"
+    MBTI: INFP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student6
+    Name: "\uBC15\uB098\uBB34"
+    MBTI: ISFP
+    FavRestaurant: "\uD574\uB2F4\uAC00"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student7
+    Name: "\uBCC0\uD6C8\uC2B9"
+    MBTI: INTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student8
+    Name: "\uC11D\uC6B0\uC7AC"
+    MBTI: INFJ
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student9
+    Name: "\uC190\uC544\uC815"
+    MBTI: AAAA
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student10
+    Name: "\uC1A1\uBB34\uC601"
+    MBTI: ENTP
+    FavRestaurant: "\uC57C\uBBF8\uCE74\uCE20"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 3
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student11
+    Name: "\uC5FC\uC9C4\uCCA0"
+    MBTI: ENTJ
+    FavRestaurant: "\uD574\uB2F4\uAC00"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student12
+    Name: "\uC624\uACBD\uB3C4"
+    MBTI: ENTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student13
+    Name: "\uC724\uB77C\uC0C8"
+    MBTI: ISFP
+    FavRestaurant: "\uB3C4\uC2DC\uB77D"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student14
+    Name: "\uC774\uC544\uC120"
+    MBTI: ENFP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student15
+    Name: "\uC774\uC5F0\uC18C"
+    MBTI: ENFP
+    FavRestaurant: "\uB3C4\uC2DC\uB77D"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student16
+    Name: "\uC774\uC194\uC608"
+    MBTI: INTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 3
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student17
+    Name: "\uC774\uC9C4\uC6D0"
+    MBTI: INFP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 3
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student18
+    Name: "\uC815\uC744\uAC00"
+    MBTI: INTJ
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student19
+    Name: "\uC870\uD76C\uC724"
+    MBTI: INTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student20
+    Name: "\uCC28\uD604\uC0C1"
+    MBTI: INFP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student21
+    Name: "\uCD5C\uC601\uC11C"
+    MBTI: ENFP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 1
+    UnitySkill: 3
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student22
+    Name: "\uCD5C\uD658\uC11D"
+    MBTI: ISTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student23
+    Name: "\uCD5C\uC7AC\uD615"
+    MBTI: ISTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student24
+    Name: "\uD55C\uD6C8\uAE38"
+    MBTI: INFP
+    FavRestaurant: "\uB3C4\uC2DC\uB77D"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 2
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student25
+    Name: "\uD55C\uC601\uD0DC"
+    MBTI: INTP
+    FavRestaurant: "\uBC25"
+    AffinityType: 0
+    CSharpSkill: 2
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+  - ID: student26
+    Name: "\uD64D\uC601\uCC44"
+    MBTI: INTJ
+    FavRestaurant: "\uD574\uB2F4\uAC00"
+    AffinityType: 0
+    CSharpSkill: 3
+    UnitySkill: 1
+    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
