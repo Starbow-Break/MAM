@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -39,9 +38,15 @@ public class TeamButtonUpdater : MonoBehaviour
             }
         }
     }
+    
+    // Todo : 임시
+    public void SetHighlight(bool highlight)
+    {
+        GetComponent<Image>().color = highlight ? Color.yellow : Color.white;
+    }
 
     public void AddOnClickEventListener(UnityAction action)
     {
-        gameObject.GetComponent<TeamButton>().onClick.AddListener(action);
+        GetComponent<TeamButton>().onClick.AddListener(action);
     }
 }
