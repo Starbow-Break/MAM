@@ -11,7 +11,7 @@ public class DemoGameManagerHelper : MonoBehaviour
     //이벤트시스템 생성
     private void SetEventSystem()
     {       
-        if (FindObjectOfType<EventSystem>() == null)
+        if (FindFirstObjectByType<EventSystem>() == null)
         {
             var obj = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }

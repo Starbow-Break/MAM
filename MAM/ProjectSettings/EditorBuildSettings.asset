@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DayEndScene.unity
     guid: 379dea043ec729244ba6e191beaf6b13
+  - enabled: 1
+    path: Assets/Scenes/PresentScene.unity
+    guid: 76a85923036c5764586b1fc08e820f45
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

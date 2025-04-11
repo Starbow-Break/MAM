@@ -8,5 +8,6 @@ public enum ESceneIndex
     Lecture = 3,
     Lunch = 4,
     SelfStudy = 5,
-    DayEnd = 6
+    DayEnd = 6,
+    Present = 7
 }
