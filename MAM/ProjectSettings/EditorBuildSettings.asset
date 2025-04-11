@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 7d056872d45e3604eb97ddbce7e1eae1
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/TeamSelectScene.unity
+    guid: 8f612c505665fcf428e3fb4573589962
   - enabled: 1
     path: Assets/Scenes/LectureScene.unity
     guid: 2f97cf09e657e1f48ba6b935741fa028

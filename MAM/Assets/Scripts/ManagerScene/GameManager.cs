@@ -39,4 +39,10 @@ public class GameManager : MonoBehaviour
         
         _sceneManager.LoadTitle();
     }
+
+    public void StartGame()
+    {
+        _sceneManager.LoadScene(ESceneIndex.TeamSelect);
+        _studentManager.InitializeStudents();
+    }
 }
