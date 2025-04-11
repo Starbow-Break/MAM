@@ -8,8 +8,10 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject _loadingScreen = null;
 
     private ESceneIndex _currentScene = ESceneIndex.Title;
-    
     private List<AsyncOperation> _loadingOperations = new List<AsyncOperation>();
+    
+    public ESceneIndex CurrentScene{get{return _currentScene;}}
+    
     public void LoadTitle()
     {
         SceneManager.LoadSceneAsync((int)ESceneIndex.Title, LoadSceneMode.Additive);
@@ -22,10 +24,10 @@ public class SceneController : MonoBehaviour
         _loadingOperations.Add(SceneManager.UnloadSceneAsync((int)_currentScene));
         _loadingOperations.Add(SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Additive));
 
-        StartCoroutine(GetSceneLoading());
+        StartCoroutine(GetSceneLoading(scene));
     }
 
-    private IEnumerator GetSceneLoading()
+    private IEnumerator GetSceneLoading(ESceneIndex scene)
     {
         for (int i = 0; i < _loadingOperations.Count; i++)
         {
@@ -35,6 +37,7 @@ public class SceneController : MonoBehaviour
             }
         }
         
+        _currentScene = scene;
         _loadingScreen.SetActive(false);
     }
 

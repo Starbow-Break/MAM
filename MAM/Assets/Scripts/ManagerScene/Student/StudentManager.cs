@@ -36,4 +36,9 @@ public class StudentManager : MonoBehaviour
     {
         return _students;
     }
+
+    public int GetTotalStudentCount()
+    {
+        return _students.Count;
+    }
 }
