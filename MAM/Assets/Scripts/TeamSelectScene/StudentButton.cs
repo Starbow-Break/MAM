@@ -1,16 +1,28 @@
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class StudentButton : MonoBehaviour
+public class StudentButton : Button
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Student Student { get; private set; }
+    public override void OnSelect(BaseEventData eventData) {  }
+
+    public UnityAction OnHover { get; set; }
+    public UnityAction OnUnHover { get; set; }
+    
+    public override void OnPointerClick(PointerEventData eventData)
     {
-        
+        onClick?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        
+        OnHover?.Invoke();
+    }
+    
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        OnUnHover?.Invoke();
     }
 }

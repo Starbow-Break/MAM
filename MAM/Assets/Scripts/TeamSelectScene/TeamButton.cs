@@ -1,12 +1,17 @@
-using System;
-using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TeamButton : Button
 {
-    public bool IsSelected { get; private set; } = false;
+    private static int nextId = 1;
+    
+    public int TeamId { get; private set; }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        TeamId = nextId++;
+    }
 
     public override void OnSelect(BaseEventData eventData) {  }
     

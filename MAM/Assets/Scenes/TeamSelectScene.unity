@@ -912,202 +912,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DemoGameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[0].ID
-      value: 001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[1].ID
-      value: 002
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[2].ID
-      value: 003
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[3].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[4].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[5].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[6].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[7].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[8].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[9].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[10].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[11].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[12].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[13].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[14].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[15].ID
-      value: 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[0].Icon
-      value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[0].Name
-      value: "\uAE40\uC218\uBC94"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[1].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[1].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[2].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[2].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[3].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[3].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[4].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[4].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[5].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[5].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[6].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[6].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[7].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[7].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[8].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[8].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[9].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[9].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[10].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[10].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[11].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[11].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[12].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[12].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[13].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[13].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[14].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[14].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[15].Icon
-      value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3510684761811691060, guid: 0024ad51a3df24a46a5f61895186f3dc, type: 3}
-      propertyPath: _students.Array.data[15].Name
-      value: "\uBC15\uD6C8\uB0A8"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1130,7 +934,6 @@ GameObject:
   - component: {fileID: 445768055}
   - component: {fileID: 445768056}
   - component: {fileID: 445768053}
-  - component: {fileID: 445768057}
   m_Layer: 5
   m_Name: Team List
   m_TagString: Untagged
@@ -1226,23 +1029,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &445768057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445768051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bbc7d701a493674893fecc609b28a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScrollThreshold: 1000
-  _scrollRect: {fileID: 0}
-  _lastScrollPosition: {x: 0, y: 0}
-  <IsScrolling>k__BackingField: 0
-  <ScrollDistance>k__BackingField: 0
 --- !u!1001 &452517050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1471,7 +1257,7 @@ Transform:
   m_GameObject: {fileID: 581482344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 107.39343, y: 51.91992, z: 0.096505165}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1489,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b32332dafda4634e927037cbe4021fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 763482318}
   _updater: {fileID: 7989111053786023613, guid: 14ffc4c9ffbe14c43a5be004f9c3291f, type: 3}
   _parent: {fileID: 1750336170}
 --- !u!224 &594226152 stripped
@@ -1654,6 +1441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _studentButtonUpdater: {fileID: -7002594393479825506, guid: 160382b667e26044794d73cd9a43099a, type: 3}
   _parent: {fileID: 928696632}
+  _studentInfo: {fileID: 1805348601}
 --- !u!1 &763482316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad9aebb9fba6524f801a70052c395c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _studentListUI: {fileID: 654575555}
 --- !u!224 &868573697 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2937343534360911868, guid: 160382b667e26044794d73cd9a43099a, type: 3}
@@ -4084,7 +3873,7 @@ Transform:
   m_GameObject: {fileID: 1835141884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1126.4965, y: 650.6632, z: 7.836814}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4107,7 +3896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _teamButtonSetter: {fileID: 581482346}
   _studentButtonSetter: {fileID: 736666565}
-  _studentInfo: {fileID: 0}
+  _studentInfo: {fileID: 1805348601}
 --- !u!1 &1873016657
 GameObject:
   m_ObjectHideFlags: 0
