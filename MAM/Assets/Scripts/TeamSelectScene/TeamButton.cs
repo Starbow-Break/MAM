@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class TeamButton : MonoBehaviour
+public class TeamButton : Button
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public bool IsSelected { get; private set; } = false;
 
-    // Update is called once per frame
-    void Update()
+    public override void OnSelect(BaseEventData eventData) {  }
+    
+    public override void OnPointerClick(PointerEventData eventData)
     {
-        
+        onClick?.Invoke();
     }
 }
