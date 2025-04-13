@@ -33,7 +33,7 @@ public class FlowManager : MonoBehaviour
         _currentDay++;
     }
     
-    private void ToNextScene()
+    public void ToNextScene()
     {
         ActOnSceneSwitch?.Invoke();
         ActOnSceneSwitch = null;

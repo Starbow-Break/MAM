@@ -18,8 +18,8 @@ public class Student
     public string FavRestaurant  = string.Empty;
     public EAffinityType AffinityType = EAffinityType.Carrot;
     
-    public int CSharpSkill = 0;
-    public int UnitySkill = 0;
+    public float CSharpSkill = 0;   //1~6
+    public float UnitySkill = 0;    //1~6
     
     public float Motivation = 50f;   //의욕 0~100
     public float Intimacy = 0f;     //친밀도 0~100
