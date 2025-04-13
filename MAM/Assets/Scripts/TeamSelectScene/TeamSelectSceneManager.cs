@@ -8,8 +8,21 @@ public class TeamSelectSceneManager: MonoBehaviour
     [SerializeField] private TeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
     [SerializeField] private StudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
     [SerializeField] private StudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
-    
-    public void Start()
+
+    public static TeamSelectSceneManager Instance = null;
+
+    public void Awake()
+    {
+        if(Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
     {
         InitializeUI();
     }
