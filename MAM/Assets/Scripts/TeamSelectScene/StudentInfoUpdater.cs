@@ -26,14 +26,19 @@ public class StudentInfoUpdater : MonoBehaviour
     }
 
     // 인자로 받은 학생의 정보로 변경
-    public void SetStudent(Student student)
+    public void SetStudent(string studentId)
     {
-        _icon.sprite = student.Icon;
-        _name.text = student.Name;
-        _unity.text = student.UnitySkill.ToString();
-        _cSharp.text = student.CSharpSkill.ToString();
-        _mbti.text = student.MBTI;
-        _favRestaurant.text = student.FavRestaurant;
-        _affinity.text = student.AffinityType == EAffinityType.Carrot ? CarrotText : WhipText;
+        Student student = GameManager.StudentManager.GetStudent(studentId);
+
+        if(student != null)
+        {
+            _icon.sprite = student.Icon;
+            _name.text = student.Name;
+            _unity.text = student.UnitySkill.ToString();
+            _cSharp.text = student.CSharpSkill.ToString();
+            _mbti.text = student.MBTI;
+            _favRestaurant.text = student.FavRestaurant;
+            _affinity.text = student.AffinityType == EAffinityType.Carrot ? CarrotText : WhipText;
+        }
     }
 }

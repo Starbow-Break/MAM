@@ -39,12 +39,13 @@ public class StudentButtonSetter : MonoBehaviour
             _newUpdater.SetImage(student.Icon);
             _newUpdater.AddOnClickEventListener(() => 
             {
+                Debug.Log($"Click Student : {_newUpdater.StudentID}");
                 _controller.SelectStudent(student);
             });
             _newUpdater.AddOnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(true);
-                _studentInfoUpdater.SetStudent(student);
+                _studentInfoUpdater.SetStudent(_newUpdater.StudentID);
             });
             _newUpdater.AddOnUnHoverEventListener(() =>
             {

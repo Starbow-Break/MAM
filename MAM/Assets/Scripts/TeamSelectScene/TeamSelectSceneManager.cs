@@ -8,6 +8,7 @@ public class TeamSelectSceneManager: MonoBehaviour
     [SerializeField] private TeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
     [SerializeField] private StudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
     [SerializeField] private StudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
+    [SerializeField] private TeamSelectSubmitButtonSetter _submitButtonSetter;  // 확인 버튼
 
     public static TeamSelectSceneManager Instance = null;
 
@@ -36,6 +37,8 @@ public class TeamSelectSceneManager: MonoBehaviour
         InitializeStudentListUI();
         // 학생 정보 초기화
         InitializeStudentInfoUI();
+        // 확인 버튼 초기화
+        InitializeSubmitButton();
     }
 
     private void InitializeTeamListUI()
@@ -55,5 +58,10 @@ public class TeamSelectSceneManager: MonoBehaviour
     private void InitializeStudentInfoUI()
     {
         _studentInfoSetter.Initialize();
+    }
+
+    private void InitializeSubmitButton()
+    {
+        _submitButtonSetter.Initialize();
     }
 }

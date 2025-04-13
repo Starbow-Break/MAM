@@ -35,8 +35,10 @@ public class TeamButtonSetter : MonoBehaviour
         {
             TeamButtonUpdater newUpdater = Instantiate(_updater, _parent);
             newUpdater.TeamID = i;
+            newUpdater.SetTeamName($"Team {newUpdater.TeamID}");
             newUpdater.AddOnClickEventListener(() =>
             {
+                Debug.Log($"Selected Team : {newUpdater.TeamID}");
                 _controller.SelectTeam(newUpdater.TeamID);
             });
             _updaters.Add(newUpdater);
