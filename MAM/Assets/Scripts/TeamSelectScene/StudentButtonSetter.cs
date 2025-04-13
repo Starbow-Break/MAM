@@ -6,7 +6,7 @@ public class StudentButtonSetter : MonoBehaviour
 {
     [SerializeField] private StudentButtonUpdater _studentButtonUpdater;
     [SerializeField] private Transform _parent;
-    [SerializeField] private GameObject _studentInfo;
+    [SerializeField] private StudentInfoUpdater _studentInfoUpdater;
     private List<StudentButtonUpdater> _updaters = new List<StudentButtonUpdater>();
     
     public void Initialize(List<Student> students)
@@ -17,11 +17,12 @@ public class StudentButtonSetter : MonoBehaviour
             _newUpdater.SetImage(student.Icon);
             _newUpdater.AddOnHoverEventListener(() =>
             {
-                _studentInfo.SetActive(true);
+                _studentInfoUpdater.SetActive(true);
+                _studentInfoUpdater.SetStudent(student);
             });
             _newUpdater.AddOnUnHoverEventListener(() =>
             {
-                _studentInfo.SetActive(false);
+                _studentInfoUpdater.SetActive(false);
             });
             _updaters.Add(_newUpdater);
         }
