@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class StudentButton : Button
 {
-    public Student Student { get; private set; }
-    public override void OnSelect(BaseEventData eventData) {  }
-
     public UnityAction OnHover { get; set; }
     public UnityAction OnUnHover { get; set; }
+
+    public override void OnSelect(BaseEventData eventData) {  }
     
     public override void OnPointerClick(PointerEventData eventData)
     {
-        onClick?.Invoke();
+        if (interactable)
+        {
+            onClick?.Invoke();
+        }
     }
 
     public override void OnPointerEnter(PointerEventData eventData)

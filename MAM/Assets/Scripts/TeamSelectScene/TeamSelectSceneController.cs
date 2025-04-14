@@ -10,8 +10,7 @@ public class TeamSelectSceneController : MonoBehaviour
     [SerializeField] private GameObject _studentListUI; // 학생 목록 UI
     
     public int SelectedTeamId { get; private set; } = -1; // 현재 선택된 팀의 ID
-
-    private Dictionary<int, string[]> _teamDict = new(); // 각 팀에 배정된 학생들
+    public Dictionary<int, string[]> _teamDict { get; private set; } = new(); // 각 팀에 배정된 학생들
     
     public UnityAction OnChangeTeam { get; set; }
     public UnityAction OnChangeStudent { get; set; }
@@ -20,6 +19,46 @@ public class TeamSelectSceneController : MonoBehaviour
     {
         _studentListUI.SetActive(false);
     }
+
+    #region Query
+    // 팀에 속한 멤버 리스트 반환
+    public string[] GetTeamMembers(int teamId)
+    {
+         return _teamDict.ContainsKey(teamId) ? _teamDict[teamId] : null;
+    }
+
+    public bool IsRegistered(string targetId)
+    {
+        foreach(var team in _teamDict)
+        {
+            foreach(string studentId in team.Value)
+            {
+                if(targetId == studentId)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool IsRegisteredSelectedTeam(string targetId)
+    {
+        var membersIds = GetTeamMembers(SelectedTeamId);
+        foreach(var memberId in membersIds)
+        {
+            if(memberId == targetId)
+            {
+                if(targetId == memberId)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    #endregion
 
     // 팀 선택
     public void SelectTeam(int teamId)
