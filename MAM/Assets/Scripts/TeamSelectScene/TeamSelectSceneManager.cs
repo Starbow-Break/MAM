@@ -5,9 +5,9 @@ using UnityEngine;
 public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
 {
     [Header("UI")] 
-    [SerializeField] private TeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
-    [SerializeField] private StudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
-    [SerializeField] private StudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
+    [SerializeField] private TeamSelectTeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
+    [SerializeField] private TeamSelectStudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
+    [SerializeField] private TeamSelectStudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
     [SerializeField] private TeamSelectSubmitButtonSetter _submitButtonSetter;  // 확인 버튼
 
     private void Start()

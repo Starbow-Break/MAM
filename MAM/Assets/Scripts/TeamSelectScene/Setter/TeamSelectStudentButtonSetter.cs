@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 // ReSharper disable All
-public class StudentButtonSetter : MonoBehaviour
+public class TeamSelectStudentButtonSetter : MonoBehaviour
 {
     [Header("Controller")]
     [SerializeField] private TeamSelectSceneController _controller;
