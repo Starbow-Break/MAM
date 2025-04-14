@@ -41,4 +41,12 @@ public class StudentManager : MonoBehaviour
     {
         return _students.Count;
     }
+
+    public void ApplyMiniGameResultUnity(int score, int miniGameDifficulty)
+    {
+        foreach (Student student in _students)
+        {
+            StudentLevelHelper.ApplyMiniGameScoreUnity(student, score, miniGameDifficulty);
+        }
+    }
 }

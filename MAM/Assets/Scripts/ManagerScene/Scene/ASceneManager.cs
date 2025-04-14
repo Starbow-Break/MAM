@@ -1,16 +1,34 @@
 using UnityEngine;
 
 [DefaultExecutionOrder(-900)]
-public class ASceneManager : MonoBehaviour
+public class ASceneManager<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public static ASceneManager Instance;
+    private static T _instance;
+
+    public static T Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (T)FindFirstObjectByType<T>();
+
+                if (_instance == null)
+                {
+                    Debug.LogError($" {typeof(T).Name} 못찾음");
+                }
+            }
+            return _instance;
+        }
+    }
+    
     protected virtual void Awake()
     {
-        if (Instance == null)
+        if (_instance == null)
         {
-            Instance = this;
+            _instance = this as T;
         }
-        else if (Instance != this)
+        else if (_instance != this)
         {
             Destroy(gameObject);
         }
