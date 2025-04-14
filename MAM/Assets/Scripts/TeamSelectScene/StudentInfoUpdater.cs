@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class StudentInfoUpdater : MonoBehaviour
 {
-    private readonly string CarrotText = "당근";
-    private readonly string WhipText = "채찍";
-
     [Header("Student")]
     [SerializeField] private Image _icon;   // 학생 아이콘
     [SerializeField] private TextMeshProUGUI _name; // 학생 이름
