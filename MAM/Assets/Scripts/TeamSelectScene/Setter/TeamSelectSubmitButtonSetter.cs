@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class TeamSelectSubmitButtonSetter : MonoBehaviour
 {
-    [SerializeField] TeamSelectSceneController _controller;
     [SerializeField] SubmitButtonUpdater _updater;
 
     private int _totalStudents;
@@ -13,12 +12,14 @@ public class TeamSelectSubmitButtonSetter : MonoBehaviour
     }
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateButtonInteractable();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeStudent += () => UpdateButtonInteractable();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeStudent -= () => UpdateButtonInteractable();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeStudent -= () => UpdateButtonInteractable();
     }
     
     public void Initialize()
@@ -26,7 +27,7 @@ public class TeamSelectSubmitButtonSetter : MonoBehaviour
         _updater.SetInteractible(false);
         _updater.AddOnClickEventListener(() =>
         {
-            var teamList = _controller.GetTeamList();
+            var teamList = TeamSelectSceneManager.Controller.GetTeamList();
             GameManager.TeamManager.SetTeams(teamList);
             GameManager.FlowManager.ToNextScene();
         });
@@ -34,7 +35,7 @@ public class TeamSelectSubmitButtonSetter : MonoBehaviour
     
     private void UpdateButtonInteractable()
     {
-        bool allRegistered = _controller.RegisteredStudents == _totalStudents;
+        bool allRegistered = TeamSelectSceneManager.Controller.RegisteredStudents == _totalStudents;
         _updater.SetInteractible(allRegistered);
     }
 }

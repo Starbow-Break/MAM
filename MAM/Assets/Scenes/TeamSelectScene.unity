@@ -545,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b32332dafda4634e927037cbe4021fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 763482318}
   _updater: {fileID: 7989111053786023613, guid: 14ffc4c9ffbe14c43a5be004f9c3291f, type: 3}
   _parent: {fileID: 1750336170}
 --- !u!1 &624475104
@@ -835,7 +834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5c43d8fb9db934985eceaef7800cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 763482318}
   _studentButtonUpdater: {fileID: -7002594393479825506, guid: 160382b667e26044794d73cd9a43099a, type: 3}
   _studentInfoUpdater: {fileID: 1805348605}
   _parent: {fileID: 928696632}
@@ -1177,7 +1175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff12100256624546b2e955b777771a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 763482318}
   _updater: {fileID: 1920346871}
 --- !u!1 &1750336169
 GameObject:
@@ -1321,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f847be6ed4a2d438491657d23ce0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 763482318}
   _teamButtonSetter: {fileID: 581482346}
   _studentButtonSetter: {fileID: 736666565}
   _studentInfoSetter: {fileID: 1077656962}

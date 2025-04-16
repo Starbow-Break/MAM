@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [Serializable]
-public struct Restaurant
+public class Restaurant
 {
     public string ID;
     

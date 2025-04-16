@@ -163,8 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f474d9499afc040be39d993dc70450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 1777671418}
-  _restaurantButtonSetter: {fileID: 1465138524}
   _updater: {fileID: 1181158941}
 --- !u!1 &75307045
 GameObject:
@@ -216,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0eb7a2bd095c41499536df943a9a078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controller: {fileID: 1777671418}
   _restaurantButtonSetter: {fileID: 1465138524}
   _studentButtonSetter: {fileID: 264230407}
   _studentinfoSetter: {fileID: 1676625519}
@@ -1561,7 +1560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bdbea63ede68646babbb00e244431b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 1777671418}
   _updater: {fileID: 1344379015}
 --- !u!1 &1777671417
 GameObject:

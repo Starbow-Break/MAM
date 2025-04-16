@@ -6,9 +6,6 @@ using UnityEngine;
 // ReSharper disable All
 public class TeamSelectTeamButtonSetter : MonoBehaviour
 {
-    [Header("Controller")]
-    [SerializeField] private TeamSelectSceneController _controller;
-
     [Header("Updater")]
     [SerializeField] private TeamButtonUpdater _updater;
 
@@ -16,17 +13,18 @@ public class TeamSelectTeamButtonSetter : MonoBehaviour
     [SerializeField] private Transform _parent;
     
     private List<TeamButtonUpdater> _updaters = new List<TeamButtonUpdater>();
+    private RadioButtonGroup _teamGroup;
     
     private void OnEnable()
     {
-        _controller.OnChangeTeam += () => UpdateTeamSelected();
-        _controller.OnChangeStudent += () => UpdateTeamMembers();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeStudent += () => UpdateTeamMembers();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeTeam -= () => UpdateTeamSelected();
-        _controller.OnChangeStudent += () => UpdateTeamMembers();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeStudent += () => UpdateTeamMembers();
     }
 
     public void Initialize(int count)
@@ -34,35 +32,40 @@ public class TeamSelectTeamButtonSetter : MonoBehaviour
         for (int i = 1; i <= count; i++)
         {
             TeamButtonUpdater newUpdater = Instantiate(_updater, _parent);
-            newUpdater.TeamID = i;
-            newUpdater.SetTeamName($"Team {newUpdater.TeamID}");
-            newUpdater.AddOnClickEventListener(() =>
-            {
-                Debug.Log($"Selected Team : {newUpdater.TeamID}");
-                _controller.SelectTeam(newUpdater.TeamID);
-            });
+            Team newTeam = new Team();
+            newTeam.TeamNumber = i;
+            
+            newUpdater.SetTeam(newTeam);
+            newUpdater.SetTeamName($"Team {newUpdater.Team.TeamNumber}");
             _updaters.Add(newUpdater);
         }
-    }
 
-    public void UpdateTeamSelected()
-    {
-        foreach (TeamButtonUpdater updater in _updaters)
+        List<SImpleRadioButton> buttons = new();
+        for (int i = 0; i < count; i++)
         {
-            updater.SetSelected(_controller.SelectedTeamId == updater.TeamID);
+            SImpleRadioButton newButton = _updaters[i].GetComponent<SImpleRadioButton>();
+            buttons.Add(newButton);
         }
+        _teamGroup = new RadioButtonGroup(buttons.ToArray());
+        _teamGroup.OnValueChanged += (index) => UpdateController(index);
     }
 
     public void UpdateTeamMembers()
     {
         foreach (TeamButtonUpdater updater in _updaters)
         {
-            var currentTeam = _controller.GetTeam(updater.TeamID);
+            var currentTeam = TeamSelectSceneManager.Controller.GetTeam(updater.Team.TeamNumber);
             if (currentTeam != null)
             {
                 updater.SetTeamMemberImage(0, currentTeam.Member1?.Icon);
                 updater.SetTeamMemberImage(1, currentTeam.Member2?.Icon);
             }
         }
+    }
+
+    private void UpdateController(int index)
+    {
+        var controller = TeamSelectSceneManager.Controller;
+        controller.SelectTeam(index == -1 ? -1 : _updaters[index].Team.TeamNumber);
     }
 }

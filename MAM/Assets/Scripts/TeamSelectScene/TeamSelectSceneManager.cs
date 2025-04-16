@@ -4,12 +4,18 @@ using UnityEngine;
 // ReSharper disable All
 public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
 {
-    [Header("UI")] 
+    [SerializeField] private TeamSelectSceneController _controller;
     [SerializeField] private TeamSelectTeamButtonSetter _teamButtonSetter;      // 팀 리스트 UI
     [SerializeField] private TeamSelectStudentButtonSetter _studentButtonSetter;   // 학생 리스트 UI
     [SerializeField] private TeamSelectStudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
     [SerializeField] private TeamSelectSubmitButtonSetter _submitButtonSetter;  // 확인 버튼
 
+    public static TeamSelectSceneController Controller => Instance._controller;
+    public static TeamSelectTeamButtonSetter TeamButtonSetter => Instance._teamButtonSetter;
+    public static TeamSelectStudentButtonSetter StudentButtonSetter => Instance._studentButtonSetter;
+    public static TeamSelectStudentInfoSetter StudentInfoSetter => Instance._studentInfoSetter;
+    public static TeamSelectSubmitButtonSetter SubmitButtonSetter => Instance._submitButtonSetter;
+    
     private void Start()
     {
         InitializeUI();

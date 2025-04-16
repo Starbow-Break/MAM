@@ -5,9 +5,6 @@ using UnityEngine;
 // ReSharper disable All
 public class TeamSelectStudentButtonSetter : MonoBehaviour
 {
-    [Header("Controller")]
-    [SerializeField] private TeamSelectSceneController _controller;
-
     [Header("Updater")]
     [SerializeField] private StudentButtonUpdater _studentButtonUpdater;
     [SerializeField] private StudentInfoUpdater _studentInfoUpdater;
@@ -16,17 +13,19 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
     [SerializeField] private Transform _parent;
     
     private List<StudentButtonUpdater> _updaters = new List<StudentButtonUpdater>();
-
+    
     private void OnEnable()
     {
-        _controller.OnChangeTeam += () => UpdateStudentButtons();
-        _controller.OnChangeStudent += () => UpdateStudentButtons();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeTeam += () => UpdateStudentButtons();
+        controller.OnChangeStudent += () => UpdateStudentButtons();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeTeam -= () => UpdateStudentButtons();
-        _controller.OnChangeStudent -= () => UpdateStudentButtons();
+        var controller = TeamSelectSceneManager.Controller;
+        controller.OnChangeTeam -= () => UpdateStudentButtons();
+        controller.OnChangeStudent -= () => UpdateStudentButtons();
     }
     
     public void Initialize(List<Student> students)
@@ -40,7 +39,7 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
             _newUpdater.AddOnClickEventListener(() => 
             {
                 Debug.Log($"Click Student : {_newUpdater.Student.ID}");
-                _controller.SelectStudent(student);
+                TeamSelectSceneManager.Controller.SelectStudent(student);
             });
             _newUpdater.AddOnHoverEventListener(() =>
             {
@@ -57,22 +56,22 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
 
     public void UpdateStudentButtons()
     {
+        var controller = TeamSelectSceneManager.Controller;
         foreach (StudentButtonUpdater updater in _updaters)
         {
-            if (_controller.IsRegistered(updater.Student))
+            if (controller.IsRegistered(updater.Student))
             {
-                if (_controller.IsRegisteredSelectedTeam(updater.Student))
+                if (controller.IsRegisteredSelectedTeam(updater.Student))
                 {
-                    updater.SetInteractable(true);
-                    updater.SetSelected(true);
+                    updater.SetStatus(StudentButton.EStatus.Selected);
                 }
                 else {
-                    updater.SetInteractable(false);
+                    updater.SetStatus(StudentButton.EStatus.Disabled);
                 }
             }
-            else {
-                updater.SetInteractable(true);
-                updater.SetSelected(false);
+            else
+            {
+                updater.SetStatus(StudentButton.EStatus.Normal);
             }
         }
     }

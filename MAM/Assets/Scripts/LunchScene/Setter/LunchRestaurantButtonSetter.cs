@@ -13,15 +13,6 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
 
     private List<RestaurantButtonUpdater> _updaters = new();
     private RadioButtonGroup _restaurantsGroup;
-    public RadioButtonGroup RestaurantGroup
-    {
-        get { return _restaurantsGroup; }
-    }
-
-    public Restaurant SelectedRestaurant
-    {
-        get { return _updaters[_restaurantsGroup.SelectedIndex].Restaurant; }
-    }
     
     public void Initialize(List<Restaurant> restaurants)
     {
@@ -43,5 +34,12 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
             }
         }
         _restaurantsGroup = new RadioButtonGroup(buttons);
+        _restaurantsGroup.OnValueChanged += (index) => UpdateController(index);
+    }
+
+    private void UpdateController(int index)
+    {
+        var controller = LunchSceneManager.Controller;
+        controller.SelectRestaurant(index == -1 ? null : _updaters[index].Restaurant);
     }
 }

@@ -10,7 +10,19 @@ public class TeamButtonUpdater : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _teamName;
     [SerializeField] private List<Image> _teamMemberImages;
 
-    public int TeamID;
+    private Team _team;
+
+    public Team Team
+    {
+        get { return _team; }
+    }
+
+    public void SetTeam(Team team)
+    {
+        _team = team;
+        SetTeamMemberImage(0, team.Member1?.Icon);
+        SetTeamMemberImage(1, team.Member2?.Icon);
+    }
 
     public void SetTeamName(string teamName)
     {
@@ -20,16 +32,5 @@ public class TeamButtonUpdater : MonoBehaviour
     public void SetTeamMemberImage(int imageIndex, Sprite sprite)
     {
         _teamMemberImages[imageIndex].sprite = sprite;
-    }
-    
-    public void SetSelected(bool selected)
-    {
-        // Todo : 임시
-        GetComponent<Image>().color = selected ? Color.yellow : Color.white;
-    }
-
-    public void AddOnClickEventListener(UnityAction action)
-    {
-        GetComponent<TeamButton>().onClick.AddListener(action);
     }
 }
