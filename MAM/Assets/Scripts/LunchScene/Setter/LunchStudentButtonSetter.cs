@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class LunchStudentButtonSetter : MonoBehaviour
 {
-    [Header("Controller")]
-    [SerializeField] private LunchSceneController _controller;
-    
     [Header("Updater")]
     [SerializeField] private StudentButtonUpdater _studentButtonUpdater;
     [SerializeField] private StudentInfoUpdater _studentInfoUpdater;
@@ -17,12 +14,14 @@ public class LunchStudentButtonSetter : MonoBehaviour
     
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateStudentButtons();
+        var controller = LunchSceneManager.Controller;
+        controller.OnChangeStudent += () => UpdateStudentButtons();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeStudent += () => UpdateStudentButtons();
+        var controller = LunchSceneManager.Controller;
+        controller.OnChangeStudent -= () => UpdateStudentButtons();
     }
     
     public void Initialize(List<Student> students)
@@ -30,12 +29,11 @@ public class LunchStudentButtonSetter : MonoBehaviour
         foreach (Student student in students)
         {
             StudentButtonUpdater newUpdater = Instantiate(_studentButtonUpdater, _parent);
-            newUpdater.Student = student;
-            newUpdater.SetImage(student.Icon);
-            
+            newUpdater.SetStudent(student);
             newUpdater.AddOnClickEventListener(() =>
             {
-                _controller.SelectStudent(newUpdater.Student);
+                var controller = LunchSceneManager.Controller;
+                controller.SelectStudent(newUpdater.Student);
             });
             newUpdater.AddOnHoverEventListener(() =>
             {
@@ -55,7 +53,7 @@ public class LunchStudentButtonSetter : MonoBehaviour
     {
         foreach (StudentButtonUpdater updater in _updaters)
         {
-            if (_controller.IsSelected(updater.Student))
+            if (LunchSceneManager.Controller.IsSelected(updater.Student))
             {
                 updater.SetStatus(StudentButton.EStatus.Selected);
             }
