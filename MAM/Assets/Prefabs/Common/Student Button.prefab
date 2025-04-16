@@ -134,3 +134,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 6273137421461236893}
+  Student:
+    _id: 
+    Name: 
+    MBTI: 
+    FavRestaurant: 
+    AffinityType: 0
+    CSharpSkill: 0
+    UnitySkill: 0
+    Motivation: 0
+    Icon: {fileID: 0}

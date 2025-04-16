@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 // ReSharper disable All
-public class StudentButtonSetter : MonoBehaviour
+public class TeamSelectStudentButtonSetter : MonoBehaviour
 {
     [Header("Controller")]
     [SerializeField] private TeamSelectSceneController _controller;
@@ -35,17 +35,17 @@ public class StudentButtonSetter : MonoBehaviour
         {
             StudentButtonUpdater _newUpdater = Instantiate(_studentButtonUpdater, _parent);
             
-            _newUpdater.StudentID = student.ID;
+            _newUpdater.Student = student;
             _newUpdater.SetImage(student.Icon);
             _newUpdater.AddOnClickEventListener(() => 
             {
-                Debug.Log($"Click Student : {_newUpdater.StudentID}");
+                Debug.Log($"Click Student : {_newUpdater.Student.ID}");
                 _controller.SelectStudent(student);
             });
             _newUpdater.AddOnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(true);
-                _studentInfoUpdater.SetStudent(_newUpdater.StudentID);
+                _studentInfoUpdater.SetStudent(_newUpdater.Student);
             });
             _newUpdater.AddOnUnHoverEventListener(() =>
             {
@@ -59,9 +59,9 @@ public class StudentButtonSetter : MonoBehaviour
     {
         foreach (StudentButtonUpdater updater in _updaters)
         {
-            if (_controller.IsRegistered(updater.StudentID))
+            if (_controller.IsRegistered(updater.Student))
             {
-                if (_controller.IsRegisteredSelectedTeam(updater.StudentID))
+                if (_controller.IsRegisteredSelectedTeam(updater.Student))
                 {
                     updater.SetInteractable(true);
                     updater.SetSelected(true);

@@ -47,8 +47,6 @@ public class StudentStartDataTableEditor : Editor
         googleSheet.LoadSheet(_table.URL_ID, _table.URL_SHEET, (tsv) =>
         {
             loader.LoadSheet(tsv);
-
-
             OnFinishLoad(loader);
         });
 

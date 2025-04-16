@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class TeamSelectSubmitButtonUpdater : MonoBehaviour
+public class SubmitButtonUpdater : MonoBehaviour
 {
     private Button _button;
 

@@ -40,7 +40,7 @@ public class TeamSelectSceneController : MonoBehaviour
     }
     
     // 팀에 가입한 상태인지 확인
-    public bool IsRegistered(string targetId)
+    public bool IsRegistered(Student student)
     {
         foreach(var teamPair in _teamDict)
         {
@@ -48,7 +48,7 @@ public class TeamSelectSceneController : MonoBehaviour
             List<Student> members = new List<Student> { currentTeam.Member1, currentTeam.Member2 };
             foreach(var member in members)
             {
-                if(member != null && targetId == member.ID)
+                if(member != null && student == member)
                 {
                     return true;
                 }
@@ -59,13 +59,13 @@ public class TeamSelectSceneController : MonoBehaviour
     }
     
     // 선택한 팀에 가입한 상태인지 확인
-    public bool IsRegisteredSelectedTeam(string targetId)
+    public bool IsRegisteredSelectedTeam(Student student)
     {
         var team = GetTeam(SelectedTeamId);
         List<Student> members = new List<Student> { team?.Member1, team?.Member2 };
         foreach(var member in members)
         {
-            if(member != null && member.ID == targetId)
+            if(member != null && member == student)
             {
                 return true;
             }

@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 1714519206}
   - component: {fileID: 1714519207}
   m_Layer: 0
-  m_Name: TeamSelectSubmitButtonSetter
+  m_Name: SubmitButtonSetter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1338,7 +1338,7 @@ GameObject:
   - component: {fileID: 1873016659}
   - component: {fileID: 1873016658}
   m_Layer: 5
-  m_Name: UI
+  m_Name: Team Select UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1641,6 +1641,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1969297889905004718, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969297889905004718, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969297889905004718, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969297889905004718, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2803848398790251165, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1662,6 +1678,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2803848398790251165, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333298787684739900, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333298787684739900, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333298787684739900, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333298787684739900, guid: 77d4a31ea87012c488850452b51fdafd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

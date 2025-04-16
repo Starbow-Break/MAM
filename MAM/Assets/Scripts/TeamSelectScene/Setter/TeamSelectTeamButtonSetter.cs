@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 // ReSharper disable All
-public class TeamButtonSetter : MonoBehaviour
+public class TeamSelectTeamButtonSetter : MonoBehaviour
 {
     [Header("Controller")]
     [SerializeField] private TeamSelectSceneController _controller;
@@ -16,7 +16,7 @@ public class TeamButtonSetter : MonoBehaviour
     [SerializeField] private Transform _parent;
     
     private List<TeamButtonUpdater> _updaters = new List<TeamButtonUpdater>();
-
+    
     private void OnEnable()
     {
         _controller.OnChangeTeam += () => UpdateTeamSelected();

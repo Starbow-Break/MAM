@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class StudentInfoUpdater : MonoBehaviour
 {
-    private readonly string CarrotText = "당근";
-    private readonly string WhipText = "채찍";
-
     [Header("Student")]
     [SerializeField] private Image _icon;   // 학생 아이콘
     [SerializeField] private TextMeshProUGUI _name; // 학생 이름
@@ -27,10 +24,8 @@ public class StudentInfoUpdater : MonoBehaviour
     }
 
     // 인자로 받은 학생의 정보로 변경
-    public void SetStudent(string studentId)
+    public void SetStudent(Student student)
     {
-        Student student = GameManager.StudentManager.GetStudent(studentId);
-
         if(student != null)
         {
             _icon.sprite = student.Icon;

@@ -3,7 +3,7 @@ using UnityEngine;
 public class TeamSelectSubmitButtonSetter : MonoBehaviour
 {
     [SerializeField] TeamSelectSceneController _controller;
-    [SerializeField] TeamSelectSubmitButtonUpdater _updater;
+    [SerializeField] SubmitButtonUpdater _updater;
 
     private int _totalStudents;
 

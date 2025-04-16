@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StudentInfoSetter : MonoBehaviour
+public class TeamSelectStudentInfoSetter : MonoBehaviour
 {
     [SerializeField] StudentInfoUpdater _updater;
 

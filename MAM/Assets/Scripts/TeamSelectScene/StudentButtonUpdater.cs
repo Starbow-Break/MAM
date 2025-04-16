@@ -10,7 +10,7 @@ public class StudentButtonUpdater : MonoBehaviour
 
     private Button _button;
     
-    public string StudentID;    // Updater가 관여하는 버튼에 대응되는 학생의 ID
+    public Student Student;    // Updater가 관여하는 버튼에 대응되는 학생의 ID
 
     private void Awake()
     {
