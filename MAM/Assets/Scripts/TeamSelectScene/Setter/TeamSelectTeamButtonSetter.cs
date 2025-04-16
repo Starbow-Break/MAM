@@ -16,7 +16,7 @@ public class TeamSelectTeamButtonSetter : MonoBehaviour
     [SerializeField] private Transform _parent;
     
     private List<TeamButtonUpdater> _updaters = new List<TeamButtonUpdater>();
-
+    
     private void OnEnable()
     {
         _controller.OnChangeTeam += () => UpdateTeamSelected();

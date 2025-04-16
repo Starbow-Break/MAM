@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 1777671418}
+  _restaurantButtonSetter: {fileID: 1465138524}
   _updater: {fileID: 1181158941}
 --- !u!1 &75307045
 GameObject:

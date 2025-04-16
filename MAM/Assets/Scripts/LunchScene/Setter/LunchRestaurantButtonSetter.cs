@@ -17,6 +17,11 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
     {
         get { return _restaurantsGroup; }
     }
+
+    public Restaurant SelectedRestaurant
+    {
+        get { return _updaters[_restaurantsGroup.SelectedIndex].Restaurant; }
+    }
     
     public void Initialize(List<Restaurant> restaurants)
     {
@@ -25,8 +30,7 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
         foreach (var restaurant in restaurants)
         {
             RestaurantButtonUpdater newUpdater = Instantiate(_restaurantButtonUpdater, _parent);
-            newUpdater.SetIcon(restaurant.Icon);
-            newUpdater.SetName(restaurant.Name);
+            newUpdater.SetRestaurant(restaurant);
             _updaters.Add(newUpdater);
         }
 
