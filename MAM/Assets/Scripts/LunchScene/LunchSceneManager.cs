@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LunchSceneManager : ASceneManager<LunchSceneManager>
 {
+    [SerializeField] private LunchRestaurantButtonSetter _restaurantButtonSetter;
     [SerializeField] private LunchStudentButtonSetter _studentButtonSetter;
     [SerializeField] private LunchStudentInfoSetter _studentinfoSetter;
     [SerializeField] private LunchSubmitButtonSetter _submitButtonSetter;
@@ -14,12 +15,20 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
 
     private void InitializeUI()
     {
-        // 학생 버튼 UI 초기화
+        // 식당 묵록 초기화
+        InitializeRestaurantButtonUI();
+        // 학생 묵록 초기화
         InitializeStudentButtonUI();
         // 학생 정보 초기화
         InitializeStudentInfoUI();
         // 확인 버튼 초기화
         InitializeSubmitButton();
+    }
+
+    private void InitializeRestaurantButtonUI()
+    {
+        List<Restaurant> restaurants = GameManager.RestaurantTable.GetRestaurants();
+        _restaurantButtonSetter.Initialize(restaurants);
     }
     
     private void InitializeStudentButtonUI()
