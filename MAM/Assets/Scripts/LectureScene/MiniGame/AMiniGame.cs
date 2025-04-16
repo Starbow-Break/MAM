@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class AMiniGame : MonoBehaviour
 {
-    protected EMiniGameType _miniGameType = EMiniGameType.Unity;
+    protected ESkillType _miniGameType = ESkillType.Unity;
     protected int _difficulty = 0;
     protected int _score = 0; //0~100
 
