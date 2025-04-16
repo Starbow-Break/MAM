@@ -24,10 +24,8 @@ public class StudentInfoUpdater : MonoBehaviour
     }
 
     // 인자로 받은 학생의 정보로 변경
-    public void SetStudent(string studentId)
+    public void SetStudent(Student student)
     {
-        Student student = GameManager.StudentManager.GetStudent(studentId);
-
         if(student != null)
         {
             _icon.sprite = student.Icon;

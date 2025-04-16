@@ -7,7 +7,8 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     [SerializeField] private LunchStudentButtonSetter _studentButtonSetter;
     [SerializeField] private LunchStudentInfoSetter _studentinfoSetter;
     [SerializeField] private LunchSubmitButtonSetter _submitButtonSetter;
-
+    [SerializeField] private LunchStudentSelectedInfoSetter _studentSelectedInfoSetter;
+    
     public void Start()
     {
         InitializeUI();
@@ -23,6 +24,8 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
         InitializeStudentInfoUI();
         // 확인 버튼 초기화
         InitializeSubmitButton();
+        // 학생 선택 상태 초기화
+        InitializeStudentSelectedInfoUI();
     }
 
     private void InitializeRestaurantButtonUI()
@@ -45,5 +48,10 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     private void InitializeSubmitButton()
     {
         _submitButtonSetter.Initialize();
+    }
+
+    private void InitializeStudentSelectedInfoUI()
+    {
+        _studentSelectedInfoSetter.Initialize();
     }
 }
