@@ -57,14 +57,11 @@ public class TeamButtonSetter : MonoBehaviour
     {
         foreach (TeamButtonUpdater updater in _updaters)
         {
-            var memberIDs = _controller.GetTeamMembers(updater.TeamID);
-
-            if (memberIDs != null)
+            var currentTeam = _controller.GetTeam(updater.TeamID);
+            if (currentTeam != null)
             {
-                for (int i = 0; i < memberIDs.Length; i++) {
-                    Student student = GameManager.StudentManager.GetStudent(memberIDs[i]);
-                    updater.SetTeamMemberImage(i, student?.Icon);
-                }
+                updater.SetTeamMemberImage(0, currentTeam.Member1?.Icon);
+                updater.SetTeamMemberImage(1, currentTeam.Member2?.Icon);
             }
         }
     }

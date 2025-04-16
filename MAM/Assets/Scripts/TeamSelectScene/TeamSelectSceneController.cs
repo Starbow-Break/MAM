@@ -3,37 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// ReSharper disable All
 public class TeamSelectSceneController : MonoBehaviour
 {
-    private static readonly int MemberPerTeam = 2;  // 팀 당 인원 수
-
     [SerializeField] private GameObject _studentListUI; // 학생 목록 UI
     
     public int SelectedTeamId { get; private set; } = -1; // 현재 선택된 팀의 ID
-    public Dictionary<int, string[]> _teamDict { get; private set; } = new(); // 각 팀에 배정된 학생들
-    
+    public Dictionary<int, Team> _teamDict { get; private set; } = new(); // 각 팀에 배정된 학생들
+    public int RegisteredStudents { get; private set; }   // 팀에 들어간 학생 수
+
     public UnityAction OnChangeTeam { get; set; }
     public UnityAction OnChangeStudent { get; set; }
 
     public void Start()
     {
         _studentListUI.SetActive(false);
+        RegisteredStudents = 0;
     }
 
     #region Query
-    // 팀에 속한 멤버 리스트 반환
-    public string[] GetTeamMembers(int teamId)
+    // 팀 반환
+    public Team GetTeam(int teamId)
     {
          return _teamDict.ContainsKey(teamId) ? _teamDict[teamId] : null;
     }
-
+    
+    // 팀 리스트
+    public List<Team> GetTeamList()
+    {
+        List<Team> teamList = new List<Team>();
+        foreach (var teamPair in _teamDict)
+        {
+            teamList.Add(teamPair.Value);
+        }
+        return teamList;
+    }
+    
+    // 팀에 가입한 상태인지 확인
     public bool IsRegistered(string targetId)
     {
-        foreach(var team in _teamDict)
+        foreach(var teamPair in _teamDict)
         {
-            foreach(string studentId in team.Value)
+            Team currentTeam = teamPair.Value;
+            List<Student> members = new List<Student> { currentTeam.Member1, currentTeam.Member2 };
+            foreach(var member in members)
             {
-                if(targetId == studentId)
+                if(member != null && targetId == member.ID)
                 {
                     return true;
                 }
@@ -42,33 +57,35 @@ public class TeamSelectSceneController : MonoBehaviour
 
         return false;
     }
-
+    
+    // 선택한 팀에 가입한 상태인지 확인
     public bool IsRegisteredSelectedTeam(string targetId)
     {
-        var membersIds = GetTeamMembers(SelectedTeamId);
-        foreach(var memberId in membersIds)
+        var team = GetTeam(SelectedTeamId);
+        List<Student> members = new List<Student> { team?.Member1, team?.Member2 };
+        foreach(var member in members)
         {
-            if(memberId == targetId)
+            if(member != null && member.ID == targetId)
             {
-                if(targetId == memberId)
-                {
-                    return true;
-                }
+                return true;
             }
         }
+
         return false;
     }
     #endregion
 
     // 팀 선택
-    public void SelectTeam(int teamId)
+    public void SelectTeam(int teamNumber)
     { 
-        if (!_teamDict.ContainsKey(teamId))
+        if (!_teamDict.ContainsKey(teamNumber))
         {   
-            _teamDict.Add(teamId, new string[MemberPerTeam]);
+            Team newTeam = new Team();
+            newTeam.TeamNumber = teamNumber;
+            _teamDict.Add(teamNumber, newTeam);
         }
         
-        SelectedTeamId = SelectedTeamId == teamId ? -1 : teamId;
+        SelectedTeamId = SelectedTeamId == teamNumber ? -1 : teamNumber;
         _studentListUI.SetActive(SelectedTeamId != -1);
         OnChangeTeam?.Invoke();
     }
@@ -76,22 +93,34 @@ public class TeamSelectSceneController : MonoBehaviour
     // 학생 선택
     public void SelectStudent(Student student)
     {
-        int index = Array.IndexOf(_teamDict[SelectedTeamId], student.ID);
-        if (index != -1)
+        int unregisteredStudentsBefore = RegisteredStudents;
+        
+        Team currentTeam = GetTeam(SelectedTeamId);
+        if (currentTeam.Member1 == student)
         {
-            _teamDict[SelectedTeamId][index] = null;
+            currentTeam.Member1 = null;
+            RegisteredStudents--;
+            OnChangeStudent?.Invoke();
+        }
+        else if (currentTeam.Member2 == student)
+        {
+            currentTeam.Member2 = null;
+            RegisteredStudents--;
             OnChangeStudent?.Invoke();
         }
         else
         {
-            for (int i = 0; i < MemberPerTeam; i++)
+            if (currentTeam.Member1 == null)
             {
-                if (_teamDict[SelectedTeamId][i] == null)
-                {
-                    _teamDict[SelectedTeamId][i] = student.ID;
-                    OnChangeStudent?.Invoke();
-                    break;
-                }
+                currentTeam.Member1 = student;
+                RegisteredStudents++;
+                OnChangeStudent?.Invoke();
+            }
+            else if (currentTeam.Member2 == null)
+            {
+                currentTeam.Member2 = student;
+                RegisteredStudents++;
+                OnChangeStudent?.Invoke();
             }
         }
     }
