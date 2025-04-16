@@ -29,25 +29,25 @@ public class LunchStudentButtonSetter : MonoBehaviour
     {
         foreach (Student student in students)
         {
-            StudentButtonUpdater _newUpdater = Instantiate(_studentButtonUpdater, _parent);
-            _newUpdater.Student = student;
-            _newUpdater.SetImage(student.Icon);
+            StudentButtonUpdater newUpdater = Instantiate(_studentButtonUpdater, _parent);
+            newUpdater.Student = student;
+            newUpdater.SetImage(student.Icon);
             
-            _newUpdater.AddOnClickEventListener(() =>
+            newUpdater.AddOnClickEventListener(() =>
             {
-                _controller.SelectStudent(_newUpdater.Student);
+                _controller.SelectStudent(newUpdater.Student);
             });
-            _newUpdater.AddOnHoverEventListener(() =>
+            newUpdater.AddOnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(true);
-                _studentInfoUpdater.SetStudent(_newUpdater.Student);
+                _studentInfoUpdater.SetStudent(newUpdater.Student);
             });
-            _newUpdater.AddOnUnHoverEventListener(() =>
+            newUpdater.AddOnUnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(false);
             });
             
-            _updaters.Add(_newUpdater);
+            _updaters.Add(newUpdater);
         }
     }
     
@@ -57,11 +57,11 @@ public class LunchStudentButtonSetter : MonoBehaviour
         {
             if (_controller.IsSelected(updater.Student))
             {
-                updater.SetSelected(true);
+                updater.SetStatus(StudentButton.EStatus.Selected);
             }
             else
             {
-                updater.SetSelected(false);
+                updater.SetStatus(StudentButton.EStatus.Normal);
             }
         }
     }

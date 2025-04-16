@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class LunchSubmitButtonSetter : MonoBehaviour
 {
-    [SerializeField] private LunchSceneController _controller;
-    [SerializeField] private LunchRestaurantButtonSetter _restaurantButtonSetter;
     [SerializeField] private SubmitButtonUpdater _updater;
 
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant += () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeStudent += () => UpdateUI();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeStudent -= () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant -= () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeStudent -= () => UpdateUI();
     }
 
     public void Initialize()
@@ -22,12 +22,15 @@ public class LunchSubmitButtonSetter : MonoBehaviour
         _updater.SetInteractible(false);
         _updater.AddOnClickEventListener(() =>
         {
-            Debug.Log(_restaurantButtonSetter.SelectedRestaurant.Name);
+            var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
+            Debug.Log(selectedRestaurant?.Name);
         });
     }
 
     private void UpdateUI()
     {
-        _updater.SetInteractible(_controller.SelectedStudentCount > 0);
+        int selectedStudentCount = LunchSceneManager.Controller.SelectedStudentCount;
+        var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
+        _updater.SetInteractible(selectedRestaurant != null && selectedStudentCount > 0);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class RadioButtonGroup
@@ -7,7 +8,9 @@ public class RadioButtonGroup
 
     public SImpleRadioButton SelectedButton { get; private set; } = null;
     public int SelectedIndex { get; private set; } = -1;  //-1 선택안됨
-    
+
+    public UnityAction<int> OnValueChanged;    // 선택된 값이 바뀔 대 발생하는 이벤트
+        
     public RadioButtonGroup(SImpleRadioButton[] buttons)
     {
         _buttons = buttons;
@@ -30,15 +33,18 @@ public class RadioButtonGroup
             SelectedButton.PlayDeSelectAnimation();
             SelectedButton = null;
             SelectedIndex = -1;
-            return;
         }
+        else
+        {
+            //다른거누를때
+            if(SelectedButton != null)
+                SelectedButton.PlayDeSelectAnimation();
         
-        //다른거누를때
-        if(SelectedButton != null)
-            SelectedButton.PlayDeSelectAnimation();
-        
-        SelectedButton = _buttons[selectedIndex];
-        SelectedIndex = selectedIndex;
-        SelectedButton.PlaySelectAnimation();
+            SelectedButton = _buttons[selectedIndex];
+            SelectedIndex = selectedIndex;
+            SelectedButton.PlaySelectAnimation();
+        }
+
+        OnValueChanged?.Invoke(SelectedIndex);
     }
 }

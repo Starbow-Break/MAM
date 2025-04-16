@@ -6,18 +6,15 @@ public class LunchSceneController : MonoBehaviour
 {
     [SerializeField, Min(1)] private int _maxSelectedStudent = 6;   // 최대로 선택 가능한 학생 수
 
+    private Restaurant _selectedRestaurant = null;
     private List<Student> _selectedStudent = new List<Student>();
     
+    public UnityAction OnChangeRestaurant { get; set; }
     public UnityAction OnChangeStudent { get; set; }
 
-    public int MaxSelectedStudent {
-        get { return _maxSelectedStudent; }
-    }
-
-    public int SelectedStudentCount
-    {
-        get { return _selectedStudent.Count; }
-    }
+    public Restaurant SelectedRestaurant => _selectedRestaurant;
+    public int MaxSelectedStudent => _maxSelectedStudent;
+    public int SelectedStudentCount => _selectedStudent.Count;
 
     #region Query
 
@@ -47,5 +44,12 @@ public class LunchSceneController : MonoBehaviour
             
             OnChangeStudent?.Invoke();
         }
+    }
+    
+    // 학생 선택
+    public void SelectRestaurant(Restaurant restaurant)
+    {
+        _selectedRestaurant = restaurant;
+        OnChangeRestaurant?.Invoke();
     }
 }

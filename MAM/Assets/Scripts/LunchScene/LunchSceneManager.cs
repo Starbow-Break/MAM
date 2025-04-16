@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class LunchSceneManager : ASceneManager<LunchSceneManager>
 {
+    [SerializeField] private LunchSceneController _controller;
     [SerializeField] private LunchRestaurantButtonSetter _restaurantButtonSetter;
     [SerializeField] private LunchStudentButtonSetter _studentButtonSetter;
     [SerializeField] private LunchStudentInfoSetter _studentinfoSetter;
     [SerializeField] private LunchSubmitButtonSetter _submitButtonSetter;
     [SerializeField] private LunchStudentSelectedInfoSetter _studentSelectedInfoSetter;
+    
+    public static LunchSceneController Controller => Instance._controller;
+    public static LunchRestaurantButtonSetter RestaurantButtonSetter => Instance._restaurantButtonSetter;
     
     public void Start()
     {
