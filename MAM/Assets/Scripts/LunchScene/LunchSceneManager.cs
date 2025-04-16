@@ -11,7 +11,6 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     [SerializeField] private LunchStudentSelectedInfoSetter _studentSelectedInfoSetter;
     
     public static LunchSceneController Controller => Instance._controller;
-    public static LunchRestaurantButtonSetter RestaurantButtonSetter => Instance._restaurantButtonSetter;
     
     public void Start()
     {

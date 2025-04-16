@@ -19,7 +19,7 @@ public class StudentButton : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public UnityAction OnHover { get; set; }
     public UnityAction OnUnHover { get; set; }
     
-    public EStatus Status { get; private set; }
+    public EStatus Status { get; private set; } = EStatus.Normal;
 
     public void SetStatus(EStatus status)
     {

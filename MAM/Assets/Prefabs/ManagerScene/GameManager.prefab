@@ -48,7 +48,6 @@ MonoBehaviour:
   _sceneController: {fileID: 5384339663671239216}
   _demoNextSceneButton: {fileID: 0}
   _totalDayInProject: 3
-  _totalProjectCount: 3
 --- !u!1 &3154278042214563232
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flowManager: {fileID: 6497346113347550716}
-  _sceneManager: {fileID: 5384339663671239216}
   _studentManager: {fileID: 1003888309013122161}
   _teamManager: {fileID: 7904808464386021783}
+  _restaurantTable: {fileID: 11400000, guid: 4ffffc3fad1efe94caa21c052f8f4249, type: 2}
   IsTestMode: 0
 --- !u!1 &4167025047880194672
 GameObject:

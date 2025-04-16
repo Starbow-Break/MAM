@@ -20,11 +20,7 @@ public class LunchSubmitButtonSetter : MonoBehaviour
     public void Initialize()
     {
         _updater.SetInteractible(false);
-        _updater.AddOnClickEventListener(() =>
-        {
-            var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
-            Debug.Log(selectedRestaurant?.Name);
-        });
+        _updater.AddOnClickEventListener(() => ClickButton());
     }
 
     private void UpdateUI()
@@ -32,5 +28,24 @@ public class LunchSubmitButtonSetter : MonoBehaviour
         int selectedStudentCount = LunchSceneManager.Controller.SelectedStudentCount;
         var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
         _updater.SetInteractible(selectedRestaurant != null && selectedStudentCount > 0);
+    }
+
+    private void ClickButton()
+    {
+        ApplyLunch();
+        
+        // 스텟 결과 변화를 보여줘야 함
+        
+        GameManager.FlowManager.ToNextScene();// 지울 예정
+    }
+
+    private void ApplyLunch()
+    {
+        var selectedStudents = LunchSceneManager.Controller.SelectedStudents;
+        var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
+        foreach (Student student in selectedStudents)
+        {
+            StudentLevelHelper.ApplyLunch(student, selectedRestaurant);
+        }
     }
 }
