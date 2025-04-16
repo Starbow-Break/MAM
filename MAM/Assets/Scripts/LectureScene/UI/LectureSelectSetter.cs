@@ -15,6 +15,7 @@ public class LectureSelectSetter : MonoBehaviour
         _lectureLevelGroup = new RadioButtonGroup(_updater.LevelButtons);
         
         _updater.StartButton.onClick.AddListener(OnClickStartButton);
+        _updater.gameObject.SetActive(true);
     }
 
     private void OnClickStartButton()
@@ -26,7 +27,7 @@ public class LectureSelectSetter : MonoBehaviour
         
         _updater.gameObject.SetActive(false);
         
-        EMiniGameType miniGameType = (EMiniGameType)_lectureTypeGroup.SelectedIndex;
+        ESkillType miniGameType = (ESkillType)_lectureTypeGroup.SelectedIndex;
         LectureSceneManager.Instance.MiniGameController.PlayMiniGame(miniGameType, _lectureLevelGroup.SelectedIndex + 1);
     }
 }

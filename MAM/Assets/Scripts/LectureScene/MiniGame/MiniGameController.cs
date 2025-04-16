@@ -7,14 +7,14 @@ public class MiniGameController : MonoBehaviour
 
     private AMiniGame _currentMiniGame = null;
 
-    public void PlayMiniGame(EMiniGameType miniGameType, int difficulty)
+    public void PlayMiniGame(ESkillType miniGameType, int difficulty)
     {
         switch (miniGameType)
         {
-            case EMiniGameType.Unity:
+            case ESkillType.Unity:
                 _currentMiniGame = _unityMiniGame;
                 break;
-            case EMiniGameType.CSharp:
+            case ESkillType.CSharp:
                 _currentMiniGame = _unityMiniGame;  //나중에 교체
                 break;
             default:

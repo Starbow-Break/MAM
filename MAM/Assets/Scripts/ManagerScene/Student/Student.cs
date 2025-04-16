@@ -1,10 +1,24 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum EAffinityType
 {
     Carrot,
     Whip
+}
+
+public enum ESkillType
+{
+    Unity,
+    CSharp
+}
+
+[System.Serializable]
+public class SkillLevel
+{
+    public ESkillType SkillType;
+    public float Level;
 }
 
 [Serializable]
@@ -16,6 +30,8 @@ public class Student
     public string MBTI = string.Empty;
     public string FavRestaurant  = string.Empty;    //좋아하는 식당
     public EAffinityType AffinityType = EAffinityType.Carrot;
+    
+    public List<SkillLevel> Skills = new List<SkillLevel>();
     
     public float CSharpSkill = 0;   //1~6
     public float UnitySkill = 0;    //1~6
@@ -31,5 +47,25 @@ public class Student
     public Student(string id)
     {
         _id = id;
+        
+        SkillLevel skillLevelUnity = new SkillLevel();
+        skillLevelUnity.SkillType = ESkillType.Unity;
+        skillLevelUnity.Level = 1f;
+        Skills.Add(skillLevelUnity);
+        
+        SkillLevel skillLevelCSharp = new SkillLevel();
+        skillLevelCSharp.SkillType = ESkillType.CSharp;
+        skillLevelCSharp.Level = 1f;
+        Skills.Add(skillLevelCSharp);
+    }
+
+    public float GetSkillLevel(ESkillType skillType)
+    {
+        return Skills.Find(x => x.SkillType == skillType).Level;
+    }
+
+    public void SetSkillLevel(ESkillType skillType, float level)
+    {
+        Skills.Find(x => x.SkillType == skillType).Level = level;
     }
 }

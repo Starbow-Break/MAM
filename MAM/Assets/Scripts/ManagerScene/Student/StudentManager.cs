@@ -17,8 +17,8 @@ public class StudentManager : MonoBehaviour
             Student newStudent = new Student(data.ID);
             newStudent.Name = data.Name;
             newStudent.MBTI = data.MBTI;
-            newStudent.UnitySkill = data.UnitySkill;
-            newStudent.CSharpSkill = data.CSharpSkill;
+            newStudent.SetSkillLevel(ESkillType.Unity, data.UnitySkill);
+            newStudent.SetSkillLevel(ESkillType.CSharp, data.CSharpSkill);
             newStudent.FavRestaurant = data.FavRestaurant;
             newStudent.AffinityType = data.AffinityType;
             newStudent.Icon = data.Icon;
@@ -42,11 +42,11 @@ public class StudentManager : MonoBehaviour
         return _students.Count;
     }
 
-    public void ApplyMiniGameResultUnity(int score, int miniGameDifficulty)
+    public void ApplyMiniGameScore(int score, int miniGameDifficulty, ESkillType skillType)
     {
         foreach (Student student in _students)
         {
-            StudentLevelHelper.ApplyMiniGameScoreUnity(student, score, miniGameDifficulty);
+            StudentLevelHelper.ApplyMiniGameScore(student, skillType, score, miniGameDifficulty);
         }
     }
 }
