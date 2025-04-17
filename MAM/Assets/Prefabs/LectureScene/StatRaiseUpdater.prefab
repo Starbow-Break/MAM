@@ -368,7 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 4484605818655165888}
   _studentName: {fileID: 773240072959107861}
-  _lectureType: {fileID: 1784744327407823535}
+  _skillType: {fileID: 1784744327407823535}
   _statLevel: {fileID: 5228370283956603884}
 --- !u!1 &5365651802431739659
 GameObject:

@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _miniGameController: {fileID: 898293386}
+  _lectureResultSetter: {fileID: 1040050023}
 --- !u!4 &588403167
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040050022}
+  - component: {fileID: 1040050023}
   m_Layer: 0
   m_Name: LectureResultSetter
   m_TagString: Untagged
@@ -1197,6 +1199,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 588403167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040050023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040050021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efeecccc8760b43449d20954af762560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _updater: {fileID: 1723551279}
 --- !u!224 &1077625628 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8968888263733174890, guid: f529244d1c4ff784a820f50f455b4ec1, type: 3}
@@ -2326,6 +2341,10 @@ PrefabInstance:
     - target: {fileID: 5057827106870463716, guid: 1d191b6f865a0cd4ab4da7d5ac18f0ba, type: 3}
       propertyPath: m_Name
       value: StatRaiseUpdater
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057827106870463716, guid: 1d191b6f865a0cd4ab4da7d5ac18f0ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5665177755180587041, guid: 1d191b6f865a0cd4ab4da7d5ac18f0ba, type: 3}
       propertyPath: m_Pivot.x
