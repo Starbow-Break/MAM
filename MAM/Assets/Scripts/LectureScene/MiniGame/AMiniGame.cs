@@ -14,6 +14,7 @@ public abstract class AMiniGame : MonoBehaviour
 
     protected virtual void EndGame()
     {
+        gameObject.SetActive(false);
         LectureSceneManager.Instance.OnEndMiniGame(_miniGameType, _difficulty, _score);
     }
 }

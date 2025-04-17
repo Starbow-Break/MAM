@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].MBTI
-      value: AAAA
+      value: INFP
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].Name
@@ -434,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].Motivation
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].Motivation
@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].UnitySkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].Motivation
@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].Motivation
@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].Motivation
@@ -474,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].Motivation
@@ -482,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].Motivation
@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].Motivation
@@ -498,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].Motivation
@@ -506,11 +506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].UnitySkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].Motivation
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].Motivation
@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].Motivation
@@ -534,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].Motivation
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].Motivation
@@ -550,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].Motivation
@@ -558,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].UnitySkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].Motivation
@@ -566,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].UnitySkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].Motivation
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].Motivation
@@ -582,7 +582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].Motivation
@@ -590,11 +590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].Motivation
@@ -602,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].UnitySkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].Motivation
@@ -610,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].Motivation
@@ -618,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].Motivation
@@ -626,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].UnitySkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].Motivation
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].Motivation
@@ -642,103 +642,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].UnitySkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].CSharpSkill
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].CSharpSkill
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].CSharpSkill
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].CSharpSkill
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].FavRestaurant
@@ -758,7 +758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].FavRestaurant
-      value: "\uBC25"
+      value: "\uD574\uB2F4\uAC00"
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].FavRestaurant
@@ -843,6 +843,422 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].FavRestaurant
       value: "\uD574\uB2F4\uAC00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[0].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[1].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[2].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[3].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[4].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[5].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[6].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[7].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[8].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[9].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[10].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[11].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[12].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[13].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[14].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[15].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[16].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[17].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[18].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[19].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[20].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[21].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[22].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[23].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[24].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[25].Skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[0].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[0].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[1].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[1].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[2].Skills.Array.data[0].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[2].Skills.Array.data[1].Level
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[3].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[3].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[4].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[4].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[5].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[5].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[6].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[6].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[7].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[7].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[8].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[8].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[9].Skills.Array.data[0].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[9].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[10].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[10].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[11].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[11].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[12].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[12].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[13].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[13].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[14].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[14].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[15].Skills.Array.data[0].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[15].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[16].Skills.Array.data[0].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[16].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[17].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[17].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[18].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[18].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[19].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[19].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[20].Skills.Array.data[0].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[20].Skills.Array.data[1].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[21].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[21].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[22].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[22].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[23].Skills.Array.data[0].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[23].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[24].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[24].Skills.Array.data[1].Level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[25].Skills.Array.data[0].Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[25].Skills.Array.data[1].Level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[0].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[1].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[2].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[3].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[4].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[5].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[6].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[7].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[8].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[9].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[10].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[11].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[12].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[13].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[14].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[15].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[16].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[17].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[18].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[19].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[20].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[21].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[22].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[23].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[24].Skills.Array.data[1].SkillType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
+      propertyPath: _students.Array.data[25].Skills.Array.data[1].SkillType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3154278042214563232, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: m_Name
