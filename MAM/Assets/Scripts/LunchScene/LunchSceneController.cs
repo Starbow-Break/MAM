@@ -28,23 +28,19 @@ public class LunchSceneController : MonoBehaviour
     // 학생 선택
     public void SelectStudent(Student student)
     {
-        if (_maxSelectedStudent <= _selectedStudents.Count)
+        if (IsSelected(student))
         {
-            return;
+            _selectedStudents.Remove(student);
         }
         else
         {
-            if (IsSelected(student))
-            {
-                _selectedStudents.Remove(student);
-            }
-            else
+            if (_selectedStudents.Count < _maxSelectedStudent)
             {
                 _selectedStudents.Add(student);
             }
-            
-            OnChangeStudent?.Invoke();
         }
+        
+        OnChangeStudent?.Invoke();
     }
     
     // 학생 선택
