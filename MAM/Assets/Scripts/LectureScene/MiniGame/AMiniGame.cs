@@ -2,8 +2,8 @@ using UnityEngine;
 
 public abstract class AMiniGame : MonoBehaviour
 {
-    protected ESkillType _miniGameType = ESkillType.Unity;
-    protected int _difficulty = 0;
+    [SerializeField] protected ESkillType _miniGameType = ESkillType.Unity;
+    protected int _difficulty = 0; //1~3
     protected int _score = 0; //0~100
 
     public virtual void Initialize(int difficulty)
@@ -15,6 +15,6 @@ public abstract class AMiniGame : MonoBehaviour
     protected virtual void EndGame()
     {
         gameObject.SetActive(false);
-        LectureSceneManager.Instance.OnEndMiniGame(_miniGameType, _difficulty, _score);
+        LectureSceneManager.Instance.OnEndMiniGame(_miniGameType, _score, _difficulty);
     }
 }

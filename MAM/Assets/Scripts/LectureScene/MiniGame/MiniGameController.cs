@@ -15,7 +15,7 @@ public class MiniGameController : MonoBehaviour
                 _currentMiniGame = _unityMiniGame;
                 break;
             case ESkillType.CSharp:
-                _currentMiniGame = _unityMiniGame;  //나중에 교체
+                _currentMiniGame = _cSharpMiniGame;  //나중에 교체
                 break;
             default:
                 _currentMiniGame = _cSharpMiniGame;

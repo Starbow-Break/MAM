@@ -36,7 +36,7 @@ public class Student
     public float CSharpSkill = 0;   //1~6
     public float UnitySkill = 0;    //1~6
     
-    public float Motivation = 50f;   //의욕 0~100
+    public float Motivation = 5f;   //의욕 1~5
     private float _intimacy = 0f;     //친밀도 0~100
     
     public Sprite Icon = null;

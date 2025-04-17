@@ -9,11 +9,15 @@ public static class StudentLevelHelper
     private static readonly float[] _gainMultiPlier = { 1.0f, 0.5f, 0.25f };
     private const int _maxLevel = 6;
 
-    public static void ApplyMiniGameScore(Student student,ESkillType skillType, int miniGameScore, int miniGameDifficulty)
+
+    /// <returns> 바뀐 능력치 리턴</returns>
+    public static float ApplyMiniGameScore(Student student,ESkillType skillType, int miniGameScore, int miniGameDifficulty)
     {
         float skillLevel = student.GetSkillLevel(skillType);
         float newSkillLevel = GetRaisedSkillLevel(skillLevel, miniGameScore, miniGameDifficulty);   
-        student.SetSkillLevel(skillType,newSkillLevel);
+        student.SetSkillLevel(skillType, newSkillLevel);
+        
+        return newSkillLevel;
     }
     
     private static float GetRaisedSkillLevel(float studentSkillLevel, int miniGameScore, int miniGameDifficulty)
