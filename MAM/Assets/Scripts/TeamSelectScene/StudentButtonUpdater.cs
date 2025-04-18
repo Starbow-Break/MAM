@@ -9,8 +9,8 @@ public class StudentButtonUpdater : MonoBehaviour
     [SerializeField] private Image _image;
 
     private StudentButton _studentButton;
-    
-    public Student Student;    // Updater가 관여하는 버튼에 대응되는 학생의 ID
+
+    public Student Student { get; private set; } // Updater가 관여하는 버튼에 대응되는 학생
 
     private void Awake()
     {

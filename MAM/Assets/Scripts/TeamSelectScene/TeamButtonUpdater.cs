@@ -10,16 +10,11 @@ public class TeamButtonUpdater : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _teamName;
     [SerializeField] private List<Image> _teamMemberImages;
 
-    private Team _team;
-
-    public Team Team
-    {
-        get { return _team; }
-    }
+    public Team Team { get; private set; }
 
     public void SetTeam(Team team)
     {
-        _team = team;
+        Team = team;
         SetTeamMemberImage(0, team.Member1?.Icon);
         SetTeamMemberImage(1, team.Member2?.Icon);
     }
