@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].MBTI
-      value: ISFP
+      value: ESFP
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].Name
@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].MBTI
-      value: ENFP
+      value: ENTP
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].Name
@@ -1042,7 +1042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].Skills.Array.data[1].Level
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].Skills.Array.data[0].Level
