@@ -22,7 +22,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student2
     Name: "\uAE40\uC724\uB3C4"
     MBTI: INFJ
@@ -30,7 +30,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student3
     Name: "\uAE40\uC218\uBC94"
     MBTI: INFP
@@ -38,7 +38,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 6
     UnitySkill: 3
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student4
     Name: "\uAE40\uC815\uD0DC"
     MBTI: ESTJ
@@ -46,7 +46,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student5
     Name: "\uAE40\uC624\uD604"
     MBTI: INFP
@@ -54,15 +54,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student6
     Name: "\uBC15\uB098\uBB34"
-    MBTI: ISFP
+    MBTI: ESFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student7
     Name: "\uBCC0\uD6C8\uC2B9"
     MBTI: INTP
@@ -70,7 +70,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student8
     Name: "\uC11D\uC6B0\uC7AC"
     MBTI: INFJ
@@ -78,7 +78,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student9
     Name: "\uC190\uC544\uC815"
     MBTI: INFP
@@ -86,7 +86,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student10
     Name: "\uC1A1\uBB34\uC601"
     MBTI: ENTP
@@ -94,7 +94,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student11
     Name: "\uC5FC\uC9C4\uCCA0"
     MBTI: ENTJ
@@ -102,15 +102,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student12
     Name: "\uC624\uACBD\uB3C4"
     MBTI: ENTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
-    CSharpSkill: 3
+    CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student13
     Name: "\uC724\uB77C\uC0C8"
     MBTI: ISFP
@@ -118,15 +118,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student14
     Name: "\uC774\uC544\uC120"
-    MBTI: ENFP
+    MBTI: ENTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student15
     Name: "\uC774\uC5F0\uC18C"
     MBTI: ENFP
@@ -134,7 +134,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student16
     Name: "\uC774\uC194\uC608"
     MBTI: INTP
@@ -142,7 +142,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student17
     Name: "\uC774\uC9C4\uC6D0"
     MBTI: INFP
@@ -150,7 +150,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student18
     Name: "\uC815\uC744\uAC00"
     MBTI: INTJ
@@ -158,7 +158,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student19
     Name: "\uC870\uD76C\uC724"
     MBTI: INTP
@@ -166,7 +166,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student20
     Name: "\uCC28\uD604\uC0C1"
     MBTI: INFP
@@ -174,7 +174,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student21
     Name: "\uCD5C\uC601\uC11C"
     MBTI: ENFP
@@ -182,7 +182,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student22
     Name: "\uCD5C\uD658\uC11D"
     MBTI: ISTP
@@ -190,7 +190,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student23
     Name: "\uCD5C\uC7AC\uD615"
     MBTI: ISTP
@@ -198,7 +198,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student24
     Name: "\uD55C\uD6C8\uAE38"
     MBTI: INFP
@@ -206,7 +206,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student25
     Name: "\uD55C\uC601\uD0DC"
     MBTI: INTP
@@ -214,7 +214,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
   - ID: student26
     Name: "\uD64D\uC601\uCC44"
     MBTI: INTJ
@@ -222,4 +222,4 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
