@@ -42,8 +42,10 @@ public class DayEndTeamProjectProgressSetter : MonoBehaviour
             updater.SetActive(true);
             
             Team team = updater.Team;
-            float targetProgress = TeamProjectProgressHelper.GetRaisedTeamProjectProgress(team);
-            StartCoroutine(RaiseProgressSequence(updater, team.ProjectProgress, targetProgress, raiseDuration));
+            float beforeProgress = team.ProjectProgress;
+            float targetProgress = TeamProjectProgressHelper.ApplyDayEnd(team);
+            
+            StartCoroutine(RaiseProgressSequence(updater, beforeProgress, targetProgress, raiseDuration));
             yield return wait;
         }
     }

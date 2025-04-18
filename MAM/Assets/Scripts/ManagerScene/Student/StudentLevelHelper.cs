@@ -59,6 +59,13 @@ public static class StudentLevelHelper
     private static Tuple<float, float> notMatchRange = new (0.9f, 1.1f);
     private static Tuple<float, float> matchRange = new (1.2f, 1.5f);
 
+    public static float ApplyLunch(Student student, Restaurant restaurant)
+    {
+        float newIntimacy = GetRaisedIntimacy(student, restaurant);
+        student.Intimacy = newIntimacy;
+        return newIntimacy;
+    }
+    
     public static float GetRaisedIntimacy(Student student, Restaurant restaurant)
     {
         bool favMatch = student.FavRestaurant == restaurant?.Name;

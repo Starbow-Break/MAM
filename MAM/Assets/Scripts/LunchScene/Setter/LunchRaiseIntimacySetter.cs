@@ -6,6 +6,8 @@ public class LunchRaiseIntimacySetter : MonoBehaviour
 {
     [SerializeField] private RaiseIntimacyUpdater _updater;
     [SerializeField] private Transform _parent;
+    [SerializeField, Min(0.1f)] private float raiseDuration = 1.0f;
+    [SerializeField, Min(0.1f)] private float itemActiveInterval = 0.4f;
 
     private List<RaiseIntimacyUpdater> _updaters = new();
     
@@ -48,15 +50,19 @@ public class LunchRaiseIntimacySetter : MonoBehaviour
 
     private IEnumerator ApplyLunchSequence(Restaurant restaurant)
     {
-        var wait = new WaitForSeconds(1.0f);
+        var wait = new WaitForSeconds(itemActiveInterval);
         
-        foreach (var updater in _updaters)
+        int SelectedStudentCount = LunchSceneManager.Controller.SelectedStudentCount;
+        for(int i = 0; i < SelectedStudentCount; i++)
         {
+            var updater = _updaters[i];
             updater.SetActive(true);
             
-            float targetIntimacy = StudentLevelHelper.GetRaisedIntimacy(updater.Student, restaurant);
             Student student = updater.Student;
-            StartCoroutine(RaiseIntimacySequence(updater, student.Intimacy, targetIntimacy, 1.0f));
+            float beforeIntimacy = student.Intimacy;
+            float targetIntimacy = StudentLevelHelper.ApplyLunch(updater.Student, restaurant);
+            
+            StartCoroutine(RaiseIntimacySequence(updater, beforeIntimacy, targetIntimacy, raiseDuration));
             yield return wait;
         }
     }

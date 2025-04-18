@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LunchSubmitButtonSetter : MonoBehaviour
+public class LunchSelectLunchSubmitButtonSetter : MonoBehaviour
 {
     [SerializeField] private SubmitButtonUpdater _updater;
 

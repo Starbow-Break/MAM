@@ -4,7 +4,14 @@ public static class TeamProjectProgressHelper
 {
     private static float maxProgress = 100.0f;
 
-    public static float GetRaisedTeamProjectProgress(Team team)
+    public static float ApplyDayEnd(Team team)
+    {
+        float newProgress = GetRaisedTeamProjectProgress(team);
+        team.ProjectProgress = newProgress;
+        return newProgress;
+    }
+    
+    private static float GetRaisedTeamProjectProgress(Team team)
     {
         float addProgress = CalculateAddProgress(team);
         return Mathf.Clamp(team.ProjectProgress + addProgress, 0, maxProgress);

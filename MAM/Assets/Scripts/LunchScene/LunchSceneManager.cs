@@ -25,11 +25,13 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     [SerializeField] private LunchRestaurantButtonSetter _restaurantButtonSetter;
     [SerializeField] private LunchStudentButtonSetter _studentButtonSetter;
     [SerializeField] private LunchStudentInfoSetter _studentinfoSetter;
-    [SerializeField] private LunchSubmitButtonSetter _submitButtonSetter;
+    [SerializeField] private LunchSelectLunchSubmitButtonSetter _selectLunchSubmitButtonSetter;
     [SerializeField] private LunchStudentSelectedInfoSetter _studentSelectedInfoSetter;
     [SerializeField] private LunchRaiseIntimacySetter _raiseIntimacySetter;
+    [SerializeField] private LunchRaiseIntimacySubmitButtonSetter _raiseIntimacySubmitButtonSetter;
 
-    [Header("UI Pages")] [SerializeField] private List<UIObjectData> _uiDatas;
+    [Header("UI Pages")] 
+    [SerializeField] private List<UIObjectData> _uiDatas;
     
     public static LunchSceneController Controller => Instance._controller;
     public static LunchRaiseIntimacySetter RaiseIntimacySetter => Instance._raiseIntimacySetter;
@@ -47,12 +49,14 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
         InitializeStudentButtonUI();
         // 학생 정보 초기화
         InitializeStudentInfoUI();
-        // 확인 버튼 초기화
-        InitializeSubmitButton();
+        // 점심 선택 확인 버튼 초기화
+        InitializeSelectLunchSubmitButton();
         // 학생 선택 상태 초기화
         InitializeStudentSelectedInfoUI();
         // 친밀도 화면 초기화
         InitializeRaisedIntimacyUI();
+        // 친밀도 확인 버튼 초기화
+        InitializeRaiseIntimacySubmitButton();
         
         SetUiObjects(EUIObjectType.Select_Lunch);
     }
@@ -74,9 +78,9 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
         _studentinfoSetter.Initialize();
     }
 
-    private void InitializeSubmitButton()
+    private void InitializeSelectLunchSubmitButton()
     {
-        _submitButtonSetter.Initialize();
+        _selectLunchSubmitButtonSetter.Initialize();
     }
 
     private void InitializeStudentSelectedInfoUI()
@@ -87,6 +91,11 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     private void InitializeRaisedIntimacyUI()
     {
         _raiseIntimacySetter.Initialize(_controller.MaxSelectedStudent);
+    }
+    
+    private void InitializeRaiseIntimacySubmitButton()
+    {
+        _raiseIntimacySubmitButtonSetter.Initialize();
     }
 
     public void SetUiObjects(EUIObjectType uiType)
