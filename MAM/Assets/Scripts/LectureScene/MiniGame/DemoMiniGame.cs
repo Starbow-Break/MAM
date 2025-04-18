@@ -3,13 +3,11 @@ using UnityEngine;
 
 public class DemoMiniGame : AMiniGame
 {
-    [SerializeField]private Button _button = null;
+    [SerializeField] private Button _button = null;
     
-    private int _level = 0;
-    
-    public override void Initialize(int level)
+    public override void Initialize(int difficulty)
     {
-        _level = level;
+        _difficulty = difficulty;
         _score = 100;
         _button.onClick.AddListener(EndGame);
     }
