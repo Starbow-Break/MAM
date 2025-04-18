@@ -30,8 +30,8 @@ public class StudentInfoUpdater : MonoBehaviour
         {
             _icon.sprite = student.Icon;
             _name.text = student.Name;
-            _unity.text = Mathf.FloorToInt(student.UnitySkill).ToString();
-            _cSharp.text = Mathf.FloorToInt(student.CSharpSkill).ToString();
+            _unity.text = Mathf.FloorToInt(student.GetSkillLevel(ESkillType.Unity)).ToString();
+            _cSharp.text = Mathf.FloorToInt(student.GetSkillLevel(ESkillType.CSharp)).ToString();
             _intimacy.text = Mathf.FloorToInt(student.Intimacy).ToString();
             _mbtiUpdater.SetStudentMBTI(student);
             _favRestaurantUpdater.SetStudentFavRestaurant(student);

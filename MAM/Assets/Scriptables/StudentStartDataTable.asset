@@ -57,7 +57,7 @@ MonoBehaviour:
     Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
   - ID: student6
     Name: "\uBC15\uB098\uBB34"
-    MBTI: ISFP
+    MBTI: ESFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
     AffinityType: 0
     CSharpSkill: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
     MBTI: ENTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
-    CSharpSkill: 3
+    CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
   - ID: student13
@@ -121,7 +121,7 @@ MonoBehaviour:
     Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
   - ID: student14
     Name: "\uC774\uC544\uC120"
-    MBTI: ENFP
+    MBTI: ENTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
     CSharpSkill: 1

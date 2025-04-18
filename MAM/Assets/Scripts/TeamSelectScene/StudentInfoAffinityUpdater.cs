@@ -22,7 +22,8 @@ public class StudentInfoAffinityUpdater : MonoBehaviour
             Sprite affinitySprite = student.AffinityType switch
             {
                 EAffinityType.Carrot => carrot,
-                EAffinityType.Whip => whip
+                EAffinityType.Whip => whip,
+                _ => null
             };
             
             _affinityImage.sprite = affinitySprite;
