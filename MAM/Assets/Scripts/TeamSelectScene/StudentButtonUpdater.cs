@@ -8,26 +8,24 @@ public class StudentButtonUpdater : MonoBehaviour
 {
     [SerializeField] private Image _image;
 
-    private Button _button;
+    private StudentButton _studentButton;
     
     public Student Student;    // Updater가 관여하는 버튼에 대응되는 학생의 ID
 
     private void Awake()
     {
-        _button = GetComponent<Button>();
+        _studentButton = GetComponent<StudentButton>();
     }
 
-    public void SetInteractable(bool interactable)
+    public void SetStudent(Student student)
     {
-        _button.interactable = interactable;
-        // Todo : 임시
-        _image.color = interactable ? Color.white * 1f : Color.white * 0f;
+        Student = student;
+        SetImage(student.Icon);
     }
 
-    public void SetSelected(bool selected)
+    public void SetStatus(StudentButton.EStatus status)
     {
-        // Todo : 임시
-        _image.color = selected ? Color.white * 0.5f : Color.white * 1f;
+        _studentButton.SetStatus(status);
     }
 
     public void SetImage(Sprite sprite)
@@ -37,16 +35,16 @@ public class StudentButtonUpdater : MonoBehaviour
 
     public void AddOnClickEventListener(UnityAction action)
     {
-        GetComponent<StudentButton>().onClick.AddListener(action);
+        _studentButton.OnClick += action;
     }
 
     public void AddOnHoverEventListener(UnityAction action)
     {
-        GetComponent<StudentButton>().OnHover += action;
+        _studentButton.OnHover += action;
     }
     
     public void AddOnUnHoverEventListener(UnityAction action)
     {
-        GetComponent<StudentButton>().OnUnHover += action;
+        _studentButton.OnUnHover += action;
     }
 }

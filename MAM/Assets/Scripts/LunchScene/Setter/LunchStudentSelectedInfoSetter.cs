@@ -3,16 +3,15 @@ using UnityEngine.PlayerLoop;
 
 public class LunchStudentSelectedInfoSetter : MonoBehaviour
 {
-    [SerializeField] private LunchSceneController _controller;
     [SerializeField] private StudentSelectedInfoUpdater _updater;
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateText();
+        LunchSceneManager.Controller.OnChangeStudent += () => UpdateText();
     }
     
     private void OnDisable()
     {
-        _controller.OnChangeStudent -= () => UpdateText();
+        LunchSceneManager.Controller.OnChangeStudent -= () => UpdateText();
     }
 
     public void Initialize()
@@ -22,6 +21,8 @@ public class LunchStudentSelectedInfoSetter : MonoBehaviour
     
     private void UpdateText()
     {
-        _updater.SetText(_controller.SelectedStudentCount, _controller.MaxSelectedStudent);
+        int selectedStudentCount = LunchSceneManager.Controller.SelectedStudentCount;
+        int maxSelectedStudent = LunchSceneManager.Controller.MaxSelectedStudent;
+        _updater.SetText(selectedStudentCount, maxSelectedStudent);
     }
 }

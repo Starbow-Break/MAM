@@ -3,31 +3,49 @@ using UnityEngine;
 
 public class LunchSubmitButtonSetter : MonoBehaviour
 {
-    [SerializeField] private LunchSceneController _controller;
-    [SerializeField] private LunchRestaurantButtonSetter _restaurantButtonSetter;
     [SerializeField] private SubmitButtonUpdater _updater;
 
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant += () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeStudent += () => UpdateUI();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeStudent -= () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant -= () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeStudent -= () => UpdateUI();
     }
 
     public void Initialize()
     {
         _updater.SetInteractible(false);
-        _updater.AddOnClickEventListener(() =>
-        {
-            Debug.Log(_restaurantButtonSetter.SelectedRestaurant.Name);
-        });
+        _updater.AddOnClickEventListener(() => ClickButton());
     }
 
     private void UpdateUI()
     {
-        _updater.SetInteractible(_controller.SelectedStudentCount > 0);
+        int selectedStudentCount = LunchSceneManager.Controller.SelectedStudentCount;
+        var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
+        _updater.SetInteractible(selectedRestaurant != null && selectedStudentCount > 0);
+    }
+
+    private void ClickButton()
+    {
+        ApplyLunch();
+        
+        // 스텟 결과 변화를 보여줘야 함
+        
+        GameManager.FlowManager.ToNextScene();// 지울 예정
+    }
+
+    private void ApplyLunch()
+    {
+        var selectedStudents = LunchSceneManager.Controller.SelectedStudents;
+        var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
+        foreach (Student student in selectedStudents)
+        {
+            StudentLevelHelper.ApplyLunch(student, selectedRestaurant);
+        }
     }
 }

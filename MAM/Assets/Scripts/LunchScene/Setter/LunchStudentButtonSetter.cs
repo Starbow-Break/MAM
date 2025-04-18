@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class LunchStudentButtonSetter : MonoBehaviour
 {
-    [Header("Controller")]
-    [SerializeField] private LunchSceneController _controller;
-    
     [Header("Updater")]
     [SerializeField] private StudentButtonUpdater _studentButtonUpdater;
     [SerializeField] private StudentInfoUpdater _studentInfoUpdater;
@@ -17,37 +14,38 @@ public class LunchStudentButtonSetter : MonoBehaviour
     
     private void OnEnable()
     {
-        _controller.OnChangeStudent += () => UpdateStudentButtons();
+        var controller = LunchSceneManager.Controller;
+        controller.OnChangeStudent += () => UpdateStudentButtons();
     }
 
     private void OnDisable()
     {
-        _controller.OnChangeStudent += () => UpdateStudentButtons();
+        var controller = LunchSceneManager.Controller;
+        controller.OnChangeStudent -= () => UpdateStudentButtons();
     }
     
     public void Initialize(List<Student> students)
     {
         foreach (Student student in students)
         {
-            StudentButtonUpdater _newUpdater = Instantiate(_studentButtonUpdater, _parent);
-            _newUpdater.Student = student;
-            _newUpdater.SetImage(student.Icon);
-            
-            _newUpdater.AddOnClickEventListener(() =>
+            StudentButtonUpdater newUpdater = Instantiate(_studentButtonUpdater, _parent);
+            newUpdater.SetStudent(student);
+            newUpdater.AddOnClickEventListener(() =>
             {
-                _controller.SelectStudent(_newUpdater.Student);
+                var controller = LunchSceneManager.Controller;
+                controller.SelectStudent(newUpdater.Student);
             });
-            _newUpdater.AddOnHoverEventListener(() =>
+            newUpdater.AddOnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(true);
-                _studentInfoUpdater.SetStudent(_newUpdater.Student);
+                _studentInfoUpdater.SetStudent(newUpdater.Student);
             });
-            _newUpdater.AddOnUnHoverEventListener(() =>
+            newUpdater.AddOnUnHoverEventListener(() =>
             {
                 _studentInfoUpdater.SetActive(false);
             });
             
-            _updaters.Add(_newUpdater);
+            _updaters.Add(newUpdater);
         }
     }
     
@@ -55,13 +53,13 @@ public class LunchStudentButtonSetter : MonoBehaviour
     {
         foreach (StudentButtonUpdater updater in _updaters)
         {
-            if (_controller.IsSelected(updater.Student))
+            if (LunchSceneManager.Controller.IsSelected(updater.Student))
             {
-                updater.SetSelected(true);
+                updater.SetStatus(StudentButton.EStatus.Selected);
             }
             else
             {
-                updater.SetSelected(false);
+                updater.SetStatus(StudentButton.EStatus.Normal);
             }
         }
     }
