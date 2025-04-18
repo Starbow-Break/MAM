@@ -34,8 +34,7 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
         {
             StudentButtonUpdater _newUpdater = Instantiate(_studentButtonUpdater, _parent);
             
-            _newUpdater.Student = student;
-            _newUpdater.SetImage(student.Icon);
+            _newUpdater.SetStudent(student);
             _newUpdater.AddOnClickEventListener(() => 
             {
                 Debug.Log($"Click Student : {_newUpdater.Student.ID}");

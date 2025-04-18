@@ -49,4 +49,10 @@ public class LunchSceneController : MonoBehaviour
         _selectedRestaurant = restaurant;
         OnChangeRestaurant?.Invoke();
     }
+    
+    public void ApplyLunch()
+    {
+        var raiseIntimacySetter = LunchSceneManager.RaiseIntimacySetter;
+        raiseIntimacySetter.ApplyLunch(_selectedStudents, _selectedRestaurant);
+    }
 }

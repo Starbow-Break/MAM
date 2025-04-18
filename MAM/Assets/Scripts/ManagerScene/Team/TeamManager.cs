@@ -10,4 +10,9 @@ public class TeamManager : MonoBehaviour
     {
         _teams = teams;
     }
+
+    public List<Team> GetTeams()
+    {
+        return _teams;
+    }
 }
