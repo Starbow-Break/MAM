@@ -41,12 +41,4 @@ public class StudentManager : MonoBehaviour
     {
         return _students.Count;
     }
-
-    public void ApplyMiniGameScore(int score, int miniGameDifficulty, ESkillType skillType)
-    {
-        foreach (Student student in _students)
-        {
-            StudentLevelHelper.ApplyMiniGameScore(student, skillType, score, miniGameDifficulty);
-        }
-    }
 }

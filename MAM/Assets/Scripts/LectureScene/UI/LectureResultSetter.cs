@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class LectureResultSetter : MonoBehaviour
 {
     [SerializeField] private LectureResultUpdater _updater = null;
 
     private List<SkillRaiseViewer> _skillRaiseViewers = null;
+    private readonly float _activeDelay = 0.2f;
     
     private void Awake()
     {
@@ -21,7 +23,6 @@ public class LectureResultSetter : MonoBehaviour
         foreach (var student in students)
         {
             SkillRaiseUpdater newUpdater = Instantiate(_updater.OriginalUpdater, _updater.ContentTransform);
-            newUpdater.gameObject.SetActive(true);
             
             SkillRaiseViewer newViewer = new SkillRaiseViewer(newUpdater, student.ID); 
             _skillRaiseViewers.Add(newViewer);
@@ -30,18 +31,26 @@ public class LectureResultSetter : MonoBehaviour
         _updater.StartButton.onClick.AddListener(ToNextScene);
     }
 
-    public void ShowPopup(ESkillType miniGameType)
+    public void ShowPopup(ESkillType miniGameType, int score, int miniGameDifficulty)
     {
         _updater.gameObject.SetActive(true);
         
+        StartCoroutine(RaiseLevelCo(miniGameType, score, miniGameDifficulty));
+    }
+
+    //아이콘채우기
+    private IEnumerator RaiseLevelCo(ESkillType miniGameType, int score, int miniGameDifficulty)
+    {
         foreach (var viewer in _skillRaiseViewers)
         {
-            viewer.SetSkillTypeLevel(miniGameType);
-            viewer.StartRaising();
+            viewer.SetSkillTypeLevel(miniGameType, score, miniGameDifficulty);
+            StartCoroutine(viewer.RaiseCo());
+            
+            yield return new WaitForSeconds(_activeDelay);
         }
     }
 
-    public void ToNextScene()
+    private void ToNextScene()
     {
         LectureSceneManager.Instance.ToNextScene();
     }

@@ -33,16 +33,15 @@ public class Student
     
     public List<SkillLevel> Skills = new List<SkillLevel>();
     
-    public float CSharpSkill = 0;   //1~6
-    public float UnitySkill = 0;    //1~6
-    
-    public float Motivation = 50f;   //의욕 0~100
+    public float Motivation = 5f;   //의욕 1~5
     private float _intimacy = 0f;     //친밀도 0~100
     
     public Sprite Icon = null;
 
     public string ID { get { return _id; } }
     public float Intimacy {get {return _intimacy;} set {_intimacy = value;}}
+    public float UnitySkill => GetSkillLevel(ESkillType.Unity); //1~6
+    public float CSharpSkill => GetSkillLevel(ESkillType.CSharp); //1~6
     
     public Student(string id)
     {
@@ -58,7 +57,7 @@ public class Student
         skillLevelCSharp.Level = 1f;
         Skills.Add(skillLevelCSharp);
     }
-
+    
     public float GetSkillLevel(ESkillType skillType)
     {
         return Skills.Find(x => x.SkillType == skillType).Level;

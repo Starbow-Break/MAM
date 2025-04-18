@@ -6,14 +6,9 @@ public class LectureSceneManager : ASceneManager<LectureSceneManager>
     [SerializeField] private LectureResultSetter _lectureResultSetter = null;
     public MiniGameController MiniGameController => _miniGameController;
     
-    public void OnEndMiniGame(ESkillType miniGameType, int miniGameDifficulty, int score)
+    public void OnEndMiniGame(ESkillType miniGameType, int score, int miniGameDifficulty)
     {
-        _lectureResultSetter.ShowPopup(miniGameType);
-        
-        if (miniGameType == ESkillType.Unity)
-        {
-            GameManager.StudentManager.ApplyMiniGameScore(score, miniGameDifficulty, miniGameType);
-        }
+        _lectureResultSetter.ShowPopup(miniGameType, score, miniGameDifficulty);
     }
 
     public void ToNextScene()
