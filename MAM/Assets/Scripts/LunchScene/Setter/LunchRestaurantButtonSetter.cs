@@ -16,7 +16,7 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
     
     public void Initialize(List<Restaurant> restaurants)
     {
-        SImpleRadioButton[] buttons = new SImpleRadioButton[restaurants.Count];
+        SimpleRadioButton[] buttons = new SimpleRadioButton[restaurants.Count];
         
         foreach (var restaurant in restaurants)
         {
@@ -27,7 +27,7 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
 
         for (int i = 0; i < _updaters.Count; i++)
         {
-            SImpleRadioButton button = _updaters[i].GetComponent<SImpleRadioButton>();
+            SimpleRadioButton button = _updaters[i].GetComponent<SimpleRadioButton>();
             if (button != null)
             {
                 buttons[i] = button;
