@@ -62,15 +62,15 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
             {
                 if (controller.IsRegisteredSelectedTeam(updater.Student))
                 {
-                    updater.SetStatus(StudentButton.EStatus.Selected);
+                    updater.SetButtonStatus(StudentButton.EButtonStatus.Selected);
                 }
                 else {
-                    updater.SetStatus(StudentButton.EStatus.Disabled);
+                    updater.SetButtonStatus(StudentButton.EButtonStatus.Disabled);
                 }
             }
             else
             {
-                updater.SetStatus(StudentButton.EStatus.Normal);
+                updater.SetButtonStatus(StudentButton.EButtonStatus.Normal);
             }
         }
     }
