@@ -11,7 +11,7 @@ public class StudentInfoFavRestaurantUpdater : MonoBehaviour
         bool isReveal = StudentInfoRevealChecker.CheckFavRestaurantReveal(student);
         if (isReveal)
         {
-            _favRestaurantText.text = student.MBTI;
+            _favRestaurantText.text = student.FavRestaurant;
         }
         else
         {

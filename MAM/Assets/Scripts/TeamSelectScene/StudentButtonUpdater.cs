@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StudentButtonUpdater : MonoBehaviour
 {
     [SerializeField] private Image _image;
+    [SerializeField] private TextMeshProUGUI _nameText;
 
     private StudentButton _studentButton;
 
@@ -17,20 +18,26 @@ public class StudentButtonUpdater : MonoBehaviour
         _studentButton = GetComponent<StudentButton>();
     }
 
+    public void SetButtonStatus(StudentButton.EButtonStatus status)
+    {
+        _studentButton.SetStatus(status);
+    }
+
     public void SetStudent(Student student)
     {
         Student = student;
         SetImage(student.Icon);
-    }
-
-    public void SetStatus(StudentButton.EStatus status)
-    {
-        _studentButton.SetStatus(status);
+        SetNameText(student.Name);
     }
 
     public void SetImage(Sprite sprite)
     {
         _image.sprite = sprite;
+    }
+
+    public void SetNameText(string name)
+    {
+        _nameText.text = name;
     }
 
     public void AddOnClickEventListener(UnityAction action)
