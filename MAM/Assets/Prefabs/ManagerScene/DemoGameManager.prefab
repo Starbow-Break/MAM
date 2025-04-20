@@ -14,48 +14,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0]._id
-      value: student1
+      value: GaMin
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1]._id
-      value: student2
+      value: DoYoon
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2]._id
-      value: student3
+      value: BeomSoo
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3]._id
-      value: student4
+      value: TaeJung
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4]._id
-      value: student5
+      value: HyunOh
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5]._id
-      value: student6
+      value: NamHoon
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6]._id
-      value: student7
+      value: SeungHoon
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7]._id
-      value: student8
+      value: JaeWoo
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8]._id
-      value: student9
+      value: JungAh
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9]._id
-      value: student10
+      value: YongMoo
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].MBTI
       value: INFJ
@@ -66,48 +66,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10]._id
-      value: student11
+      value: ChulJin
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11]._id
-      value: student12
+      value: DoKyung
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12]._id
-      value: student13
+      value: SaeRha
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13]._id
-      value: student14
+      value: SunAh
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14]._id
-      value: student15
+      value: SoYeon
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15]._id
-      value: student16
+      value: YeSol
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16]._id
-      value: student17
+      value: WonJin
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17]._id
-      value: student18
+      value: GaEul
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18]._id
-      value: student19
+      value: YeonHee
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19]._id
-      value: student20
+      value: SangHyun
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].MBTI
       value: INFJ
@@ -118,32 +118,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20]._id
-      value: student21
+      value: SeoYong
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21]._id
-      value: student22
+      value: SukHwan
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22]._id
-      value: student23
+      value: HyungJae
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23]._id
-      value: student24
+      value: GillHoon
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24]._id
-      value: student25
+      value: TaeYong
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25]._id
-      value: student26
+      value: ChaeYong
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].MBTI
       value: INFP
@@ -155,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].MBTI
       value: ESTJ
@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].MBTI
       value: INFP
@@ -179,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].MBTI
       value: ESFP
@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].MBTI
       value: INTP
@@ -203,7 +203,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].MBTI
       value: INFJ
@@ -215,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].MBTI
       value: INFP
@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].MBTI
       value: ENTP
@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].MBTI
       value: ENTJ
@@ -251,7 +251,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].MBTI
       value: ENTP
@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].MBTI
       value: ISFP
@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].MBTI
       value: ENTP
@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].MBTI
       value: ENFP
@@ -299,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].MBTI
       value: INTP
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].MBTI
       value: INFP
@@ -323,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].MBTI
       value: INTJ
@@ -335,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].MBTI
       value: INTP
@@ -347,7 +347,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].MBTI
       value: INFP
@@ -359,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].MBTI
       value: ENFP
@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].MBTI
       value: ISTP
@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].MBTI
       value: ISTP
@@ -395,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].MBTI
       value: INFP
@@ -407,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].MBTI
       value: INTP
@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+      objectReference: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].MBTI
       value: INTJ
@@ -430,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[0].UnitySkill
@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[1].UnitySkill
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[2].UnitySkill
@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[3].UnitySkill
@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[4].UnitySkill
@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[5].UnitySkill
@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[6].UnitySkill
@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[7].UnitySkill
@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[8].UnitySkill
@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[9].UnitySkill
@@ -514,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[10].UnitySkill
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[11].UnitySkill
@@ -530,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[12].UnitySkill
@@ -538,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].UnitySkill
@@ -546,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].UnitySkill
@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[15].UnitySkill
@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[16].UnitySkill
@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[17].UnitySkill
@@ -578,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[18].UnitySkill
@@ -586,7 +586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[19].UnitySkill
@@ -598,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[20].UnitySkill
@@ -606,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[21].UnitySkill
@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[22].UnitySkill
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[23].UnitySkill
@@ -630,7 +630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[24].UnitySkill
@@ -638,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].Motivation
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[25].UnitySkill
@@ -794,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[13].FavRestaurant
-      value: "\uBC25"
+      value: "\uC140\uB7EC\uB514"
       objectReference: {fileID: 0}
     - target: {fileID: 1003888309013122161, guid: de5e5bb53c353a049b1704f160e9abd4, type: 3}
       propertyPath: _students.Array.data[14].FavRestaurant

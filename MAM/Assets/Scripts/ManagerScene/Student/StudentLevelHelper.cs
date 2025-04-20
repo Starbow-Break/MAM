@@ -74,4 +74,33 @@ public static class StudentLevelHelper
     }
     #endregion
 
+    #region 의욕
+
+    private static float _maxMotivation = 5.0f;
+    private static float _minMotivation = 1.0f;
+
+    private static float _randomAdjustMotivation = 0.5f;
+    public static void ApplySelfStudyInteraction(Student student, EAffinityType actionType)
+    {
+        if (student.AffinityType == actionType)
+        {
+            student.Motivation = Mathf.Clamp(student.Motivation + 1, _minMotivation, _maxMotivation);
+            return;
+        }
+
+        student.Motivation = Mathf.Clamp(student.Motivation - 1, _minMotivation, _maxMotivation);
+    }
+
+    public static void ApplyRandomMotivation(Student student)
+    {
+        if (Random.value < 0.5f)
+        {
+            student.Motivation = Mathf.Clamp(student.Motivation + _randomAdjustMotivation, _minMotivation, _maxMotivation);
+            return;
+        }
+        
+        student.Motivation = Mathf.Clamp(student.Motivation - _randomAdjustMotivation, _minMotivation, _maxMotivation);
+    }
+    
+    #endregion
 }

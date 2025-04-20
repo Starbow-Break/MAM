@@ -10,4 +10,15 @@ public class TeamManager : MonoBehaviour
     {
         _teams = teams;
     }
+
+    public Team GetTeam(Student student)
+    {
+        foreach (var team in _teams)
+        {
+            if (team.Member1 == student || team.Member2 == student)
+                return team;
+        }
+        
+        return null;
+    }
 }

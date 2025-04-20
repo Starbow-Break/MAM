@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e31e856b40075648be2ec2be8b163c2, type: 3}
+  m_Name: StudentSpriteLibraryTable
+  m_EditorClassIdentifier: 
+  LibraryEntries:
+  - Id: ChaeYong
+    SpriteLibrary: {fileID: 11400000, guid: 94117cd5d5110444d8b143ed5bba17bc, type: 2}
+  - Id: SoYeon
+    SpriteLibrary: {fileID: 11400000, guid: adbde1d37f0219947bf4c5f4d02542fe, type: 2}
+  - Id: BeomSoo
+    SpriteLibrary: {fileID: 11400000, guid: a974ae0a856681e4a839843d15ce418b, type: 2}
+  - Id: SunAh
+    SpriteLibrary: {fileID: 11400000, guid: cad8cf7e47c9a2644b295d295a8f6046, type: 2}
