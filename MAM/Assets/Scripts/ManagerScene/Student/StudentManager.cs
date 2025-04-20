@@ -28,6 +28,8 @@ public class StudentManager : MonoBehaviour
             
             _students.Add(newStudent);
         }
+
+        GameManager.FlowManager.ActOnNewDayStart += ApplyRandomMotivation;
     }
     
     public Student GetStudent(string ID)
@@ -53,5 +55,13 @@ public class StudentManager : MonoBehaviour
             ids.Add(student.ID);
         }
         return ids;
+    }
+
+    private void ApplyRandomMotivation()
+    {
+        foreach (var student in _students)
+        {
+            StudentLevelHelper.ApplyRandomMotivation(student);
+        }
     }
 }
