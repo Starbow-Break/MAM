@@ -18,13 +18,18 @@ public class StudentClickPopupSetter : MonoBehaviour
     {
         _selectedStudent = GameManager.StudentManager.GetStudent(studentId);
         _updater.InfoUpdater.SetStudent(_selectedStudent);
-        
+        _updater.gameObject.SetActive(true);
+
         //도움버튼 활성화여부
         Team team = GameManager.TeamManager.GetTeam(_selectedStudent);
-        if(team != null)
-            _updater.HelpButton.gameObject.SetActive(!team.GotHelped);
+
+        if (team == null)
+        {
+            _updater.HelpButton.gameObject.SetActive(false);
+            return;
+        }
         
-        _updater.gameObject.SetActive(true);
+        _updater.HelpButton.gameObject.SetActive(!team.GotHelped);
     }
     
     private void ClosePopup()

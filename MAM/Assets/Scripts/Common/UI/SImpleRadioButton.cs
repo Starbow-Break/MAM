@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class SImpleRadioButton : MonoBehaviour, IPointerClickHandler
+public class SimpleRadioButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private SimpleRadioButtonAnimator _animator;
 
