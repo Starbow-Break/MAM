@@ -1775,6 +1775,8 @@ MonoBehaviour:
   _studentButtonSetter: {fileID: 736666565}
   _studentInfoSetter: {fileID: 1077656962}
   _submitButtonSetter: {fileID: 1714519207}
+  testMode: 1
+  studentShuffleCount: 20
 --- !u!1 &1873016657
 GameObject:
   m_ObjectHideFlags: 0
