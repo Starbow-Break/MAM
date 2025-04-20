@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class RadioButtonGroup
 {
-    private readonly SImpleRadioButton[] _buttons = null;
+    private readonly SimpleRadioButton[] _buttons = null;
 
-    public SImpleRadioButton SelectedButton { get; private set; } = null;
+    public SimpleRadioButton SelectedButton { get; private set; } = null;
     public int SelectedIndex { get; private set; } = -1;  //-1 선택안됨
 
     public UnityAction<int> OnValueChanged;    // 선택된 값이 바뀔 대 발생하는 이벤트
         
-    public RadioButtonGroup(SImpleRadioButton[] buttons)
+    public RadioButtonGroup(SimpleRadioButton[] buttons)
     {
         _buttons = buttons;
 
