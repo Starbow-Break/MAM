@@ -11,6 +11,11 @@ public class TeamManager : MonoBehaviour
         _teams = teams;
     }
 
+    public List<Team> GetTeams()
+    {
+        return _teams;
+    }
+
     public Team GetTeam(Student student)
     {
         foreach (var team in _teams)

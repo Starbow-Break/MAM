@@ -4,10 +4,17 @@ public static class TeamProjectProgressHelper
 {
     private static float maxProgress = 100.0f;
 
-    public static void ApplyDayEnd(Team team)
+    public static float ApplyDayEnd(Team team)
+    {
+        float newProgress = GetRaisedTeamProjectProgress(team);
+        team.ProjectProgress = newProgress;
+        return newProgress;
+    }
+    
+    private static float GetRaisedTeamProjectProgress(Team team)
     {
         float addProgress = CalculateAddProgress(team);
-        RaiseProgress(team, addProgress);
+        return Mathf.Clamp(team.ProjectProgress + addProgress, 0, maxProgress);
     }
 
     private static float CalculateAddProgress(Team team)
@@ -25,10 +32,5 @@ public static class TeamProjectProgressHelper
         float maxSkill = Mathf.Max(student.UnitySkill, student.CSharpSkill);
         float minSkill = Mathf.Min(student.UnitySkill, student.CSharpSkill);
         return maxSkill + minSkill / 2f;
-    }
-    
-    private static void RaiseProgress(Team team, float addProgress)
-    {
-        team.ProjectProgress = Mathf.Clamp(team.ProjectProgress + addProgress, 0.0f, maxProgress);
     }
 }

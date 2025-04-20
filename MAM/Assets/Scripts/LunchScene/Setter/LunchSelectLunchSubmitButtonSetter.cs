@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LunchSubmitButtonSetter : MonoBehaviour
+public class LunchSelectLunchSubmitButtonSetter : MonoBehaviour
 {
     [SerializeField] private SubmitButtonUpdater _updater;
 
@@ -20,7 +20,7 @@ public class LunchSubmitButtonSetter : MonoBehaviour
     public void Initialize()
     {
         _updater.SetInteractible(false);
-        _updater.AddOnClickEventListener(() => ClickButton());
+        _updater.AddOnClickEventListener(() => OnClick());
     }
 
     private void UpdateUI()
@@ -30,22 +30,10 @@ public class LunchSubmitButtonSetter : MonoBehaviour
         _updater.SetInteractible(selectedRestaurant != null && selectedStudentCount > 0);
     }
 
-    private void ClickButton()
+    private void OnClick()
     {
-        ApplyLunch();
-        
-        // 스텟 결과 변화를 보여줘야 함
-        
-        GameManager.FlowManager.ToNextScene();// 지울 예정
-    }
-
-    private void ApplyLunch()
-    {
-        var selectedStudents = LunchSceneManager.Controller.SelectedStudents;
-        var selectedRestaurant = LunchSceneManager.Controller.SelectedRestaurant;
-        foreach (Student student in selectedStudents)
-        {
-            StudentLevelHelper.ApplyLunch(student, selectedRestaurant);
-        }
+        var targetUIType = LunchSceneManager.EUIObjectType.Raise_Intimacy;
+        LunchSceneManager.Instance.SetUiObjects(targetUIType);
+        LunchSceneManager.Controller.ApplyLunch();
     }
 }
