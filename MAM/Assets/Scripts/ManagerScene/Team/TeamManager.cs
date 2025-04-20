@@ -6,6 +6,12 @@ public class TeamManager : MonoBehaviour
 {
     [SerializeField] private List<Team> _teams = new List<Team>();
 
+    public List<Team> Teams => _teams;
+
+    public void Initialize()
+    {
+        GameManager.FlowManager.ActOnNewProjectStart += () => {_teams.Clear(); };
+    }
     public void SetTeams(List<Team> teams)
     {
         _teams = teams;

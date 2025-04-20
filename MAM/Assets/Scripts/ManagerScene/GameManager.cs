@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        _flowManager.GameStart();
         _studentManager.InitializeStudents();
+        _teamManager.Initialize();
+        _flowManager.GameStart();
     }
 }
