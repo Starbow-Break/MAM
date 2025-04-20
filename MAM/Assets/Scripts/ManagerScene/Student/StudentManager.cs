@@ -6,6 +6,9 @@ public class StudentManager : MonoBehaviour
 {
     [SerializeField] private StudentStartDataTable _startDataTable = null;
     [SerializeField] private List<Student> _students = new List<Student>();
+    [SerializeField] private StudentCharacterGenerator _studentCharacterGenerator = null;
+
+    public StudentCharacter GetStudentCharacter(string ID) => _studentCharacterGenerator.GetCharacter(ID);
 
     public void InitializeStudents()
     {
@@ -40,5 +43,15 @@ public class StudentManager : MonoBehaviour
     public int GetTotalStudentCount()
     {
         return _students.Count;
+    }
+
+    public List<string> GetStudentIds()
+    {
+        List<string> ids = new List<string>();
+        foreach (var student in _students)
+        {
+            ids.Add(student.ID);
+        }
+        return ids;
     }
 }

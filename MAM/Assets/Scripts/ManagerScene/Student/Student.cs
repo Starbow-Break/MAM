@@ -33,7 +33,7 @@ public class Student
     
     public List<SkillLevel> Skills = new List<SkillLevel>();
     
-    public float Motivation = 5f;   //의욕 1~5
+    public float Motivation = 3f;   //의욕 1~5
     private float _intimacy = 0f;     //친밀도 0~100
     
     public Sprite Icon = null;

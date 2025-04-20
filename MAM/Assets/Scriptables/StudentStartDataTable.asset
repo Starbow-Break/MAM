@@ -15,7 +15,7 @@ MonoBehaviour:
   URL_ID: 1geUI-yXY5iO3cqlfqMH_vRGQ5TQjIyalk7tYtBUhAVA
   URL_SHEET: 0
   StudentStartDataList:
-  - ID: student1
+  - ID: GaMin
     Name: "\uAE40\uBBFC\uAC00"
     MBTI: INFJ
     FavRestaurant: "\uBC25"
@@ -23,7 +23,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student2
+  - ID: DoYoon
     Name: "\uAE40\uC724\uB3C4"
     MBTI: INFJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
@@ -31,7 +31,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student3
+  - ID: BeomSoo
     Name: "\uAE40\uC218\uBC94"
     MBTI: INFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
@@ -39,7 +39,7 @@ MonoBehaviour:
     CSharpSkill: 6
     UnitySkill: 3
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student4
+  - ID: TaeJung
     Name: "\uAE40\uC815\uD0DC"
     MBTI: ESTJ
     FavRestaurant: "\uBC25"
@@ -47,7 +47,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student5
+  - ID: HyunOh
     Name: "\uAE40\uC624\uD604"
     MBTI: INFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
@@ -55,7 +55,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student6
+  - ID: NamHoon
     Name: "\uBC15\uB098\uBB34"
     MBTI: ESFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
@@ -63,7 +63,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student7
+  - ID: SeungHoon
     Name: "\uBCC0\uD6C8\uC2B9"
     MBTI: INTP
     FavRestaurant: "\uBC25"
@@ -71,7 +71,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student8
+  - ID: JaeWoo
     Name: "\uC11D\uC6B0\uC7AC"
     MBTI: INFJ
     FavRestaurant: "\uBC25"
@@ -79,7 +79,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student9
+  - ID: JungAh
     Name: "\uC190\uC544\uC815"
     MBTI: INFP
     FavRestaurant: "\uBC25"
@@ -87,7 +87,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student10
+  - ID: YongMoo
     Name: "\uC1A1\uBB34\uC601"
     MBTI: ENTP
     FavRestaurant: "\uC57C\uBBF8\uCE74\uCE20"
@@ -95,7 +95,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student11
+  - ID: ChulJin
     Name: "\uC5FC\uC9C4\uCCA0"
     MBTI: ENTJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
@@ -103,7 +103,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student12
+  - ID: DoKyung
     Name: "\uC624\uACBD\uB3C4"
     MBTI: ENTP
     FavRestaurant: "\uBC25"
@@ -111,7 +111,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student13
+  - ID: SaeRha
     Name: "\uC724\uB77C\uC0C8"
     MBTI: ISFP
     FavRestaurant: "\uB3C4\uC2DC\uB77D"
@@ -119,15 +119,15 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student14
+  - ID: SunAh
     Name: "\uC774\uC544\uC120"
     MBTI: ENTP
-    FavRestaurant: "\uBC25"
+    FavRestaurant: "\uC140\uB7EC\uB514"
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student15
+  - ID: SoYeon
     Name: "\uC774\uC5F0\uC18C"
     MBTI: ENFP
     FavRestaurant: "\uB3C4\uC2DC\uB77D"
@@ -135,7 +135,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student16
+  - ID: YeSol
     Name: "\uC774\uC194\uC608"
     MBTI: INTP
     FavRestaurant: "\uBC25"
@@ -143,7 +143,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student17
+  - ID: WonJin
     Name: "\uC774\uC9C4\uC6D0"
     MBTI: INFP
     FavRestaurant: "\uBC25"
@@ -151,7 +151,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student18
+  - ID: GaEul
     Name: "\uC815\uC744\uAC00"
     MBTI: INTJ
     FavRestaurant: "\uBC25"
@@ -159,7 +159,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student19
+  - ID: YeonHee
     Name: "\uC870\uD76C\uC724"
     MBTI: INTP
     FavRestaurant: "\uBC25"
@@ -167,7 +167,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student20
+  - ID: SangHyun
     Name: "\uCC28\uD604\uC0C1"
     MBTI: INFP
     FavRestaurant: "\uBC25"
@@ -175,7 +175,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student21
+  - ID: SeoYong
     Name: "\uCD5C\uC601\uC11C"
     MBTI: ENFP
     FavRestaurant: "\uBC25"
@@ -183,7 +183,7 @@ MonoBehaviour:
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student22
+  - ID: SukHwan
     Name: "\uCD5C\uD658\uC11D"
     MBTI: ISTP
     FavRestaurant: "\uBC25"
@@ -191,7 +191,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student23
+  - ID: HyungJae
     Name: "\uCD5C\uC7AC\uD615"
     MBTI: ISTP
     FavRestaurant: "\uBC25"
@@ -199,7 +199,7 @@ MonoBehaviour:
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student24
+  - ID: GillHoon
     Name: "\uD55C\uD6C8\uAE38"
     MBTI: INFP
     FavRestaurant: "\uB3C4\uC2DC\uB77D"
@@ -207,7 +207,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student25
+  - ID: TaeYong
     Name: "\uD55C\uC601\uD0DC"
     MBTI: INTP
     FavRestaurant: "\uBC25"
@@ -215,7 +215,7 @@ MonoBehaviour:
     CSharpSkill: 2
     UnitySkill: 1
     Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: student26
+  - ID: ChaeYong
     Name: "\uD64D\uC601\uCC44"
     MBTI: INTJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
