@@ -6,11 +6,14 @@ public class NoteSpawner : MonoBehaviour
     [System.Serializable]
     public struct NoteData
     {
+        [field: SerializeField]
         public ENoteType Type { get; private set; }
-        public GameObject NotePrefab { get; private set; }
+        [field: SerializeField]
+        public ANoteUpdater NoteUpdater { get; private set; }
     }
 
     [SerializeField] private List<NoteData> noteDatas;
+    [SerializeField] private Transform judgePoint;
 
     private void Update()
     {
@@ -34,7 +37,10 @@ public class NoteSpawner : MonoBehaviour
         {
             if (noteData.Type == type)
             {
-                Instantiate(noteData.NotePrefab, transform.position, Quaternion.identity);
+                ANoteUpdater newUpdater = Instantiate(noteData.NoteUpdater, transform.position, Quaternion.identity);
+                newUpdater.SetBpm(120);
+                newUpdater.SetDestination(transform.position);
+                newUpdater.SetArrival(judgePoint.position);
                 break;
             }
         }

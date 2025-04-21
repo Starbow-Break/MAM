@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CsharpMiniGameController : MonoBehaviour
 {
+    [SerializeField] NoteSpawner _noteSpawner;
+    
     private float _bpm;  // BPM
     private float _offset;   // 오프셋
 
@@ -66,6 +68,7 @@ public class CsharpMiniGameController : MonoBehaviour
             if (noteQueue.First().time - 1 == beat)
             {
                 Debug.Log($"Spawn Note : {noteQueue.First().type}");
+                _noteSpawner.SpawnNote(ENoteType.Normal);
                 noteQueue.Dequeue();
             }
             
