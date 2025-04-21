@@ -48,6 +48,9 @@ MonoBehaviour:
   _sceneController: {fileID: 5384339663671239216}
   _demoNextSceneButton: {fileID: 0}
   _totalDayInProject: 3
+  _projectProgressGoals:
+  - 60
+  - 100
 --- !u!1 &3154278042214563232
 GameObject:
   m_ObjectHideFlags: 0

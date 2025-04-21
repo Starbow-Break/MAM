@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.UI;
 
 // ReSharper disable All
 public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
@@ -12,8 +13,8 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     [SerializeField] private TeamSelectSubmitButtonSetter _submitButtonSetter;  // 확인 버튼
 
     [Header("Test Mode")]
-    [SerializeField] private bool testMode = false;
-    [SerializeField, Min(0)] private int studentShuffleCount = 20;
+    [SerializeField] private Button _randomizeButton = null;
+    [SerializeField, Min(0)] private int _studentShuffleCount = 20;
 
     public static TeamSelectSceneController Controller => Instance._controller;
     public static TeamSelectTeamButtonSetter TeamButtonSetter => Instance._teamButtonSetter;
@@ -24,10 +25,8 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     private void Start()
     {
         InitializeUI();
-        if(testMode)
-        {
-            SetTestMode();
-        }
+
+        _randomizeButton.onClick.AddListener(SetTestMode);
     }
     
     // UI 초기화
@@ -84,7 +83,7 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
             shuffledStudent.Add(student);
         }
 
-        ListShuffler.Shuffle(shuffledStudent, studentShuffleCount);
+        ListShuffler.Shuffle(shuffledStudent, _studentShuffleCount);
 
         for(int i = 1; i <= teamCount; i++)
         {

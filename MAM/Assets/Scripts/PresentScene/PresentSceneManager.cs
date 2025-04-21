@@ -1,0 +1,28 @@
+using System.ComponentModel.Design.Serialization;
+using UnityEngine;
+public class PresentSceneManager : ASceneManager<PresentSceneManager>
+{
+    [SerializeField] private TeamGradeButtonSetter _teamGradeButtonSetter = null;
+    [SerializeField] private PresentSkillRaiseSetter _presentSkillRaiseSetter = null;
+    
+    [SerializeField] private DemoGameManagerHelper _demoGameManagerHelper = null;
+
+    public static PresentSkillRaiseSetter SkillRaiseSetter => Instance._presentSkillRaiseSetter;
+    
+    private void Start()
+    {
+        Initialize();
+        
+        _teamGradeButtonSetter.ShowButtons();
+    }
+
+    private void Initialize()
+    {
+        if(GameManager.Instance.IsTestMode)
+            _demoGameManagerHelper.SetDemoTeam();   //임시로팀만들기
+        
+        _teamGradeButtonSetter.Initialize();
+        _presentSkillRaiseSetter.Initialize();
+    }
+
+}
