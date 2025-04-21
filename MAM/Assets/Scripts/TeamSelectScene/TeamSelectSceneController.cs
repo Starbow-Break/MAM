@@ -11,7 +11,7 @@ public class TeamSelectSceneController : MonoBehaviour
     
     public int SelectedTeamId { get; private set; } = -1; // 현재 선택된 팀의 ID
     public Dictionary<int, Team> _teamDict { get; private set; } = new(); // 각 팀에 배정된 학생들
-    public int RegisteredStudents { get; private set; }   // 팀에 들어간 학생 수
+    public int RegisteredStudents { get; private set; } = 0;   // 팀에 들어간 학생 수
 
     public UnityAction OnChangeTeam { get; set; }
     public UnityAction OnChangeStudent { get; set; }
@@ -19,7 +19,6 @@ public class TeamSelectSceneController : MonoBehaviour
     public void Start()
     {
         _studentListUI.SetActive(false);
-        RegisteredStudents = 0;
     }
 
     #region Query
@@ -49,7 +48,7 @@ public class TeamSelectSceneController : MonoBehaviour
             List<Student> members = new List<Student> { currentTeam.Member1, currentTeam.Member2 };
             foreach(var member in members)
             {
-                if(member != null && student == member)
+                if(member != null && student.ID == member.ID)
                 {
                     return true;
                 }
@@ -66,7 +65,7 @@ public class TeamSelectSceneController : MonoBehaviour
         List<Student> members = new List<Student> { team?.Member1, team?.Member2 };
         foreach(var member in members)
         {
-            if(member != null && member == student)
+            if(member != null && student.ID == member.ID)
             {
                 return true;
             }
@@ -75,6 +74,35 @@ public class TeamSelectSceneController : MonoBehaviour
         return false;
     }
     #endregion
+    
+    // 팀 랜덤 배정
+    public void RandomizeTeamSetting(int shuffleCount)
+    {
+        _teamDict.Clear();
+        
+        List<Student> students = GameManager.StudentManager.GetStudents();
+        int teamCount = students.Count / 2 + students.Count % 2;
+
+        List<Student> shuffledStudent = new();
+        foreach(Student student in students)
+        {
+            shuffledStudent.Add(student);
+        }
+
+        ListShuffler.Shuffle(shuffledStudent, shuffleCount);
+
+        for(int i = 1; i <= teamCount; i++)
+        {
+            Team newTeam = new Team();
+            newTeam.TeamNumber = i;
+            _teamDict.Add(i, newTeam);
+            
+            newTeam.Member1 = shuffledStudent[2 * i - 2];
+            newTeam.Member2 = shuffledStudent[2 * i - 1];
+        }
+        
+        OnChangeStudent?.Invoke();
+    }
 
     // 팀 선택
     public void SelectTeam(int teamNumber)
