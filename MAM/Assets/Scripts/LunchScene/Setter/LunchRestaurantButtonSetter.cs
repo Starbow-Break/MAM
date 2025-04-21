@@ -27,7 +27,7 @@ public class LunchRestaurantButtonSetter : MonoBehaviour
 
         for (int i = 0; i < _updaters.Count; i++)
         {
-            SimpleRadioButton button = _updaters[i].GetComponent<SimpleRadioButton>();
+            SimpleRadioButton button = _updaters[i].RadioButton;
             if (button != null)
             {
                 buttons[i] = button;

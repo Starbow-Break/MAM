@@ -162,8 +162,8 @@ GameObject:
   m_Component:
   - component: {fileID: 469509061159366650}
   - component: {fileID: 5055332526600933134}
-  - component: {fileID: 3126627022463352031}
   - component: {fileID: 2021747403040486077}
+  - component: {fileID: 3126627022463352031}
   - component: {fileID: 3220413760541393485}
   m_Layer: 5
   m_Name: Restaurant Button
@@ -214,18 +214,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3126627022463352031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790918422663417065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee52da87a3120c24dab0ea93db76d5dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2021747403040486077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +228,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 3013592471000116976}
   _name: {fileID: 4654050318128226568}
+  _radioButton: {fileID: 3220413760541393485}
+--- !u!114 &3126627022463352031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790918422663417065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee52da87a3120c24dab0ea93db76d5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3220413760541393485
 MonoBehaviour:
   m_ObjectHideFlags: 0

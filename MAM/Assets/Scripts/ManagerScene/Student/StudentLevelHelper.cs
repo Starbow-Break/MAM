@@ -107,12 +107,12 @@ public static class StudentLevelHelper
     
     #endregion
 
-    #region c#,유니티 프로젝트 상승
+    #region c#,유니티 프로젝트 후 상승
 
-    //private float _minRaise
-    public static void ApplyProjectScore(Student student, float projectScore, out float newUnitySkillLevel, out float newCSharpSkillLevel)
+    public static void ApplyProjectScore(Student student, float projectProgress, float progressGoal, out float newUnitySkillLevel, out float newCSharpSkillLevel)
     {
-        float raiseValue = Mathf.Clamp(projectScore / 100f, 0f, 1f);
+        float overflow = Mathf.Max(0, (projectProgress - progressGoal) / progressGoal); // 초과비율
+        float raiseValue = Mathf.Clamp(overflow, 0f, 1f); // 최대 1까지 상승
         
         newUnitySkillLevel = Mathf.Min(student.GetSkillLevel(ESkillType.Unity) + raiseValue, _maxSkillLevel);
         newCSharpSkillLevel = Mathf.Min(student.GetSkillLevel(ESkillType.CSharp) + raiseValue, _maxSkillLevel);

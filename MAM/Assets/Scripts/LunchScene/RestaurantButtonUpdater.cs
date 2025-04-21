@@ -7,8 +7,9 @@ public class RestaurantButtonUpdater : MonoBehaviour
 {
     [SerializeField] private Image _icon;
     [SerializeField] private TextMeshProUGUI _name;
-    
+    [SerializeField] private SimpleRadioButton _radioButton;
     public Restaurant Restaurant { get; private set; }
+    public SimpleRadioButton RadioButton => _radioButton;
     
     public void SetIcon(Sprite sprite)
     {

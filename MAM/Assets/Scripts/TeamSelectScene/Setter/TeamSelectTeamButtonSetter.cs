@@ -43,7 +43,7 @@ public class TeamSelectTeamButtonSetter : MonoBehaviour
         List<SimpleRadioButton> buttons = new();
         for (int i = 0; i < count; i++)
         {
-            SimpleRadioButton newButton = _updaters[i].GetComponent<SimpleRadioButton>();
+            SimpleRadioButton newButton = _updaters[i].RadioButton;
             buttons.Add(newButton);
         }
         _teamGroup = new RadioButtonGroup(buttons.ToArray());

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,5 +16,26 @@ public class DemoGameManagerHelper : MonoBehaviour
         {
             var obj = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }
+    }
+
+    public void SetDemoTeam()
+    {
+        List<Student> students = GameManager.StudentManager.GetStudents();
+        List<Team> teams = new List<Team>();
+        int teamNum = 1;
+        for (int i = 0; i < students.Count; i+=2)
+        {
+            Team team = new Team();
+            team.Member1 = students[i];
+            team.Member2 = students[i + 1];
+            team.TeamNumber = teamNum;
+            teamNum++;
+            
+            team.ProjectProgress = Random.Range(0, 100);
+            teams.Add(team);
+        }
+        
+        GameManager.TeamManager.SetTeams(teams);
+        
     }
 }
