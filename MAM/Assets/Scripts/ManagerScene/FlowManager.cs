@@ -17,7 +17,7 @@ public class FlowManager : MonoBehaviour
     private int _currentProject = 0;
     
     public int GetCurrentPojectNumber { get { return _currentProject; } }
-    public float GetCurrentProjectGoal { get { return _projectProgressGoals[_currentProject]; } }
+    public float GetCurrentProjectGoal { get { return _projectProgressGoals[_currentProject - 1]; } }
     public UnityAction ActOnSceneSwitch{ get; set; }    //씬언로드전 마지막행동
     public UnityAction ActOnNewDayStart { get; set; }   //새 하루 시작할때
     public UnityAction ActOnNewProjectStart{ get; set; }    //새프로잭트시작할때 팀선정 전
