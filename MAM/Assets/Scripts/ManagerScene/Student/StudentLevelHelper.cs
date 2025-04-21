@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 //학생들 스텟 올려주는 클래스
 public static class StudentLevelHelper
 {
-    #region c#,유니티
+    #region c#,유니티 미니게임 상승
 
     private static readonly float[] _gainMultiPlier = { 1.0f, 0.5f, 0.25f };
-    private const int _maxLevel = 6;
+    private const int _maxSkillLevel = 6;
 
 
     /// <returns> 바뀐 능력치 리턴</returns>
@@ -33,7 +33,7 @@ public static class StudentLevelHelper
         
         float totalGain = baseGain * gainMultiplier;
         
-        return Mathf.Min(studentSkillLevel + totalGain, _maxLevel);
+        return Mathf.Min(studentSkillLevel + totalGain, _maxSkillLevel);
     }
     
     private static int GetRecommendedDifficulty(int studentSkillLevel)
@@ -102,5 +102,22 @@ public static class StudentLevelHelper
         student.Motivation = Mathf.Clamp(student.Motivation - _randomAdjustMotivation, _minMotivation, _maxMotivation);
     }
     
+    #endregion
+
+    #region c#,유니티 프로젝트 상승
+
+    //private float _minRaise
+    public static void ApplyProjectScore(Student student, float projectScore, out float newUnitySkillLevel, out float newCSharpSkillLevel)
+    {
+        float raiseValue = Mathf.Clamp(projectScore / 100f, 0f, 1f);
+        
+        newUnitySkillLevel = Mathf.Min(student.GetSkillLevel(ESkillType.Unity) + raiseValue, _maxSkillLevel);
+        newCSharpSkillLevel = Mathf.Min(student.GetSkillLevel(ESkillType.CSharp) + raiseValue, _maxSkillLevel);
+        
+        student.SetSkillLevel(ESkillType.Unity, newUnitySkillLevel);
+        student.SetSkillLevel(ESkillType.CSharp, newCSharpSkillLevel);
+    }
+    
+
     #endregion
 }
