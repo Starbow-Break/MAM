@@ -4,7 +4,8 @@ using System.Collections.Generic;
 public static class TeamProjectProgressHelper
 {
     private static float maxProgress = 100.0f;
-
+    private static float helpProgress = 3f;
+    
     public static float ApplyDayEnd(Team team)
     {
         float newProgress = GetRaisedTeamProjectProgress(team);
@@ -22,9 +23,8 @@ public static class TeamProjectProgressHelper
     {
         float mbti = MBTIHelper.GetSynergyScore(team.Member1.MBTI, team.Member2.MBTI);
         float motivation = team.Member1.Motivation + team.Member2.Motivation;
-        float help = 0; // 프로젝트 헬프 (반영 예정)
+        float help = team.GotHelped ? helpProgress : 0; // 프로젝트 헬프
         float skill = CalculateSkillScore(team.Member1) + CalculateSkillScore(team.Member2);
-
         return mbti + motivation + help + skill;
     }
 
