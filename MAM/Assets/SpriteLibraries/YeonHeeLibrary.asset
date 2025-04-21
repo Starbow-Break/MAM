@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: YeonHeeLibrary
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Idle_Left
+    m_Hash: 367294619
+    m_CategoryList:
+    - m_Name: Idle_Left_0
+      m_Hash: 373841139
+      m_Sprite: {fileID: -8541104046634690183, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Left_1
+      m_Hash: 558853221
+      m_Sprite: {fileID: 1765707516, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Left_2
+      m_Hash: 944127455
+      m_Sprite: {fileID: -682519325, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Left_3
+      m_Hash: 255921481
+      m_Sprite: {fileID: -1400691287, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Left_4
+      m_Hash: 287676650
+      m_Sprite: {fileID: 304423726, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Left_5
+      m_Hash: 639805564
+      m_Sprite: {fileID: -745857101, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+  - m_Name: Idle_Back
+    m_Hash: 38624964
+    m_CategoryList:
+    - m_Name: Idle_Back_0
+      m_Hash: 963022652
+      m_Sprite: {fileID: 1367561590, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Back_1
+      m_Hash: 241287082
+      m_Sprite: {fileID: -919949909, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Back_2
+      m_Hash: 392752656
+      m_Sprite: {fileID: -752256147, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Back_3
+      m_Hash: 544202374
+      m_Sprite: {fileID: 894137303, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Back_4
+      m_Hash: 1040927525
+      m_Sprite: {fileID: 1552423276, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Back_5
+      m_Hash: 151813043
+      m_Sprite: {fileID: 150576921, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+  - m_Name: Idle_Right
+    m_Hash: 277959981
+    m_CategoryList:
+    - m_Name: Idle_Right_0
+      m_Hash: 554175693
+      m_Sprite: {fileID: 889656173, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Right_1
+      m_Hash: 370097243
+      m_Sprite: {fileID: 1534469421, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Right_2
+      m_Hash: 252079585
+      m_Sprite: {fileID: -1303603346, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Right_3
+      m_Hash: 939613559
+      m_Sprite: {fileID: -450214043, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Right_4
+      m_Hash: 644204756
+      m_Sprite: {fileID: 2053443774, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Right_5
+      m_Hash: 291698754
+      m_Sprite: {fileID: -638627043, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+  - m_Name: Idle_Front
+    m_Hash: 446710479
+    m_CategoryList:
+    - m_Name: Idle_Front_0
+      m_Hash: 244535893
+      m_Sprite: {fileID: -777213121, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Front_1
+      m_Hash: 966025923
+      m_Sprite: {fileID: 991321397, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Front_2
+      m_Hash: 547173241
+      m_Sprite: {fileID: -1839943982, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Front_3
+      m_Hash: 395969519
+      m_Sprite: {fileID: 411808133, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Front_4
+      m_Hash: 167679564
+      m_Sprite: {fileID: -1904420088, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    - m_Name: Idle_Front_5
+      m_Hash: 1056548570
+      m_Sprite: {fileID: -1334448419, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+  m_ModificationHash: 638805925612557880
+  m_Version: 1

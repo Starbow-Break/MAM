@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public static class TeamProjectProgressHelper
 {
@@ -33,4 +34,28 @@ public static class TeamProjectProgressHelper
         float minSkill = Mathf.Min(student.UnitySkill, student.CSharpSkill);
         return maxSkill + minSkill / 2f;
     }
+
+    
+    #region Grade
+    private static readonly List<KeyValuePair<float, string>> gradeThresholds = new()
+    {
+        new(1.0f, "A"),
+        new(0.9f, "B"),
+        new(0.75f, "C"),
+        new(0.65f, "D"),
+    };
+
+    public static string ProgressToGrade(Team team, float goalProgress)
+    {
+        float ratio = team.ProjectProgress / goalProgress;
+
+        foreach (var threshold in gradeThresholds)
+        {
+            if (ratio >= threshold.Key)
+                return threshold.Value;
+        }
+        
+        return "F";
+    }
+    #endregion
 }

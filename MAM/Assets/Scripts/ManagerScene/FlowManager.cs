@@ -9,11 +9,18 @@ public class FlowManager : MonoBehaviour
     [SerializeField] private Button _demoNextSceneButton = null;
     
     [SerializeField] private int _totalDayInProject = 3;
+
+    [SerializeField] private float[] _projectProgressGoals = null;
+    
     //[SerializeField] private int _totalProjectCount = 3;
     private int _currentDay = 0;
     private int _currentProject = 0;
-
+    
+    public int GetCurrentPojectNumber { get { return _currentProject; } }
+    public float GetCurrentProjectGoal { get { return _projectProgressGoals[_currentProject]; } }
     public UnityAction ActOnSceneSwitch{ get; set; }    //씬언로드전 마지막행동
+    public UnityAction ActOnNewDayStart { get; set; }   //새 하루 시작할때
+    public UnityAction ActOnNewProjectStart{ get; set; }    //새프로잭트시작할때 팀선정 전
     
     private void Start()
     {
@@ -60,11 +67,14 @@ public class FlowManager : MonoBehaviour
                     break;
                 }
                 _currentDay++;
+                ActOnNewDayStart?.Invoke();
                 _sceneController.LoadScene(ESceneIndex.Lecture);
                 break;
             
             case ESceneIndex.Present:
                 _currentProject++;
+                _currentDay = 0;
+                ActOnNewProjectStart?.Invoke();
                 _sceneController.LoadScene(ESceneIndex.TeamSelect);
                 break;
         }

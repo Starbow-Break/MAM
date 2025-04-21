@@ -22,7 +22,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1973566282, guid: 91ca929f9d2491242830df50b13ac1b1, type: 3}
   - ID: DoYoon
     Name: "\uAE40\uC724\uB3C4"
     MBTI: INFJ
@@ -30,7 +30,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1755194631, guid: a0fdd48e60399484a814dee32fcbbe91, type: 3}
   - ID: BeomSoo
     Name: "\uAE40\uC218\uBC94"
     MBTI: INFP
@@ -38,7 +38,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 6
     UnitySkill: 3
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1512749064, guid: 389109dcc0df23c4282a80eab414c8d2, type: 3}
   - ID: TaeJung
     Name: "\uAE40\uC815\uD0DC"
     MBTI: ESTJ
@@ -46,7 +46,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 1942558141, guid: 3b18837e52ede8d4a901cbe54f18106a, type: 3}
   - ID: HyunOh
     Name: "\uAE40\uC624\uD604"
     MBTI: INFP
@@ -54,7 +54,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1299574474, guid: e8cfd0fd0b332fd4998c29784b3a413b, type: 3}
   - ID: NamHoon
     Name: "\uBC15\uB098\uBB34"
     MBTI: ESFP
@@ -62,7 +62,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 2103112910, guid: 30caf2b751686a5438938d599352e753, type: 3}
   - ID: SeungHoon
     Name: "\uBCC0\uD6C8\uC2B9"
     MBTI: INTP
@@ -70,7 +70,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1575385149, guid: dd350afb0da55a848b29b67761fb6bb0, type: 3}
   - ID: JaeWoo
     Name: "\uC11D\uC6B0\uC7AC"
     MBTI: INFJ
@@ -78,7 +78,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -798827331, guid: a77972a2c6878a84caa5c000d41a9ff7, type: 3}
   - ID: JungAh
     Name: "\uC190\uC544\uC815"
     MBTI: INFP
@@ -86,15 +86,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: YongMoo
+    Icon: {fileID: 1925890502, guid: 008abb9300889e243bd5e1156c8a3627, type: 3}
+  - ID: YoungMoo
     Name: "\uC1A1\uBB34\uC601"
     MBTI: ENTP
     FavRestaurant: "\uC57C\uBBF8\uCE74\uCE20"
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -679560471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
   - ID: ChulJin
     Name: "\uC5FC\uC9C4\uCCA0"
     MBTI: ENTJ
@@ -102,15 +102,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -679560471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
   - ID: DoKyung
-    Name: "\uC624\uACBD\uB3C4"
+    Name: "\uC624\uB3C4\uACBD"
     MBTI: ENTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
-    CSharpSkill: 1
-    UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    CSharpSkill: 3
+    UnitySkill: 3
+    Icon: {fileID: 684483431, guid: 80e41f691edb1a146a44831538b2a4ce, type: 3}
   - ID: SaeRha
     Name: "\uC724\uB77C\uC0C8"
     MBTI: ISFP
@@ -118,7 +118,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 523002919, guid: 3121c4155c23aae4698a758c55fdfa8c, type: 3}
   - ID: SunAh
     Name: "\uC774\uC544\uC120"
     MBTI: ENTP
@@ -126,7 +126,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -491405731, guid: 4508171118193c04ba3f2f66e31561a2, type: 3}
   - ID: SoYeon
     Name: "\uC774\uC5F0\uC18C"
     MBTI: ENFP
@@ -134,7 +134,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 918305889, guid: 9ecd62b24a5faa947a7f151c5f68d26d, type: 3}
   - ID: YeSol
     Name: "\uC774\uC194\uC608"
     MBTI: INTP
@@ -142,7 +142,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1302352854, guid: 14f4a22028c732b4daab056b2fa1efa4, type: 3}
   - ID: WonJin
     Name: "\uC774\uC9C4\uC6D0"
     MBTI: INFP
@@ -150,7 +150,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 393640642, guid: 946f9e63ca7f7414a9c90f8685c95b6d, type: 3}
   - ID: GaEul
     Name: "\uC815\uC744\uAC00"
     MBTI: INTJ
@@ -158,7 +158,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: 307480820, guid: f84d3a54c7eff8b4e848e61b3db416a4, type: 3}
   - ID: YeonHee
     Name: "\uC870\uD76C\uC724"
     MBTI: INTP
@@ -166,7 +166,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -777213121, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
   - ID: SangHyun
     Name: "\uCC28\uD604\uC0C1"
     MBTI: INFP
@@ -174,15 +174,15 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: SeoYong
+    Icon: {fileID: 1795895343, guid: 598d2209762f2c144809751008ae3444, type: 3}
+  - ID: SeoYoung
     Name: "\uCD5C\uC601\uC11C"
     MBTI: ENFP
     FavRestaurant: "\uBC25"
     AffinityType: 0
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -1181339499, guid: 584dab03dc513c545bceafb554477d91, type: 3}
   - ID: SukHwan
     Name: "\uCD5C\uD658\uC11D"
     MBTI: ISTP
@@ -190,7 +190,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -2103347801, guid: 1be2fa68cfb9df94fa0378e3ff33588d, type: 3}
   - ID: HyungJae
     Name: "\uCD5C\uC7AC\uD615"
     MBTI: ISTP
@@ -198,7 +198,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -2067811856, guid: aa180d95ac5d1fb4488295a9ebbd334d, type: 3}
   - ID: GillHoon
     Name: "\uD55C\uD6C8\uAE38"
     MBTI: INFP
@@ -206,20 +206,20 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: TaeYong
+    Icon: {fileID: -1490443361, guid: af84ff37eac91e34f8d67c56d63a4585, type: 3}
+  - ID: TaeYoung
     Name: "\uD55C\uC601\uD0DC"
     MBTI: INTP
     FavRestaurant: "\uBC25"
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
-  - ID: ChaeYong
+    Icon: {fileID: 1657866132, guid: 4374731b4034226409a731a8919bc59b, type: 3}
+  - ID: ChaeYoung
     Name: "\uD64D\uC601\uCC44"
     MBTI: INTJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
     AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: 5509754145171606342, guid: ffbf7203d8ce812459695030c55b97c1, type: 3}
+    Icon: {fileID: -50426827, guid: d660399e5f0077b4c835ebb9f5a50d0b, type: 3}
