@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 // ReSharper disable All
@@ -11,7 +9,10 @@ public class TeamButtonUpdater : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _teamName;
     [SerializeField] private List<Image> _teamMemberImages;
     [SerializeField] private SimpleRadioButton _radioButton;
+    [SerializeField] private Sprite _emptySlotIcon = null;
+    [SerializeField] private List<Image> _emptySlotMasks;
 
+    private readonly float _minAlpha = 0.00392f;
     private Team _team;
 
     public SimpleRadioButton RadioButton => _radioButton;
@@ -34,6 +35,21 @@ public class TeamButtonUpdater : MonoBehaviour
 
     public void SetTeamMemberImage(int imageIndex, Sprite sprite)
     {
+        Color color = _emptySlotMasks[imageIndex].color;
+        color = _emptySlotMasks[imageIndex].color;
+
+        if (sprite == null)
+        {
+            _teamMemberImages[imageIndex].sprite = _emptySlotIcon;
+            
+            color.a = 1f; 
+            _emptySlotMasks[imageIndex].color = color;
+            return;
+        }
+       
         _teamMemberImages[imageIndex].sprite = sprite;
+        
+        color.a = _minAlpha; 
+        _emptySlotMasks[imageIndex].color = color;
     }
 }

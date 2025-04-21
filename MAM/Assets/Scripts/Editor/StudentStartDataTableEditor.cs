@@ -1,8 +1,10 @@
 #if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 [CustomEditor(typeof(StudentStartDataTable))]
 [CanEditMultipleObjects]
@@ -86,7 +88,8 @@ public class StudentStartDataTableLoader
     private static string FAV_RESTAURANT = "FavRestaurant";
     private static string AFFINITY = "Affinity";
     private static string ICON = "Icon";
-    
+
+    private static int SPRITE_INDEX = 18;
     public void LoadSheet(string tsv)
     {
         StudentStartDataList = new List<StudentStartData>();
@@ -146,7 +149,11 @@ public class StudentStartDataTableLoader
                 }
                 if (itemNames[j] == ICON)
                 {
-                    desc.Icon = AssetDatabase.LoadAssetAtPath(columns[j], typeof(Sprite)) as Sprite;
+                    Object[] assets = AssetDatabase.LoadAllAssetsAtPath(columns[j]);
+                    Sprite[] sprites = assets.OfType<Sprite>().ToArray();
+                    
+                    Sprite targetSprite = sprites[SPRITE_INDEX]; 
+                    desc.Icon = targetSprite;
                 }
             }
 
