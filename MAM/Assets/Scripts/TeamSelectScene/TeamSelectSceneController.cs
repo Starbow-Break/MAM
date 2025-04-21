@@ -100,7 +100,8 @@ public class TeamSelectSceneController : MonoBehaviour
             newTeam.Member1 = shuffledStudent[2 * i - 2];
             newTeam.Member2 = shuffledStudent[2 * i - 1];
         }
-        
+
+        RegisteredStudents = students.Count;
         OnChangeStudent?.Invoke();
     }
 
