@@ -13,11 +13,55 @@ MonoBehaviour:
   m_Name: StudentSpriteLibraryTable
   m_EditorClassIdentifier: 
   LibraryEntries:
-  - Id: ChaeYong
-    SpriteLibrary: {fileID: 11400000, guid: 94117cd5d5110444d8b143ed5bba17bc, type: 2}
-  - Id: SoYeon
-    SpriteLibrary: {fileID: 11400000, guid: adbde1d37f0219947bf4c5f4d02542fe, type: 2}
+  - Id: GaMin
+    SpriteLibrary: {fileID: 11400000, guid: ec4e109deb1386648a909bafa3653ae2, type: 2}
+  - Id: DoYoon
+    SpriteLibrary: {fileID: 11400000, guid: 2aefcf04be1ddd9478c40448ec802762, type: 2}
   - Id: BeomSoo
     SpriteLibrary: {fileID: 11400000, guid: a974ae0a856681e4a839843d15ce418b, type: 2}
+  - Id: TaeJung
+    SpriteLibrary: {fileID: 11400000, guid: 5819c16fbe69e6444b53b6d95a6bd1a3, type: 2}
+  - Id: HyunOh
+    SpriteLibrary: {fileID: 11400000, guid: eb0c7fab66f8a764187413b656bfc6d3, type: 2}
+  - Id: NamHoon
+    SpriteLibrary: {fileID: 11400000, guid: f865ec3bb820b324696e70d4068113a8, type: 2}
+  - Id: SeungHoon
+    SpriteLibrary: {fileID: 11400000, guid: 10d0e3a168e30864f98a05c7be9def61, type: 2}
+  - Id: JaeWoo
+    SpriteLibrary: {fileID: 11400000, guid: 02b6e6c4448b4bd42aeb14eb1e8763d1, type: 2}
+  - Id: JungAh
+    SpriteLibrary: {fileID: 11400000, guid: 858bc4a936d44354f9b0d1ff292dda19, type: 2}
+  - Id: YoungMoo
+    SpriteLibrary: {fileID: 11400000, guid: d1a541fd9350dcb408432d1a6d0684cc, type: 2}
+  - Id: ChulJin
+    SpriteLibrary: {fileID: 11400000, guid: 1a657ac27fbb3c54492ea10ed08a96e4, type: 2}
+  - Id: DoKyung
+    SpriteLibrary: {fileID: 11400000, guid: 0a7db0c6989f2fa4690063b0f0972e9a, type: 2}
+  - Id: SaeRha
+    SpriteLibrary: {fileID: 11400000, guid: 2287869fe4976a7458f666c2b51a6c4b, type: 2}
   - Id: SunAh
     SpriteLibrary: {fileID: 11400000, guid: cad8cf7e47c9a2644b295d295a8f6046, type: 2}
+  - Id: SoYeon
+    SpriteLibrary: {fileID: 11400000, guid: adbde1d37f0219947bf4c5f4d02542fe, type: 2}
+  - Id: YeSol
+    SpriteLibrary: {fileID: 11400000, guid: c9087082d7e116e408a95d48dbdd714c, type: 2}
+  - Id: WonJin
+    SpriteLibrary: {fileID: 11400000, guid: 9dd618beabaafaa4fa5891bdd157631d, type: 2}
+  - Id: GaEul
+    SpriteLibrary: {fileID: 11400000, guid: a15dd26ecaaf3d6469ba06674cd8493c, type: 2}
+  - Id: YeonHee
+    SpriteLibrary: {fileID: 11400000, guid: bda1412fef846ea479ba892accd8e532, type: 2}
+  - Id: SangHyun
+    SpriteLibrary: {fileID: 11400000, guid: bb81cb2f8f98219449abfb55069eaced, type: 2}
+  - Id: SeoYoung
+    SpriteLibrary: {fileID: 11400000, guid: dfeda0d7c1c65be4482e0d97b898a241, type: 2}
+  - Id: SukHwan
+    SpriteLibrary: {fileID: 11400000, guid: 579044a0df22a52458ce4eb2402366e5, type: 2}
+  - Id: HyungJae
+    SpriteLibrary: {fileID: 11400000, guid: e4a4808b5b0ecc74385cff936ad91772, type: 2}
+  - Id: GillHoon
+    SpriteLibrary: {fileID: 11400000, guid: af4d4bee2143ee74c891b2048acd3289, type: 2}
+  - Id: TaeYoung
+    SpriteLibrary: {fileID: 11400000, guid: 2e5f97f96f9a3894687ead40378d7387, type: 2}
+  - Id: ChaeYoung
+    SpriteLibrary: {fileID: 11400000, guid: 94117cd5d5110444d8b143ed5bba17bc, type: 2}

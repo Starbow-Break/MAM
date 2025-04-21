@@ -37,7 +37,6 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
             _newUpdater.SetStudent(student);
             _newUpdater.AddOnClickEventListener(() => 
             {
-                Debug.Log($"Click Student : {_newUpdater.Student.ID}");
                 TeamSelectSceneManager.Controller.SelectStudent(student);
             });
             _newUpdater.AddOnHoverEventListener(() =>
