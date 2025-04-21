@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class StudentButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public enum EStatus
+    public enum EButtonStatus
     {
         Disabled,   // 상호작용 비활성화
         Normal,     // 평상시
@@ -19,20 +19,20 @@ public class StudentButton : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public UnityAction OnHover { get; set; }
     public UnityAction OnUnHover { get; set; }
     
-    public EStatus Status { get; private set; } = EStatus.Normal;
+    public EButtonStatus Status { get; private set; } = EButtonStatus.Normal;
 
-    public void SetStatus(EStatus status)
+    public void SetStatus(EButtonStatus status)
     {
         Status = status;
         switch (status)
         {
-            case EStatus.Disabled:
+            case EButtonStatus.Disabled:
                 _animator.PlayDisabledAnimation();
                 break;
-            case EStatus.Normal:
+            case EButtonStatus.Normal:
                 _animator.PlayNormalAnimation();
                 break;
-            case EStatus.Selected:
+            case EButtonStatus.Selected:
                 _animator.PlaySelectedAnimation();
                 break;
         }
@@ -40,7 +40,7 @@ public class StudentButton : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (Status != EStatus.Disabled)
+        if (Status != EButtonStatus.Disabled)
         {
             OnClick?.Invoke();
         }

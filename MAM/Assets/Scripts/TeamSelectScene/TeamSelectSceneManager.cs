@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 // ReSharper disable All
@@ -10,6 +11,10 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     [SerializeField] private TeamSelectStudentInfoSetter _studentInfoSetter;  // 학생 정보 UI
     [SerializeField] private TeamSelectSubmitButtonSetter _submitButtonSetter;  // 확인 버튼
 
+    [Header("Test Mode")]
+    [SerializeField] private bool testMode = false;
+    [SerializeField, Min(0)] private int studentShuffleCount = 20;
+
     public static TeamSelectSceneController Controller => Instance._controller;
     public static TeamSelectTeamButtonSetter TeamButtonSetter => Instance._teamButtonSetter;
     public static TeamSelectStudentButtonSetter StudentButtonSetter => Instance._studentButtonSetter;
@@ -19,6 +24,10 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     private void Start()
     {
         InitializeUI();
+        if(testMode)
+        {
+            SetTestMode();
+        }
     }
     
     // UI 초기화
@@ -57,4 +66,32 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     {
         _submitButtonSetter.Initialize();
     }
+
+    #region Test Mode
+    private void SetTestMode()
+    {
+        RandomizeTeamSetting();
+    }
+
+    private void RandomizeTeamSetting()
+    {
+        List<Student> students = GameManager.StudentManager.GetStudents();
+        int teamCount = students.Count / 2 + students.Count % 2;
+
+        List<Student> shuffledStudent = new();
+        foreach(Student student in students)
+        {
+            shuffledStudent.Add(student);
+        }
+
+        ListShuffler.Shuffle(shuffledStudent, studentShuffleCount);
+
+        for(int i = 1; i <= teamCount; i++)
+        {
+            Controller.SelectTeam(i);
+            Controller.SelectStudent(shuffledStudent[2 * i - 2]);
+            Controller.SelectStudent(shuffledStudent[2 * i - 1]);
+        }
+    }
+    #endregion
 }

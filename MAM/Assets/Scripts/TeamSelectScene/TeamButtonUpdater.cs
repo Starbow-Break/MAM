@@ -9,11 +9,9 @@ public class TeamButtonUpdater : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _teamName;
     [SerializeField] private List<Image> _teamMemberImages;
-    [SerializeField] private SimpleRadioButton _button; 
 
     private Team _team;
 
-    public SimpleRadioButton RadioButton => _button;
     public Team Team
     {
         get { return _team; }

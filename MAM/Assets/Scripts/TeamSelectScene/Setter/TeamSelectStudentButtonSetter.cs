@@ -34,8 +34,7 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
         {
             StudentButtonUpdater _newUpdater = Instantiate(_studentButtonUpdater, _parent);
             
-            _newUpdater.Student = student;
-            _newUpdater.SetImage(student.Icon);
+            _newUpdater.SetStudent(student);
             _newUpdater.AddOnClickEventListener(() => 
             {
                 Debug.Log($"Click Student : {_newUpdater.Student.ID}");
@@ -63,15 +62,15 @@ public class TeamSelectStudentButtonSetter : MonoBehaviour
             {
                 if (controller.IsRegisteredSelectedTeam(updater.Student))
                 {
-                    updater.SetStatus(StudentButton.EStatus.Selected);
+                    updater.SetButtonStatus(StudentButton.EButtonStatus.Selected);
                 }
                 else {
-                    updater.SetStatus(StudentButton.EStatus.Disabled);
+                    updater.SetButtonStatus(StudentButton.EButtonStatus.Disabled);
                 }
             }
             else
             {
-                updater.SetStatus(StudentButton.EStatus.Normal);
+                updater.SetButtonStatus(StudentButton.EButtonStatus.Normal);
             }
         }
     }

@@ -55,11 +55,11 @@ public class LunchStudentButtonSetter : MonoBehaviour
         {
             if (LunchSceneManager.Controller.IsSelected(updater.Student))
             {
-                updater.SetStatus(StudentButton.EStatus.Selected);
+                updater.SetButtonStatus(StudentButton.EButtonStatus.Selected);
             }
             else
             {
-                updater.SetStatus(StudentButton.EStatus.Normal);
+                updater.SetButtonStatus(StudentButton.EButtonStatus.Normal);
             }
         }
     }
