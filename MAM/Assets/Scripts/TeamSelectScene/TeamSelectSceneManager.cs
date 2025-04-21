@@ -69,28 +69,8 @@ public class TeamSelectSceneManager: ASceneManager<TeamSelectSceneManager>
     #region Test Mode
     private void SetTestMode()
     {
-        RandomizeTeamSetting();
+        Controller.RandomizeTeamSetting(_studentShuffleCount);
     }
-
-    private void RandomizeTeamSetting()
-    {
-        List<Student> students = GameManager.StudentManager.GetStudents();
-        int teamCount = students.Count / 2 + students.Count % 2;
-
-        List<Student> shuffledStudent = new();
-        foreach(Student student in students)
-        {
-            shuffledStudent.Add(student);
-        }
-
-        ListShuffler.Shuffle(shuffledStudent, _studentShuffleCount);
-
-        for(int i = 1; i <= teamCount; i++)
-        {
-            Controller.SelectTeam(i);
-            Controller.SelectStudent(shuffledStudent[2 * i - 2]);
-            Controller.SelectStudent(shuffledStudent[2 * i - 1]);
-        }
-    }
+    
     #endregion
 }
