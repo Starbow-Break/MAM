@@ -1,0 +1,29 @@
+{
+	"title":"???",
+	"bpm":120,
+	"offset": 50,
+	"notes":[
+		{
+			"time":4,
+			"type": "normal",
+			"count":1
+		},
+		{
+			"time":7,
+			"type": "normal",
+			"count":1
+		},
+		{
+			"time":10,
+			"type": "if",
+			"count":4,
+			"color":"red",
+			"pattern":"1001"
+		},
+		{
+			"time":18,
+			"type": "for",
+			"count":4
+		}
+	]
+}
