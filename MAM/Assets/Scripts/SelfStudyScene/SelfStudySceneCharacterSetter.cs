@@ -4,38 +4,39 @@ using UnityEngine.Tilemaps;
 
 public class SelfStudySceneCharacterSetter : MonoBehaviour
 {
-    [SerializeField] private Vector2 _areaCenter = new Vector2(0.5f, -1f);
-    [SerializeField] private  Vector2 _areaSize = new Vector2(19f, 10f);
-    
+    [SerializeField] private List<ACharacterSpot> _characterSpots = new List<ACharacterSpot>();
     private List<StudentCharacter> _characters = new List<StudentCharacter>();
- 
-    private void Start()
+    
+    public void Initialize()
     {
-
         foreach (string id in GameManager.StudentManager.GetStudentIds())
         {
             StudentCharacter character = GameManager.StudentManager.GetStudentCharacter(id);
-            character.transform.position = GetRandomTileWorldPosition();
             character.transform.SetParent(transform);
-            character.InitializeClickDetecter();
+            character.InitializeClickDetector();
             character.gameObject.SetActive(true);
 
             _characters.Add(character);
         }
+        
+        _characterSpots.Shuffle();
+        Queue<StudentCharacter> characterQueue = new Queue<StudentCharacter>(_characters);
+
+        foreach (var spot in _characterSpots)
+        {
+            if (characterQueue.Count <= 0)
+                return;
+            
+            if (spot is ADoubleCharacterSpot doubleCharacterSpot)
+            {
+                if(characterQueue.Count <= 1)
+                    continue;
+                
+                doubleCharacterSpot.SetCharacters(characterQueue.Dequeue(), characterQueue.Dequeue());
+                continue;
+            }
+            
+            spot.SetCharacter(characterQueue.Dequeue());
+        }
     }
-    
-    private Vector3 GetRandomTileWorldPosition()
-    {
-        float x = Random.Range(_areaCenter.x - _areaSize.x / 2f, _areaCenter.x + _areaSize.x / 2f);
-        float y = Random.Range(_areaCenter.y - _areaSize.y / 2f, _areaCenter.y + _areaSize.y / 2f);
-        return new Vector2(x, y);
-    }
-    
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(_areaCenter, _areaSize);
-        Gizmos.color = Color.white;
-    }
-    
 }

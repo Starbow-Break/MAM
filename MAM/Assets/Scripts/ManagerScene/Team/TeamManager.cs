@@ -11,7 +11,9 @@ public class TeamManager : MonoBehaviour
     public void Initialize()
     {
         GameManager.FlowManager.ActOnNewProjectStart += () => {_teams.Clear(); };
+        GameManager.FlowManager.ActOnNewDayStart += ResetGotHelped;
     }
+    
     public void SetTeams(List<Team> teams)
     {
         _teams = teams;
@@ -31,5 +33,13 @@ public class TeamManager : MonoBehaviour
         }
         
         return null;
+    }
+
+    private void ResetGotHelped()
+    {
+        foreach (var team in _teams)
+        {
+            team.GotHelped = false;
+        }
     }
 }

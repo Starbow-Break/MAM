@@ -136,9 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22810887a8534324ea547cf9b549cc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteResolver: {fileID: 9123878462812166935}
   _spriteLibrary: {fileID: 4994734500049081280}
-  _detecter: {fileID: 3725084601284872886}
+  _detector: {fileID: 3725084601284872886}
+  _spriteResolver: {fileID: 9123878462812166935}
+  _animator: {fileID: 6241298353178126811}
 --- !u!1 &2888775006157134406
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ GameObject:
   - component: {fileID: 8354655507307387443}
   - component: {fileID: 1795721935061058264}
   - component: {fileID: 588159623801230331}
+  - component: {fileID: 6241298353178126811}
   - component: {fileID: 4994734500049081280}
   - component: {fileID: 9123878462812166935}
   m_Layer: 0
@@ -297,6 +299,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6241298353178126811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4626228738448050762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b1150f8d620e646a6e8fdc2e2bfd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 588159623801230331}
 --- !u!114 &4994734500049081280
 MonoBehaviour:
   m_ObjectHideFlags: 0

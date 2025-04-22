@@ -29,6 +29,7 @@ public class SkillRaiseViewer
         
         //스킬레벨 올리기
         _newSkillLevel = StudentLevelHelper.ApplyMiniGameScore(_student,skillType, score, miniGameDifficulty);
+        _newSkillLevel = Mathf.Floor(_newSkillLevel);
     }
     
     public IEnumerator RaiseCo()

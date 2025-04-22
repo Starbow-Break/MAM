@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class SelfStudySceneManager : ASceneManager<SelfStudySceneManager>
 {
-    [SerializeField] private StudentClickPopupSetter _studentClickPopupSetter;
+    [SerializeField] private StudentClickPopupSetter _studentClickPopupSetter = null;
+    [SerializeField] private SelfStudySceneCharacterSetter _characterSetter = null;
     [SerializeField] private Button _toHomeButton = null;
 
     public int InteractionCount { get; private set; } = 3;
@@ -18,7 +19,7 @@ public class SelfStudySceneManager : ASceneManager<SelfStudySceneManager>
     private void Initialize()
     {
         _studentClickPopupSetter.Initialize();
-        
+        _characterSetter.Initialize();
         _toHomeButton.onClick.AddListener(GameManager.FlowManager.ToNextScene);
     }
 

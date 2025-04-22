@@ -59,6 +59,8 @@ public class PresentSkillRaiseViewer
 
     public IEnumerator RaiseUnityCo()
     {
+        _newUnitySkillLevel = Mathf.Floor(_newUnitySkillLevel);
+        
         if (_newUnitySkillLevel - _startUnitySkillLevel < 1)
             yield break;
 
@@ -79,6 +81,8 @@ public class PresentSkillRaiseViewer
 
     public IEnumerator RaiseCSharpCo()
     {
+        _newCSharpSkillLevel = Mathf.Floor(_newCSharpSkillLevel);
+        
         if (_newCSharpSkillLevel - _startCSharpSkillLevel < 1)
             yield break;
 
