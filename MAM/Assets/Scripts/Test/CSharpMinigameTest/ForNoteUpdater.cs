@@ -13,8 +13,8 @@ public class ForNoteUpdater : ANoteUpdater
     {
         while (_count > 0)
         {
-            yield return new WaitForSeconds(1f);
-            SetCount(_count - 1);
+            yield return new WaitForSeconds(60f / _bpm);
+            Discount();
         }
         
         Destroy(gameObject);
@@ -24,5 +24,10 @@ public class ForNoteUpdater : ANoteUpdater
     {
         _count = count;
         _countText.text = count.ToString();
+    }
+
+    public void Discount()
+    {
+        SetCount(_count - 1);
     }
 }

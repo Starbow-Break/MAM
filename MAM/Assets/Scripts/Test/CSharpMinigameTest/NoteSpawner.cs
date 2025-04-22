@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class NoteSpawner : MonoBehaviour
 {
     [System.Serializable]
-    public struct NoteData
+    public struct NoteUpdaterData
     {
         [field: SerializeField]
         public ENoteType Type { get; private set; }
@@ -12,35 +13,29 @@ public class NoteSpawner : MonoBehaviour
         public ANoteUpdater NoteUpdater { get; private set; }
     }
 
-    [SerializeField] private List<NoteData> noteDatas;
+    [FormerlySerializedAs("noteDatas")] [SerializeField] private List<NoteUpdaterData> noteUpdaterDatas;
     [SerializeField] private Transform judgePoint;
 
-    private void Update()
+    public void SpawnNote(NoteData noteData)
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        foreach (var noteUpdaterData in noteUpdaterDatas)
         {
-            SpawnNote(ENoteType.Normal);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SpawnNote(ENoteType.If);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SpawnNote(ENoteType.For);
-        }
-    }
-
-    public void SpawnNote(ENoteType type)
-    {
-        foreach (var noteData in noteDatas)
-        {
-            if (noteData.Type == type)
+            if (noteUpdaterData.Type == noteData.type && noteUpdaterData.NoteUpdater != null)
             {
-                ANoteUpdater newUpdater = Instantiate(noteData.NoteUpdater, transform.position, Quaternion.identity);
+                ANoteUpdater newUpdater = Instantiate(noteUpdaterData.NoteUpdater, transform.position, Quaternion.identity);
                 newUpdater.SetBpm(120);
                 newUpdater.SetDestination(transform.position);
                 newUpdater.SetArrival(judgePoint.position);
+
+                switch (noteData.type)
+                {
+                    case ENoteType.For:
+                    {
+                        ForNoteUpdater newUpdaterFor = newUpdater.GetComponent<ForNoteUpdater>();
+                        newUpdaterFor.SetCount(noteData.count);
+                        break;
+                    }
+                }
                 break;
             }
         }

@@ -7,18 +7,20 @@ public class NormalNoteUpdater : ANoteUpdater
     {
         float duration = 60f / _bpm;
         float currentTime = 0.0f;
-        while (currentTime < duration)
+        while (currentTime < duration * 2f)
         {
             currentTime += Time.deltaTime;
             float normalizedTime = currentTime / duration;
             float value = MoveCurve(normalizedTime);
-            transform.position = Vector3.Lerp(_destination, _arrival, value);
+            transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
             yield return null;
         }
+        
+        Destroy(gameObject);
     }
 
     private float MoveCurve(float x)
     {
-        return Mathf.Pow(1.0f - Mathf.Cos(x / 2.0f * Mathf.PI), 5);
+        return Mathf.Pow(x, 30);
     }
 }

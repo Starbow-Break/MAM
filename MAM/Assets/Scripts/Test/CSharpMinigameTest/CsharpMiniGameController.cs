@@ -68,7 +68,7 @@ public class CsharpMiniGameController : MonoBehaviour
             if (noteQueue.First().time - 1 == beat)
             {
                 Debug.Log($"Spawn Note : {noteQueue.First().type}");
-                _noteSpawner.SpawnNote(ENoteType.Normal);
+                _noteSpawner.SpawnNote(noteQueue.First());
                 noteQueue.Dequeue();
             }
             
