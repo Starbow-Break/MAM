@@ -41,9 +41,6 @@ TextureImporter:
   - first:
       213: 1195881231753726471
     second: ChulJin_Idle_12
-  - first:
-      213: -4540418074420929439
-    second: ChulJin_Idle_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -464,10 +461,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 16c906641d13df0c0800000000000000
-      internalID: -4540418074420929439
+      spriteID: 3162b416a5e9f6f4c920450207841ea3
+      internalID: -607154271
       vertices: []
       indices: 
       edges: []
@@ -488,8 +485,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6f536fa1bfe4af49960a2638bffd154
-      internalID: -253296190
+      spriteID: 63ea9d70954342347b0a5625e72d9cd7
+      internalID: 313630306
       vertices: []
       indices: 
       edges: []
@@ -510,8 +507,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71f14c42154a1b9459f7a75cbecc0294
-      internalID: -1489474928
+      spriteID: 063a75c5c37e63c4c809498df34cf61f
+      internalID: -397025
       vertices: []
       indices: 
       edges: []
@@ -532,8 +529,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426efc270f64a0044be93e34ebb5575c
-      internalID: 590753630
+      spriteID: e7badb602c4466948a13214b1ce5e64c
+      internalID: 2061562125
       vertices: []
       indices: 
       edges: []
@@ -554,8 +551,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91232376f87aaf34390f0053f51c4f77
-      internalID: 1779288002
+      spriteID: e6d17e06bba675a4baa0ebe66ec11696
+      internalID: -1160127716
       vertices: []
       indices: 
       edges: []
@@ -576,8 +573,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d79d8e90381d58459567dda1788482e
-      internalID: -679560471
+      spriteID: 4694419a0fc68bb41b0824c940e5b936
+      internalID: 850861157
       vertices: []
       indices: 
       edges: []
@@ -598,8 +595,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0bd06d0f57bdd545b85e156e7160beb
-      internalID: 748560177
+      spriteID: b8c9a24438abf094b8b12df0efbdc2b6
+      internalID: -1315044267
       vertices: []
       indices: 
       edges: []
@@ -620,8 +617,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dfc5d4f45c931c40861e9a733d7a882
-      internalID: -1102701694
+      spriteID: 374bd919fdd850a428e21b374f72403b
+      internalID: -935767914
       vertices: []
       indices: 
       edges: []
@@ -642,8 +639,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e0e16ee8061494cafcec5a55e850e9
-      internalID: -1971650542
+      spriteID: 98afda67302482343971b741f8841413
+      internalID: 1258719878
       vertices: []
       indices: 
       edges: []
@@ -664,8 +661,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1fdd68ad1109544287cbcae540a95d8
-      internalID: 629008758
+      spriteID: 5e19244c433a9e64e8e5198134585484
+      internalID: -1776398256
       vertices: []
       indices: 
       edges: []
@@ -686,8 +683,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c382484e328cc6146b96bb3794c2642f
-      internalID: -439339112
+      spriteID: 98049beb042d134469a1f42b39b2d71f
+      internalID: -913367192
       vertices: []
       indices: 
       edges: []
@@ -696,7 +693,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d7f240af2992504419610aee2bac1f72
+    spriteID: 69a69e72d422f4c49a789a152a86b639
     internalID: 0
     vertices: []
     indices: 
@@ -711,18 +708,18 @@ TextureImporter:
       ChulJin_Idle_10: -7290709594113033373
       ChulJin_Idle_11: 3690983169408912712
       ChulJin_Idle_12: 1195881231753726471
-      ChulJin_Idle_13: -4540418074420929439
-      ChulJin_Idle_14: -253296190
-      ChulJin_Idle_15: -1489474928
-      ChulJin_Idle_16: 590753630
-      ChulJin_Idle_17: 1779288002
-      ChulJin_Idle_18: -679560471
-      ChulJin_Idle_19: 748560177
+      ChulJin_Idle_13: -607154271
+      ChulJin_Idle_14: 313630306
+      ChulJin_Idle_15: -397025
+      ChulJin_Idle_16: 2061562125
+      ChulJin_Idle_17: -1160127716
+      ChulJin_Idle_18: 850861157
+      ChulJin_Idle_19: -1315044267
       ChulJin_Idle_2: -1277868673004340172
-      ChulJin_Idle_20: -1102701694
-      ChulJin_Idle_21: -1971650542
-      ChulJin_Idle_22: 629008758
-      ChulJin_Idle_23: -439339112
+      ChulJin_Idle_20: -935767914
+      ChulJin_Idle_21: 1258719878
+      ChulJin_Idle_22: -1776398256
+      ChulJin_Idle_23: -913367192
       ChulJin_Idle_3: 3518081730702032643
       ChulJin_Idle_4: 4620716752484347078
       ChulJin_Idle_5: -8874135125135631848
