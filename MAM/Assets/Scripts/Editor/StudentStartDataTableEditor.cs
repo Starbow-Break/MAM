@@ -90,7 +90,7 @@ public class StudentStartDataTableLoader
     private static string ICON = "Icon";
 
     private static string AFFINITY_CARROT = "당근";
-    private static int SPRITE_INDEX = 18;
+    private static string SPRITE_NAME = "_Idle_18";
     public void LoadSheet(string tsv)
     {
         StudentStartDataList = new List<StudentStartData>();
@@ -152,8 +152,13 @@ public class StudentStartDataTableLoader
                 {
                     Object[] assets = AssetDatabase.LoadAllAssetsAtPath(columns[j]);
                     Sprite[] sprites = assets.OfType<Sprite>().ToArray();
-                    
-                    Sprite targetSprite = sprites[SPRITE_INDEX]; 
+                    int index = Array.FindIndex(sprites, sprite => sprite.name == desc.ID + SPRITE_NAME);
+                    if (index == -1)
+                    {
+                        Debug.Log(sprites[0].name +" vs "+ desc.ID + SPRITE_NAME);
+                        continue;
+                    }
+                    Sprite targetSprite = sprites[index]; 
                     desc.Icon = targetSprite;
                 }
             }

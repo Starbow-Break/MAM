@@ -102,7 +102,7 @@ MonoBehaviour:
     AffinityType: 0
     CSharpSkill: 2
     UnitySkill: 2
-    Icon: {fileID: -679560471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+    Icon: {fileID: 850861157, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
   - ID: DoKyung
     Name: "\uC624\uB3C4\uACBD"
     MBTI: ENTP
@@ -222,4 +222,4 @@ MonoBehaviour:
     AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: -50426827, guid: d660399e5f0077b4c835ebb9f5a50d0b, type: 3}
+    Icon: {fileID: -1305906667, guid: d660399e5f0077b4c835ebb9f5a50d0b, type: 3}
