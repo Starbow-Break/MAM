@@ -253,13 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84826688e2c8d84f82d30115df00db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteDatas:
-  - <Type>k__BackingField: 0
-    <NoteUpdater>k__BackingField: {fileID: 7598528410065307033, guid: f2a8bd36a9b7dfb4db63d20c008a6424, type: 3}
-  - <Type>k__BackingField: 1
-    <NoteUpdater>k__BackingField: {fileID: 7241814639305245143, guid: 225c820698dc29340bb583dd87f170d7, type: 3}
-  - <Type>k__BackingField: 2
-    <NoteUpdater>k__BackingField: {fileID: 2047358006535828378, guid: e5c818b6d850aec408841f9ae2315d39, type: 3}
+  noteUpdaterDatas: []
   judgePoint: {fileID: 1371108195}
 --- !u!1 &960225112
 GameObject:
