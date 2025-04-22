@@ -63,39 +63,39 @@ MonoBehaviour:
       m_Sprite: {fileID: 1195881231753726471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Right_1
       m_Hash: 370097243
-      m_Sprite: {fileID: -4540418074420929439, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -607154271, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Right_2
       m_Hash: 252079585
-      m_Sprite: {fileID: -253296190, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: 313630306, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Right_3
       m_Hash: 939613559
-      m_Sprite: {fileID: -1489474928, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -397025, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Right_4
       m_Hash: 644204756
-      m_Sprite: {fileID: 590753630, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: 2061562125, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Right_5
       m_Hash: 291698754
-      m_Sprite: {fileID: 1779288002, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -1160127716, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
   - m_Name: Idle_Front
     m_Hash: 446710479
     m_CategoryList:
     - m_Name: Idle_Front_0
       m_Hash: 244535893
-      m_Sprite: {fileID: -679560471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: 850861157, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Front_1
       m_Hash: 966025923
-      m_Sprite: {fileID: 748560177, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -1315044267, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Front_2
       m_Hash: 547173241
-      m_Sprite: {fileID: -1102701694, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -935767914, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Front_3
       m_Hash: 395969519
-      m_Sprite: {fileID: -1971650542, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: 1258719878, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Front_4
       m_Hash: 167679564
-      m_Sprite: {fileID: 629008758, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -1776398256, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
     - m_Name: Idle_Front_5
       m_Hash: 1056548570
-      m_Sprite: {fileID: -439339112, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+      m_Sprite: {fileID: -913367192, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
   m_ModificationHash: 638805925612557880
   m_Version: 1
