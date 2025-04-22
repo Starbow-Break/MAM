@@ -89,6 +89,7 @@ public class StudentStartDataTableLoader
     private static string AFFINITY = "Affinity";
     private static string ICON = "Icon";
 
+    private static string AFFINITY_CARROT = "당근";
     private static int SPRITE_INDEX = 18;
     public void LoadSheet(string tsv)
     {
@@ -137,13 +138,13 @@ public class StudentStartDataTableLoader
                 if (itemNames[j] == AFFINITY)
                 { 
                     string input = columns[j];
-                    if (Enum.TryParse<EAffinityType>(input, out var result))
+                    if (columns[j] == AFFINITY_CARROT)
                     {
-                        desc.AffinityType = result;
+                        desc.AffinityType = EAffinityType.Carrot;
                     }
                     else
                     {
-                        desc.AffinityType = EAffinityType.Carrot;
+                        desc.AffinityType = EAffinityType.Whip;
                     }
                     continue;
                 }

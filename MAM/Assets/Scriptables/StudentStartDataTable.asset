@@ -27,7 +27,7 @@ MonoBehaviour:
     Name: "\uAE40\uC724\uB3C4"
     MBTI: INFJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 2
     Icon: {fileID: -1755194631, guid: a0fdd48e60399484a814dee32fcbbe91, type: 3}
@@ -35,7 +35,7 @@ MonoBehaviour:
     Name: "\uAE40\uC218\uBC94"
     MBTI: INFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 6
     UnitySkill: 3
     Icon: {fileID: -1512749064, guid: 389109dcc0df23c4282a80eab414c8d2, type: 3}
@@ -43,7 +43,7 @@ MonoBehaviour:
     Name: "\uAE40\uC815\uD0DC"
     MBTI: ESTJ
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: 1942558141, guid: 3b18837e52ede8d4a901cbe54f18106a, type: 3}
@@ -59,7 +59,7 @@ MonoBehaviour:
     Name: "\uBC15\uB098\uBB34"
     MBTI: ESFP
     FavRestaurant: "\uD574\uB2F4\uAC00"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 1
     Icon: {fileID: 2103112910, guid: 30caf2b751686a5438938d599352e753, type: 3}
@@ -67,10 +67,10 @@ MonoBehaviour:
     Name: "\uBCC0\uD6C8\uC2B9"
     MBTI: INTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 1
-    Icon: {fileID: -1575385149, guid: dd350afb0da55a848b29b67761fb6bb0, type: 3}
+    Icon: {fileID: 626935199, guid: c461d86ea66b2bd4183517db38660498, type: 3}
   - ID: JaeWoo
     Name: "\uC11D\uC6B0\uC7AC"
     MBTI: INFJ
@@ -91,10 +91,10 @@ MonoBehaviour:
     Name: "\uC1A1\uBB34\uC601"
     MBTI: ENTP
     FavRestaurant: "\uC57C\uBBF8\uCE74\uCE20"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 3
-    Icon: {fileID: -679560471, guid: 7a5e6765f1beefc4b8937af27a0a4aab, type: 3}
+    Icon: {fileID: 563725997, guid: c3451366c792a5d4a9fc8d17f0dc7f43, type: 3}
   - ID: ChulJin
     Name: "\uC5FC\uC9C4\uCCA0"
     MBTI: ENTJ
@@ -131,7 +131,7 @@ MonoBehaviour:
     Name: "\uC774\uC5F0\uC18C"
     MBTI: ENFP
     FavRestaurant: "\uB3C4\uC2DC\uB77D"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 2
     Icon: {fileID: 918305889, guid: 9ecd62b24a5faa947a7f151c5f68d26d, type: 3}
@@ -139,7 +139,7 @@ MonoBehaviour:
     Name: "\uC774\uC194\uC608"
     MBTI: INTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: -1302352854, guid: 14f4a22028c732b4daab056b2fa1efa4, type: 3}
@@ -147,7 +147,7 @@ MonoBehaviour:
     Name: "\uC774\uC9C4\uC6D0"
     MBTI: INFP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 1
     UnitySkill: 3
     Icon: {fileID: 393640642, guid: 946f9e63ca7f7414a9c90f8685c95b6d, type: 3}
@@ -155,7 +155,7 @@ MonoBehaviour:
     Name: "\uC815\uC744\uAC00"
     MBTI: INTJ
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 307480820, guid: f84d3a54c7eff8b4e848e61b3db416a4, type: 3}
@@ -163,7 +163,7 @@ MonoBehaviour:
     Name: "\uC870\uD76C\uC724"
     MBTI: INTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: -777213121, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
@@ -171,7 +171,7 @@ MonoBehaviour:
     Name: "\uCC28\uD604\uC0C1"
     MBTI: INFP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: 1795895343, guid: 598d2209762f2c144809751008ae3444, type: 3}
@@ -187,7 +187,7 @@ MonoBehaviour:
     Name: "\uCD5C\uD658\uC11D"
     MBTI: ISTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: -2103347801, guid: 1be2fa68cfb9df94fa0378e3ff33588d, type: 3}
@@ -195,7 +195,7 @@ MonoBehaviour:
     Name: "\uCD5C\uC7AC\uD615"
     MBTI: ISTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: -2067811856, guid: aa180d95ac5d1fb4488295a9ebbd334d, type: 3}
@@ -203,7 +203,7 @@ MonoBehaviour:
     Name: "\uD55C\uD6C8\uAE38"
     MBTI: INFP
     FavRestaurant: "\uB3C4\uC2DC\uB77D"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 2
     UnitySkill: 2
     Icon: {fileID: -1490443361, guid: af84ff37eac91e34f8d67c56d63a4585, type: 3}
@@ -211,7 +211,7 @@ MonoBehaviour:
     Name: "\uD55C\uC601\uD0DC"
     MBTI: INTP
     FavRestaurant: "\uBC25"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 2
     UnitySkill: 1
     Icon: {fileID: 1657866132, guid: 4374731b4034226409a731a8919bc59b, type: 3}
@@ -219,7 +219,7 @@ MonoBehaviour:
     Name: "\uD64D\uC601\uCC44"
     MBTI: INTJ
     FavRestaurant: "\uD574\uB2F4\uAC00"
-    AffinityType: 0
+    AffinityType: 1
     CSharpSkill: 3
     UnitySkill: 1
     Icon: {fileID: -50426827, guid: d660399e5f0077b4c835ebb9f5a50d0b, type: 3}
