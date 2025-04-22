@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
-public class SelfStudySceneCharacterSetter : MonoBehaviour
+public class PresentSceneCharacterSetter : MonoBehaviour
 {
     [SerializeField] private List<ACharacterSpot> _characterSpots = new List<ACharacterSpot>();
     private List<StudentCharacter> _characters = new List<StudentCharacter>();
@@ -25,16 +25,7 @@ public class SelfStudySceneCharacterSetter : MonoBehaviour
         {
             if (characterQueue.Count <= 0)
                 return;
-            
-            if (spot is ADoubleCharacterSpot doubleCharacterSpot)
-            {
-                if(characterQueue.Count <= 1)
-                    continue;
-                
-                doubleCharacterSpot.SetCharacters(characterQueue.Dequeue(), characterQueue.Dequeue());
-                continue;
-            }
-            
+
             spot.SetCharacter(characterQueue.Dequeue());
         }
     }
