@@ -13,8 +13,8 @@ public class FlowManager : MonoBehaviour
     [SerializeField] private float[] _projectProgressGoals = null;
     
     //[SerializeField] private int _totalProjectCount = 3;
-    private int _currentDay = 0;
-    private int _currentProject = 0;
+    private int _currentDay = 1;
+    private int _currentProject = 1;
     
     public int GetCurrentPojectNumber { get { return _currentProject; } }
     public float GetCurrentProjectGoal { get { return _projectProgressGoals[_currentProject - 1]; } }
@@ -36,8 +36,8 @@ public class FlowManager : MonoBehaviour
     {
         //필요하다면 나중에 날, 프로젝트 카운트 세팅
         _sceneController.LoadScene(ESceneIndex.TeamSelect);
-        _currentProject++;
-        _currentDay++;
+        _currentProject = 1;
+        _currentDay = 1;
     }
     
     public void ToNextScene()

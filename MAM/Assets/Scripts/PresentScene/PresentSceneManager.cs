@@ -4,6 +4,7 @@ public class PresentSceneManager : ASceneManager<PresentSceneManager>
 {
     [SerializeField] private TeamGradeButtonSetter _teamGradeButtonSetter = null;
     [SerializeField] private PresentSkillRaiseSetter _presentSkillRaiseSetter = null;
+    [SerializeField] private PresentSceneCharacterSetter _presentSceneCharacterSetter = null;
     
     [SerializeField] private DemoGameManagerHelper _demoGameManagerHelper = null;
 
@@ -23,6 +24,7 @@ public class PresentSceneManager : ASceneManager<PresentSceneManager>
         
         _teamGradeButtonSetter.Initialize();
         _presentSkillRaiseSetter.Initialize();
+        _presentSceneCharacterSetter.Initialize();
     }
 
 }
