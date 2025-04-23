@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GillHoon_Idle_0
+      name: GillHoon_Idle_00
       rect:
         serializedVersion: 2
         x: 0
@@ -134,7 +134,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -148,7 +148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_1
+      name: GillHoon_Idle_01
       rect:
         serializedVersion: 2
         x: 32
@@ -156,7 +156,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_2
+      name: GillHoon_Idle_02
       rect:
         serializedVersion: 2
         x: 64
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_3
+      name: GillHoon_Idle_03
       rect:
         serializedVersion: 2
         x: 96
@@ -200,7 +200,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_4
+      name: GillHoon_Idle_04
       rect:
         serializedVersion: 2
         x: 128
@@ -222,7 +222,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_5
+      name: GillHoon_Idle_05
       rect:
         serializedVersion: 2
         x: 160
@@ -244,7 +244,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,7 +258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_6
+      name: GillHoon_Idle_06
       rect:
         serializedVersion: 2
         x: 192
@@ -266,7 +266,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,7 +280,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_7
+      name: GillHoon_Idle_07
       rect:
         serializedVersion: 2
         x: 224
@@ -288,7 +288,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,7 +302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_8
+      name: GillHoon_Idle_08
       rect:
         serializedVersion: 2
         x: 256
@@ -310,7 +310,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -324,7 +324,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GillHoon_Idle_9
+      name: GillHoon_Idle_09
       rect:
         serializedVersion: 2
         x: 288
@@ -332,7 +332,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -354,7 +354,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -376,7 +376,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -398,7 +398,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -442,7 +442,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -464,7 +464,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -486,7 +486,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -508,7 +508,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -530,7 +530,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -552,7 +552,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -574,7 +574,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -596,7 +596,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -618,7 +618,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -640,7 +640,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -667,8 +667,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GillHoon_Idle_0: -1205825628355737050
-      GillHoon_Idle_1: 888262765
+      GillHoon_Idle_00: -1205825628355737050
+      GillHoon_Idle_01: 888262765
+      GillHoon_Idle_02: -1699062783
+      GillHoon_Idle_03: 1010752545
+      GillHoon_Idle_04: 1352399320
+      GillHoon_Idle_05: 626336209
+      GillHoon_Idle_06: -90741347
+      GillHoon_Idle_07: 1368321107
+      GillHoon_Idle_08: 1769044812
+      GillHoon_Idle_09: 74469181
       GillHoon_Idle_10: -785989607
       GillHoon_Idle_11: -439356905
       GillHoon_Idle_12: 682684288
@@ -679,18 +687,10 @@ TextureImporter:
       GillHoon_Idle_17: 662596743
       GillHoon_Idle_18: -1490443361
       GillHoon_Idle_19: 256747504
-      GillHoon_Idle_2: -1699062783
       GillHoon_Idle_20: 1573660891
       GillHoon_Idle_21: -1410351722
       GillHoon_Idle_22: -636288663
       GillHoon_Idle_23: -1612908637
-      GillHoon_Idle_3: 1010752545
-      GillHoon_Idle_4: 1352399320
-      GillHoon_Idle_5: 626336209
-      GillHoon_Idle_6: -90741347
-      GillHoon_Idle_7: 1368321107
-      GillHoon_Idle_8: 1769044812
-      GillHoon_Idle_9: 74469181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

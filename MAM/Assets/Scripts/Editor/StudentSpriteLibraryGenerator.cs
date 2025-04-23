@@ -1,8 +1,10 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using System.IO;
 using System.Linq;
+using Object = UnityEngine.Object;
 
 public class StudentSpriteLibraryGenerator : EditorWindow
 {
@@ -13,6 +15,7 @@ public class StudentSpriteLibraryGenerator : EditorWindow
     private string _ouputFolder = "Assets/SpriteLibraries";
 
     private Texture2D _idleSheet = null;
+    private Texture2D _walkSheet = null;
 
     [MenuItem("Tools/Student Sprite Library Generator")]
     public static void ShowWindow()
@@ -38,6 +41,10 @@ public class StudentSpriteLibraryGenerator : EditorWindow
         
         EditorGUILayout.Space();
         
+        _walkSheet = EditorGUILayout.ObjectField("Walk Sheet", _walkSheet, typeof(Texture2D), false) as Texture2D;
+        
+        EditorGUILayout.Space();
+        
         if (GUILayout.Button("Generate"))
         {
             GenerateLibrary();
@@ -60,22 +67,24 @@ public class StudentSpriteLibraryGenerator : EditorWindow
         //baseLibrary 복사
         SpriteLibraryAsset newLib = Object.Instantiate(_baseLibrary);
         newLib.name = _characterName + "Library";
-        
+
+        #region Idle
+
         //시트안의 스프라이트 가져오기
         string sheetPath = AssetDatabase.GetAssetPath(_idleSheet);
         var sprites = AssetDatabase.LoadAllAssetsAtPath(sheetPath)
             .OfType<Sprite>()
+            .OrderBy(sprite => sprite.name)
             .ToArray();
-        
         
         //카테고리 / 레이블에 덮어쓰기
         int spriteIndex = 0;
         
-        string category = "Idle_Left";
+        string category = "Idle_Right";
         for (int i = 0; i < 6; i++)
         {
-            newLib.RemoveCategoryLabel(category,$"Idle_Left_{i}",false);
-            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Idle_Left_{i}");
+            newLib.RemoveCategoryLabel(category,$"Idle_Right_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Idle_Right_{i}");
             
             spriteIndex++;
         }
@@ -88,11 +97,11 @@ public class StudentSpriteLibraryGenerator : EditorWindow
             spriteIndex++;
         }
         
-        category = "Idle_Right";
+        category = "Idle_Left";
         for (int i = 0; i < 6; i++)
         {
-            newLib.RemoveCategoryLabel(category,$"Idle_Right_{i}",false);
-            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Idle_Right_{i}");
+            newLib.RemoveCategoryLabel(category,$"Idle_Left_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Idle_Left_{i}");
             spriteIndex++;
         }
         
@@ -103,6 +112,53 @@ public class StudentSpriteLibraryGenerator : EditorWindow
             newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Idle_Front_{i}");
             spriteIndex++;
         }
+        #endregion
+        
+        
+        #region Walk
+
+        //시트안의 스프라이트 가져오기
+        sheetPath = AssetDatabase.GetAssetPath(_walkSheet);
+        sprites = AssetDatabase.LoadAllAssetsAtPath(sheetPath)
+            .OfType<Sprite>()
+            .OrderBy(sprite => sprite.name)
+            .ToArray();
+        
+        //카테고리 / 레이블에 덮어쓰기
+        spriteIndex = 0;
+        category = "Walk_Right";
+        for (int i = 0; i < 6; i++)
+        {
+            newLib.RemoveCategoryLabel(category,$"Walk_Right_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Walk_Right_{i}");
+            
+            spriteIndex++;
+        }
+        
+        category = "Walk_Back";
+        for (int i = 0; i < 6; i++)
+        {
+            newLib.RemoveCategoryLabel(category,$"Walk_Back_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Walk_Back_{i}");
+            spriteIndex++;
+        }
+        
+        category = "Walk_Left";
+        for (int i = 0; i < 6; i++)
+        {
+            newLib.RemoveCategoryLabel(category,$"Walk_Left_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Walk_Left_{i}");
+            spriteIndex++;
+        }
+        
+        category = "Walk_Front";
+        for (int i = 0; i < 6; i++)
+        {
+            newLib.RemoveCategoryLabel(category,$"Walk_Front_{i}",false);
+            newLib.AddCategoryLabel(sprites[spriteIndex],category,$"Walk_Front_{i}");
+            spriteIndex++;
+        }
+        #endregion
         
         
         //저장

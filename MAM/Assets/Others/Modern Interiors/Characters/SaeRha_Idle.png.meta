@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SaeRha_Idle_0
+      name: SaeRha_Idle_00
       rect:
         serializedVersion: 2
         x: 0
@@ -134,7 +134,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -148,7 +148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_1
+      name: SaeRha_Idle_01
       rect:
         serializedVersion: 2
         x: 32
@@ -156,7 +156,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_2
+      name: SaeRha_Idle_02
       rect:
         serializedVersion: 2
         x: 64
@@ -178,7 +178,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_3
+      name: SaeRha_Idle_03
       rect:
         serializedVersion: 2
         x: 96
@@ -200,7 +200,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_4
+      name: SaeRha_Idle_04
       rect:
         serializedVersion: 2
         x: 128
@@ -222,7 +222,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_5
+      name: SaeRha_Idle_05
       rect:
         serializedVersion: 2
         x: 160
@@ -244,7 +244,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,7 +258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_6
+      name: SaeRha_Idle_06
       rect:
         serializedVersion: 2
         x: 192
@@ -266,7 +266,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,7 +280,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_7
+      name: SaeRha_Idle_07
       rect:
         serializedVersion: 2
         x: 224
@@ -288,7 +288,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,7 +302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_8
+      name: SaeRha_Idle_08
       rect:
         serializedVersion: 2
         x: 256
@@ -310,7 +310,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -324,7 +324,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SaeRha_Idle_9
+      name: SaeRha_Idle_09
       rect:
         serializedVersion: 2
         x: 288
@@ -332,7 +332,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -354,7 +354,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -376,7 +376,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -398,7 +398,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -442,7 +442,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -464,7 +464,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -486,7 +486,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -508,7 +508,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -530,7 +530,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -552,7 +552,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -574,7 +574,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -596,7 +596,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -618,7 +618,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -640,7 +640,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -667,8 +667,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SaeRha_Idle_0: -4568245628416448921
-      SaeRha_Idle_1: 1733070900
+      SaeRha_Idle_00: -4568245628416448921
+      SaeRha_Idle_01: 1733070900
+      SaeRha_Idle_02: -1698789127
+      SaeRha_Idle_03: 902507150
+      SaeRha_Idle_04: 1338617180
+      SaeRha_Idle_05: 1483243008
+      SaeRha_Idle_06: -2127422683
+      SaeRha_Idle_07: 2057748775
+      SaeRha_Idle_08: 1362257785
+      SaeRha_Idle_09: 620911304
       SaeRha_Idle_10: -180737848
       SaeRha_Idle_11: -479592835
       SaeRha_Idle_12: -295376864
@@ -679,18 +687,10 @@ TextureImporter:
       SaeRha_Idle_17: 543138535
       SaeRha_Idle_18: 523002919
       SaeRha_Idle_19: -784839600
-      SaeRha_Idle_2: -1698789127
       SaeRha_Idle_20: 373213019
       SaeRha_Idle_21: -128204429
       SaeRha_Idle_22: -427459188
       SaeRha_Idle_23: 767026040
-      SaeRha_Idle_3: 902507150
-      SaeRha_Idle_4: 1338617180
-      SaeRha_Idle_5: 1483243008
-      SaeRha_Idle_6: -2127422683
-      SaeRha_Idle_7: 2057748775
-      SaeRha_Idle_8: 1362257785
-      SaeRha_Idle_9: 620911304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

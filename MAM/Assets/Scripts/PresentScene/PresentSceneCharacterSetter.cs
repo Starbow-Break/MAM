@@ -12,7 +12,6 @@ public class PresentSceneCharacterSetter : MonoBehaviour
         {
             StudentCharacter character = GameManager.StudentManager.GetStudentCharacter(id);
             character.transform.SetParent(transform);
-            character.InitializeClickDetector();
             character.gameObject.SetActive(true);
 
             _characters.Add(character);
