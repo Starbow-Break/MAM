@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 5441669723424158796}
+  _rotator: {fileID: 9179164695918267623}
 --- !u!114 &9179164695918267623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,4 +115,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c861bef5a7a80ca4cb730226b728eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotateSpeed: 30
+  rotateAngle: 120
+  pulseIntensity: 5

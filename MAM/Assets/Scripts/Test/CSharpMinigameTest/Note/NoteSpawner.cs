@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Events;
 
 public class NoteSpawner : MonoBehaviour
 {
@@ -13,8 +13,10 @@ public class NoteSpawner : MonoBehaviour
         public ANoteUpdater NoteUpdater { get; private set; }
     }
 
-    [FormerlySerializedAs("noteDatas")] [SerializeField] private List<NoteUpdaterData> noteUpdaterDatas;
-    [SerializeField] private Transform judgePoint;
+    [SerializeField] private List<NoteUpdaterData> noteUpdaterDatas;
+    [SerializeField] private Transform destroyPoint;
+
+    public UnityAction<ENoteType> OnSpawnedNote;
 
     public void SpawnNote(NoteData noteData)
     {
@@ -25,7 +27,7 @@ public class NoteSpawner : MonoBehaviour
                 ANoteUpdater newUpdater = Instantiate(noteUpdaterData.NoteUpdater, transform.position, Quaternion.identity);
                 newUpdater.SetBpm(120);
                 newUpdater.SetDestination(transform.position);
-                newUpdater.SetArrival(judgePoint.position);
+                newUpdater.SetArrival(destroyPoint.position);
 
                 switch (noteData.type)
                 {
@@ -36,6 +38,8 @@ public class NoteSpawner : MonoBehaviour
                         break;
                     }
                 }
+                
+                OnSpawnedNote?.Invoke(noteData.type);
                 break;
             }
         }

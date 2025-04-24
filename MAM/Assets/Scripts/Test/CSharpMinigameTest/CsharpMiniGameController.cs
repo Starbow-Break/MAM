@@ -14,13 +14,17 @@ public class CsharpMiniGameController : MonoBehaviour
 
     private int beat = 0;
     private float realTime = 0.0f;
-    
-    public void Play(ChartData chartData)
-    {
-        SetChartData(chartData);
-        StartCoroutine(PlaySequence());
-    }
 
+    public void OnEnable()
+    {
+        _noteSpawner.OnSpawnedNote += noteType => UpdateUI(noteType);
+    }
+    
+    public void OnDisable()
+    {
+        _noteSpawner.OnSpawnedNote -= noteType => UpdateUI(noteType);
+    }
+    
     private void SetChartData(ChartData chartData)
     {
         _bpm = chartData.bpm;
@@ -31,6 +35,13 @@ public class CsharpMiniGameController : MonoBehaviour
         {
             noteQueue.Enqueue(note);
         }
+    }
+    
+    #region Play Chart
+    public void Play(ChartData chartData)
+    {
+        SetChartData(chartData);
+        StartCoroutine(PlaySequence());
     }
 
     private IEnumerator PlaySequence()
@@ -78,4 +89,12 @@ public class CsharpMiniGameController : MonoBehaviour
             yield return new WaitForSeconds(60f / _bpm);
         }
     }
+    #endregion
+
+    #region UI
+    private void UpdateUI(ENoteType noteType)
+    {
+        
+    }
+    #endregion
 }
