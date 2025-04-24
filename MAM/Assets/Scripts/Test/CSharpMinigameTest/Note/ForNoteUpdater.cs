@@ -17,19 +17,18 @@ public class ForNoteUpdater : ANoteUpdater
     {
         SetRotators();
         
-        float duration = 60f / _bpm;
         while (_count > 0)
         {
             if (_count > 1)
             {
-                yield return new WaitForSeconds(60f / _bpm - _bulletSpawnOffset);
+                yield return new WaitForSeconds(_lifeTime - _bulletSpawnOffset);
                 float dist = (_arrival - _destination).magnitude;
                 _bulletSpawner.SpawnBullet(dist / _bulletSpawnOffset, _bulletSpawnOffset);
                 yield return new WaitForSeconds(_bulletSpawnOffset);
             }
             else
             {
-                yield return MoveSequence(duration);
+                yield return MoveSequence(_lifeTime);
             }
             Discount();
         }
@@ -39,7 +38,7 @@ public class ForNoteUpdater : ANoteUpdater
 
     private void SetRotators()
     {
-        _rotator.SetPeriod(60f / _bpm);
+        _rotator.SetPeriod(_lifeTime);
     }
     
     protected IEnumerator MoveSequence(float duration)

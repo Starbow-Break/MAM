@@ -16,14 +16,13 @@ public class IfNoteUpdater : ANoteUpdater
     {
         SetRotator();
         
-        float duration = 60f / _bpm;
-        yield return MoveSequence(duration);
+        yield return MoveSequence(_lifeTime);
         Destroy(gameObject);
     }
 
     private void SetRotator()
     {
-        _rotator.SetPeriod(60f / _bpm);
+        _rotator.SetPeriod(_lifeTime);
     }
     
     private IEnumerator MoveSequence(float duration)

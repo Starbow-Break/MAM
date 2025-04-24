@@ -7,8 +7,7 @@ public class NormalNoteUpdater : ANoteUpdater
     
     protected override IEnumerator ActSequence()
     {
-        float duration = 60f / _bpm;
-        yield return MoveSequence(duration);
+        yield return MoveSequence(_lifeTime);
         Destroy(gameObject);
     }
 

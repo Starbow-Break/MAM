@@ -18,28 +18,34 @@ public class NoteSpawner : MonoBehaviour
 
     public UnityAction<ENoteType> OnSpawnedNote;
 
-    public void SpawnNote(NoteData noteData)
+    public void SpawnNote(EventQueueData data)
     {
         foreach (var noteUpdaterData in noteUpdaterDatas)
         {
-            if (noteUpdaterData.Type == noteData.type && noteUpdaterData.NoteUpdater != null)
+            if (noteUpdaterData.Type == data.NoteType && noteUpdaterData.NoteUpdater != null)
             {
                 ANoteUpdater newUpdater = Instantiate(noteUpdaterData.NoteUpdater, transform.position, Quaternion.identity);
-                newUpdater.SetBpm(120);
+                newUpdater.SetLifeTime(data.LifeTime);
                 newUpdater.SetDestination(transform.position);
                 newUpdater.SetArrival(destroyPoint.position);
 
-                switch (noteData.type)
+                switch (data.NoteType)
                 {
+                    case ENoteType.If:
+                    {
+                        IfNoteUpdater newUpdaterIf = newUpdater.GetComponent<IfNoteUpdater>();
+                        newUpdaterIf.SetColor(data.Color);
+                        break;
+                    }
                     case ENoteType.For:
                     {
                         ForNoteUpdater newUpdaterFor = newUpdater.GetComponent<ForNoteUpdater>();
-                        newUpdaterFor.SetCount(noteData.count);
+                        newUpdaterFor.SetCount(data.Count);
                         break;
                     }
                 }
                 
-                OnSpawnedNote?.Invoke(noteData.type);
+                OnSpawnedNote?.Invoke(data.NoteType);
                 break;
             }
         }
