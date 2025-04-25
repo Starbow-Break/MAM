@@ -1,16 +1,15 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class ANoteUpdater : MonoBehaviour
 {
-    protected float _bpm;
+    protected float _lifeTime;
     protected Vector3 _destination;
     protected Vector3 _arrival;
 
-    public void SetBpm(float bpm)
+    public void SetLifeTime(float bpm)
     {
-        _bpm = bpm;
+        _lifeTime = bpm;
     }
     
     public void SetDestination(Vector3 destination)

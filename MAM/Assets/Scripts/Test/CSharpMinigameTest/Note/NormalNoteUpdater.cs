@@ -3,22 +3,32 @@ using UnityEngine;
 
 public class NormalNoteUpdater : ANoteUpdater
 {
+    [SerializeField, Min(0)] private int _moveIntensity = 4;
+    
     protected override IEnumerator ActSequence()
     {
-        float duration = 60f / _bpm;
+        var noteQueue = CSharpMiniGameQueue.NoteQueue;
+        noteQueue.Enqueue(gameObject);
+        
+        yield return MoveSequence(_lifeTime);
+        Destroy(gameObject);
+    }
+
+    private IEnumerator MoveSequence(float duration)
+    {
         float currentTime = 0.0f;
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
             float normalizedTime = currentTime / duration;
             float value = MoveCurve(normalizedTime);
-            transform.position = Vector3.Lerp(_destination, _arrival, value);
+            transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
             yield return null;
         }
     }
 
     private float MoveCurve(float x)
     {
-        return Mathf.Pow(1.0f - Mathf.Cos(x / 2.0f * Mathf.PI), 5);
+        return ConstantCurve.PolyEaseIn(_moveIntensity, x);
     }
 }
