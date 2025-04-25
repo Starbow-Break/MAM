@@ -11,16 +11,8 @@ public class JudgeEffectUpdater : MonoBehaviour
         public Transform transform;
     }
     
-    [System.Serializable]
-    public struct JudgeEffectSprite
-    {
-        public ENoteType noteType;
-        public Sprite sprite;
-    }
-    
     [SerializeField] private List<JudgeEffectPoint> _judgeEffectPoints;
     [SerializeField] private SpriteRenderer _objectRenderer;
-    [SerializeField] private List<JudgeEffectSprite> _judgeEffectSprites;
     
     public void Play()
     {
@@ -38,20 +30,25 @@ public class JudgeEffectUpdater : MonoBehaviour
         }
     }
     
-    public void SetEffectSprite(ENoteType noteType)
+    public void SetEffectSprite(Sprite sprite)
     {
-        foreach (var sprite in _judgeEffectSprites)
-        {
-            if (sprite.noteType == noteType)
-            {
-                _objectRenderer.sprite = sprite.sprite;
-            }
-        }
+        _objectRenderer.sprite = sprite;
     }
 
     public void SetSpriteEnabled(bool enabled)
     {
         _objectRenderer.enabled = enabled;
+    }
+    
+    public void SetEffectTransform(Quaternion rotation, Vector3 scale)
+    {
+        _objectRenderer.transform.rotation = rotation;
+        _objectRenderer.transform.localScale = scale;
+    }
+    
+    public void SetEffectColor(Color color)
+    {
+        _objectRenderer.color = color;
     }
 
     private IEnumerator PlaySequence()

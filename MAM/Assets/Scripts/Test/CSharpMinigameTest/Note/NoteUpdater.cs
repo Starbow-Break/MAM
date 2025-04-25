@@ -3,13 +3,25 @@ using UnityEngine;
 
 public abstract class ANoteUpdater : MonoBehaviour
 {
-    protected float _lifeTime;
+    [Header("Model")]
+    [field: SerializeField]
+    public Transform ModelTransform { get; private set; }
+
+    [field: SerializeField] 
+    public SpriteRenderer ModelRenderer { get; private set; }
+    
+    protected float _arriveTime;
     protected Vector3 _destination;
     protected Vector3 _arrival;
 
-    public void SetLifeTime(float bpm)
+    protected void SetActive(bool active)
     {
-        _lifeTime = bpm;
+        gameObject.SetActive(active);
+    }
+    
+    public void SetArriveTime(float arriveTime)
+    {
+        _arriveTime = arriveTime;
     }
     
     public void SetDestination(Vector3 destination)

@@ -8,18 +8,21 @@ public class NormalNoteUpdater : ANoteUpdater
     protected override IEnumerator ActSequence()
     {
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
-        noteQueue.Enqueue(gameObject);
+        noteQueue.Enqueue(this);
         
-        yield return MoveSequence(_lifeTime);
-        Destroy(gameObject);
+        yield return MoveSequence(_arriveTime);
     }
 
     private IEnumerator MoveSequence(float duration)
     {
         float currentTime = 0.0f;
-        while (currentTime < duration)
+        while (true)
         {
             currentTime += Time.deltaTime;
+            if (currentTime >= duration)
+            {
+                SetActive(false);
+            }
             float normalizedTime = currentTime / duration;
             float value = MoveCurve(normalizedTime);
             transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);

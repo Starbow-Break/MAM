@@ -6,12 +6,12 @@ public class CSharpMiniGameJudgeEffectSetter : MonoBehaviour
     
     public void OnEnable()
     {
-        CSharpMiniGame.Controller.OnJudge += (noteType, judge) => ShowEffect(noteType, judge);
+        CSharpMiniGame.Controller.OnJudge += judgeInfo => ShowEffect(judgeInfo);
     }
 
     public void OnDisable()
     {
-        CSharpMiniGame.Controller.OnJudge -= (noteType, judge) => ShowEffect(noteType, judge);
+        CSharpMiniGame.Controller.OnJudge -= judgeInfo => ShowEffect(judgeInfo);
     }
 
     public void Initialize()
@@ -19,12 +19,15 @@ public class CSharpMiniGameJudgeEffectSetter : MonoBehaviour
         _updater.SetSpriteEnabled(false);
     }
     
-    public void ShowEffect(ENoteType noteType, EJudge judge)
+    public void ShowEffect(JudgeInfo judgeInfo)
     {
+        EJudge judge = judgeInfo.Judge;
         if (!(judge == EJudge.None || judge == EJudge.Miss))
         {
             _updater.SetEffectPosition(judge);
-            _updater.SetEffectSprite(noteType);
+            _updater.SetEffectSprite(judgeInfo.NoteSprite);
+            _updater.SetEffectColor(judgeInfo.NoteColor);
+            _updater.SetEffectTransform(judgeInfo.NoteRotation, judgeInfo.NoteScale);
             _updater.Play();
         }
     }

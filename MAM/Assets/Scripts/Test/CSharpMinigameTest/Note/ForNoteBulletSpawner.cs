@@ -9,6 +9,6 @@ public class ForNoteBulletSpawner : MonoBehaviour
         ForNoteBulletUpdater newUpdater = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         newUpdater.SetDestination(transform.position);
         newUpdater.SetArrival(arrival);
-        newUpdater.SetLifeTime(_lifeTime);
+        newUpdater.SetArriveTime(_lifeTime);
     }
 }
