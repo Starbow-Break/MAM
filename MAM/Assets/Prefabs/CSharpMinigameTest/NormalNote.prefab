@@ -100,4 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c2ab1290e565744a635448f074613e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ModelTransform>k__BackingField: {fileID: 2453167046732288450}
+  <ModelRenderer>k__BackingField: {fileID: 8757844415785808404}
+  _renderer: {fileID: 8757844415785808404}
   _moveIntensity: 4

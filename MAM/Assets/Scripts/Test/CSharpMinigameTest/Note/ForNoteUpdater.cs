@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ForNoteUpdater : ANoteUpdater
 {
@@ -20,33 +19,35 @@ public class ForNoteUpdater : ANoteUpdater
         {
             if (_count > 1)
             {
-                _bulletSpawner.SpawnBullet(_arrival, _lifeTime);
-                yield return new WaitForSeconds(_lifeTime);
+                _bulletSpawner.SpawnBullet(_arrival, _arriveTime);
+                yield return new WaitForSeconds(_arriveTime);
             }
             else
             {
                 var noteQueue = CSharpMiniGameQueue.NoteQueue;
-                noteQueue.Enqueue(gameObject);
-                yield return MoveSequence(_lifeTime);
+                noteQueue.Enqueue(this);
+                yield return MoveSequence(_arriveTime);
             }
             Discount();
         }
-        
-        Destroy(gameObject);
     }
 
     private void SetRotators()
     {
-        _rotator.SetPeriod(_lifeTime);
+        _rotator.SetPeriod(_arriveTime);
     }
     
     protected IEnumerator MoveSequence(float duration)
     {
         float currentTime = 0.0f;
         
-        while (currentTime < duration)
+        while (true)
         {
             currentTime += Time.deltaTime;
+            if (currentTime >= duration)
+            {
+                SetActive(false);
+            }
             float normalizedTime = currentTime / duration;
             float value = MoveCurve(normalizedTime);
             transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
@@ -56,7 +57,7 @@ public class ForNoteUpdater : ANoteUpdater
 
     private float MoveCurve(float x)
     {
-        return ConstantCurve.PolyEaseIn(4, x);
+        return ConstantCurve.PolyEaseIn(_moveIntensity, x);
     }
 
     public void SetCount(int count)

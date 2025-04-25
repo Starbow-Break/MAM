@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a9b68130ef0764db6c80f09fd8a098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ModelTransform>k__BackingField: {fileID: 5125059135206133129}
+  <ModelRenderer>k__BackingField: {fileID: 6015615339390479344}
   _countText: {fileID: 672991428238583424}
   _rotator: {fileID: 6617724686349327403}
   _moveIntensity: 4

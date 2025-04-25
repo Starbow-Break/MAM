@@ -11,7 +11,7 @@ public class CSharpMiniGameController : MonoBehaviour
     
     private float startTime;
 
-    public UnityAction<ENoteType, EJudge> OnJudge;
+    public UnityAction<JudgeInfo> OnJudge;
 
     private void OnEnable()
     {
@@ -114,10 +114,19 @@ public class CSharpMiniGameController : MonoBehaviour
         {
             Debug.Log($"{delta} {judge}");
             judgeQueue.Dequeue();
-            GameObject currentNote = noteQueue.Dequeue();
+            
+            var currentNote = noteQueue.Dequeue();
+            SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
+            JudgeInfo judgeInfo = new JudgeInfo(
+                judge,
+                noteRenderer.sprite,
+                new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
+                currentNote.ModelTransform.rotation,
+                currentNote.ModelTransform.localScale
+            );
             Destroy(currentNote);
             
-            OnJudge?.Invoke(judgeData.Type, judge);
+            OnJudge?.Invoke(judgeInfo);
         } 
     }
     
@@ -140,9 +149,17 @@ public class CSharpMiniGameController : MonoBehaviour
             Debug.Log($"{delta} {judge}");
             _testText.text = $"{Mathf.RoundToInt(delta * 1000f)}ms";
             judgeQueue.Dequeue();
-            GameObject currentNote = noteQueue.Dequeue();
-            Destroy(currentNote);
-            OnJudge?.Invoke(judgeData.Type, judge);
+            var currentNote = noteQueue.Dequeue();
+            SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
+            JudgeInfo judgeInfo = new JudgeInfo(
+                judge,
+                noteRenderer.sprite,
+                new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
+                currentNote.ModelTransform.rotation,
+                currentNote.ModelTransform.localScale
+            );
+            Destroy(currentNote.gameObject);
+            OnJudge?.Invoke(judgeInfo);
         }
     }
     #endregion

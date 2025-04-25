@@ -25,7 +25,7 @@ public class NoteSpawner : MonoBehaviour
             if (noteUpdaterData.Type == data.NoteType && noteUpdaterData.NoteUpdater != null)
             {
                 ANoteUpdater newUpdater = Instantiate(noteUpdaterData.NoteUpdater, transform.position, Quaternion.identity);
-                newUpdater.SetLifeTime(data.LifeTime);
+                newUpdater.SetArriveTime(data.LifeTime);
                 newUpdater.SetDestination(transform.position);
                 newUpdater.SetArrival(destroyPoint.position);
 

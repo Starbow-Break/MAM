@@ -6,7 +6,7 @@ public static class CSharpMiniGameQueue
 {
     public static Queue<EventQueueData> EventQueue = new();
     public static Queue<JudgeQueueData> JudgeQueue = new();
-    public static Queue<GameObject> NoteQueue = new();
+    public static Queue<ANoteUpdater> NoteQueue = new();
 
     public static void ClearAllQueues()
     {
