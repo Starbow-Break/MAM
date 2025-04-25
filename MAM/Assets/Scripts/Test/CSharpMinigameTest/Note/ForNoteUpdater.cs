@@ -9,9 +9,8 @@ public class ForNoteUpdater : ANoteUpdater
     [SerializeField] PulseRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     [SerializeField] private ForNoteBulletSpawner _bulletSpawner;
-    [SerializeField] private float _bulletSpawnOffset = 0.1f;
     
-    private int _count = 3; // 박자 
+    private int _count = 3; // 박자
 
     protected override IEnumerator ActSequence()
     {
@@ -21,13 +20,13 @@ public class ForNoteUpdater : ANoteUpdater
         {
             if (_count > 1)
             {
-                yield return new WaitForSeconds(_lifeTime - _bulletSpawnOffset);
-                float dist = (_arrival - _destination).magnitude;
-                _bulletSpawner.SpawnBullet(dist / _bulletSpawnOffset, _bulletSpawnOffset);
-                yield return new WaitForSeconds(_bulletSpawnOffset);
+                _bulletSpawner.SpawnBullet(_arrival, _lifeTime);
+                yield return new WaitForSeconds(_lifeTime);
             }
             else
             {
+                var noteQueue = CSharpMiniGameQueue.NoteQueue;
+                noteQueue.Enqueue(gameObject);
                 yield return MoveSequence(_lifeTime);
             }
             Discount();

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class ChartQueueDataGenerator
@@ -6,6 +7,7 @@ public static class ChartQueueDataGenerator
     private static readonly float MiliSecond = 0.001f;
     private static readonly Color DefaultColor = Color.green;
     private static readonly Color[] IfNoteColors = { Color.red, Color.blue };
+    
     public static ChartQueueData Generate(ChartData chartData)
     {
         ChartQueueData chartQueueData = new ChartQueueData();
@@ -21,6 +23,8 @@ public static class ChartQueueDataGenerator
                 {
                     var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                     chartQueueData.EventQueueDatas.Add(spawnData);
+                    var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;
                 }
                 case ENoteType.If:
@@ -39,6 +43,9 @@ public static class ChartQueueDataGenerator
                         spawnData.Color = color;
                         chartQueueData.EventQueueDatas.Add(spawnData);
                     }
+                    
+                    var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;
                 }
                 case ENoteType.For:
@@ -47,6 +54,8 @@ public static class ChartQueueDataGenerator
                     chartQueueData.EventQueueDatas.Add(visualizeData);
                     var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                     chartQueueData.EventQueueDatas.Add(spawnData);
+                    var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;    
                 }
             }
@@ -86,9 +95,31 @@ public static class ChartQueueDataGenerator
         return data;
     }
     
-    private static JudgeQueueData GenerateJudgeData()
+    private static List<JudgeQueueData> GenerateJudgeDatas(float bpm, float offset, NoteData noteData)
     {
-        return new JudgeQueueData();
+        List<JudgeQueueData> datas = new List<JudgeQueueData>();
+
+        float add = 0f;
+        for (int i = 0; i < noteData.count; i++)
+        {
+            JudgeQueueData data = new JudgeQueueData();
+            data.Time = noteData.time * 60f / bpm + offset + add;
+            data.Type = noteData.type;
+
+            switch (noteData.type)
+            {
+                case ENoteType.If:
+                    add += 60f / bpm * 2f;
+                    break;
+                case ENoteType.For:
+                    add += 60f / bpm;
+                    break;
+            }
+            
+            datas.Add(data);
+        }
+
+        return datas;
     }
 
 }

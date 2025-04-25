@@ -1,40 +1,42 @@
 using System.Collections;
 using UnityEngine;
 
-public class ForNoteBulletUpdater : MonoBehaviour
+public class ForNoteBulletUpdater : ANoteUpdater
 {
-    private Vector3 _destination;
-    private Vector3 _arrival;
+    [SerializeField] PulseRotator _rotator;
+    [SerializeField, Min(0)] private int _moveIntensity = 4;
     
-    private bool _isShot = false;
-    private float _speed;
-    private float _lifeTime = 1.0f;
-
-    private void Start()
+    protected override IEnumerator ActSequence()
     {
-        StartCoroutine(MoveSequence(_lifeTime));
+        var noteQueue = CSharpMiniGameQueue.NoteQueue;
+        noteQueue.Enqueue(gameObject);
+        
+        SetRotator();
+        
+        yield return MoveSequence(_lifeTime);
+        Destroy(gameObject);
     }
 
-    public void SetSpeed(float speed)
+    private void SetRotator()
     {
-        _speed = speed;
+        _rotator.SetPeriod(_lifeTime);
     }
-
-    public void SetLifeTime(float lifeTime)
-    {
-        _lifeTime = lifeTime;
-    }
-
+    
     private IEnumerator MoveSequence(float duration)
     {
         float currentTime = 0.0f;
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            transform.Translate(Vector2.right * _speed * Time.deltaTime);
+            float normalizedTime = currentTime / duration;
+            float value = MoveCurve(normalizedTime);
+            transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
             yield return null;
         }
+    }
 
-        Destroy(gameObject);
+    private float MoveCurve(float x)
+    {
+        return ConstantCurve.PolyEaseIn(_moveIntensity, x);
     }
 }

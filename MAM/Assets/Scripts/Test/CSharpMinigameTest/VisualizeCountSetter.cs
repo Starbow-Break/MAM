@@ -24,11 +24,7 @@ public class VisualizeCountSetter : MonoBehaviour
 
     public void Initialize()
     {
-        for (int i = 0; i < startSpawnCount; i++)
-        {
-            SpawnIcon();
-        }
-
+        SetCount(startSpawnCount);
         SetCount(0);
     }
 
@@ -72,11 +68,14 @@ public class VisualizeCountSetter : MonoBehaviour
             unitIcons[Value].SetActive(true);
         }
         Value++;
+        Debug.Log(Value);
     }
 
     public void DisCount()
     {
         Value--;
+        Debug.Log(Value);
         unitIcons[Value].SetActive(false);
+
     }
 }

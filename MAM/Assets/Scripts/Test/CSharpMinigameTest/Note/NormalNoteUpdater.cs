@@ -7,6 +7,9 @@ public class NormalNoteUpdater : ANoteUpdater
     
     protected override IEnumerator ActSequence()
     {
+        var noteQueue = CSharpMiniGameQueue.NoteQueue;
+        noteQueue.Enqueue(gameObject);
+        
         yield return MoveSequence(_lifeTime);
         Destroy(gameObject);
     }

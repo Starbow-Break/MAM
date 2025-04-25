@@ -3,11 +3,12 @@ using UnityEngine;
 public class ForNoteBulletSpawner : MonoBehaviour
 {
     [SerializeField] private ForNoteBulletUpdater bulletPrefab;
-
-    public void SpawnBullet(float speed, float lifeTime)
+    
+    public void SpawnBullet(Vector3 arrival, float _lifeTime)
     {
         ForNoteBulletUpdater newUpdater = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        newUpdater.SetSpeed(speed);
-        newUpdater.SetLifeTime(lifeTime);
+        newUpdater.SetDestination(transform.position);
+        newUpdater.SetArrival(arrival);
+        newUpdater.SetLifeTime(_lifeTime);
     }
 }

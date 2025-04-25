@@ -14,6 +14,9 @@ public class IfNoteUpdater : ANoteUpdater
     
     protected override IEnumerator ActSequence()
     {
+        var noteQueue = CSharpMiniGameQueue.NoteQueue;
+        noteQueue.Enqueue(gameObject);
+        
         SetRotator();
         
         yield return MoveSequence(_lifeTime);
@@ -40,6 +43,6 @@ public class IfNoteUpdater : ANoteUpdater
 
     private float MoveCurve(float x)
     {
-        return ConstantCurve.PolyEaseIn(4, x);
+        return ConstantCurve.PolyEaseIn(_moveIntensity, x);
     }
 }
