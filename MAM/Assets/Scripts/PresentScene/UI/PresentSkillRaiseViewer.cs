@@ -31,7 +31,7 @@ public class PresentSkillRaiseViewer
         _updater.SetCSharpLevel(Mathf.Floor(_startCSharpSkillLevel));
         
         //스킬레벨 올리기
-        float goal = GameManager.FlowManager.GetCurrentProjectGoal;
+        float goal = GameManager.FlowManager.GetCurrentProjectGoal();
         StudentLevelHelper.ApplyProjectScore(student, projectProgress, goal, out _newUnitySkillLevel,
             out _newCSharpSkillLevel);
     }

@@ -15,7 +15,7 @@ public class TeamGradeButtonViewer
         _updater.SetTeam(team);
         _updater.SetTeamName($"Team {team.TeamNumber}");
 
-        float goal = GameManager.FlowManager.GetCurrentProjectGoal;
+        float goal = GameManager.FlowManager.GetCurrentProjectGoal();
         string grade = TeamProjectProgressHelper.ProgressToGrade(team, goal);
         _updater.SetGrade(grade);
     }

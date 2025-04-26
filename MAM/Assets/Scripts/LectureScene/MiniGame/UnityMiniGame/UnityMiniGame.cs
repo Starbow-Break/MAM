@@ -1,0 +1,91 @@
+using System.Collections;
+using UnityEngine;
+
+public class UnityMiniGame : AMiniGame
+{
+    [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
+    [SerializeField] private MiniGameCharacterController _characterController = null;
+    [SerializeField] private UnityScreenController _screenController = null;
+    [SerializeField] private UnityWindowInputHandler _inputHandler = null;
+    [SerializeField] private UnityMiniGameUIUpdater _uiUpdater = null;
+
+    private int _correctSetCount = 0;
+
+    private static readonly float _gameTime = 60; //초
+    private static readonly float _delayBetweenSets = 0.3f;
+    private static readonly int _baseCueCount = 3;
+    private static readonly int _baseScore = 7;
+
+    public override void Initialize(int difficulty)
+    {
+        _difficulty = difficulty;
+        _unityWindowCueManager.InitializeCues(_baseCueCount + difficulty, OnCompleteSet);
+        _inputHandler.Initialize(_unityWindowCueManager, OnCorrectInput, OnWrongInput);
+        _uiUpdater.SkipButton.onClick.AddListener(OnEndGame);
+    }
+
+    public override void StartGame()
+    {
+        gameObject.SetActive(true);
+        _characterController.SetInstructorTalking(true);
+        _inputHandler.IsOnDelay = false;
+        StartCoroutine(ProcessGame());
+    }
+
+    private IEnumerator ProcessGame()
+    {
+
+        float currentTime = _gameTime;
+
+        while (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+            _uiUpdater.SetTime(currentTime);
+            yield return null;
+        }
+
+        OnEndGame();
+    }
+
+    private void OnCompleteSet()
+    {
+        _characterController.PlayInstructorEmote(EEmoteType.BlueExclamation);
+        _screenController.ShowCorrectImage();
+        _correctSetCount++;
+        _uiUpdater.SetScore(_correctSetCount);
+        
+        StartCoroutine(DelaySetAndSetCues());
+    }
+
+    private void OnCorrectInput(EUnityWindowType type)
+    {
+        _screenController.HighLightWindow(type);
+    }
+
+    private void OnWrongInput()
+    {
+        _characterController.PlayInstructorEmote(EEmoteType.RedExclamation);
+        _characterController.PlayStudentsEmote(EEmoteType.RedExclamation);
+        _screenController.ShowIncorrectImage();
+        
+        StartCoroutine(DelaySetAndSetCues());
+    }
+
+    private IEnumerator DelaySetAndSetCues()
+    {
+        _inputHandler.IsOnDelay = true;
+        yield return new WaitForSeconds(_delayBetweenSets);
+        _inputHandler.IsOnDelay = false;
+        
+        _unityWindowCueManager.SetRandomCues();
+        _screenController.ShowIdleImage();
+    }
+
+    private void OnEndGame()
+    {
+        StopAllCoroutines();
+        _score = Mathf.Clamp(_correctSetCount * _baseScore, 0, 100);
+        EndGame();
+    }
+
+}
