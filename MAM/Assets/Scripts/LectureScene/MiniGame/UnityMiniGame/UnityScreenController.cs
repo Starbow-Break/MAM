@@ -36,5 +36,7 @@ public class UnityScreenController : MonoBehaviour
     public void ShowIdleImage()
     {
         _screen.sprite = _idleImage;
+        _correctImage.SetActive(false);
+        _incorrectImage.SetActive(false);
     }
 }

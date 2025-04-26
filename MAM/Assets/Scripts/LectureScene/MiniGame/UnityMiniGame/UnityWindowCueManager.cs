@@ -15,6 +15,8 @@ public class UnityWindowCueManager : MonoBehaviour
     private int _currentCueIndex = 0;
     private UnityAction _actOnCompleteSet  = null;
     
+    public KeyCode GetCurrentRequiredKeyCode => _windowCues[_currentCueIndex].RequiredKey;
+    
     public void InitializeCues(int count, UnityAction actOnCompleteSet)
     {
         _cueCount = count;
@@ -37,7 +39,7 @@ public class UnityWindowCueManager : MonoBehaviour
     }
     
     //랜덤세트맞추기
-    private void SetRandomCues()
+    public void SetRandomCues()
     {
         for (int i = 0; i < _cueCount; i++)
         {
@@ -49,33 +51,24 @@ public class UnityWindowCueManager : MonoBehaviour
         _currentCueIndex = 0;
     }
 
-    public void InputCorrectKey()
+    public bool TryInputKey(KeyCode inputKey, out EUnityWindowType currentWindowType)
     {
-        //키 맞으면
+        currentWindowType = _windowCues[_currentCueIndex].WindowType;
+        
+        if (inputKey != _windowCues[_currentCueIndex].RequiredKey)
+        {
+            return false;
+        }
+        
         _windowCues[_currentCueIndex].SetComplete();
         _currentCueIndex++;
 
-        if (_currentCueIndex < _windowCues.Count)
-            return;
-            
-        _actOnCompleteSet?.Invoke();
-        SetRandomCues();
-    }
-
-    public void InputWrongKey()
-    {
-        _currentCueIndex = 0;
-        SetRandomCues();
-    }
-
-    public KeyCode GetCurrentKey()
-    {
-        return _windowCues[_currentCueIndex].RequiredKey;
-    }
-
-    public EUnityWindowType GetCurrentWindowType()
-    {
-        return _windowCues[_currentCueIndex].WindowType;
+        if (_currentCueIndex >= _windowCues.Count)
+        {
+            _actOnCompleteSet?.Invoke();
+        }
+        
+        return true;
     }
     
     private UnityWindowCue GetRandomWindowCue()

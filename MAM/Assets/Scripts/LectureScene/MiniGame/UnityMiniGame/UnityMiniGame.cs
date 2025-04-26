@@ -6,79 +6,86 @@ public class UnityMiniGame : AMiniGame
     [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
     [SerializeField] private MiniGameCharacterController _characterController = null;
     [SerializeField] private UnityScreenController _screenController = null;
-    
+    [SerializeField] private UnityWindowInputHandler _inputHandler = null;
+    [SerializeField] private UnityMiniGameUIUpdater _uiUpdater = null;
+
     private int _correctSetCount = 0;
-    private static readonly float _gameTime = 5000f; //초
-    private static readonly float _delayBetweenSets = 0.2f;
-    
+
+    private static readonly float _gameTime = 60; //초
+    private static readonly float _delayBetweenSets = 0.3f;
+    private static readonly int _baseCueCount = 3;
+    private static readonly int _baseScore = 7;
+
     public override void Initialize(int difficulty)
     {
         _difficulty = difficulty;
-        _unityWindowCueManager.InitializeCues(7,AddCorrectCount);
+        _unityWindowCueManager.InitializeCues(_baseCueCount + difficulty, OnCompleteSet);
+        _inputHandler.Initialize(_unityWindowCueManager, OnCorrectInput, OnWrongInput);
+        _uiUpdater.SkipButton.onClick.AddListener(OnEndGame);
     }
+
     public override void StartGame()
     {
+        gameObject.SetActive(true);
         _characterController.SetInstructorTalking(true);
-
+        _inputHandler.IsOnDelay = false;
         StartCoroutine(ProcessGame());
     }
 
     private IEnumerator ProcessGame()
     {
-        
-        float currentTime = 0;
-        KeyCode inputKey = _unityWindowCueManager.GetCurrentKey();
 
-        while (currentTime < _gameTime)
+        float currentTime = _gameTime;
+
+        while (currentTime > 0)
         {
-            currentTime += Time.deltaTime;
-
-            if (!Input.anyKeyDown)
-            {
-                yield return null;
-                continue;
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                yield return null;
-                continue;
-            }
-
-            if (Input.GetKeyDown(inputKey)) 
-            {
-                //맞은키
-                _screenController.HighLightWindow(_unityWindowCueManager.GetCurrentWindowType());
-                _unityWindowCueManager.InputCorrectKey();
-            }
-            else
-            {
-                //틀린키
-                InputWrongKey();
-                yield return new WaitForSeconds(_delayBetweenSets);
-                _unityWindowCueManager.InputWrongKey();
-                _screenController.ShowIdleImage();
-            }
-            
-            inputKey = _unityWindowCueManager.GetCurrentKey();
+            currentTime -= Time.deltaTime;
+            _uiUpdater.SetTime(currentTime);
             yield return null;
         }
 
-        _score = _correctSetCount * 10;
-        EndGame();
+        OnEndGame();
     }
 
-    private void AddCorrectCount()
+    private void OnCompleteSet()
     {
         _characterController.PlayInstructorEmote(EEmoteType.BlueExclamation);
         _screenController.ShowCorrectImage();
         _correctSetCount++;
+        _uiUpdater.SetScore(_correctSetCount);
+        
+        StartCoroutine(DelaySetAndSetCues());
     }
 
-    private void InputWrongKey()
+    private void OnCorrectInput(EUnityWindowType type)
+    {
+        _screenController.HighLightWindow(type);
+    }
+
+    private void OnWrongInput()
     {
         _characterController.PlayInstructorEmote(EEmoteType.RedExclamation);
         _characterController.PlayStudentsEmote(EEmoteType.RedExclamation);
         _screenController.ShowIncorrectImage();
+        
+        StartCoroutine(DelaySetAndSetCues());
     }
+
+    private IEnumerator DelaySetAndSetCues()
+    {
+        _inputHandler.IsOnDelay = true;
+        yield return new WaitForSeconds(_delayBetweenSets);
+        _inputHandler.IsOnDelay = false;
+        
+        _unityWindowCueManager.SetRandomCues();
+        _screenController.ShowIdleImage();
+    }
+
+    private void OnEndGame()
+    {
+        StopAllCoroutines();
+        _score = Mathf.Clamp(_correctSetCount * _baseScore, 0, 100);
+        EndGame();
+    }
+
 }
