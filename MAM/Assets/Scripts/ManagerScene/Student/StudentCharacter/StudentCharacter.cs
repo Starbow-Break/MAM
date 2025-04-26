@@ -7,12 +7,12 @@ public class StudentCharacter : MonoBehaviour
     [SerializeField] private SpriteLibrary _spriteLibrary = null;
     [SerializeField] private CharacterClickDetector _detector = null;
     [SerializeField] private SpriteResolver _spriteResolver = null;
-    [SerializeField] private StudentCharacterAnimator _animator = null;
+    [SerializeField] private CharacterAnimator _animator = null;
     
     private readonly string _startCategory = "Idle_Front";
     private readonly string _startLabel = "Idle_Front_0";
     
-    public StudentCharacterAnimator Animator => _animator;
+    public CharacterAnimator Animator => _animator;
     public string ID {get; set;}
     
     public void SetSpriteLibrary(SpriteLibraryAsset asset)
