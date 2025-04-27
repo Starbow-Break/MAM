@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -67,10 +66,7 @@ public class CSharpMiniGameController : MonoBehaviour
                 var eventQueueData = eventQueue.Dequeue();
                 if (eventQueueData.EventType == EEventType.Visualize)
                 {
-                    if (eventQueueData.NoteType == ENoteType.If)
-                    {
-                        ShowIfNodeGuide(eventQueueData.Count);
-                    }
+                    ShowNoteGuide(eventQueueData);
                 }
                 else
                 {
@@ -82,43 +78,64 @@ public class CSharpMiniGameController : MonoBehaviour
         }
     }
 
-    private void ShowIfNodeGuide(int count)
+    private void ShowNoteGuide(EventQueueData data)
     {
-        Debug.Log("If");
-        CSharpMiniGame.VisualizeCountSetter.SetCount(count);
+        if (data.NoteType == ENoteType.If)
+        {
+            ShowIfNoteGuide(data);
+        }
+        else if (data.NoteType == ENoteType.For)
+        {
+            ShowForNoteGuide(data);
+        }
     }
-    
-    private void ShowForNodeGuide()
+
+    private void ShowIfNoteGuide(EventQueueData data)
     {
-        Debug.Log("For");
+        CSharpMiniGame.VisualizeCountSetter.SetCount(data.Count);
+        CSharpMiniGame.JudgeLineSetter.SetColor(data.Color);
+        CSharpMiniGame.SpeechBubbleSetter.Show($"If {data.Count}", data.LifeTime);
+    }
+
+    private void ShowForNoteGuide(EventQueueData data)
+    {
+        CSharpMiniGame.SpeechBubbleSetter.Show($"For {data.Count}", data.LifeTime);
     }
     #endregion
     
     #region Judge
+    private EJudge CalculateCurrentJudge() {
+        var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
+
+        float playTime = Time.time - startTime;
+        var judgeData = judgeQueue.Peek();
+        float delta = playTime - judgeData.Time;
+
+        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta);
+        
+        return judge;
+    }
 
     private void ResolveMiss()
     {
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
-        if (judgeQueue.Count <= 0)
+
+        if (CSharpMiniGameQueue.JudgeQueue.Count <= 0)
         {
             return;
         }
-        
-        float playTime = Time.time - startTime;
-        var judgeData = judgeQueue.Peek();
-        float delta = playTime - judgeData.Time;
-        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta);
+
+        EJudge judge = CalculateCurrentJudge();
 
         if (judge == EJudge.Miss)
         {
-            Debug.Log($"{delta} {judge}");
-            judgeQueue.Dequeue();
-            
+            var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
+                judgeQueueData.Type,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
                 currentNote.ModelTransform.rotation,
@@ -134,25 +151,22 @@ public class CSharpMiniGameController : MonoBehaviour
     {
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
-        if (judgeQueue.Count <= 0)
+
+        if (CSharpMiniGameQueue.JudgeQueue.Count <= 0)
         {
             return;
         }
-        
-        float playTime = Time.time - startTime;
-        var judgeData = judgeQueue.Peek();
-        float delta =  playTime - judgeData.Time;
-        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta);
+
+        EJudge judge = CalculateCurrentJudge();
 
         if (judge != EJudge.None)
         {
-            Debug.Log($"{delta} {judge}");
-            _testText.text = $"{Mathf.RoundToInt(delta * 1000f)}ms";
-            judgeQueue.Dequeue();
+            var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
+                judgeQueueData.Type,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
                 currentNote.ModelTransform.rotation,

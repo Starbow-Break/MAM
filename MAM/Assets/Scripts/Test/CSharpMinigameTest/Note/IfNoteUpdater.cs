@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class IfNoteUpdater : ANoteUpdater
 {
-    [SerializeField] PulseRotator _rotator;
+    [SerializeField] APeriodicRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     
     public void SetColor(Color color)

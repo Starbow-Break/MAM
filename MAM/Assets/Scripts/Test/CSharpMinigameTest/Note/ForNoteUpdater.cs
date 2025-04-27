@@ -5,7 +5,7 @@ using UnityEngine;
 public class ForNoteUpdater : ANoteUpdater
 {
     [SerializeField] TextMeshPro _countText;
-    [SerializeField] PulseRotator _rotator;
+    [SerializeField] APeriodicRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     [SerializeField] private ForNoteBulletSpawner _bulletSpawner;
     

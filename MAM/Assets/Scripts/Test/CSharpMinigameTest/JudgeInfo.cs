@@ -3,6 +3,7 @@ using UnityEngine;
 public class JudgeInfo
 {
     public EJudge Judge;
+    public ENoteType NoteType;
     public Sprite NoteSprite;
     public Color NoteColor;
     public Quaternion NoteRotation;
@@ -10,6 +11,7 @@ public class JudgeInfo
 
     public JudgeInfo(
         EJudge judge,
+        ENoteType noteType,
         Sprite noteSprite,
         Color noteColor,
         Quaternion noteRotation,
@@ -17,6 +19,7 @@ public class JudgeInfo
 
     {
         Judge = judge;
+        NoteType = noteType;
         NoteSprite = noteSprite;
         NoteColor = noteColor;
         NoteRotation = noteRotation;

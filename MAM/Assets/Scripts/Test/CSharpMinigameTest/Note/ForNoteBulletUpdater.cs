@@ -4,7 +4,7 @@ using UnityEngine;
 public class ForNoteBulletUpdater : ANoteUpdater
 {
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] PulseRotator _rotator;
+    [SerializeField] APeriodicRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     
     protected override IEnumerator ActSequence()
