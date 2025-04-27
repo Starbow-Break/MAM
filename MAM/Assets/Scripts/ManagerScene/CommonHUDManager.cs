@@ -4,12 +4,16 @@ public class CommonHUDManager : MonoBehaviour
 {
     [SerializeField] private CommonHUDUpdater _updater = null;
 
-
+    private void Start()
+    {
+        _updater.gameObject.SetActive(false);
+    }
     public void Initialize()
     {
         GameManager.FlowManager.ActOnNewDayStart += SetHUDDay;
         GameManager.FlowManager.ActOnNewProjectStart += SetProjectNumber;
         
+        _updater.gameObject.SetActive(true);
         SetHUDDay();
         SetProjectNumber();
     }
