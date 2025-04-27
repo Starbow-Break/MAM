@@ -118,6 +118,10 @@ public static class ChartQueueDataGenerator
                     break;
                 case ENoteType.For:
                     add += 60f / bpm;
+                    if(i < noteData.count - 1)
+                    {
+                        data.Type = ENoteType.ForBullet;
+                    }
                     break;
             }
             

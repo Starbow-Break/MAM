@@ -6,7 +6,7 @@ public class ForNoteBulletSpawner : MonoBehaviour
     
     public void SpawnBullet(Vector3 arrival, float _lifeTime)
     {
-        ForNoteBulletUpdater newUpdater = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform);
+        ANoteUpdater newUpdater = NotePoolManager.Instance.SpawnNote(ENoteType.ForBullet, transform.position, Quaternion.identity, transform);
         newUpdater.SetDestination(transform.position);
         newUpdater.SetArrival(arrival);
         newUpdater.SetArriveTime(_lifeTime);

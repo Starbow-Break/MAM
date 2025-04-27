@@ -14,7 +14,15 @@ public abstract class ANoteUpdater : MonoBehaviour
     protected Vector3 _destination;
     protected Vector3 _arrival;
 
+    private Quaternion startModelRotation;
+    private Vector3 startScale;
     private bool needAct = false;
+
+    private void Awake()
+    {
+        startModelRotation = ModelTransform.rotation;
+        startScale = transform.localScale;
+    }
 
     private void OnEnable()
     {
@@ -32,6 +40,8 @@ public abstract class ANoteUpdater : MonoBehaviour
 
     private void Act()
     {
+        ModelTransform.rotation = startModelRotation;
+        transform.localScale = startScale;
         StartCoroutine(ActSequence());
     }
 

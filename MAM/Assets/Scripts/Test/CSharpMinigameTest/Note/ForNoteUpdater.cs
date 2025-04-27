@@ -37,6 +37,11 @@ public class ForNoteUpdater : ANoteUpdater
         _rotator.SetPeriod(_arriveTime);
         _rotator.Play();
     }
+
+    private void OnDisable()
+    {
+        _rotator.Stop();
+    }
     
     protected IEnumerator MoveSequence(float duration)
     {
