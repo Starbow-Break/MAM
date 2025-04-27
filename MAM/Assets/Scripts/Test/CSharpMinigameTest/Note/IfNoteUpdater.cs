@@ -26,7 +26,12 @@ public class IfNoteUpdater : ANoteUpdater
         _rotator.SetPeriod(_arriveTime);
         _rotator.Play();
     }
-    
+
+    private void OnDisable()
+    {
+        _rotator.Stop();
+    }
+
     private IEnumerator MoveSequence(float duration)
     {
         float currentTime = 0.0f;

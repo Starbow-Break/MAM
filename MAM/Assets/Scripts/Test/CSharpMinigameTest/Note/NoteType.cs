@@ -5,5 +5,6 @@ public enum ENoteType
 {
     Normal,
     If,
-    For
+    For,
+    ForBullet
 }

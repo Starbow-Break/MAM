@@ -15,6 +15,7 @@ public abstract class APeriodicRotator : MonoBehaviour
 
     public void Stop()
     {
+        loopCount = 0;
         StopAllCoroutines();
     }
 
