@@ -21,7 +21,7 @@ public abstract class ANoteUpdater : MonoBehaviour
     private void Awake()
     {
         startModelRotation = ModelTransform.rotation;
-        startScale = transform.localScale;
+        startScale = transform.lossyScale;
     }
 
     private void OnEnable()
