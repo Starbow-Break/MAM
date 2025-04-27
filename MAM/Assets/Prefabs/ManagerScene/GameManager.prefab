@@ -84,6 +84,7 @@ Transform:
   - {fileID: 4052619104190709394}
   - {fileID: 1052908965055763813}
   - {fileID: 8382514192906629185}
+  - {fileID: 107292275265361115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5388400005388692420
@@ -102,6 +103,7 @@ MonoBehaviour:
   _studentManager: {fileID: 1003888309013122161}
   _teamManager: {fileID: 7904808464386021783}
   _restaurantTable: {fileID: 11400000, guid: 4ffffc3fad1efe94caa21c052f8f4249, type: 2}
+  _commonHUDManager: {fileID: 883864345908644338}
   IsTestMode: 0
 --- !u!1 &4167025047880194672
 GameObject:
@@ -377,6 +379,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _table: {fileID: 11400000, guid: b93b8bec32724694584492b035d10826, type: 2}
   _originalCharacter: {fileID: 3867107075854209347}
+--- !u!1 &6479271010007066316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107292275265361115}
+  - component: {fileID: 883864345908644338}
+  m_Layer: 0
+  m_Name: CommonHUDManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107292275265361115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479271010007066316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4356701484371557128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883864345908644338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479271010007066316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef79d3f70368ce34a9e2983158343096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _updater: {fileID: 0}
 --- !u!1 &6682607555032208377
 GameObject:
   m_ObjectHideFlags: 0
