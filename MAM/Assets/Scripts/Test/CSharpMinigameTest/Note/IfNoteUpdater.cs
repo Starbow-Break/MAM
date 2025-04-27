@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class IfNoteUpdater : ANoteUpdater
 {
-    [SerializeField] PulseRotator _rotator;
+    [SerializeField] APeriodicRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     
     public void SetColor(Color color)
@@ -16,14 +16,15 @@ public class IfNoteUpdater : ANoteUpdater
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
         noteQueue.Enqueue(this);
         
-        SetRotator();
+        PlayRotator();
         
         yield return MoveSequence(_arriveTime);
     }
 
-    private void SetRotator()
+    private void PlayRotator()
     {
         _rotator.SetPeriod(_arriveTime);
+        _rotator.Play();
     }
     
     private IEnumerator MoveSequence(float duration)

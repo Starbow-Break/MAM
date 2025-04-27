@@ -14,7 +14,30 @@ public abstract class ANoteUpdater : MonoBehaviour
     protected Vector3 _destination;
     protected Vector3 _arrival;
 
-    protected void SetActive(bool active)
+    private bool needAct = false;
+
+    private void OnEnable()
+    {
+        needAct = true;
+    }
+
+    private void Update()
+    {
+        if(needAct)
+        {
+            needAct = false;
+            Act();
+        }
+    }
+
+    private void Act()
+    {
+        StartCoroutine(ActSequence());
+    }
+
+    protected abstract IEnumerator ActSequence();
+
+    protected virtual void SetActive(bool active)
     {
         gameObject.SetActive(active);
     }
@@ -33,16 +56,4 @@ public abstract class ANoteUpdater : MonoBehaviour
     {
         _arrival = arrival;
     }
-    
-    private void Start()
-    {
-        Act();
-    }
-
-    private void Act()
-    {
-        StartCoroutine(ActSequence());
-    }
-
-    protected abstract IEnumerator ActSequence();
 }

@@ -68,14 +68,11 @@ public class VisualizeCountSetter : MonoBehaviour
             unitIcons[Value].SetActive(true);
         }
         Value++;
-        Debug.Log(Value);
     }
 
     public void DisCount()
     {
         Value--;
-        Debug.Log(Value);
         unitIcons[Value].SetActive(false);
-
     }
 }

@@ -45,6 +45,10 @@ public static class ChartQueueDataGenerator
                     }
                     
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    for(int i = 0; i < judgeDatas.Count; i++)
+                    {
+                        judgeDatas[i].isHit = noteData.pattern[i] == '1';
+                    }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;
                 }
@@ -69,12 +73,12 @@ public static class ChartQueueDataGenerator
     private static EventQueueData GenerateBaseVisualizeData(float bpm, float offset, NoteData noteData)
     {
         EventQueueData data = new EventQueueData();
-        data.Time = (noteData.time - 2) * 60f / bpm + offset;
+        data.Time = (noteData.time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Visualize;
         data.NoteType = noteData.type;
         data.SpawnPosition = Vector3.zero;
         data.LifeTime = 60f / bpm;
-        data.Color = DefaultColor;
+        data.Color = noteData.color;
         data.Count = noteData.count;
 
         return data;
@@ -105,6 +109,7 @@ public static class ChartQueueDataGenerator
             JudgeQueueData data = new JudgeQueueData();
             data.Time = noteData.time * 60f / bpm + offset + add;
             data.Type = noteData.type;
+            data.isHit = true;
 
             switch (noteData.type)
             {
