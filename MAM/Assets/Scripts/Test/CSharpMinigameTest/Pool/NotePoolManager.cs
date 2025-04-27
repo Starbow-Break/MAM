@@ -43,7 +43,7 @@ public class NotePoolManager : MonoBehaviour
         ANoteUpdater noteUpdater = _notePools[noteType].Get();
         noteUpdater.transform.position = position;
         noteUpdater.transform.rotation = rotation;
-        noteUpdater.transform.SetParent(parent);
+        noteUpdater.transform.SetParent(parent, worldPositionStays: true);
 
         return noteUpdater;
     }
