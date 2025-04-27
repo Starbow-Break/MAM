@@ -14,7 +14,40 @@ public abstract class ANoteUpdater : MonoBehaviour
     protected Vector3 _destination;
     protected Vector3 _arrival;
 
-    protected void SetActive(bool active)
+    private Quaternion startModelRotation;
+    private Vector3 startScale;
+    private bool needAct = false;
+
+    private void Awake()
+    {
+        startModelRotation = ModelTransform.rotation;
+        startScale = transform.lossyScale;
+    }
+
+    private void OnEnable()
+    {
+        needAct = true;
+    }
+
+    private void Update()
+    {
+        if(needAct)
+        {
+            needAct = false;
+            Act();
+        }
+    }
+
+    private void Act()
+    {
+        ModelTransform.rotation = startModelRotation;
+        transform.localScale = startScale;
+        StartCoroutine(ActSequence());
+    }
+
+    protected abstract IEnumerator ActSequence();
+
+    protected virtual void SetActive(bool active)
     {
         gameObject.SetActive(active);
     }
@@ -33,16 +66,4 @@ public abstract class ANoteUpdater : MonoBehaviour
     {
         _arrival = arrival;
     }
-    
-    private void Start()
-    {
-        Act();
-    }
-
-    private void Act()
-    {
-        StartCoroutine(ActSequence());
-    }
-
-    protected abstract IEnumerator ActSequence();
 }

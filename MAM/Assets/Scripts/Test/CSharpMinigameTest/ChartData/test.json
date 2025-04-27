@@ -1,6 +1,6 @@
 {
 	"title":"???",
-	"bpm":120,
+	"bpm":200,
 	"offset": 50,
 	"notes":[
 		{
@@ -22,6 +22,21 @@
 		},
 		{
 			"time":15,
+			"type": "for",
+			"count":4
+		},
+		{
+			"time":20,
+			"type": "for",
+			"count":4
+		},
+		{
+			"time":25,
+			"type": "for",
+			"count":4
+		},
+		{
+			"time":30,
 			"type": "for",
 			"count":4
 		}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2749207070074213728}
   - component: {fileID: 7454713375327807309}
-  - component: {fileID: 4373568143612833753}
+  - component: {fileID: 1647336682512389217}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4373568143612833753
+--- !u!114 &1647336682512389217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944007482600785094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c861bef5a7a80ca4cb730226b728eba1, type: 3}
+  m_Script: {fileID: 11500000, guid: bf7320a79783e2a41bfa5383d24d9d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateAngle: 90
-  pulseIntensity: 4
+  _intensity: 4
 --- !u!1 &3477552098253818225
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,5 +150,5 @@ MonoBehaviour:
   <ModelTransform>k__BackingField: {fileID: 2749207070074213728}
   <ModelRenderer>k__BackingField: {fileID: 7454713375327807309}
   _renderer: {fileID: 7454713375327807309}
-  _rotator: {fileID: 4373568143612833753}
+  _rotator: {fileID: 1647336682512389217}
   _moveIntensity: 4

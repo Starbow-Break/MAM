@@ -5,7 +5,7 @@ using UnityEngine;
 public class ForNoteUpdater : ANoteUpdater
 {
     [SerializeField] TextMeshPro _countText;
-    [SerializeField] PulseRotator _rotator;
+    [SerializeField] APeriodicRotator _rotator;
     [SerializeField, Min(0)] private int _moveIntensity = 4;
     [SerializeField] private ForNoteBulletSpawner _bulletSpawner;
     
@@ -13,7 +13,7 @@ public class ForNoteUpdater : ANoteUpdater
 
     protected override IEnumerator ActSequence()
     {
-        SetRotators();
+        PlayRotator();
         
         while (_count > 0)
         {
@@ -32,9 +32,15 @@ public class ForNoteUpdater : ANoteUpdater
         }
     }
 
-    private void SetRotators()
+    private void PlayRotator()
     {
         _rotator.SetPeriod(_arriveTime);
+        _rotator.Play();
+    }
+
+    private void OnDisable()
+    {
+        _rotator.Stop();
     }
     
     protected IEnumerator MoveSequence(float duration)

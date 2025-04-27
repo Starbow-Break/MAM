@@ -1,17 +1,22 @@
 using System.Collections;
 using UnityEngine;
 
-public class PulseRotator : MonoBehaviour
+public abstract class APeriodicRotator : MonoBehaviour
 {
     [SerializeField] private float rotateAngle; // 주기당 회전 각
-    [SerializeField, Min(0)] private int pulseIntensity;  // 펄스 세기
     
-    private float _period; // 주기
-    private bool isFirstPriod = true;
+    protected float _period; // 주기
+    protected int loopCount = 0;    // 주기 횟수
     
-    private void Start()
+    public void Play()
     {
         StartCoroutine(RotateSequence());
+    }
+
+    public void Stop()
+    {
+        loopCount = 0;
+        StopAllCoroutines();
     }
 
     public void SetPeriod(float period)
@@ -19,7 +24,7 @@ public class PulseRotator : MonoBehaviour
         _period = period;
     }
 
-    private IEnumerator RotateSequence()
+    protected virtual IEnumerator RotateSequence()
     {
         float currentTime = 0.0f;
         float beforeValue = 0.0f;
@@ -29,15 +34,14 @@ public class PulseRotator : MonoBehaviour
             float offset = 0.0f;
             
             currentTime += Time.deltaTime;
-            if (currentTime >= _period)
-            {
-                isFirstPriod = false;
-                offset += rotateAngle * Mathf.Floor(currentTime / _period);
-                currentTime %= _period;
-            }
+
+            int addLoop = Mathf.FloorToInt(currentTime / _period);
+            loopCount += addLoop;
+            offset += rotateAngle * addLoop;
+            currentTime %= _period;
             
             float normalizedTime = currentTime / _period;
-            float currentValue = RotateCurve(isFirstPriod, normalizedTime);
+            float currentValue = RotateCurve(normalizedTime);
             
             float diff = offset + (currentValue - beforeValue) * rotateAngle;
             
@@ -48,13 +52,5 @@ public class PulseRotator : MonoBehaviour
         }
     }
 
-    private float RotateCurve(bool isFirst, float x)
-    {
-        if (isFirst)
-        {
-            return ConstantCurve.PolyEaseIn(pulseIntensity, x);
-        }
-
-        return ConstantCurve.PolyEaseInOut(pulseIntensity, x);
-    }
+    protected abstract float RotateCurve(float x);
 }
