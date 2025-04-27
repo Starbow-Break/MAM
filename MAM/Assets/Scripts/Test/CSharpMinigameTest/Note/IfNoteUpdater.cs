@@ -16,14 +16,15 @@ public class IfNoteUpdater : ANoteUpdater
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
         noteQueue.Enqueue(this);
         
-        SetRotator();
+        PlayRotator();
         
         yield return MoveSequence(_arriveTime);
     }
 
-    private void SetRotator()
+    private void PlayRotator()
     {
         _rotator.SetPeriod(_arriveTime);
+        _rotator.Play();
     }
     
     private IEnumerator MoveSequence(float duration)

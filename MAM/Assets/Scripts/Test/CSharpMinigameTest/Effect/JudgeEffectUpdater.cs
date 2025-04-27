@@ -55,6 +55,7 @@ public class JudgeEffectUpdater : MonoBehaviour
     {
         SetSpriteEnabled(true);
         
+        Vector3 originLocalScale = _objectRenderer.transform.localScale;
         float currentTime = 0f;
         float duration = 0.2f;
 
@@ -63,7 +64,7 @@ public class JudgeEffectUpdater : MonoBehaviour
             currentTime += Time.deltaTime;
             float n = currentTime / duration;
             float value = 1f - Mathf.Abs(Mathf.Cos(n * Mathf.PI));
-            _objectRenderer.transform.localScale = value * Vector3.one;
+            _objectRenderer.transform.localScale = value * originLocalScale;
             yield return null;
         }
         

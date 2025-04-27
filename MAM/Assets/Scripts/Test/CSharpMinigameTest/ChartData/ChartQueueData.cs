@@ -31,4 +31,5 @@ public class JudgeQueueData
 {
     public float Time;  // 시간
     public ENoteType Type;  // 노트 타입
+    public bool isHit; // 치는 노트 여부
 }

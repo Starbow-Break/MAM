@@ -13,7 +13,7 @@ public class ForNoteUpdater : ANoteUpdater
 
     protected override IEnumerator ActSequence()
     {
-        SetRotators();
+        PlayRotator();
         
         while (_count > 0)
         {
@@ -32,9 +32,10 @@ public class ForNoteUpdater : ANoteUpdater
         }
     }
 
-    private void SetRotators()
+    private void PlayRotator()
     {
         _rotator.SetPeriod(_arriveTime);
+        _rotator.Play();
     }
     
     protected IEnumerator MoveSequence(float duration)

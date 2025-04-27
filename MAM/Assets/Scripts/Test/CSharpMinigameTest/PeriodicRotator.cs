@@ -8,9 +8,14 @@ public abstract class APeriodicRotator : MonoBehaviour
     protected float _period; // 주기
     protected int loopCount = 0;    // 주기 횟수
     
-    protected void Start()
+    public void Play()
     {
         StartCoroutine(RotateSequence());
+    }
+
+    public void Stop()
+    {
+        StopAllCoroutines();
     }
 
     public void SetPeriod(float period)
@@ -18,7 +23,7 @@ public abstract class APeriodicRotator : MonoBehaviour
         _period = period;
     }
 
-    protected IEnumerator RotateSequence()
+    protected virtual IEnumerator RotateSequence()
     {
         float currentTime = 0.0f;
         float beforeValue = 0.0f;

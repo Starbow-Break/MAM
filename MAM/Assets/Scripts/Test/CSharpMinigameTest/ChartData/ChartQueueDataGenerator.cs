@@ -45,6 +45,10 @@ public static class ChartQueueDataGenerator
                     }
                     
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    for(int i = 0; i < judgeDatas.Count; i++)
+                    {
+                        judgeDatas[i].isHit = noteData.pattern[i] == '1';
+                    }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;
                 }
@@ -105,6 +109,7 @@ public static class ChartQueueDataGenerator
             JudgeQueueData data = new JudgeQueueData();
             data.Time = noteData.time * 60f / bpm + offset + add;
             data.Type = noteData.type;
+            data.isHit = true;
 
             switch (noteData.type)
             {

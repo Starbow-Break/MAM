@@ -24,7 +24,7 @@ public class NoteSpawner : MonoBehaviour
         {
             if (noteUpdaterData.Type == data.NoteType && noteUpdaterData.NoteUpdater != null)
             {
-                ANoteUpdater newUpdater = Instantiate(noteUpdaterData.NoteUpdater, transform.position, Quaternion.identity);
+                ANoteUpdater newUpdater = NotePoolManager.Instance.SpawnNote(data.NoteType, transform.position, Quaternion.identity, transform);
                 newUpdater.SetArriveTime(data.LifeTime);
                 newUpdater.SetDestination(transform.position);
                 newUpdater.SetArrival(destroyPoint.position);

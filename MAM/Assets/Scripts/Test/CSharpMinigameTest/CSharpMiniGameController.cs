@@ -110,8 +110,9 @@ public class CSharpMiniGameController : MonoBehaviour
         float playTime = Time.time - startTime;
         var judgeData = judgeQueue.Peek();
         float delta = playTime - judgeData.Time;
+        bool isHit = judgeData.isHit;
 
-        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta);
+        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta, isHit);
         
         return judge;
     }
@@ -121,27 +122,30 @@ public class CSharpMiniGameController : MonoBehaviour
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
 
-        if (CSharpMiniGameQueue.JudgeQueue.Count <= 0)
+        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0)
         {
             return;
         }
 
+        bool isHit = judgeQueue.Peek().isHit;
         EJudge judge = CalculateCurrentJudge();
 
-        if (judge == EJudge.Miss)
+        if ((isHit && judge == EJudge.Miss) || (!isHit && judge == EJudge.Perfect))
         {
             var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
-                judgeQueueData.Type,
+                judgeQueueData.isHit,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
                 currentNote.ModelTransform.rotation,
                 currentNote.ModelTransform.localScale
             );
-            Destroy(currentNote);
+            NotePoolManager.Instance.ReleaseNote(judgeQueueData.Type, currentNote);
+
+            Debug.Log($"{judge}");
             
             OnJudge?.Invoke(judgeInfo);
         } 
@@ -152,7 +156,7 @@ public class CSharpMiniGameController : MonoBehaviour
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
 
-        if (CSharpMiniGameQueue.JudgeQueue.Count <= 0)
+        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0)
         {
             return;
         }
@@ -166,13 +170,16 @@ public class CSharpMiniGameController : MonoBehaviour
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
-                judgeQueueData.Type,
+                judgeQueueData.isHit,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
                 currentNote.ModelTransform.rotation,
                 currentNote.ModelTransform.localScale
             );
-            Destroy(currentNote.gameObject);
+            NotePoolManager.Instance.ReleaseNote(judgeQueueData.Type, currentNote);
+
+            Debug.Log($"{(Time.time - startTime - judgeQueueData.Time) * 1000f}ms {judge}");
+
             OnJudge?.Invoke(judgeInfo);
         }
     }
