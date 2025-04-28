@@ -299,7 +299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7729266309465727983}
-  - {fileID: 4139296659847833215}
+  - {fileID: 6336584401548560670}
   - {fileID: 7877754635055961172}
   - {fileID: 2103886563797294361}
   - {fileID: 4475074071396393817}
@@ -1045,7 +1045,7 @@ Transform:
   - {fileID: 5657661380073081390}
   - {fileID: 7837669637357942523}
   - {fileID: 6657022935427392752}
-  m_Father: {fileID: 4218872293616977673}
+  m_Father: {fileID: 6336584401548560670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3112397669509604262
 MonoBehaviour:
@@ -1440,7 +1440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _noteSpawner: {fileID: 213307449776890035}
   _music: {fileID: 640742904761167977}
-  _testText: {fileID: 0}
 --- !u!1 &5897161880475411593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1870,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _updater: {fileID: 4072655820831441333}
   fadeOutSpeed: 2
+--- !u!1 &7010913563864111999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6336584401548560670}
+  m_Layer: 0
+  m_Name: PoolManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6336584401548560670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010913563864111999}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4139296659847833215}
+  m_Father: {fileID: 4218872293616977673}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7357351011093890900
 GameObject:
   m_ObjectHideFlags: 0

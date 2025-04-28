@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class RiderCodeNavigator : MonoBehaviour
 {
@@ -39,7 +38,7 @@ public class RiderCodeNavigator : MonoBehaviour
         _currentNode = null;
     }
 
-    public GameObject GetCode(EJudge judge)
+    public SpriteRenderer GetCodeRenderer(EJudge judge)
     {
         if (_currentNode == null)
         {
@@ -54,10 +53,12 @@ public class RiderCodeNavigator : MonoBehaviour
                 => node.GoodCode,
             _ => node.BadCode
         };
+        
+        SpriteRenderer codeReanderer = CodeSpritePoolManager.Instance.Spawn(code.name, Vector3.zero, Quaternion.identity, null);
 
         MoveNext();
 
-        return Instantiate(code);
+        return codeReanderer;
     }
 
     private void PickRandomNode()

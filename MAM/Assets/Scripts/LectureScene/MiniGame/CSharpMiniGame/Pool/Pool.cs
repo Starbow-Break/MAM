@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 [DefaultExecutionOrder(-2000)]
-public class Pool<T> : MonoBehaviour where T : MonoBehaviour
+public class Pool<T> : MonoBehaviour where T : Component
 {
-    [SerializeField] private T prefab;
+    [SerializeField] private T _prefab;
     [SerializeField] private int _defaultCapacity = 10;
     [SerializeField] private int _maxSize = 50;
     [SerializeField] private bool _collectionCheck = false;
@@ -17,10 +17,12 @@ public class Pool<T> : MonoBehaviour where T : MonoBehaviour
             _collectionCheck, _defaultCapacity, _maxSize);
     }
 
+    public string PrefabName => _prefab.name;
+
     #region Create Object
     private T CreateObject()
     {
-        T obj = Instantiate(prefab);
+        T obj = Instantiate(_prefab);
         return obj;
     }
     #endregion
