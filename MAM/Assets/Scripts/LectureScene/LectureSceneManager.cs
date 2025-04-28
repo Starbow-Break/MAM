@@ -4,7 +4,7 @@ public class LectureSceneManager : ASceneManager<LectureSceneManager>
 {
     [SerializeField] private MiniGameController _miniGameController = null;
     [SerializeField] private LectureResultSetter _lectureResultSetter = null;
-    public MiniGameController MiniGameController => _miniGameController;
+    public static MiniGameController MiniGameController => Instance._miniGameController;
     
     public void OnEndMiniGame(ESkillType miniGameType, int score, int miniGameDifficulty)
     {
