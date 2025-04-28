@@ -10,6 +10,8 @@ public class CSharpMiniGameController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _testText;
     
     private float startTime;
+    private float currentScoreWeight;
+    private float maxScoreWeight;
 
     public UnityAction<JudgeInfo> OnJudge;
 
@@ -25,6 +27,8 @@ public class CSharpMiniGameController : MonoBehaviour
     
     private void SetChartData(ChartData chartData)
     {
+        maxScoreWeight = CSharpMiniGameScoreHelper.GetTotalMaxWeight(chartData);
+        
         ChartQueueData chartQueueData = ChartQueueDataGenerator.Generate(chartData);
         foreach (var eventQueueData in chartQueueData.EventQueueDatas)
         {
@@ -39,6 +43,7 @@ public class CSharpMiniGameController : MonoBehaviour
     #region Play Chart
     public void Play(ChartData chartData)
     {
+        currentScoreWeight = 0f;
         SetChartData(chartData);
         StartCoroutine(PlaySequence(chartData.MusicClip, chartData.Delay, chartData.Offset));
     }
@@ -141,6 +146,10 @@ public class CSharpMiniGameController : MonoBehaviour
 
         if ((isHit && judge == EJudge.Miss) || (!isHit && judge == EJudge.Perfect))
         {
+            currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
+            float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
+            
             var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
@@ -175,6 +184,10 @@ public class CSharpMiniGameController : MonoBehaviour
 
         if (judge != EJudge.None)
         {
+            currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
+            float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
+            
             var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();

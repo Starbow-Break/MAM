@@ -13,7 +13,7 @@ public static class StudentLevelHelper
 
 
     /// <returns> 바뀐 능력치 리턴</returns>
-    public static float ApplyMiniGameScore(Student student,ESkillType skillType, int miniGameScore, int miniGameDifficulty)
+    public static float ApplyMiniGameScore(Student student,ESkillType skillType, float miniGameScore, int miniGameDifficulty)
     {
         float skillLevel = student.GetSkillLevel(skillType);
         float newSkillLevel = GetRaisedSkillLevel(skillLevel, miniGameScore, miniGameDifficulty);   
@@ -22,7 +22,7 @@ public static class StudentLevelHelper
         return newSkillLevel;
     }
     
-    private static float GetRaisedSkillLevel(float studentSkillLevel, int miniGameScore, int miniGameDifficulty)
+    private static float GetRaisedSkillLevel(float studentSkillLevel, float miniGameScore, int miniGameDifficulty)
     {
         float baseGain = miniGameScore / 100f;
         int studentSkillLevelInt = Mathf.FloorToInt(studentSkillLevel);
