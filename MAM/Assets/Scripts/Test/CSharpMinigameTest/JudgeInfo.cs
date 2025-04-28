@@ -3,6 +3,7 @@ using UnityEngine;
 public class JudgeInfo
 {
     public EJudge Judge;
+    public ENoteType NoteType;
     public bool IsHit;
     public Sprite NoteSprite;
     public Color NoteColor;
@@ -11,6 +12,7 @@ public class JudgeInfo
 
     public JudgeInfo(
         EJudge judge,
+        ENoteType noteType,
         bool isHit,
         Sprite noteSprite,
         Color noteColor,
@@ -19,6 +21,7 @@ public class JudgeInfo
 
     {
         Judge = judge;
+        NoteType = noteType;
         IsHit = isHit;
         NoteSprite = noteSprite;
         NoteColor = noteColor;

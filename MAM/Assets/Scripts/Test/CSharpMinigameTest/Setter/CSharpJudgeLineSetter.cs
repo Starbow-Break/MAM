@@ -8,12 +8,12 @@ public class CSharpJudgeLineSetter : MonoBehaviour
 
     private void OnEnable()
     {
-        CSharpMiniGame.Controller.OnJudge += judgeInfo => TrySetDefault(judgeInfo);
+        CSharpMiniGame.VisualizeCountSetter.OnValueChanged += value => OnVisualizeCountValueChanged(value);
     }
 
     private void OnDisable()
     {
-        CSharpMiniGame.Controller.OnJudge -= judgeInfo => TrySetDefault(judgeInfo);
+        CSharpMiniGame.VisualizeCountSetter.OnValueChanged -= value => OnVisualizeCountValueChanged(value);
     }
 
     public void Initialize()
@@ -26,16 +26,16 @@ public class CSharpJudgeLineSetter : MonoBehaviour
         _updater.SetLineColor(color);
     }
 
-    public void SetDefaultColor()
+    private void OnVisualizeCountValueChanged(int value)
     {
-        SetColor(_defaultColor);
-    }
-
-    private void TrySetDefault(JudgeInfo judgeInfo)
-    {
-        if(CSharpMiniGame.VisualizeCountSetter.Value == 0)
+        if (value <= 0)
         {
             SetDefaultColor();
         }
+    }
+
+    private void SetDefaultColor()
+    {
+        SetColor(_defaultColor);
     }
 }

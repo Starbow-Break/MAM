@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class ChartQueueDataGenerator
 {
-    private static readonly float MiliSecond = 0.001f;
+    
     private static readonly Color DefaultColor = Color.green;
     private static readonly Color[] IfNoteColors = { Color.red, Color.blue };
     
@@ -12,12 +12,12 @@ public static class ChartQueueDataGenerator
     {
         ChartQueueData chartQueueData = new ChartQueueData();
 
-        float bpm = chartData.bpm;
-        float offset = chartData.offset * MiliSecond;
+        float bpm = chartData.Bpm;
+        float offset = chartData.Offset;
 
-        foreach (var noteData in chartData.notes)
+        foreach (var noteData in chartData.Notes)
         {
-            switch (noteData.type)
+            switch (noteData.NoteType)
             {
                 case ENoteType.Normal:
                 {
@@ -30,24 +30,25 @@ public static class ChartQueueDataGenerator
                 case ENoteType.If:
                 {
                     var visualizeData = GenerateBaseVisualizeData(bpm, offset, noteData);
+                    visualizeData.Color = noteData.Color;
                     chartQueueData.EventQueueDatas.Add(visualizeData);
                     
-                    for(int i = 0; i < noteData.pattern.Length; i++)
+                    for(int i = 0; i < noteData.Pattern.Length; i++)
                     {
                         var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                         spawnData.Time += 60f / bpm * 2 * i;
                         
-                        Debug.Log(noteData.color);
-                        int colorIndex = (Array.IndexOf(IfNoteColors, noteData.color) + (noteData.pattern[i] == '1' ? 0 : 1)) % 2;
+                        Debug.Log(noteData.Color);
+                        int colorIndex = (Array.IndexOf(IfNoteColors, noteData.Color) + (noteData.Pattern[i] == '1' ? 0 : 1)) % 2;
                         Color color = IfNoteColors[colorIndex];
                         spawnData.Color = color;
                         chartQueueData.EventQueueDatas.Add(spawnData);
                     }
                     
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
-                    for(int i = 0; i < judgeDatas.Count; i++)
+                    for (int i = 0; i < noteData.Pattern.Length; i++)
                     {
-                        judgeDatas[i].isHit = noteData.pattern[i] == '1';
+                        judgeDatas[i].isHit = noteData.Pattern[i] == '1';
                     }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;
@@ -59,6 +60,10 @@ public static class ChartQueueDataGenerator
                     var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                     chartQueueData.EventQueueDatas.Add(spawnData);
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
+                    for (int i = 0; i < noteData.Count - 1; i++)
+                    {
+                        judgeDatas[i].Type = ENoteType.ForBullet;
+                    }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
                     break;    
                 }
@@ -73,13 +78,13 @@ public static class ChartQueueDataGenerator
     private static EventQueueData GenerateBaseVisualizeData(float bpm, float offset, NoteData noteData)
     {
         EventQueueData data = new EventQueueData();
-        data.Time = (noteData.time - 1) * 60f / bpm + offset;
+        data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Visualize;
-        data.NoteType = noteData.type;
+        data.NoteType = noteData.NoteType;
         data.SpawnPosition = Vector3.zero;
         data.LifeTime = 60f / bpm;
-        data.Color = noteData.color;
-        data.Count = noteData.count;
+        data.Color = DefaultColor;
+        data.Count = noteData.Count;
 
         return data;
     }
@@ -88,13 +93,13 @@ public static class ChartQueueDataGenerator
     {
         EventQueueData data = new EventQueueData();
         
-        data.Time = (noteData.time - 1) * 60f / bpm + offset;
+        data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Spawn;
-        data.NoteType = noteData.type;
+        data.NoteType = noteData.NoteType;
         data.SpawnPosition = Vector3.zero;
         data.LifeTime = 60f / bpm;
         data.Color = DefaultColor;
-        data.Count = noteData.count;
+        data.Count = noteData.Count;
 
         return data;
     }
@@ -104,24 +109,20 @@ public static class ChartQueueDataGenerator
         List<JudgeQueueData> datas = new List<JudgeQueueData>();
 
         float add = 0f;
-        for (int i = 0; i < noteData.count; i++)
+        for (int i = 0; i < noteData.Count; i++)
         {
             JudgeQueueData data = new JudgeQueueData();
-            data.Time = noteData.time * 60f / bpm + offset + add;
-            data.Type = noteData.type;
+            data.Time = noteData.Time * 60f / bpm + offset + add;
+            data.Type = noteData.NoteType;
             data.isHit = true;
 
-            switch (noteData.type)
+            switch (noteData.NoteType)
             {
                 case ENoteType.If:
                     add += 60f / bpm * 2f;
                     break;
                 case ENoteType.For:
                     add += 60f / bpm;
-                    if(i < noteData.count - 1)
-                    {
-                        data.Type = ENoteType.ForBullet;
-                    }
                     break;
             }
             

@@ -1,27 +1,29 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [System.Serializable]
 public class ChartData
 {
-    public string title;    // 곡 제목
-    public float bpm;  // 시작 BPM
-    public float offset;    // 오프셋
+    public AudioClip MusicClip;    // 곡
+    public float Bpm;  // 시작 BPM
+    public float Offset;    // 오프셋
+    public float Delay; // 곡 재생 지연 시간
         
-    public List<NoteData> notes;   // 노트 정보
+    public List<NoteData> Notes;   // 노트 정보
 
     public ChartData()
     {
-        notes = new List<NoteData>();
+        Notes = new List<NoteData>();
     }
 }
     
 [System.Serializable]
 public class NoteData
 {
-    public int time;   // 쳐야하는 시간
-    public ENoteType type; // 노트 타입
-    public int count;  // 타격 수
-    public Color color;    // 색 (if 노트에서만 사용)
-    public string pattern; // 스폰 후 패턴을 나타내는 문자열 (if 노트에서만 사용)
+    public int Time;   // 쳐야하는 시간
+    public ENoteType NoteType; // 노트 타입
+    public int Count;  // 타격 수
+    public Color Color;    // 색 (if 노트에서만 사용)
+    public string Pattern; // 스폰 후 패턴을 나타내는 문자열 (if 노트에서만 사용)
 }
