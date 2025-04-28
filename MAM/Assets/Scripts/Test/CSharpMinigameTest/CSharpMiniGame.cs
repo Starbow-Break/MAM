@@ -58,9 +58,4 @@ public class CSharpMiniGame: AMiniGame
         _speechBubbleSetter.Initialize();
         _judgeLineSetter.Initialize();
     }
-
-    private void Start()
-    {
-        StartGame();
-    }
 }
