@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class CSharpMiniGameController : MonoBehaviour
 {
     [SerializeField] NoteSpawner _noteSpawner;
+    [SerializeField] private AudioSource _music;
     [SerializeField] TextMeshProUGUI _testText;
     
     private float startTime;
@@ -39,29 +40,36 @@ public class CSharpMiniGameController : MonoBehaviour
     public void Play(ChartData chartData)
     {
         SetChartData(chartData);
-        StartCoroutine(PlaySequence());
+        StartCoroutine(PlaySequence(chartData.MusicClip, chartData.Delay, chartData.Offset));
     }
 
-    private IEnumerator PlaySequence()
+    private IEnumerator PlaySequence(AudioClip musicClip, float delay, float chartOffset)
     {
-        yield return PlayChartSequence();
+        StartCoroutine(PlayMusicSequence(musicClip, delay));
+        yield return PlayChartSequence(delay, chartOffset);
+    }
+
+    private IEnumerator PlayMusicSequence(AudioClip musicClip, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _music.PlayOneShot(musicClip);
     }
     
-    private IEnumerator PlayChartSequence()
+    private IEnumerator PlayChartSequence(float delay, float offset)
     {
-        startTime = Time.time;
+        startTime = Time.time + delay;
         
         var eventQueue = CSharpMiniGameQueue.EventQueue;
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         
         while (eventQueue.Count > 0 || judgeQueue.Count > 0)
         {
-            ResolveMiss();
+            ResolveNoHit();
             
             float playTime = Time.time - startTime;
             
             playTime += Time.deltaTime;
-            if (eventQueue.Count > 0 && eventQueue.Peek().Time <= playTime)
+            while (eventQueue.Count > 0 && eventQueue.Peek().Time <= playTime)
             {
                 var eventQueueData = eventQueue.Dequeue();
                 if (eventQueueData.EventType == EEventType.Visualize)
@@ -70,6 +78,7 @@ public class CSharpMiniGameController : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log(eventQueueData.NoteType);
                     _noteSpawner.SpawnNote(eventQueueData);
                 }
             }
@@ -117,7 +126,7 @@ public class CSharpMiniGameController : MonoBehaviour
         return judge;
     }
 
-    private void ResolveMiss()
+    private void ResolveNoHit()
     {
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
@@ -137,6 +146,7 @@ public class CSharpMiniGameController : MonoBehaviour
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
+                judgeQueueData.Type,
                 judgeQueueData.isHit,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),
@@ -170,6 +180,7 @@ public class CSharpMiniGameController : MonoBehaviour
             SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
             JudgeInfo judgeInfo = new JudgeInfo(
                 judge,
+                judgeQueueData.Type,
                 judgeQueueData.isHit,
                 noteRenderer.sprite,
                 new Color(noteRenderer.color.r, noteRenderer.color.g, noteRenderer.color.b, 1f),

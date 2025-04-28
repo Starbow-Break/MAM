@@ -1,25 +1,28 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VisualizeCountSetter : MonoBehaviour
 {
     [SerializeField] private GameObject UnitIcon;
     [SerializeField] private Transform _parent;
-    [SerializeField] private NoteSpawner _noteSpawner;
     [SerializeField, Min(0)] private int startSpawnCount = 12;
 
     List<GameObject> unitIcons = new();
+
+    public UnityAction<int> OnValueChanged;
 
     public int Value { get; private set; } = 0;
     
     private void OnEnable()
     {
-        _noteSpawner.OnSpawnedNote += noteType => OnSpawnedNote(noteType);
+        CSharpMiniGame.Controller.OnJudge += judgeInfo => OnJudge(judgeInfo);
     }
     
     private void OnDisable()
     {
-        _noteSpawner.OnSpawnedNote -= noteType => OnSpawnedNote(noteType);
+        CSharpMiniGame.Controller.OnJudge -= judgeInfo => OnJudge(judgeInfo);
     }
 
     public void Initialize()
@@ -28,11 +31,11 @@ public class VisualizeCountSetter : MonoBehaviour
         SetCount(0);
     }
 
-    private void OnSpawnedNote(ENoteType noteType)
+    private void OnJudge(JudgeInfo judgeInfo)
     {
-        if (noteType == ENoteType.If)
+        if (judgeInfo.NoteType == ENoteType.If && Value > 0)
         {
-            DisCount();
+            SetCount(Value - 1);
         }
     }
 
@@ -55,9 +58,11 @@ public class VisualizeCountSetter : MonoBehaviour
         {
             DisCount();
         }
+        
+        OnValueChanged?.Invoke(Value);
     }
 
-    public void AddCount()
+    private void AddCount()
     {
         if (unitIcons.Count <= Value)
         {
@@ -70,8 +75,13 @@ public class VisualizeCountSetter : MonoBehaviour
         Value++;
     }
 
-    public void DisCount()
+    private void DisCount()
     {
+        if (Value <= 0)
+        {
+            throw new Exception("Value couldn't less than 0");
+        }
+        
         Value--;
         unitIcons[Value].SetActive(false);
     }

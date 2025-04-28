@@ -1,16 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public static class ChartDataParser
 {
+    private static readonly float MiliSecond = 0.001f;
+    
     [System.Serializable]
     public struct ChartStartData
     {
-        public string title;    // 곡 제목
+        public string music_path;    // 곡 파일 위치
         public float bpm;  // 시작 BPM
         public float offset;    // 오프셋
+        public float delay; // 곡 재생 지연 시간
         
         public List<NoteStartData> notes;   // 노트 정보
     }
@@ -25,7 +30,7 @@ public static class ChartDataParser
         public string pattern; // 스폰 후 패턴을 나타내는 문자열 (if 노트에서만 사용)
     }
     
-    private const string testPath = "Assets/Scripts/Test/CSharpMinigameTest/ChartData/test.json";
+    private const string testPath = "Assets/CSharpMiniGameData/ChartData/test.json";
 
     public static ChartData Parse(string chartDataPath = testPath)
     {
@@ -35,26 +40,27 @@ public static class ChartDataParser
         Debug.Log(json);
         var chartStartData = JsonUtility.FromJson<ChartStartData>(json);
         
-        chartData.title = chartStartData.title;
-        chartData.bpm = chartStartData.bpm;
-        chartData.offset = chartStartData.offset;
+        AudioClip musicClip = AssetDatabase.LoadAssetAtPath<AudioClip>(chartStartData.music_path);
+        chartData.MusicClip = musicClip;
+        chartData.Bpm = chartStartData.bpm;
+        chartData.Offset = chartStartData.offset * MiliSecond;
+        chartData.Delay = chartStartData.delay * MiliSecond;
         foreach (var startNote in chartStartData.notes)
         {
             NoteData noteData = new NoteData();
-            noteData.time = startNote.time;
-            noteData.type = ConvertStringToNoteType(startNote.type);
-            noteData.count = startNote.count;
-            noteData.color = startNote.color;
-            noteData.pattern = startNote.pattern;
-            chartData.notes.Add(noteData);
+            noteData.Time = startNote.time;
+            noteData.NoteType = ConvertStringToNoteType(startNote.type);
+            noteData.Count = startNote.count;
+            noteData.Color = startNote.color;
+            noteData.Pattern = startNote.pattern;
+            chartData.Notes.Add(noteData);
         }
         
-        Debug.Log(chartData.title);
-        Debug.Log(chartData.bpm);
-        Debug.Log(chartData.offset);
-        foreach (NoteData note in chartData.notes)
+        Debug.Log(chartData.Bpm);
+        Debug.Log(chartData.Offset);
+        foreach (NoteData note in chartData.Notes)
         {
-            Debug.Log($"{note.time} {note.type} {note.count} {note.color} {note.pattern}");
+            Debug.Log($"{note.Time} {note.NoteType} {note.Count} {note.Color} {note.Pattern}");
         }
         
         return chartData;
