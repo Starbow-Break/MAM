@@ -49,7 +49,7 @@ public class UnityMiniGame : AMiniGame
 
     private void OnCompleteSet()
     {
-        _characterController.PlayInstructorEmote(EEmoteType.BlueExclamation);
+        _characterController.PlayInstructorEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
         _screenController.ShowCorrectImage();
         _correctSetCount++;
         _uiUpdater.SetScore(_correctSetCount);
@@ -64,8 +64,8 @@ public class UnityMiniGame : AMiniGame
 
     private void OnWrongInput()
     {
-        _characterController.PlayInstructorEmote(EEmoteType.RedExclamation);
-        _characterController.PlayStudentsEmote(EEmoteType.RedExclamation);
+        _characterController.PlayInstructorEmote(EEmoteType.RedExclamation, _delayBetweenSets);
+        _characterController.PlayStudentsEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _screenController.ShowIncorrectImage();
         
         StartCoroutine(DelaySetAndSetCues());

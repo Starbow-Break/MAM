@@ -8,11 +8,8 @@ public class FlowManager : MonoBehaviour
     [SerializeField] private SceneController _sceneController = null;
     [SerializeField] private Button _demoNextSceneButton = null;
     
-    [SerializeField] private int _totalDayInProject = 3;
-
-    [SerializeField] private float[] _projectProgressGoals = null;
+    [SerializeField] private FlowData _flowData = null;
     
-    //[SerializeField] private int _totalProjectCount = 3;
     private int _currentDay = 1;
     private int _currentProject = 1;
     
@@ -61,7 +58,7 @@ public class FlowManager : MonoBehaviour
                 break;
             
             case ESceneIndex.DayEnd:
-                if (_currentDay >= _totalDayInProject)
+                if (_currentDay >= _flowData.TotalDaysInProject)
                 {
                     _sceneController.LoadScene(ESceneIndex.Present);
                     break;
@@ -82,8 +79,8 @@ public class FlowManager : MonoBehaviour
 
     public float GetCurrentProjectGoal()
     {
-        int index = Mathf.Clamp(_currentProject - 1, 0, _projectProgressGoals.Length - 1);
-        return _projectProgressGoals[index];
+        int index = Mathf.Clamp(_currentProject - 1, 0, _flowData.TotalProjectCount - 1);
+        return _flowData.ProjectProgressGoals[index];
     }
 
 }

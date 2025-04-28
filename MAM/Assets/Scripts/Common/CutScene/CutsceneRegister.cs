@@ -10,4 +10,9 @@ public class CutsceneRegister : MonoBehaviour
     {
         GameManager.CutsceneManager.RegisterCutscene(_cutsceneName, _director);
     }
+
+    protected virtual void OnDestroy()
+    {
+        GameManager.CutsceneManager.UnregisterCutscene(_cutsceneName);
+    }
 }

@@ -21,7 +21,10 @@ public class CutsceneManager : MonoBehaviour
 
     public void RegisterCutscene(ECutsceneName cutsceneName, PlayableDirector cutscene)
     {
-        _cutscenes.Add(cutsceneName, cutscene);
+        if (_cutscenes.TryAdd(cutsceneName, cutscene) == false)
+        {
+            Debug.LogWarning("Cutscene already registered");
+        }
     }
 
     public void UnregisterCutscene(ECutsceneName cutsceneName)

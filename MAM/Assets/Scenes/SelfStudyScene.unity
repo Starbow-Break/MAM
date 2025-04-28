@@ -391,6 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225150768}
   - component: {fileID: 225150769}
+  - component: {fileID: 225150770}
   m_Layer: 0
   m_Name: CarrotCutscene
   m_TagString: Untagged
@@ -424,7 +425,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -433,6 +434,20 @@ PlayableDirector:
     value: {fileID: 1778946160}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &225150770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225150767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be092ef0b5a93694da40133f7bc5b7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _director: {fileID: 225150769}
+  _cutsceneName: 1
 --- !u!1 &405047796
 GameObject:
   m_ObjectHideFlags: 0
