@@ -439,6 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6319435961191248806}
+  - component: {fileID: 3003803701817534141}
   m_Layer: 0
   m_Name: SpeechBubble
   m_TagString: Untagged
@@ -462,3 +463,15 @@ Transform:
   - {fileID: 5250076623690867041}
   m_Father: {fileID: 8354655507307387443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &3003803701817534141
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008355678983590792}
+  m_Enabled: 1
+  m_SortingLayerID: -1491952087
+  m_SortingLayer: 2
+  m_SortingOrder: 1
+  m_SortAtRoot: 0

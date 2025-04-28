@@ -884,13 +884,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Talking_Emotes_14
+      name: Emote_Shy
       rect:
         serializedVersion: 2
         x: 480
-        y: 480
+        y: 448
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1253,28 +1253,6 @@ TextureImporter:
       bones: []
       spriteID: 0744093c2fb79df47a8a0b28e8b785c3
       internalID: 418374615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_32
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d524744905e30548b32586c2bc1bfc4
-      internalID: -286529403
       vertices: []
       indices: 
       edges: []
@@ -1654,13 +1632,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Talking_Emotes_50
+      name: Emote_Water
       rect:
         serializedVersion: 2
         x: 480
-        y: 416
+        y: 384
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2023,28 +2001,6 @@ TextureImporter:
       bones: []
       spriteID: 1402b2acc69457447a3894e46c20bd59
       internalID: 483851844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_67
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8e8d807f6c4c484096951cf441b77d3
-      internalID: -436779947
       vertices: []
       indices: 
       edges: []
@@ -3502,13 +3458,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Talking_Emotes_134
+      name: Emote_Angry
       rect:
         serializedVersion: 2
         x: 384
-        y: 224
+        y: 192
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3783,28 +3739,6 @@ TextureImporter:
       bones: []
       spriteID: b8c651e22a188ce40afc1124576db5b4
       internalID: 1760728224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_147
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7734d9765b6b69b4db6e9135592f3c96
-      internalID: 546739658
       vertices: []
       indices: 
       edges: []
@@ -4606,9 +4540,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4628,9 +4562,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4650,9 +4584,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4672,9 +4606,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4694,9 +4628,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4716,9 +4650,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 32
+        y: 0
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4861,138 +4795,6 @@ TextureImporter:
       bones: []
       spriteID: fe8d6bf662450a343a5961ba77c4a8d0
       internalID: -1975679219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_204
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2441eabb00ac7449a12cebe2ecdb5fb
-      internalID: 912311960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_205
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2e3e56848a277d488531e95b2b9615f
-      internalID: -168940411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_206
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ad814700c37d1349b741a1eb047283b
-      internalID: 305729731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_207
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98310d05529d5d84eba212ca51dd2567
-      internalID: -1762675517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_208
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4cfd81272248c04097cff1781231bfd
-      internalID: 1117874277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Talking_Emotes_209
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f676bb859dad6c42b9ef5e067408d94
-      internalID: -1466570213
       vertices: []
       indices: 
       edges: []
@@ -5143,6 +4945,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Emote_Angry: 1004619422
+      Emote_Shy: 670244896
+      Emote_Water: -586586272
       Talking_Emotes_00: 1890205099
       Talking_Emotes_01: -2084001212
       Talking_Emotes_02: -1096255480
@@ -5192,13 +4997,11 @@ TextureImporter:
       UI_Talking_Emotes_131: 1272283998
       UI_Talking_Emotes_132: 1947634253
       UI_Talking_Emotes_133: 1238214235
-      UI_Talking_Emotes_134: 1004619422
       UI_Talking_Emotes_135: -818665952
       UI_Talking_Emotes_136: 1858413806
       UI_Talking_Emotes_137: 1006803057
       UI_Talking_Emotes_138: -357790724
       UI_Talking_Emotes_139: 1124295543
-      UI_Talking_Emotes_14: 670244896
       UI_Talking_Emotes_140: -484508599
       UI_Talking_Emotes_141: -1292572243
       UI_Talking_Emotes_142: 921560079
@@ -5305,7 +5108,6 @@ TextureImporter:
       UI_Talking_Emotes_48: -627359795
       UI_Talking_Emotes_49: 1592194399
       UI_Talking_Emotes_5: -1982812069
-      UI_Talking_Emotes_50: -586586272
       UI_Talking_Emotes_51: -581560051
       UI_Talking_Emotes_52: 411760976
       UI_Talking_Emotes_53: -1877325271

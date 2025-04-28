@@ -34,8 +34,13 @@ public class StudentCharacterGenerator : MonoBehaviour
         }
         else
         {
-            
+            Debug.LogWarning(id + " not found");
         }
         return newStudentCharacter;
+    }
+
+    public SpriteLibraryAsset GetSpriteLibrary(string id)
+    {
+        return _lookup.TryGetValue(id, out SpriteLibraryAsset asset) ? asset : null;
     }
 }
