@@ -37,6 +37,16 @@ public class CSharpMiniGame: AMiniGame
             }
         }
     }
+
+    private void OnEnable()
+    {
+        Controller.OnPlayChartEnded += () => EndGame();
+    }
+
+    private void OnDisable()
+    {
+        Controller.OnPlayChartEnded -= () => EndGame();
+    }
     
     public override void Initialize(int difficulty)
     {

@@ -68,7 +68,6 @@ public static class ChartDataParser
 
     private static ENoteType ConvertStringToNoteType(string noteTypeStr)
     {
-        Debug.Log(noteTypeStr);
         ENoteType type = noteTypeStr switch
         {
             "normal" => ENoteType.Normal,

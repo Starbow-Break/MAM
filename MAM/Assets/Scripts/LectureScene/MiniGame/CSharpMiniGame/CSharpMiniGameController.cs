@@ -7,13 +7,13 @@ public class CSharpMiniGameController : MonoBehaviour
 {
     [SerializeField] NoteSpawner _noteSpawner;
     [SerializeField] private AudioSource _music;
-    [SerializeField] TextMeshProUGUI _testText;
     
     private float startTime;
     private float currentScoreWeight;
     private float maxScoreWeight;
 
     public UnityAction<JudgeInfo> OnJudge;
+    public UnityAction OnPlayChartEnded;
 
     private void OnEnable()
     {
@@ -29,6 +29,7 @@ public class CSharpMiniGameController : MonoBehaviour
     {
         maxScoreWeight = CSharpMiniGameScoreHelper.GetTotalMaxWeight(chartData);
         
+        CSharpMiniGameQueue.ClearAllQueues();
         ChartQueueData chartQueueData = ChartQueueDataGenerator.Generate(chartData);
         foreach (var eventQueueData in chartQueueData.EventQueueDatas)
         {
@@ -50,8 +51,16 @@ public class CSharpMiniGameController : MonoBehaviour
 
     private IEnumerator PlaySequence(AudioClip musicClip, float delay, float chartOffset)
     {
+        yield return MusicLoaded(musicClip);
         StartCoroutine(PlayMusicSequence(musicClip, delay));
-        yield return PlayChartSequence(delay, chartOffset);
+        yield return PlayChartSequence(delay);
+    }
+
+    private IEnumerator MusicLoaded(AudioClip musicClip)
+    {
+        _music.clip = musicClip;
+        musicClip.LoadAudioData();
+        yield return new WaitUntil(() => musicClip.loadState == AudioDataLoadState.Loaded);
     }
 
     private IEnumerator PlayMusicSequence(AudioClip musicClip, float delay)
@@ -60,14 +69,15 @@ public class CSharpMiniGameController : MonoBehaviour
         _music.PlayOneShot(musicClip);
     }
     
-    private IEnumerator PlayChartSequence(float delay, float offset)
+    private IEnumerator PlayChartSequence(float delay)
     {
+        Debug.Log(Time.time);
         startTime = Time.time + delay;
         
         var eventQueue = CSharpMiniGameQueue.EventQueue;
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         
-        while (eventQueue.Count > 0 || judgeQueue.Count > 0)
+        while (eventQueue.Count > 0 || judgeQueue.Count > 0 || _music.isPlaying)
         {
             ResolveNoHit();
             
@@ -90,6 +100,8 @@ public class CSharpMiniGameController : MonoBehaviour
             
             yield return null;
         }
+        
+        OnPlayChartEnded?.Invoke();
     }
 
     private void ShowNoteGuide(EventQueueData data)

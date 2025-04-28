@@ -1,7 +1,7 @@
 {
 	"music_path":"Assets/CSharpMiniGameData/Music/test.mp3",
 	"bpm":168,
-	"offset":2080,
+	"offset":1900,
 	"delay":500,
 	"notes":[
 		{ "time":7, "type": "normal", "count":1 },

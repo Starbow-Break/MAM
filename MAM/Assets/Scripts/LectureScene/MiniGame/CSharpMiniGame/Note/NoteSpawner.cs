@@ -16,8 +16,6 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] private List<NoteUpdaterData> noteUpdaterDatas;
     [SerializeField] private Transform destroyPoint;
 
-    public UnityAction<ENoteType> OnSpawnedNote;
-
     public void SpawnNote(EventQueueData data)
     {
         foreach (var noteUpdaterData in noteUpdaterDatas)
@@ -45,7 +43,6 @@ public class NoteSpawner : MonoBehaviour
                     }
                 }
                 
-                OnSpawnedNote?.Invoke(data.NoteType);
                 break;
             }
         }
