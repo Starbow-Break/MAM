@@ -4,12 +4,12 @@ using UnityEngine;
 public class UnityMiniGame : AMiniGame
 {
     [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
-    [SerializeField] private MiniGameCharacterController _characterController = null;
     [SerializeField] private UnityScreenController _screenController = null;
     [SerializeField] private UnityWindowInputHandler _inputHandler = null;
-    [SerializeField] private UnityMiniGameUIUpdater _uiUpdater = null;
 
     private int _correctSetCount = 0;
+    private MiniGameCharacterController _characterCon = null;
+    private MiniGameUIUpdater _uiUpdater = null;
 
     private static readonly float _gameTime = 60; //초
     private static readonly float _delayBetweenSets = 0.3f;
@@ -21,14 +21,18 @@ public class UnityMiniGame : AMiniGame
         _difficulty = difficulty;
         _unityWindowCueManager.InitializeCues(_baseCueCount + difficulty, OnCompleteSet);
         _inputHandler.Initialize(_unityWindowCueManager, OnCorrectInput, OnWrongInput);
-        _uiUpdater.SkipButton.onClick.AddListener(OnEndGame);
+        LectureSceneManager.MiniGameController.UIUpdater.SkipButton.onClick.AddListener(OnEndGame);
+        
+        _characterCon = LectureSceneManager.MiniGameController.CharacterController;
+        _uiUpdater = LectureSceneManager.MiniGameController.UIUpdater;
     }
 
     public override void StartGame()
     {
         gameObject.SetActive(true);
-        _characterController.SetInstructorTalking(true);
+        _characterCon.SetInstructorTalking(true);
         _inputHandler.IsOnDelay = false;
+        _uiUpdater.ShowTime();
         StartCoroutine(ProcessGame());
     }
 
@@ -49,7 +53,7 @@ public class UnityMiniGame : AMiniGame
 
     private void OnCompleteSet()
     {
-        _characterController.PlayInstructorEmote(EEmoteType.BlueExclamation);
+        _characterCon.PlayInstructorEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
         _screenController.ShowCorrectImage();
         _correctSetCount++;
         _uiUpdater.SetScore(_correctSetCount);
@@ -64,8 +68,8 @@ public class UnityMiniGame : AMiniGame
 
     private void OnWrongInput()
     {
-        _characterController.PlayInstructorEmote(EEmoteType.RedExclamation);
-        _characterController.PlayStudentsEmote(EEmoteType.RedExclamation);
+        _characterCon.PlayInstructorEmote(EEmoteType.RedExclamation, _delayBetweenSets);
+        _characterCon.PlayStudentsEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _screenController.ShowIncorrectImage();
         
         StartCoroutine(DelaySetAndSetCues());

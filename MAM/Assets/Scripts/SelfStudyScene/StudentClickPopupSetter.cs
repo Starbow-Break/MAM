@@ -46,6 +46,8 @@ public class StudentClickPopupSetter : MonoBehaviour
         StudentLevelHelper.ApplySelfStudyInteraction(_selectedStudent, actionType);
         
         //나중에 컷씬
+        if (actionType == EAffinityType.Carrot)
+            GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Carrot);
         
         SelfStudySceneManager.Instance.UseInteractionCount();
         ClosePopup();

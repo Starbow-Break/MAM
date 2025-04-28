@@ -8,13 +8,13 @@ public class FlowManager : MonoBehaviour
     [SerializeField] private SceneController _sceneController = null;
     [SerializeField] private Button _demoNextSceneButton = null;
     
-    [SerializeField] private int _totalDayInProject = 3;
-
-    [SerializeField] private float[] _projectProgressGoals = null;
+    [SerializeField] private FlowData _flowData = null;
     
-    //[SerializeField] private int _totalProjectCount = 3;
     private int _currentDay = 1;
     private int _currentProject = 1;
+    
+    public int CurrentDay {get {return _currentDay;}}
+    public int CurrentProject {get {return _currentProject;}}
     public UnityAction ActOnSceneSwitch{ get; set; }    //씬언로드전 마지막행동
     public UnityAction ActOnNewDayStart { get; set; }   //새 하루 시작할때
     public UnityAction ActOnNewProjectStart{ get; set; }    //새프로잭트시작할때 팀선정 전
@@ -58,7 +58,7 @@ public class FlowManager : MonoBehaviour
                 break;
             
             case ESceneIndex.DayEnd:
-                if (_currentDay >= _totalDayInProject)
+                if (_currentDay >= _flowData.TotalDaysInProject)
                 {
                     _sceneController.LoadScene(ESceneIndex.Present);
                     break;
@@ -70,7 +70,7 @@ public class FlowManager : MonoBehaviour
             
             case ESceneIndex.Present:
                 _currentProject++;
-                _currentDay = 0;
+                _currentDay = 1;
                 ActOnNewProjectStart?.Invoke();
                 _sceneController.LoadScene(ESceneIndex.TeamSelect);
                 break;
@@ -79,8 +79,8 @@ public class FlowManager : MonoBehaviour
 
     public float GetCurrentProjectGoal()
     {
-        int index = Mathf.Clamp(_currentProject - 1, 0, _projectProgressGoals.Length - 1);
-        return _projectProgressGoals[index];
+        int index = Mathf.Clamp(_currentProject - 1, 0, _flowData.TotalProjectCount - 1);
+        return _flowData.ProjectProgressGoals[index];
     }
 
 }

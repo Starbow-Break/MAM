@@ -162,11 +162,11 @@ MonoBehaviour:
   - ID: YeonHee
     Name: "\uC870\uD76C\uC724"
     MBTI: INTP
-    FavRestaurant: "\uBC25"
-    AffinityType: 1
+    FavRestaurant: "\uC57C\uBBF8\uCE74\uCE20"
+    AffinityType: 0
     CSharpSkill: 3
     UnitySkill: 1
-    Icon: {fileID: -777213121, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
+    Icon: {fileID: -1528430799, guid: 3122e0e6905219f4f8294f789449ec8b, type: 3}
   - ID: SangHyun
     Name: "\uCC28\uD604\uC0C1"
     MBTI: INFP

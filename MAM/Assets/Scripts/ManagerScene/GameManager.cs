@@ -22,11 +22,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private StudentManager _studentManager = null;
     [SerializeField] private TeamManager _teamManager = null;
     [SerializeField] private RestaurantTable _restaurantTable = null;
+    [SerializeField] private CommonHUDManager _commonHUDManager = null;
+    [SerializeField] private CutsceneManager _cutsceneManager = null;
     
     public static FlowManager FlowManager => Instance._flowManager;
     public static StudentManager StudentManager => Instance._studentManager;
     public static TeamManager TeamManager => Instance._teamManager;
     public static RestaurantTable RestaurantTable => Instance._restaurantTable;
+    public static CommonHUDManager HUDManager => Instance._commonHUDManager;
+    public static CutsceneManager CutsceneManager => Instance._cutsceneManager;
 
     public bool IsTestMode = false;
     
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         _studentManager.InitializeStudents();
         _teamManager.Initialize();
+        _commonHUDManager.Initialize();
         _flowManager.GameStart();
     }
 }

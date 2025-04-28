@@ -28,6 +28,6 @@ public class LectureSelectSetter : MonoBehaviour
         _updater.gameObject.SetActive(false);
         
         ESkillType miniGameType = (ESkillType)_lectureTypeGroup.SelectedIndex;
-        LectureSceneManager.Instance.MiniGameController.PlayMiniGame(miniGameType, _lectureLevelGroup.SelectedIndex + 1);
+        LectureSceneManager.MiniGameController.PlayMiniGame(miniGameType, _lectureLevelGroup.SelectedIndex + 1);
     }
 }

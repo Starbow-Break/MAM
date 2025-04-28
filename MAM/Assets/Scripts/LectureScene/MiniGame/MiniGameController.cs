@@ -4,8 +4,13 @@ public class MiniGameController : MonoBehaviour
 {
     [SerializeField] private AMiniGame _unityMiniGame = null;
     [SerializeField] private AMiniGame _cSharpMiniGame = null;
+    [SerializeField] private MiniGameUIUpdater _uiUpdater = null;
+    [SerializeField] private MiniGameCharacterController _characterController = null;
 
     private AMiniGame _currentMiniGame = null;
+    
+    public MiniGameUIUpdater UIUpdater => _uiUpdater;
+    public MiniGameCharacterController CharacterController => _characterController;
 
     public void PlayMiniGame(ESkillType miniGameType, int difficulty)
     {
@@ -22,6 +27,7 @@ public class MiniGameController : MonoBehaviour
                 break;
         }
         _currentMiniGame.Initialize(difficulty);
+        _uiUpdater.gameObject.SetActive(true);
         _currentMiniGame.StartGame();
     }
 }
