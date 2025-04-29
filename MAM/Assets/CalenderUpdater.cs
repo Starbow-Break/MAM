@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 public class CalenderUpdater : MonoBehaviour
 {
@@ -17,20 +14,9 @@ public class CalenderUpdater : MonoBehaviour
 
     public UnityAction OnMoveFinished;
 
-    public void Initialize()
+    public void SetActive(bool active)
     {
-        int currentProject = GameManager.FlowManager.CurrentProject;
-        int currentDay = GameManager.FlowManager.CurrentDay;
-        int currentIndex = GetRectIndex(currentProject, currentDay);
-        
-        RectTransform target = _squareRects[currentIndex];
-        _teacher.SetParent(target);
-        _teacher.anchoredPosition = Vector3.zero;
-    }
-
-    public void Start()
-    {
-        Initialize();
+        gameObject.SetActive(active);
     }
 
     public void OnDisable()
@@ -38,26 +24,16 @@ public class CalenderUpdater : MonoBehaviour
         OnMoveFinished = null;
     }
 
-    public void Update()
+    public void SetTeacherPosition(int index)
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !IsMoving)
-        {
-            IsMoving = true;
-            MoveNext();
-        }
-    }
-
-    public void MoveNext()
-    {
-        int currentProject = GameManager.FlowManager.CurrentProject;
-        int currentDay = GameManager.FlowManager.CurrentDay;
-        int currentIndex = GetRectIndex(currentProject, currentDay);
-        
-        MoveTeacher(_squareRects[currentIndex + 1], 300f);
+        RectTransform newParent = _squareRects[index];
+        _teacher.SetParent(newParent);
+        _teacher.anchoredPosition = Vector3.zero;
     }
     
-    private void MoveTeacher(RectTransform target, float speed)
+    public void MoveTeacher(int targetIndex, float speed = 300f)
     {
+        RectTransform target = _squareRects[targetIndex];
         StartCoroutine(MoveFlow(target, speed));
     }
     
@@ -66,6 +42,7 @@ public class CalenderUpdater : MonoBehaviour
         yield return new WaitForSeconds(moveBeforeDelay);
         
         _teacher.SetParent(target);
+        _teacher.GetComponent<Animator>().SetBool("Walk", true);
         
         float time = _teacher.anchoredPosition.magnitude / speed;
         Vector3 startPosition = _teacher.anchoredPosition;
@@ -79,13 +56,9 @@ public class CalenderUpdater : MonoBehaviour
             yield return null;
         }
         IsMoving = false;
+        _teacher.GetComponent<Animator>().SetBool("Walk", false);
         
         yield return new WaitForSeconds(moveAfterDelay);
         OnMoveFinished?.Invoke();
-    }
-
-    public int GetRectIndex(int project, int day)
-    {
-        return (project - 1) * 4 + (day - 1);
     }
 }
