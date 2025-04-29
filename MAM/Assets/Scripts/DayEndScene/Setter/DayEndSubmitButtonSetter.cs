@@ -1,10 +1,12 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DayEndSubmitButtonSetter : MonoBehaviour
 {
     [SerializeField] private SubmitButtonUpdater _updater;
+    [SerializeField] private CalenderUpdater _calender;
 
     public void Initialize()
     {
@@ -14,6 +16,8 @@ public class DayEndSubmitButtonSetter : MonoBehaviour
 
     private void OnClick()
     {
-        GameManager.FlowManager.ToNextScene();
+        _calender.gameObject.SetActive(true);
+        _calender.MoveNext();
+        _calender.OnMoveFinished += () => GameManager.FlowManager.ToNextScene();
     }
 }

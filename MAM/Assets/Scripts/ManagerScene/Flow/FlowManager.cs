@@ -40,7 +40,6 @@ public class FlowManager : MonoBehaviour
     public void ToNextScene()
     {
         ActOnSceneSwitch?.Invoke();
-        ActOnSceneSwitch = null;
         
         switch (_sceneController.CurrentScene)
         {

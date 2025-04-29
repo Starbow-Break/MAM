@@ -5,12 +5,25 @@ public class DayEndSceneManager : ASceneManager<DayEndSceneManager>
 {
     [SerializeField] DayEndTeamProjectProgressSetter _teamProjectProgressSetter;
     [SerializeField] DayEndSubmitButtonSetter _submitButtonSetter;
+    [SerializeField] CalenderUpdater _calenderUpdater;
     
     public DayEndTeamProjectProgressSetter TeamProjectProgressSetter => _teamProjectProgressSetter;
-
+    public CalenderUpdater CalenderUpdater => _calenderUpdater;
+    
     private void Start()
     {
         InitializeUI();
+        PlayCutScene();
+    }
+
+    private void PlayCutScene()
+    {
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Sleep);
+        GameManager.CutsceneManager.ActOnCutSceneEnd += OnCutSceneEnd;
+    }
+
+    private void OnCutSceneEnd()
+    {
         DayEnd();
     }
     
