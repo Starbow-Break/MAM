@@ -13,8 +13,16 @@ PrefabInstance:
       value: CutsceneActor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1537290065166243912, guid: ac0013a242505014890cba0625a7eac4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537290065166243912, guid: ac0013a242505014890cba0625a7eac4, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537290065166243912, guid: ac0013a242505014890cba0625a7eac4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -785747605
       objectReference: {fileID: 0}
     - target: {fileID: 1795721935061058264, guid: ac0013a242505014890cba0625a7eac4, type: 3}
       propertyPath: m_Sprite
@@ -25,8 +33,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3811007798000762966, guid: ac0013a242505014890cba0625a7eac4, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_SortingLayer
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811007798000762966, guid: ac0013a242505014890cba0625a7eac4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811007798000762966, guid: ac0013a242505014890cba0625a7eac4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -785747605
       objectReference: {fileID: 0}
     - target: {fileID: 5880637469130732476, guid: ac0013a242505014890cba0625a7eac4, type: 3}
       propertyPath: m_LocalScale.x
