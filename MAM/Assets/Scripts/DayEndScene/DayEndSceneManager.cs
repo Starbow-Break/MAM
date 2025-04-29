@@ -13,6 +13,7 @@ public class DayEndSceneManager : ASceneManager<DayEndSceneManager>
     private void Start()
     {
         InitializeUI();
+        PlayCutScene();
     }
 
     private void PlayCutScene()
