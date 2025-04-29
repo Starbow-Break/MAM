@@ -3696,7 +3696,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_162
+      name: BeigeWallLeftTop
       rect:
         serializedVersion: 2
         x: 0
@@ -3718,7 +3718,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_163
+      name: BeigeWallCenterTop
       rect:
         serializedVersion: 2
         x: 32
@@ -3740,7 +3740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_164
+      name: BeigeWallRightTop
       rect:
         serializedVersion: 2
         x: 64
@@ -4356,7 +4356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_192
+      name: BeigeWallLeftBottom
       rect:
         serializedVersion: 2
         x: 0
@@ -4378,7 +4378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_193
+      name: BeigeWallCenterBottom
       rect:
         serializedVersion: 2
         x: 32
@@ -4400,7 +4400,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Walls_32x32_194
+      name: BeigeWallRightBottom
       rect:
         serializedVersion: 2
         x: 64
@@ -21529,6 +21529,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BeigeWallCenterBottom: -512712171
+      BeigeWallCenterTop: -1842799102
+      BeigeWallLeftBottom: 1019035558
+      BeigeWallLeftTop: -1119887335
+      BeigeWallRightBottom: -1396750939
+      BeigeWallRightTop: -1905147956
       Room_Builder_Walls_32x32_0: 4301990614810869188
       Room_Builder_Walls_32x32_1: -3664339817038392517
       Room_Builder_Walls_32x32_10: -778975570
@@ -21600,9 +21606,6 @@ TextureImporter:
       Room_Builder_Walls_32x32_16: 1661025256
       Room_Builder_Walls_32x32_160: 848543566
       Room_Builder_Walls_32x32_161: 876273848
-      Room_Builder_Walls_32x32_162: -1119887335
-      Room_Builder_Walls_32x32_163: -1842799102
-      Room_Builder_Walls_32x32_164: -1905147956
       Room_Builder_Walls_32x32_165: 203904066
       Room_Builder_Walls_32x32_166: 1834125704
       Room_Builder_Walls_32x32_167: 298906197
@@ -21627,9 +21630,6 @@ TextureImporter:
       Room_Builder_Walls_32x32_19: 935185428
       Room_Builder_Walls_32x32_190: -791042606
       Room_Builder_Walls_32x32_191: -815612533
-      Room_Builder_Walls_32x32_192: 1019035558
-      Room_Builder_Walls_32x32_193: -512712171
-      Room_Builder_Walls_32x32_194: -1396750939
       Room_Builder_Walls_32x32_195: -1678169744
       Room_Builder_Walls_32x32_196: 249396102
       Room_Builder_Walls_32x32_197: 1461833848

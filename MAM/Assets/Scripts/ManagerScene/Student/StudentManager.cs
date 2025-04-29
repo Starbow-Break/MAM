@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine.U2D.Animation;
 
 public class StudentManager : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class StudentManager : MonoBehaviour
     [SerializeField] private StudentCharacterGenerator _studentCharacterGenerator = null;
 
     public StudentCharacter GetStudentCharacter(string ID) => _studentCharacterGenerator.GetCharacter(ID);
+    public SpriteLibraryAsset GetStudentSpriteLibrary(string ID) => _studentCharacterGenerator.GetSpriteLibrary(ID);
 
     public void InitializeStudents()
     {

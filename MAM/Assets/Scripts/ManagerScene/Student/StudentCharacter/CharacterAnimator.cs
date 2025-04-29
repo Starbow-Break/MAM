@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class CharacterAnimator : MonoBehaviour
 {
@@ -7,12 +6,7 @@ public class CharacterAnimator : MonoBehaviour
 
     private readonly int _hashX = Animator.StringToHash("X");
     private readonly int _hashY = Animator.StringToHash("Y");
-    
-    private readonly int _hashIsTalking = Animator.StringToHash("IsTalking");
-    private readonly int _hashIsEmote = Animator.StringToHash("IsEmote");
-    private readonly int _hashExRed = Animator.StringToHash("ExRed");
-    private readonly int _hashExBlue = Animator.StringToHash("ExBlue");
-
+    private readonly int _hashIsWalking = Animator.StringToHash("IsWalking");
     public void TurnFront()
     {
         _animator.SetFloat(_hashX, 0);
@@ -37,30 +31,8 @@ public class CharacterAnimator : MonoBehaviour
         _animator.SetFloat(_hashY, 0);
     }
 
-    public void SetIsTalking(bool isTalking)
+    public void SetIsWalking(bool isWalking)
     {
-        _animator.SetBool(_hashIsTalking, isTalking);
-    }
-
-    public void PlayExclamationRed(float duration = 0.3f)
-    {
-        StopAllCoroutines();
-        StartCoroutine(PlayExclamation(_hashExRed,duration));
-    }
-
-    public void PlayExclamationBlue(float duration = 0.3f)
-    {
-        StopAllCoroutines();
-        StartCoroutine(PlayExclamation(_hashExBlue,duration));
-    }
-
-    private IEnumerator PlayExclamation(int hash, float duration)
-    {
-        _animator.SetTrigger(hash);
-        _animator.SetBool(_hashIsEmote, true);
-        
-        yield return new WaitForSeconds(duration);
-        
-        _animator.SetBool(_hashIsEmote, false);
+        _animator.SetBool(_hashIsWalking, isWalking);
     }
 }

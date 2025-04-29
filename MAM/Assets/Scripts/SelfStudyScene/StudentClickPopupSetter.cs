@@ -6,6 +6,9 @@ public class StudentClickPopupSetter : MonoBehaviour
 
     private Student _selectedStudent = null;
     public bool IsPopupOpen => _updater.gameObject.activeInHierarchy;
+    public Student SelectedStudent => _selectedStudent;
+
+    private bool _isCutscenePlaying = false;
     public void Initialize()
     {
         _updater.BackGroundButton.onClick.AddListener(ClosePopup);
@@ -16,6 +19,9 @@ public class StudentClickPopupSetter : MonoBehaviour
 
     public void OpenPopup(string studentId)
     {
+        if (_isCutscenePlaying)
+            return;
+        
         _selectedStudent = GameManager.StudentManager.GetStudent(studentId);
         _updater.InfoUpdater.SetStudent(_selectedStudent);
         _updater.gameObject.SetActive(true);
@@ -34,7 +40,6 @@ public class StudentClickPopupSetter : MonoBehaviour
     
     private void ClosePopup()
     {
-        _selectedStudent = null;
         _updater.gameObject.SetActive(false);
     }
 
@@ -48,9 +53,15 @@ public class StudentClickPopupSetter : MonoBehaviour
         //나중에 컷씬
         if (actionType == EAffinityType.Carrot)
             GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Carrot);
+        else if (actionType == EAffinityType.Whip)
+            GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Whip);
+
+        GameManager.CutsceneManager.ActOnCutSceneEnd += OnEndCutscene;
+        _isCutscenePlaying = true;
+        
+        ClosePopup();
         
         SelfStudySceneManager.Instance.UseInteractionCount();
-        ClosePopup();
     }
 
     private void HelpStudent()
@@ -65,5 +76,11 @@ public class StudentClickPopupSetter : MonoBehaviour
         
         SelfStudySceneManager.Instance.UseInteractionCount();
         ClosePopup();
+    }
+
+    private void OnEndCutscene()
+    {
+        _isCutscenePlaying = false;
+        _selectedStudent = null;
     }
 }

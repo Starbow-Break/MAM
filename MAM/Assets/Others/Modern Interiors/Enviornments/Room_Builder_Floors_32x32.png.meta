@@ -1719,7 +1719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_72
+      name: FloorLobbyFullCorner
       rect:
         serializedVersion: 2
         x: 384
@@ -1741,7 +1741,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_73
+      name: FloorLobbyTop
       rect:
         serializedVersion: 2
         x: 416
@@ -1763,7 +1763,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_74
+      name: FloorLobbyCorner
       rect:
         serializedVersion: 2
         x: 448
@@ -1983,7 +1983,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_84
+      name: FloorLobbyLeft
       rect:
         serializedVersion: 2
         x: 384
@@ -2005,7 +2005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_85
+      name: FloorLobbyBase
       rect:
         serializedVersion: 2
         x: 416
@@ -2027,7 +2027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_Builder_Floors_32x32_86
+      name: FloorLobbyFull
       rect:
         serializedVersion: 2
         x: 448
@@ -9982,6 +9982,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      FloorLobbyBase: -1845612731
+      FloorLobbyCorner: 951105041
+      FloorLobbyFull: -29449292
+      FloorLobbyFullCorner: 603141491
+      FloorLobbyLeft: -97237026
+      FloorLobbyTop: 767255053
       FloorMainBase: -1003758224
       FloorMainCorner: 1699676961
       FloorMainFull: 154519889
@@ -10399,9 +10405,6 @@ TextureImporter:
       Room_Builder_Floors_32x32_7: 2022936916
       Room_Builder_Floors_32x32_70: -1251156427
       Room_Builder_Floors_32x32_71: -27172498
-      Room_Builder_Floors_32x32_72: 603141491
-      Room_Builder_Floors_32x32_73: 767255053
-      Room_Builder_Floors_32x32_74: 951105041
       Room_Builder_Floors_32x32_75: 667423184
       Room_Builder_Floors_32x32_76: 1132475388
       Room_Builder_Floors_32x32_77: -747858189
@@ -10412,9 +10415,6 @@ TextureImporter:
       Room_Builder_Floors_32x32_81: 1600426290
       Room_Builder_Floors_32x32_82: 1050584194
       Room_Builder_Floors_32x32_83: 832257767
-      Room_Builder_Floors_32x32_84: -97237026
-      Room_Builder_Floors_32x32_85: -1845612731
-      Room_Builder_Floors_32x32_86: -29449292
       Room_Builder_Floors_32x32_87: -290131080
       Room_Builder_Floors_32x32_88: -759977509
       Room_Builder_Floors_32x32_89: -399807410

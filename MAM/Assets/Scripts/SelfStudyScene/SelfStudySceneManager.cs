@@ -10,7 +10,6 @@ public class SelfStudySceneManager : ASceneManager<SelfStudySceneManager>
     public int InteractionCount { get; private set; } = 3;
     public static StudentClickPopupSetter StudentClickPopupSetter => Instance._studentClickPopupSetter;
 
-
     private void Start()
     {
         Initialize();

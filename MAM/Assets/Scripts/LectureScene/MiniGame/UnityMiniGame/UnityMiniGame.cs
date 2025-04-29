@@ -6,7 +6,7 @@ public class UnityMiniGame : AMiniGame
     [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
     [SerializeField] private UnityScreenController _screenController = null;
     [SerializeField] private UnityWindowInputHandler _inputHandler = null;
-
+    
     private int _correctSetCount = 0;
     private MiniGameCharacterController _characterCon = null;
     private MiniGameUIUpdater _uiUpdater = null;
@@ -30,6 +30,7 @@ public class UnityMiniGame : AMiniGame
     public override void StartGame()
     {
         gameObject.SetActive(true);
+        _screenController.gameObject.SetActive(true);
         _characterCon.SetInstructorTalking(true);
         _inputHandler.IsOnDelay = false;
         _uiUpdater.ShowTime();
@@ -54,6 +55,8 @@ public class UnityMiniGame : AMiniGame
     private void OnCompleteSet()
     {
         _characterCon.PlayInstructorEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
+        _characterCon.PlayStudentsEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
+
         _screenController.ShowCorrectImage();
         _correctSetCount++;
         _uiUpdater.SetScore(_correctSetCount);
