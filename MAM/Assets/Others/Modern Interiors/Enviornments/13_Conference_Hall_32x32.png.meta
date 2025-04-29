@@ -442,13 +442,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_10
+      name: StageSpeaker
       rect:
         serializedVersion: 2
         x: 448
-        y: 352
+        y: 320
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,13 +508,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_13
+      name: StageMike
       rect:
         serializedVersion: 2
         x: 224
-        y: 288
+        y: 256
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,7 +794,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_26
+      name: Stage_Back
       rect:
         serializedVersion: 2
         x: 160
@@ -816,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_27
+      name: ChairArm_Left
       rect:
         serializedVersion: 2
         x: 320
@@ -838,7 +838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_28
+      name: ChairArmRight
       rect:
         serializedVersion: 2
         x: 384
@@ -904,13 +904,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_31
+      name: FireExtinguisher
       rect:
         serializedVersion: 2
         x: 416
-        y: 128
+        y: 96
         width: 32
-        height: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1251,28 +1251,6 @@ TextureImporter:
       bones: []
       spriteID: 5ec5de308c7ab674fa5e73d20c119b10
       internalID: 2097256050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_47
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b59cdc822ccf7f48b2e18860b042079
-      internalID: -670209997
       vertices: []
       indices: 
       edges: []
@@ -1625,28 +1603,6 @@ TextureImporter:
       bones: []
       spriteID: 65c69a4bb5bfa8249b8e7df494db5879
       internalID: -741938607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_64
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f501acb39c106f948acfe54cda6d1b61
-      internalID: 1206065055
       vertices: []
       indices: 
       edges: []
@@ -2400,7 +2356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_99
+      name: Chair
       rect:
         serializedVersion: 2
         x: 352
@@ -2532,7 +2488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_105
+      name: Stage_Middle_Left
       rect:
         serializedVersion: 2
         x: 160
@@ -2554,7 +2510,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_106
+      name: Stage_Middle_1
       rect:
         serializedVersion: 2
         x: 192
@@ -2598,7 +2554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_108
+      name: Stage_Middle_Right
       rect:
         serializedVersion: 2
         x: 256
@@ -2664,7 +2620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_115
+      name: Stage_Front_Left
       rect:
         serializedVersion: 2
         x: 160
@@ -2686,7 +2642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_116
+      name: Stage_Front_1
       rect:
         serializedVersion: 2
         x: 192
@@ -2708,7 +2664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_117
+      name: Stage_Front_2
       rect:
         serializedVersion: 2
         x: 224
@@ -2730,7 +2686,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_118
+      name: Stage_Front_Right
       rect:
         serializedVersion: 2
         x: 256
@@ -2796,7 +2752,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_121
+      name: SeatedChair
       rect:
         serializedVersion: 2
         x: 384
@@ -2813,28 +2769,6 @@ TextureImporter:
       bones: []
       spriteID: 83cc46887b21f7941bea402de8808710
       internalID: -1156328220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 13_Conference_Hall_32x32_122
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e148cf2e71ef64043be28a627b3392bf
-      internalID: 42178337
       vertices: []
       indices: 
       edges: []
@@ -2943,30 +2877,21 @@ TextureImporter:
     nameFileIdTable:
       13_Conference_Hall_32x32_0: 2347321455211660817
       13_Conference_Hall_32x32_1: 6865662138522343164
-      13_Conference_Hall_32x32_10: -8282515725333280373
       13_Conference_Hall_32x32_100: 1663548990
       13_Conference_Hall_32x32_101: 439653557
       13_Conference_Hall_32x32_102: 549513174
       13_Conference_Hall_32x32_103: 33658407
       13_Conference_Hall_32x32_104: 70114137
-      13_Conference_Hall_32x32_105: 1484893072
-      13_Conference_Hall_32x32_106: 279860780
       13_Conference_Hall_32x32_107: 1473946273
-      13_Conference_Hall_32x32_108: 1026094573
       13_Conference_Hall_32x32_109: -262328138
       13_Conference_Hall_32x32_11: 7492660595145004736
       13_Conference_Hall_32x32_111: 1528923454
       13_Conference_Hall_32x32_112: 1732151199
       13_Conference_Hall_32x32_113: 1993078526
       13_Conference_Hall_32x32_114: 758440091
-      13_Conference_Hall_32x32_115: -695103457
-      13_Conference_Hall_32x32_116: 366647428
-      13_Conference_Hall_32x32_117: 729339549
-      13_Conference_Hall_32x32_118: -1143635740
       13_Conference_Hall_32x32_119: -2031357432
       13_Conference_Hall_32x32_12: 7239534702764456219
       13_Conference_Hall_32x32_120: -388245130
-      13_Conference_Hall_32x32_121: -1156328220
       13_Conference_Hall_32x32_122: 42178337
       13_Conference_Hall_32x32_123: -156862720
       13_Conference_Hall_32x32_124: -1971433528
@@ -2975,7 +2900,6 @@ TextureImporter:
       13_Conference_Hall_32x32_127: 2092127917
       13_Conference_Hall_32x32_128: 534334886
       13_Conference_Hall_32x32_129: 550117400
-      13_Conference_Hall_32x32_13: -6528246331450291295
       13_Conference_Hall_32x32_130: -603245885
       13_Conference_Hall_32x32_131: -1838106532
       13_Conference_Hall_32x32_132: -1056746790
@@ -2996,13 +2920,9 @@ TextureImporter:
       13_Conference_Hall_32x32_23: -6691509271371995968
       13_Conference_Hall_32x32_24: 8057295193895699977
       13_Conference_Hall_32x32_25: -4818178171230302778
-      13_Conference_Hall_32x32_26: -5909591779941374380
-      13_Conference_Hall_32x32_27: -600698857739252175
-      13_Conference_Hall_32x32_28: -3388835338444483390
       13_Conference_Hall_32x32_29: 2501537449460620332
       13_Conference_Hall_32x32_3: -7411441406123249799
       13_Conference_Hall_32x32_30: -8410760865367961519
-      13_Conference_Hall_32x32_31: -8409027951281779066
       13_Conference_Hall_32x32_32: -8214381085800237037
       13_Conference_Hall_32x32_33: 1077160660
       13_Conference_Hall_32x32_34: 918814576
@@ -3076,8 +2996,22 @@ TextureImporter:
       13_Conference_Hall_32x32_96: -1171501505
       13_Conference_Hall_32x32_97: -1382449024
       13_Conference_Hall_32x32_98: 449735854
-      13_Conference_Hall_32x32_99: -513321916
+      Chair: -513321916
+      ChairArmRight: -3388835338444483390
+      ChairArm_Left: -600698857739252175
+      FireExtinguisher: -8409027951281779066
       Screen: -149061020
+      SeatedChair: -1156328220
+      StageMike: -6528246331450291295
+      StageSpeaker: -8282515725333280373
+      Stage_Back: -5909591779941374380
+      Stage_Front_1: 366647428
+      Stage_Front_2: 729339549
+      Stage_Front_Left: -695103457
+      Stage_Front_Right: -1143635740
+      Stage_Middle_1: 279860780
+      Stage_Middle_Left: 1484893072
+      Stage_Middle_Right: 1026094573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
