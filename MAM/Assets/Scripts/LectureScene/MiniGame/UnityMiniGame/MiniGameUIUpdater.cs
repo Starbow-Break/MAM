@@ -18,7 +18,7 @@ public class MiniGameUIUpdater : MonoBehaviour
         _timePanel.SetActive(false);
     }
     
-    public void SetScore(int score)
+    public void SetScore(float score)
     {
         _score.text = score.ToString();
     }

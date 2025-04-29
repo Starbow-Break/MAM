@@ -19,7 +19,7 @@ public class SkillRaiseViewer
         _updater.SetInfo(_student.Icon, _student.Name);
     }
 
-    public void SetSkillTypeLevel(ESkillType skillType, int score, int miniGameDifficulty)
+    public void SetSkillTypeLevel(ESkillType skillType, float score, int miniGameDifficulty)
     {
         _updater.gameObject.SetActive(true);
         _updater.SetSkillType(skillType);

@@ -31,7 +31,7 @@ public class LectureResultSetter : MonoBehaviour
         _updater.StartButton.onClick.AddListener(ToNextScene);
     }
 
-    public void ShowPopup(ESkillType miniGameType, int score, int miniGameDifficulty)
+    public void ShowPopup(ESkillType miniGameType, float score, int miniGameDifficulty)
     {
         _updater.gameObject.SetActive(true);
         
@@ -39,7 +39,7 @@ public class LectureResultSetter : MonoBehaviour
     }
 
     //아이콘채우기
-    private IEnumerator RaiseLevelCo(ESkillType miniGameType, int score, int miniGameDifficulty)
+    private IEnumerator RaiseLevelCo(ESkillType miniGameType, float score, int miniGameDifficulty)
     {
         foreach (var viewer in _skillRaiseViewers)
         {
