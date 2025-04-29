@@ -5,8 +5,10 @@ public class DayEndSceneManager : ASceneManager<DayEndSceneManager>
 {
     [SerializeField] DayEndTeamProjectProgressSetter _teamProjectProgressSetter;
     [SerializeField] DayEndSubmitButtonSetter _submitButtonSetter;
+    [SerializeField] CalenderUpdater _calenderUpdater;
     
     public DayEndTeamProjectProgressSetter TeamProjectProgressSetter => _teamProjectProgressSetter;
+    public CalenderUpdater CalenderUpdater => _calenderUpdater;
     
     private void Start()
     {

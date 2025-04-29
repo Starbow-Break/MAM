@@ -41,5 +41,6 @@ public class LunchSelectLunchSubmitButtonSetter : MonoBehaviour
         var targetUIType = LunchSceneManager.EUIObjectType.Raise_Intimacy;
         LunchSceneManager.Instance.SetUiObjects(targetUIType);
         LunchSceneManager.Controller.ApplyLunch();
+        GameManager.CutsceneManager.ActOnCutSceneEnd += OnEndCutscene;
     }
 }
