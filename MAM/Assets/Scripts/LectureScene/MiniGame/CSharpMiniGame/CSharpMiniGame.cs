@@ -55,6 +55,7 @@ public class CSharpMiniGame: AMiniGame
 
     public override void StartGame()
     {
+        gameObject.SetActive(true);
         InitializeUI();
         ChartData chartData = ChartDataParser.Parse();
         _controller.Play(chartData);

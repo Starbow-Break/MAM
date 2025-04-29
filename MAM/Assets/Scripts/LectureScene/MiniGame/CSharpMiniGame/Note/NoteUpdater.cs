@@ -26,7 +26,13 @@ public abstract class ANoteUpdater : MonoBehaviour
 
     private void OnEnable()
     {
+        ModelTransform.rotation = startModelRotation;
         needAct = true;
+    }
+
+    private void Start()
+    {
+        transform.localScale = startScale;
     }
 
     private void Update()
@@ -40,8 +46,6 @@ public abstract class ANoteUpdater : MonoBehaviour
 
     private void Act()
     {
-        ModelTransform.rotation = startModelRotation;
-        transform.localScale = startScale;
         StartCoroutine(ActSequence());
     }
 

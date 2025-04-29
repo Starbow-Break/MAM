@@ -8,6 +8,11 @@ public class HitEffectUpdater : MonoBehaviour
     {
         _renderer = GetComponent<SpriteRenderer>();     
     }
+
+    public void SetColor(Color color)
+    {
+        _renderer.color = color;
+    }
     
     public void SetAlpha(float a)
     {
