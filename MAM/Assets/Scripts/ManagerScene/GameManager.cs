@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         _studentManager.InitializeStudents();
         _teamManager.Initialize();
         _commonHUDManager.Initialize();
+        _cutsceneManager.Initialize();
         _flowManager.GameStart();
     }
 }
