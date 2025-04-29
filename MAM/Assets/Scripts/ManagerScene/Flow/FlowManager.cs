@@ -60,6 +60,7 @@ public class FlowManager : MonoBehaviour
             case ESceneIndex.DayEnd:
                 if (_currentDay >= _flowData.TotalDaysInProject)
                 {
+                    _currentDay++;
                     _sceneController.LoadScene(ESceneIndex.Present);
                     break;
                 }

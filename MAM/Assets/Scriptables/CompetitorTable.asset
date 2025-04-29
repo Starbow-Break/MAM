@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550a22571d87e9d47865356b38980a80, type: 3}
+  m_Name: CompetitorTable
+  m_EditorClassIdentifier: 
+  SpriteLibraryAssets:
+  - Icon: {fileID: -7732699054673710070, guid: 6786be87e4cbb8047a7295cedbd5942e, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: 45707ff07d9c8b64cb8a1faacba9a77a, type: 2}
+  - Icon: {fileID: -4276384618777042594, guid: 1412c5e11c4f27643b642146a11a88c0, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: ff0597b9093d0024b94ff6c356ab9474, type: 2}
+  - Icon: {fileID: 4143374787217148518, guid: e0b0f90b482a31e4287c932e4404f3fe, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: 2b59b24e119f90040853f4cc01a31b62, type: 2}
+  - Icon: {fileID: 3635396616420914242, guid: 9bd53103d5fae1c44bf7b641c93eb611, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: f1e61420b0eec864abe04ea407a70d08, type: 2}
+  - Icon: {fileID: 2995205455417749867, guid: 175ad3f99d261a5469c624f58390e95e, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: 614458edf6bc8884cb72915b230291d1, type: 2}
+  - Icon: {fileID: -2964629087773195342, guid: 6f53c280324851a42accd407e88b2411, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: 1dadab1de80e1094cb970aadfa2a5ea3, type: 2}
+  MinScore: 70
+  MaxScore: 98
+  _scoreDistributionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.00976944
+      value: -0.0012817383
+      inSlope: -0.0018776442
+      outSlope: -0.0018776442
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.2500001
+    - serializedVersion: 3
+      time: 0.6956984
+      value: 0.928355
+      inSlope: -0.03069762
+      outSlope: -0.03069762
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0015173
+      value: 0.0026558265
+      inSlope: -6.6321654
+      outSlope: -6.6321654
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.019390438
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  BaseID: Competitor
