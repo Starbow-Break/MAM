@@ -11,7 +11,7 @@ public class CutsceneManager : MonoBehaviour
     public UnityAction ActOnCutSceneStart { get; set; }
     public UnityAction ActOnCutSceneEnd { get; set; }
 
-    private void Initialize()
+    public void Initialize()
     {
         GameManager.FlowManager.ActOnSceneSwitch += () =>
         {
