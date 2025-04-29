@@ -4,7 +4,7 @@ public abstract class AMiniGame : MonoBehaviour
 {
     [SerializeField] protected ESkillType _miniGameType = ESkillType.Unity;
     protected int _difficulty = 0; //1~3
-    protected int _score = 0; //0~100
+    protected float _score = 0; //0~100
 
     public virtual void Initialize(int difficulty)
     {
