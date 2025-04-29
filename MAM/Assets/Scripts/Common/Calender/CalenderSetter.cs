@@ -25,8 +25,7 @@ public class CalenderSetter : MonoBehaviour
     private void Initialize()
     {
         FlowManager flowMgr = GameManager.FlowManager;
-        int index = GetRectIndex(flowMgr.CurrentProject, flowMgr.CurrentDay);
-        _updater.SetTeacherPosition(index);
+        _updater.SetTeacherPosition(flowMgr.CurrentProject, flowMgr.CurrentDay);
         _updater.SetActive(false);
     }
 
@@ -34,13 +33,9 @@ public class CalenderSetter : MonoBehaviour
     {
         _updater.SetActive(true);
         FlowManager flowMgr = GameManager.FlowManager;
-        int index = GetRectIndex(flowMgr.CurrentProject, flowMgr.CurrentDay);
-        _updater.MoveTeacher(index);
+        _updater.MoveTeacher(flowMgr.CurrentProject, flowMgr.CurrentDay);
         _updater.OnMoveFinished += () => _updater.SetActive(false);
     }
     
-    public int GetRectIndex(int project, int day)
-    {
-        return (project - 1) * 4 + (day - 1);
-    }
+    
 }
