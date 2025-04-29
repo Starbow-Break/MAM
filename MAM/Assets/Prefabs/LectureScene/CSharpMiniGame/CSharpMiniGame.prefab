@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769f56a5f9234ba7d6cb7d9c18b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7598528410065307033, guid: f2a8bd36a9b7dfb4db63d20c008a6424, type: 3}
+  _prefab: {fileID: 0}
   _defaultCapacity: 5
   _maxSize: 5
   _collectionCheck: 0
@@ -278,6 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4218872293616977673}
+  - component: {fileID: 4707715646314163256}
   m_Layer: 0
   m_Name: CSharpMiniGame
   m_TagString: Untagged
@@ -306,6 +307,26 @@ Transform:
   - {fileID: 8269946043125849007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4707715646314163256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719375815811809828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e82ba6b4e91b242b0f232d2a7462ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _miniGameType: 1
+  _controller: {fileID: 6315465850859134527}
+  _input: {fileID: 6693148003697472007}
+  _visualizeCountSetter: {fileID: 8114776157084010453}
+  _hitEffectSetter: {fileID: 8384106738033023660}
+  _judgeEffectSetter: {fileID: 3127705972050940910}
+  _speechBubbleSetter: {fileID: 7845434666589830891}
+  _judgeLineSetter: {fileID: 5762631207702670211}
 --- !u!1 &813710734896129722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,9 +1369,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7729266309465727983}
-  - component: {fileID: 6702814162075245265}
   m_Layer: 0
-  m_Name: CsharpMiniGameManager
+  m_Name: MiniGameSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1374,26 +1394,6 @@ Transform:
   - {fileID: 6676581663460784831}
   m_Father: {fileID: 4218872293616977673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6702814162075245265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5263371523893838564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e82ba6b4e91b242b0f232d2a7462ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _miniGameType: 1
-  _controller: {fileID: 6315465850859134527}
-  _input: {fileID: 6693148003697472007}
-  _visualizeCountSetter: {fileID: 8114776157084010453}
-  _hitEffectSetter: {fileID: 8384106738033023660}
-  _judgeEffectSetter: {fileID: 3127705972050940910}
-  _speechBubbleSetter: {fileID: 7845434666589830891}
-  _judgeLineSetter: {fileID: 5762631207702670211}
 --- !u!1 &5779153481330895498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769f56a5f9234ba7d6cb7d9c18b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7241814639305245143, guid: 225c820698dc29340bb583dd87f170d7, type: 3}
+  _prefab: {fileID: 0}
   _defaultCapacity: 5
   _maxSize: 5
   _collectionCheck: 0
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769f56a5f9234ba7d6cb7d9c18b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3981124405116370733, guid: b569b4b4e4731be4b810550fb3722bf8, type: 3}
+  _prefab: {fileID: 0}
   _defaultCapacity: 5
   _maxSize: 5
   _collectionCheck: 0
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769f56a5f9234ba7d6cb7d9c18b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2225742469249169287, guid: 94074a4d302ec7a4cb3afb388d2162b8, type: 3}
+  _prefab: {fileID: 0}
   _defaultCapacity: 5
   _maxSize: 10
   _collectionCheck: 0
