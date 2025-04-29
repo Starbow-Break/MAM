@@ -221,17 +221,17 @@ PlayableDirector:
   - key: {fileID: -515065397527268300, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
     value: {fileID: 1528561569}
   - key: {fileID: 2907028386623559198, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
-    value: {fileID: 1528561569}
+    value: {fileID: 1612499979}
   - key: {fileID: -7494286701535873634, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
-    value: {fileID: 1528561569}
+    value: {fileID: 1612499979}
   - key: {fileID: -6866295017563273087, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
     value: {fileID: 1528561567}
   - key: {fileID: 4731142552808704808, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
     value: {fileID: 1528561568}
   - key: {fileID: 3850849229104619303, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
-    value: {fileID: 1528561567}
+    value: {fileID: 1325010091}
   - key: {fileID: 2005968958255354019, guid: 88fa0d9a3ee20144aac6f0a9e82d8dcb, type: 2}
-    value: {fileID: 1528561567}
+    value: {fileID: 1325010091}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &84106327
@@ -552,19 +552,19 @@ PlayableDirector:
   - key: {fileID: -515065397527268300, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
     value: {fileID: 1983971072}
   - key: {fileID: 2907028386623559198, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
-    value: {fileID: 1983971072}
+    value: {fileID: 699946710}
   - key: {fileID: -6866295017563273087, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
     value: {fileID: 960200803}
   - key: {fileID: -7494286701535873634, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
-    value: {fileID: 1983971072}
+    value: {fileID: 699946710}
   - key: {fileID: 4731142552808704808, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
     value: {fileID: 960200806}
   - key: {fileID: 200008499461371568, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
     value: {fileID: 233837559}
   - key: {fileID: 3850849229104619303, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
-    value: {fileID: 960200803}
+    value: {fileID: 1760883291}
   - key: {fileID: 2005968958255354019, guid: 3b9fed85e0c05bc4db7f2b488b45361f, type: 2}
-    value: {fileID: 960200803}
+    value: {fileID: 1760883291}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &225150770
@@ -1104,6 +1104,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &699946710 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4379076681994837477, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
+  m_PrefabInstance: {fileID: 3960134450078578555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915592849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1602,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1638, y: 942.75305}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1325010091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8358819594758251921, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
+  m_PrefabInstance: {fileID: 1528561565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1382291692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2024,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &1612499979 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4379076681994837477, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
+  m_PrefabInstance: {fileID: 1528561565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1760883291 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8358819594758251921, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
+  m_PrefabInstance: {fileID: 3960134450078578555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782381976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,7 +3533,7 @@ PrefabInstance:
     - target: {fileID: 108705146883690747, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3550003092031830553, guid: c494b3626b37df440a6c14e2b4f3fb3a, type: 3}
+      objectReference: {fileID: -1093959212, guid: 32e6f226f8853584886f2e966ba7ad2b, type: 3}
     - target: {fileID: 1906789448817965436, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3569,7 +3589,7 @@ PrefabInstance:
     - target: {fileID: 5280426484985374863, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 975257216872412374, guid: 32e6f226f8853584886f2e966ba7ad2b, type: 3}
+      objectReference: {fileID: 4432571743371408948, guid: 32e6f226f8853584886f2e966ba7ad2b, type: 3}
     - target: {fileID: 7491485417702869300, guid: d17e41ad31c069544864e66739ecbd95, type: 3}
       propertyPath: m_labelHash
       value: 0.00028302343

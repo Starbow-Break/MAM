@@ -23,7 +23,7 @@ public class MiniGameCharacterController : MonoBehaviour
 
     public void SetInstructorTalking(bool isTalking)
     {
-        _instructor.Animator.SetIsTalking(isTalking);
+        _instructor.SpeechBubbleAnimator.SetIsTalking(isTalking);
     }
 
     private void PlayEmote(StudentCharacter character, EEmoteType emoteType, float duration)
@@ -31,10 +31,10 @@ public class MiniGameCharacterController : MonoBehaviour
         switch (emoteType)
         {
             case EEmoteType.BlueExclamation:
-                character.Animator.PlayExclamationBlue(duration);
+                character.SpeechBubbleAnimator.PlayExclamationBlue(duration);
                 break;
             case EEmoteType.RedExclamation:
-                character.Animator.PlayExclamationRed(duration);
+                character.SpeechBubbleAnimator.PlayExclamationRed(duration);
                 break;
         }
     }

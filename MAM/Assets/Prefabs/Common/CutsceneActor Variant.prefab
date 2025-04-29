@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CutsceneActor Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1537290065166243912, guid: ac0013a242505014890cba0625a7eac4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1795721935061058264, guid: ac0013a242505014890cba0625a7eac4, type: 3}
       propertyPath: m_Sprite
       value: 
