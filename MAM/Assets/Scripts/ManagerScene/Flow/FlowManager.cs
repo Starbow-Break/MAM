@@ -60,6 +60,12 @@ public class FlowManager : MonoBehaviour
                 if (_currentDay >= _flowData.TotalDaysInProject)
                 {
                     _currentDay++;
+
+                    if (_currentProject >= _flowData.TotalProjectCount)
+                    {
+                        _sceneController.LoadScene(ESceneIndex.Contest);
+                        break;
+                    }
                     _sceneController.LoadScene(ESceneIndex.Present);
                     break;
                 }

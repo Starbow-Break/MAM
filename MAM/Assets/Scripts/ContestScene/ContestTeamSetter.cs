@@ -7,7 +7,6 @@ public class ContestTeamSetter : MonoBehaviour
     [SerializeField] private CompetitorTable _table = null;
 
     private List<ContestTeam> _teams = new List<ContestTeam>();
-    
     public List<ContestTeam> GetTeams => _teams;
 
     public void Initialize()
@@ -36,7 +35,7 @@ public class ContestTeamSetter : MonoBehaviour
         ContestCharacterData member1 = GenerateRandomCharacter(index, 0);
         ContestCharacterData member2 = GenerateRandomCharacter(index, 1);
         
-        float score = _table.GetRandomScore();
+        float score = _table.GetRandomScore(index);
         
         ContestTeam newTeam = new ContestTeam(member1, member2, score, false);
         
@@ -47,9 +46,9 @@ public class ContestTeamSetter : MonoBehaviour
     {
         string id = _table.BaseID + index.ToString() + memberNum.ToString();
         _table.GetRandomLibraryAndIcon(out var libraryAsset, out var sprite);
-        string name = KoreanNameGenerator.GetRandomKoreanName();
+        string randomName = _table.GetRandomName();
         
-        ContestCharacterData character = new ContestCharacterData(id, name, sprite, libraryAsset);
+        ContestCharacterData character = new ContestCharacterData(id, randomName, sprite, libraryAsset);
         
         return character;
     }

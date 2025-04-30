@@ -5,9 +5,9 @@ public class ChairSpot : ACharacterSpot
     [SerializeField] private GameObject _fullChairImage = null;
     [SerializeField] private GameObject _chairArmImage = null;
     
-    private StudentCharacter _character = null;
+    private BaseCharacter _character = null;
     
-    public override void SetCharacter(StudentCharacter character)
+    public override void SetCharacter(BaseCharacter character)
     {
         _character = character;
         _character.transform.SetParent(_characterPosition);

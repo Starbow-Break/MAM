@@ -11,10 +11,10 @@ public class TeamRankButtonUpdater : MonoBehaviour
     [SerializeField] private SimpleRadioButton _radioButton;
     [SerializeField] private TextMeshProUGUI _gradeText;
 
-    private Team _team;
+    private ContestTeam _team;
 
     public SimpleRadioButton RadioButton => _radioButton;
-    public Team Team
+    public ContestTeam Team
     {
         get { return _team; }
     }
@@ -24,13 +24,15 @@ public class TeamRankButtonUpdater : MonoBehaviour
         _teamRank.text = rank.ToString();
     }
     
-    public void SetTeam(Team team)
+    public void SetTeam(ContestTeam team)
     {
         _team = team;
-        SetTeamMemberImage(0, team.Member1?.Icon);
-        SetTeamMemberImage(1, team.Member2?.Icon);
-        SetTeamMemberName(0, team.Member1?.Name);
-        SetTeamMemberName(1, team.Member2?.Name);
+        SetTeamMemberImage(0, team.Members[0].CharacterIcon);
+        SetTeamMemberImage(1, team.Members[1].CharacterIcon);
+        SetTeamMemberName(0, team.Members[0].CharacterName);
+        SetTeamMemberName(1, team.Members[1].CharacterName);
+        
+        SetGrade(team.ProjectScore);
     }
     
     private void SetTeamMemberImage(int imageIndex, Sprite sprite)
@@ -41,11 +43,10 @@ public class TeamRankButtonUpdater : MonoBehaviour
     private void SetTeamMemberName(int imageIndex, string memberName)
     {
         _teamMemeberNames[imageIndex].text = memberName;
-
     }
 
-    public void SetGrade(string grade)
+    private void SetGrade(float score)
     {
-        _gradeText.text = grade;
+        _gradeText.text = Mathf.Floor(score).ToString();
     }
 }

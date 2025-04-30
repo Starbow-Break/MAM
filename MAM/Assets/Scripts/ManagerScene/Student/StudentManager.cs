@@ -42,12 +42,7 @@ public class StudentManager : MonoBehaviour
     {
         return _students;
     }
-
-    public int GetTotalStudentCount()
-    {
-        return _students.Count;
-    }
-
+    
     public List<string> GetStudentIds()
     {
         List<string> ids = new List<string>();

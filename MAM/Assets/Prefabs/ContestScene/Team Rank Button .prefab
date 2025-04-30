@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7389155149664052591}
   - component: {fileID: 6357116931499240102}
-  - component: {fileID: 5438362367956887519}
+  - component: {fileID: 2575721431856454790}
   - component: {fileID: 2153980784580723740}
   - component: {fileID: 8145213481578635168}
   m_Layer: 5
@@ -108,7 +108,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4430729629506660108}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -143,7 +143,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5438362367956887519
+--- !u!114 &2575721431856454790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,13 +152,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4430729629506660108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501f12714f24cee4aa99bfdc987e9f19, type: 3}
+  m_Script: {fileID: 11500000, guid: f0b3d88e2d9e12f46873999c14e92b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teamName: {fileID: 7913801809180005423}
+  _teamRank: {fileID: 7913801809180005423}
   _teamMemberImages:
   - {fileID: 7173222629076328893}
   - {fileID: 5486574560702911125}
+  _teamMemeberNames:
+  - {fileID: 1645032251049365476}
+  - {fileID: 9047744442967832759}
   _radioButton: {fileID: 8145213481578635168}
   _gradeText: {fileID: 4319724764434092372}
 --- !u!114 &2153980784580723740
@@ -598,7 +601,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A
+  m_text: 99
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 330103b932f308d4881764453811a016, type: 2}
   m_sharedMaterial: {fileID: -1571516202784473276, guid: 330103b932f308d4881764453811a016, type: 2}

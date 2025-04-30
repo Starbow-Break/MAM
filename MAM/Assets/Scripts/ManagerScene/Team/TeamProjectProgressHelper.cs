@@ -49,6 +49,17 @@ public static class TeamProjectProgressHelper
     {
         float ratio = team.ProjectProgress / goalProgress;
 
+        return GetGrade(ratio);
+    }
+    public static string ProgressToGrade(ContestTeam team, float goalProgress)
+    {
+        float ratio = team.ProjectScore / goalProgress;
+        
+        return GetGrade(ratio);
+    }
+
+    private static string GetGrade(float ratio)
+    {
         foreach (var threshold in gradeThresholds)
         {
             if (ratio >= threshold.Key)
