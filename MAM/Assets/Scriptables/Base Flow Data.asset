@@ -15,4 +15,5 @@ MonoBehaviour:
   TotalDaysInProject: 3
   ProjectProgressGoals:
   - 50
+  - 70
   - 100
