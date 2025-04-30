@@ -1,5 +1,11 @@
 ﻿public enum EEventType
 {
     Visualize,
-    Spawn
+    Spawn,
+}
+
+public enum ESoundType
+{
+    NoteSpawn,
+    Hit,
 }

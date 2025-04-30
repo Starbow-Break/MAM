@@ -15,6 +15,9 @@ public class CSharpMiniGame: AMiniGame
     [SerializeField] private SpeechBubbleSetter _speechBubbleSetter;
     [SerializeField] private CSharpJudgeLineSetter _judgeLineSetter;
     
+    [Header("Data")]
+    [SerializeField] private MusicDataTable _musicDataTable;
+    
     public static CSharpMiniGame Instance { get; private set; }
     
     public static CSharpMiniGameController Controller => Instance._controller;
@@ -53,11 +56,18 @@ public class CSharpMiniGame: AMiniGame
         _difficulty = difficulty;
     }
 
+    private ChartData GetChartDataFromTable(int difficulty)
+    {
+        MusicData musicData = _musicDataTable.GetMusicDataRandomly();
+        ChartData chartData = ChartDataParser.Parse(musicData.GetChartPath(_difficulty));
+        return chartData;
+    }
+
     public override void StartGame()
     {
         gameObject.SetActive(true);
         InitializeUI();
-        ChartData chartData = ChartDataParser.Parse();
+        ChartData chartData = GetChartDataFromTable(_difficulty);
         _controller.Play(chartData);
     }
 

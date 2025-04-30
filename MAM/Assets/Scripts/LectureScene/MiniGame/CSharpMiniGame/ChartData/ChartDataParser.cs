@@ -30,9 +30,7 @@ public static class ChartDataParser
         public string pattern; // 스폰 후 패턴을 나타내는 문자열 (if 노트에서만 사용)
     }
     
-    private const string testPath = "Assets/CSharpMiniGameData/ChartData/test.json";
-
-    public static ChartData Parse(string chartDataPath = testPath)
+    public static ChartData Parse(string chartDataPath)
     {
         ChartData chartData = new ChartData();
         
