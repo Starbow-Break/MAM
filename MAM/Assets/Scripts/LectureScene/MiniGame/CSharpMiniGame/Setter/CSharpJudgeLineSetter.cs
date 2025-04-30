@@ -8,12 +8,12 @@ public class CSharpJudgeLineSetter : MonoBehaviour
 
     private void OnEnable()
     {
-        CSharpMiniGame.VisualizeCountSetter.OnValueChanged += value => OnVisualizeCountValueChanged(value);
+        CSharpMiniGame.VisualizeCountSetter.OnValueChanged += OnVisualizeCountValueChanged;
     }
 
     private void OnDisable()
     {
-        CSharpMiniGame.VisualizeCountSetter.OnValueChanged -= value => OnVisualizeCountValueChanged(value);
+        CSharpMiniGame.VisualizeCountSetter.OnValueChanged -= OnVisualizeCountValueChanged;
     }
 
     public void Initialize()
