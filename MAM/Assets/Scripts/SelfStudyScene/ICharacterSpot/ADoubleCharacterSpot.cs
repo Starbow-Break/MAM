@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class ADoubleCharacterSpot : ACharacterSpot
 {
     [SerializeField] protected Transform _characterPosition2 = null;
-    public override void SetCharacter(StudentCharacter character)
+    public override void SetCharacter(BaseCharacter character)
     {
         character.transform.position = _characterPosition.position;
     }

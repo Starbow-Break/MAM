@@ -15,6 +15,8 @@ public class StudentClickPopupSetter : MonoBehaviour
         _updater.CarrotButton.onClick.AddListener(()=>ComplimentOrScold(EAffinityType.Carrot));
         _updater.WhipButton.onClick.AddListener(()=>ComplimentOrScold(EAffinityType.Whip));
         _updater.HelpButton.onClick.AddListener(HelpStudent);
+        
+        GameManager.CutsceneManager.ActOnCutSceneEnd += OnEndCutscene;
     }
 
     public void OpenPopup(string studentId)
@@ -56,12 +58,9 @@ public class StudentClickPopupSetter : MonoBehaviour
         else if (actionType == EAffinityType.Whip)
             GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Whip);
 
-        GameManager.CutsceneManager.ActOnCutSceneEnd += OnEndCutscene;
         _isCutscenePlaying = true;
         
         ClosePopup();
-        
-        SelfStudySceneManager.Instance.UseInteractionCount();
     }
 
     private void HelpStudent()
@@ -72,9 +71,8 @@ public class StudentClickPopupSetter : MonoBehaviour
         Team team = GameManager.TeamManager.GetTeam(_selectedStudent);
         team.GotHelped = true;
         
-        //나중에 컷씬
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Help);
         
-        SelfStudySceneManager.Instance.UseInteractionCount();
         ClosePopup();
     }
 
@@ -82,5 +80,7 @@ public class StudentClickPopupSetter : MonoBehaviour
     {
         _isCutscenePlaying = false;
         _selectedStudent = null;
+        
+        SelfStudySceneManager.Instance.UseInteractionCount();
     }
 }

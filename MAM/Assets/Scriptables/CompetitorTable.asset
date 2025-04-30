@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550a22571d87e9d47865356b38980a80, type: 3}
+  m_Name: CompetitorTable
+  m_EditorClassIdentifier: 
+  SpriteLibraryAssets:
+  - Icon: {fileID: -1766790117, guid: 6e2e34a5d11809d4c9e2880d8c4c9e90, type: 3}
+    SpriteLibraryAsset: {fileID: 11400000, guid: 8675822b65062254db3dac311a69265b, type: 2}
+  CompetitorScores:
+  - Min: 90
+    Max: 95
+  - Min: 85
+    Max: 90
+  - Min: 80
+    Max: 85
+  - Min: 75
+    Max: 80
+  - Min: 70
+    Max: 75
+  ScoreDistributionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5056235
+      value: 1.000177
+      inSlope: 0.032164775
+      outSlope: 0.032164775
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0111084
+      value: 0.0015716553
+      inSlope: -2.5216885
+      outSlope: -2.5216885
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03021714
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  BaseID: Competitor
+  LastNames:
+  - "\uAE40"
+  - "\uB098"
+  - "\uBC15"
+  - "\uC774"
+  - "\uCD5C"
+  - "\uD55C"
+  FirstNames:
+  - "\uCE74\uBBFC"
+  - "\uB3C4\uADE0"
+  - "\uD601\uC624"
+  - "\uB0C4\uD6C8"
+  - "\uC2A4\uC6B0"
+  - "\uC5F4\uBB34"
+  - "\uB3C4\uC601"
+  - "\uD558\uD604"
+  - "\uC77C\uC9C4"
+  - "\uC11D\uD654"
+  - "\uC808\uCE5C"
+  - "\uB300\uC5F0"
+  - "\uACA8\uC6B8"
+  - "\uC724\uD68C"
+  - "\uB3D9\uC601"
+  - "\uC314\uB77C"
+  - "\uC601\uC601"
+  - "\uCC44\uD0DC"
+  CompetitorCount: 5

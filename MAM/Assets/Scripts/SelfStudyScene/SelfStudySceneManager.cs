@@ -7,6 +7,7 @@ public class SelfStudySceneManager : ASceneManager<SelfStudySceneManager>
     [SerializeField] private SelfStudySceneCharacterSetter _characterSetter = null;
     [SerializeField] private Button _toHomeButton = null;
 
+    [SerializeField] private DemoGameManagerHelper _demoGameManagerHelper = null;
     public int InteractionCount { get; private set; } = 3;
     public static StudentClickPopupSetter StudentClickPopupSetter => Instance._studentClickPopupSetter;
 
@@ -20,6 +21,11 @@ public class SelfStudySceneManager : ASceneManager<SelfStudySceneManager>
         _studentClickPopupSetter.Initialize();
         _characterSetter.Initialize();
         _toHomeButton.onClick.AddListener(GameManager.FlowManager.ToNextScene);
+
+        if (GameManager.Instance.IsTestMode)
+        {
+            _demoGameManagerHelper.SetDemoTeam();
+        }
     }
 
     public void UseInteractionCount()
