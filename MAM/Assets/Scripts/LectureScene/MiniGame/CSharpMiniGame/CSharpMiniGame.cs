@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [DefaultExecutionOrder(-900)]
@@ -49,11 +47,6 @@ public class CSharpMiniGame: AMiniGame
     private void OnDisable()
     {
         Controller.OnPlayChartEnded -= () => EndGame();
-    }
-    
-    public override void Initialize(int difficulty)
-    {
-        _difficulty = difficulty;
     }
 
     private ChartData GetChartDataFromTable(int difficulty)
