@@ -14,6 +14,7 @@ public static class ChartQueueDataGenerator
 
         float bpm = chartData.Bpm;
         float offset = chartData.Offset;
+        float delay = chartData.Delay;
 
         foreach (var noteData in chartData.Notes)
         {
@@ -25,6 +26,23 @@ public static class ChartQueueDataGenerator
                     chartQueueData.EventQueueDatas.Add(spawnData);
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
+                    
+                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
+
+                    SoundQueueData spawnSoundData = new SoundQueueData();
+                    spawnSoundData.Time = spawnData.Time;
+                    spawnSoundData.SoundType = ESoundType.NoteSpawn;
+                    soundQueueData.Add(spawnSoundData);
+
+                    foreach (var data in judgeDatas)
+                    {
+                        SoundQueueData soundData = new SoundQueueData();
+                        soundData.Time = data.Time;
+                        soundData.SoundType = ESoundType.Hit;
+                        soundQueueData.Add(soundData);
+                    }
+                    
+                    chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
                     break;
                 }
                 case ENoteType.If:
@@ -32,6 +50,8 @@ public static class ChartQueueDataGenerator
                     var visualizeData = GenerateBaseVisualizeData(bpm, offset, noteData);
                     visualizeData.Color = noteData.Color;
                     chartQueueData.EventQueueDatas.Add(visualizeData);
+                    
+                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
                     
                     for(int i = 0; i < noteData.Pattern.Length; i++)
                     {
@@ -43,6 +63,11 @@ public static class ChartQueueDataGenerator
                         Color color = IfNoteColors[colorIndex];
                         spawnData.Color = color;
                         chartQueueData.EventQueueDatas.Add(spawnData);
+                        
+                        SoundQueueData spawnSoundData = new SoundQueueData();
+                        spawnSoundData.Time = spawnData.Time;
+                        spawnSoundData.SoundType = ESoundType.NoteSpawn;
+                        soundQueueData.Add(spawnSoundData);
                     }
                     
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
@@ -51,6 +76,17 @@ public static class ChartQueueDataGenerator
                         judgeDatas[i].isHit = noteData.Pattern[i] == '1';
                     }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
+
+                    foreach (var data in judgeDatas)
+                    {
+                        SoundQueueData soundData = new SoundQueueData();
+                        soundData.Time = data.Time;
+                        soundData.SoundType = ESoundType.Hit;
+                        soundQueueData.Add(soundData);
+                    }
+                    
+                    chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
+
                     break;
                 }
                 case ENoteType.For:
@@ -65,12 +101,32 @@ public static class ChartQueueDataGenerator
                         judgeDatas[i].Type = ENoteType.ForBullet;
                     }
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
+                    
+                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
+
+                    SoundQueueData spawnSoundData = new SoundQueueData();
+                    spawnSoundData.Time = spawnData.Time;
+                    spawnSoundData.SoundType = ESoundType.NoteSpawn;
+                    soundQueueData.Add(spawnSoundData);
+
+                    foreach (var data in judgeDatas)
+                    {
+                        SoundQueueData soundData = new SoundQueueData();
+                        soundData.Time = data.Time;
+                        soundData.SoundType = ESoundType.Hit;
+                        soundQueueData.Add(soundData);
+                    }
+                    
+                    chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
+
                     break;    
                 }
             }
         }
         
         chartQueueData.EventQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
+        chartQueueData.JudgeQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
+        chartQueueData.SoundQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
         
         return chartQueueData;
     }
@@ -81,7 +137,6 @@ public static class ChartQueueDataGenerator
         data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Visualize;
         data.NoteType = noteData.NoteType;
-        data.SpawnPosition = Vector3.zero;
         data.LifeTime = 60f / bpm;
         data.Color = DefaultColor;
         data.Count = noteData.Count;
@@ -96,7 +151,6 @@ public static class ChartQueueDataGenerator
         data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Spawn;
         data.NoteType = noteData.NoteType;
-        data.SpawnPosition = Vector3.zero;
         data.LifeTime = 60f / bpm;
         data.Color = DefaultColor;
         data.Count = noteData.Count;

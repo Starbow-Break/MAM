@@ -7,6 +7,7 @@ public class CSharpMiniGameController : MonoBehaviour
 {
     [SerializeField] NoteSpawner _noteSpawner;
     [SerializeField] private AudioSource _music;
+    [SerializeField] private CSharpMiniGameSFXAudio _sfxAudio;
     
     private float startTime;
     private float currentScoreWeight;
@@ -38,6 +39,10 @@ public class CSharpMiniGameController : MonoBehaviour
         foreach (var judgeQueueData in chartQueueData.JudgeQueueDatas)
         {
             CSharpMiniGameQueue.JudgeQueue.Enqueue(judgeQueueData);
+        }
+        foreach (var soundQueueData in chartQueueData.SoundQueueDatas)
+        {
+            CSharpMiniGameQueue.SoundQueue.Enqueue(soundQueueData);
         }
     }
     
@@ -71,19 +76,27 @@ public class CSharpMiniGameController : MonoBehaviour
     
     private IEnumerator PlayChartSequence(float delay)
     {
-        Debug.Log(Time.time);
         startTime = Time.time + delay;
         
         var eventQueue = CSharpMiniGameQueue.EventQueue;
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
+        var soundQueue = CSharpMiniGameQueue.SoundQueue;
         
-        while (eventQueue.Count > 0 || judgeQueue.Count > 0 || _music.isPlaying)
+        while (
+            eventQueue.Count > 0 || judgeQueue.Count > 0 
+            || soundQueue.Count > 0 || _music.isPlaying)
         {
-            ResolveNoHit();
-            
             float playTime = Time.time - startTime;
             
-            playTime += Time.deltaTime;
+            while (soundQueue.Count > 0 && soundQueue.Peek().Time <= playTime)
+            {
+                var soundQueueData = soundQueue.Dequeue();
+                Debug.Log(soundQueueData.SoundType);
+                _sfxAudio.PlaySFX(soundQueueData.SoundType);
+            }
+            
+            ResolveNoHit();
+            
             while (eventQueue.Count > 0 && eventQueue.Peek().Time <= playTime)
             {
                 var eventQueueData = eventQueue.Dequeue();
@@ -93,7 +106,6 @@ public class CSharpMiniGameController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log(eventQueueData.NoteType);
                     _noteSpawner.SpawnNote(eventQueueData);
                 }
             }
