@@ -60,4 +60,12 @@ public class StudentManager : MonoBehaviour
             StudentLevelHelper.ApplyRandomMotivation(student);
         }
     }
+
+    public void ParseTable()
+    {
+        #if UNITY_EDITOR
+        
+        
+        #endif
+    }
 }

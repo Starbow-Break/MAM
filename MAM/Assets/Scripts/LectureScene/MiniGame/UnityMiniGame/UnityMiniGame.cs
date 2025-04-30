@@ -18,10 +18,10 @@ public class UnityMiniGame : AMiniGame
 
     public override void Initialize(int difficulty)
     {
-        _difficulty = difficulty;
+        base.Initialize(difficulty);
+        
         _unityWindowCueManager.InitializeCues(_baseCueCount + difficulty, OnCompleteSet);
         _inputHandler.Initialize(_unityWindowCueManager, OnCorrectInput, OnWrongInput);
-        LectureSceneManager.MiniGameController.UIUpdater.SkipButton.onClick.AddListener(OnEndGame);
         
         _characterCon = LectureSceneManager.MiniGameController.CharacterController;
         _uiUpdater = LectureSceneManager.MiniGameController.UIUpdater;
@@ -49,7 +49,7 @@ public class UnityMiniGame : AMiniGame
             yield return null;
         }
 
-        OnEndGame();
+        EndGame();
     }
 
     private void OnCompleteSet()
@@ -88,11 +88,12 @@ public class UnityMiniGame : AMiniGame
         _screenController.ShowIdleImage();
     }
 
-    private void OnEndGame()
+    protected override void EndGame()
     {
         StopAllCoroutines();
+        _characterCon.SetInstructorTalking(false);
         _score = Mathf.Clamp(_correctSetCount * _baseScore, 0, 100);
-        EndGame();
+        base.EndGame();
     }
 
 }
