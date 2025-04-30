@@ -71,9 +71,8 @@ public class StudentClickPopupSetter : MonoBehaviour
         Team team = GameManager.TeamManager.GetTeam(_selectedStudent);
         team.GotHelped = true;
         
-        //나중에 컷씬
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Help);
         
-        SelfStudySceneManager.Instance.UseInteractionCount();   //나중에 제거
         ClosePopup();
     }
 
