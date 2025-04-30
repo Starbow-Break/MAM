@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class LectureSceneManager : ASceneManager<LectureSceneManager>
@@ -8,11 +9,17 @@ public class LectureSceneManager : ASceneManager<LectureSceneManager>
     
     public void OnEndMiniGame(ESkillType miniGameType, float score, int miniGameDifficulty)
     {
-        _lectureResultSetter.ShowPopup(miniGameType, score, miniGameDifficulty);
+        StartCoroutine(GradePopupCo(miniGameType, score, miniGameDifficulty));
     }
 
     public void ToNextScene()
     {
         GameManager.FlowManager.ToNextScene();
+    }
+
+    public IEnumerator GradePopupCo(ESkillType miniGameType, float score, int miniGameDifficulty)
+    {
+        yield return MiniGameController.ShowGrade(score);
+        _lectureResultSetter.ShowPopup(miniGameType, score, miniGameDifficulty);
     }
 }
