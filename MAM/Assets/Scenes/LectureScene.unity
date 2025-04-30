@@ -1748,6 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2627582ab7ea47f4fa90d420c5e26c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneName: "\uAC15\uC758"
   _miniGameController: {fileID: 898293386}
   _lectureResultSetter: {fileID: 1040050023}
 --- !u!4 &588403167

@@ -32,6 +32,11 @@ public class CommonHUDManager : MonoBehaviour
         _updater.SetDayText(day);
     }
 
+    public void SetSceneName(string sceneName)
+    {
+        _updater.SetSceneNameText(sceneName);
+    }
+    
     public void HideHUD()
     {
         _updater.gameObject.SetActive(false);

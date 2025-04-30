@@ -1097,6 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1850b8f0c9d3a00448e7106e73420b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneName: "\uB300\uD68C"
   _teamRankButtonSetter: {fileID: 1131737532}
   _contestTeamSetter: {fileID: 590145266}
   _characterSetter: {fileID: 2072587985}
