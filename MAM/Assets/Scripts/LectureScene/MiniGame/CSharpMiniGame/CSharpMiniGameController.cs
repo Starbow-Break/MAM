@@ -172,6 +172,7 @@ public class CSharpMiniGameController : MonoBehaviour
         {
             currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
             float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            CSharpMiniGame.Instance.Score = score;
             LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
             
             var judgeQueueData = judgeQueue.Dequeue();
@@ -210,6 +211,7 @@ public class CSharpMiniGameController : MonoBehaviour
         {
             currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
             float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            CSharpMiniGame.Instance.Score = score;
             LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
             
             var judgeQueueData = judgeQueue.Dequeue();

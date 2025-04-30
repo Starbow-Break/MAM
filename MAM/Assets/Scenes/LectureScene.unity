@@ -6033,6 +6033,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4707715646314163256, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: _skipButton
+      value: 
+      objectReference: {fileID: 393474447}
+    - target: {fileID: 4707715646314163256, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       propertyPath: _musicDataTable
       value: 
       objectReference: {fileID: 11400000, guid: 20b949d153e68ea4486caaaa21bee8c0, type: 2}
@@ -6044,6 +6048,10 @@ PrefabInstance:
       propertyPath: _prefab
       value: 
       objectReference: {fileID: 7241814639305245143, guid: 225c820698dc29340bb583dd87f170d7, type: 3}
+    - target: {fileID: 6315465850859134527, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: _sfxAudio
+      value: 
+      objectReference: {fileID: 1269781239}
     - target: {fileID: 6315465850859134527, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       propertyPath: _effectAudio
       value: 
