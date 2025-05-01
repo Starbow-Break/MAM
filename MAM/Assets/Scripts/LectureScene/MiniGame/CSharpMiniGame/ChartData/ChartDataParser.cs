@@ -33,13 +33,12 @@ public static class ChartDataParser
     public static ChartData Parse(string chartDataPath)
     {
         ChartData chartData = new ChartData();
-        
-        string json = File.ReadAllText(chartDataPath);
+        string path = Path.Combine(Application.streamingAssetsPath, chartDataPath);
+        string json = File.ReadAllText(path);
         Debug.Log(json);
+
         var chartStartData = JsonUtility.FromJson<ChartStartData>(json);
         
-        AudioClip musicClip = AssetDatabase.LoadAssetAtPath<AudioClip>(chartStartData.music_path);
-        chartData.MusicClip = musicClip;
         chartData.Bpm = chartStartData.bpm;
         chartData.Offset = chartStartData.offset * MiliSecond;
         chartData.Delay = chartStartData.delay * MiliSecond;
@@ -58,7 +57,7 @@ public static class ChartDataParser
         Debug.Log(chartData.Offset);
         foreach (NoteData note in chartData.Notes)
         {
-            Debug.Log($"{note.Time} {note.NoteType} {note.Count} {note.Color} {note.Pattern}");
+            //Debug.Log($"{note.Time} {note.NoteType} {note.Count} {note.Color} {note.Pattern}");
         }
         
         return chartData;

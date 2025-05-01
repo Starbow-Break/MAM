@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditorInternal;
 
 public static class TeamProjectProgressHelper
 {
