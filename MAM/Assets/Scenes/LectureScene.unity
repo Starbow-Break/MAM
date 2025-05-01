@@ -6278,6 +6278,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 94631198}
     m_Modifications:
+    - target: {fileID: 303199297649067570, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 303199297649067570, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 303199297649067570, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 640742904761167977, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       propertyPath: m_Volume
       value: 0.8
@@ -6296,6 +6308,10 @@ PrefabInstance:
       objectReference: {fileID: 3981124405116370733, guid: b569b4b4e4731be4b810550fb3722bf8, type: 3}
     - target: {fileID: 1748362008098336949, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065734323669679565, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2974800521502646051, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
@@ -6370,6 +6386,14 @@ PrefabInstance:
       propertyPath: _effectAudio
       value: 
       objectReference: {fileID: 1269781239}
+    - target: {fileID: 8269946043125849007, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269946043125849007, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71
+      objectReference: {fileID: 0}
     - target: {fileID: 8384106738033023660, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       propertyPath: _color.a
       value: 0.7019608
@@ -6408,6 +6432,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2364184205512512769, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6100965409387797934}
+    - targetCorrespondingSourceObject: {fileID: 6297589203238453495, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
 --- !u!114 &6100965409387797931 stripped
 MonoBehaviour:
