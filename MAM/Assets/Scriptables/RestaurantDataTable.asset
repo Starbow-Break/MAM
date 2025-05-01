@@ -17,13 +17,13 @@ MonoBehaviour:
   RestaurantList:
   - ID: restaurant1
     Name: "\uD574\uB2F4\uAC00"
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: -6007857137893288414, guid: cd202501f2972a3469f077bdb137aa45, type: 3}
   - ID: restaurant2
     Name: "\uBC25"
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 7145198348311737387, guid: 73163c38b3d01e74a8f8fff65911a0ff, type: 3}
   - ID: restaurant3
     Name: "\uC57C\uBBF8\uCE74\uCE20"
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: 1768679433190182986, guid: 1fee5755e041d834eaa011a08e9f8a12, type: 3}
   - ID: restaurant4
     Name: "\uB3C4\uC2DC\uB77D"
-    Icon: {fileID: 21300000, guid: c6b6295b2f027e14ab1b9acad5d0c3a1, type: 3}
+    Icon: {fileID: -5643105228771564274, guid: fb805a89add276b40a7ccb02d7576ae3, type: 3}
