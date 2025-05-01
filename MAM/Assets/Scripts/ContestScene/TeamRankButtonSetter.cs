@@ -23,13 +23,13 @@ public class TeamRankButtonSetter : MonoBehaviour
 
         contestTeams.Sort((a,b) =>b.ProjectScore.CompareTo(a.ProjectScore));
         
-        for (int i = _buttonCount; i > 0; i--)
+        for (int i = _buttonCount - 1; i >= 0; i--)
         {
             TeamRankButtonUpdater newUpdater = Instantiate(_originalUpdater, _contentTransform);
             
             newUpdater.SetTeam(contestTeams[i]);
             newUpdater.gameObject.SetActive(false);
-            newUpdater.SetRank(i);
+            newUpdater.SetRank(i + 1);
             _updaters.Add(newUpdater);
 
             newUpdater.RadioButton.ActOnClick += () =>

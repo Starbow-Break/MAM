@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CalenderUpdater : MonoBehaviour
+public class CalendarUpdater : MonoBehaviour
 {
     private readonly int WalkHash = Animator.StringToHash("Walk");
     private readonly int ProjectPerDay = 4;
-    private readonly int TotalProject = 3;
 
     [SerializeField] private RectTransform _teacher;
     [SerializeField] private List<RectTransform> _squareRects;
     [SerializeField] private List<RectTransform> _endPointRect;
-    [SerializeField] private float moveBeforeDelay = 1f;
+    [SerializeField] private float moveBeforeDelay = 2f;
     [SerializeField] private float moveAfterDelay = 1f;
     [SerializeField] private float moveSpeed = 300f;
 
