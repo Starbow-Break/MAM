@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 [DefaultExecutionOrder(-900)]
 public class ASceneManager<T> : MonoBehaviour where T : MonoBehaviour
 {
+    [SerializeField] protected string _sceneName = string.Empty;
+
     private static T _instance;
 
     public static T Instance
@@ -32,6 +35,8 @@ public class ASceneManager<T> : MonoBehaviour where T : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        GameManager.HUDManager.SetSceneName(_sceneName);
     }
-
+    
 }

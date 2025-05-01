@@ -11,4 +11,5 @@ public enum ESceneIndex
     DayEnd = 6,
     Present = 7,
     Contest = 8,
+    Calendar = 9,
 }

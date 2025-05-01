@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Debug = System.Diagnostics.Debug;
 
 public class FlowManager : MonoBehaviour
 {
@@ -55,30 +56,35 @@ public class FlowManager : MonoBehaviour
             case ESceneIndex.SelfStudy:
                 _sceneController.LoadScene(ESceneIndex.DayEnd);
                 break;
-            
             case ESceneIndex.DayEnd:
-                if (_currentDay >= _flowData.TotalDaysInProject)
+                _sceneController.LoadScene(ESceneIndex.Calendar);
+                break;
+            
+            case ESceneIndex.Calendar:
+                if (_currentDay == 1)
                 {
-                    _currentDay++;
-
-                    if (_currentProject >= _flowData.TotalProjectCount)
-                    {
-                        _sceneController.LoadScene(ESceneIndex.Contest);
-                        break;
-                    }
-                    _sceneController.LoadScene(ESceneIndex.Present);
+                    _sceneController.LoadScene(ESceneIndex.TeamSelect);
                     break;
                 }
-                _currentDay++;
-                ActOnNewDayStart?.Invoke();
-                _sceneController.LoadScene(ESceneIndex.Lecture);
+                if (_currentDay <= _flowData.TotalDaysInProject)
+                {
+                    _sceneController.LoadScene(ESceneIndex.Lecture);
+                    break;
+                }
+                if (_currentProject >= _flowData.TotalProjectCount)
+                {
+                    _sceneController.LoadScene(ESceneIndex.Contest);
+                    break;
+                }
+                _sceneController.LoadScene(ESceneIndex.Present);
                 break;
             
             case ESceneIndex.Present:
-                _currentProject++;
-                _currentDay = 1;
-                ActOnNewProjectStart?.Invoke();
-                _sceneController.LoadScene(ESceneIndex.TeamSelect);
+                _sceneController.LoadScene(ESceneIndex.Calendar);
+                break;
+                
+            case ESceneIndex.Contest:
+                _sceneController.LoadScene(ESceneIndex.Title);
                 break;
         }
     }
@@ -87,6 +93,20 @@ public class FlowManager : MonoBehaviour
     {
         int index = Mathf.Clamp(_currentProject - 1, 0, _flowData.TotalProjectCount - 1);
         return _flowData.ProjectProgressGoals[index];
+    }
+
+    public void AddCurrentDay()
+    {
+        _currentDay++;
+        if (_currentDay <= _flowData.TotalDaysInProject + 1)
+        {
+            ActOnNewDayStart?.Invoke();
+            return;
+        }
+
+        _currentDay = 1;
+        _currentProject++;
+        ActOnNewProjectStart?.Invoke();
     }
 
 }

@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 6692309372788361820}
   - component: {fileID: 6091305000544911193}
   m_Layer: 0
-  m_Name: Calender UI
+  m_Name: Calendar UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

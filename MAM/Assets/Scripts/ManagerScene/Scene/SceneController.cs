@@ -5,10 +5,10 @@ using System.Collections;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private GameObject _loadingScreen = null;
-
     private ESceneIndex _currentScene = ESceneIndex.Title;
     private List<AsyncOperation> _loadingOperations = new List<AsyncOperation>();
+
+    private static readonly float _fadeDuration = 0.3f;
     
     public ESceneIndex CurrentScene{get{return _currentScene;}}
     
@@ -20,15 +20,17 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(ESceneIndex scene)
     {
-        _loadingScreen.SetActive(true);
-        _loadingOperations.Add(SceneManager.UnloadSceneAsync((int)_currentScene));
-        _loadingOperations.Add(SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Additive));
-
-        StartCoroutine(GetSceneLoading(scene));
+        GameManager.HUDManager.FadeOut(_fadeDuration, () =>
+        {
+            _loadingOperations.Add(SceneManager.UnloadSceneAsync((int)_currentScene));
+            _loadingOperations.Add(SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Additive));
+            StartCoroutine(GetSceneLoading(scene));
+        });
     }
 
     private IEnumerator GetSceneLoading(ESceneIndex scene)
     {
+
         for (int i = 0; i < _loadingOperations.Count; i++)
         {
             while (!_loadingOperations[i].isDone)
@@ -37,8 +39,10 @@ public class SceneController : MonoBehaviour
             }
         }
         
+        yield return new WaitForSeconds(_fadeDuration);
+        
+        GameManager.HUDManager.FadeIn(_fadeDuration);
         _currentScene = scene;
-        _loadingScreen.SetActive(false);
     }
 
     

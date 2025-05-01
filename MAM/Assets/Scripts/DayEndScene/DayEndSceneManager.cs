@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 
 public class DayEndSceneManager : ASceneManager<DayEndSceneManager>
 {
     [SerializeField] DayEndTeamProjectProgressSetter _teamProjectProgressSetter;
     [SerializeField] DayEndSubmitButtonSetter _submitButtonSetter;
-    [SerializeField] CalenderUpdater _calenderUpdater;
+    [FormerlySerializedAs("_calenderUpdater")] [SerializeField] CalendarUpdater calendarUpdater;
     
     public DayEndTeamProjectProgressSetter TeamProjectProgressSetter => _teamProjectProgressSetter;
-    public CalenderUpdater CalenderUpdater => _calenderUpdater;
+    public CalendarUpdater CalendarUpdater => calendarUpdater;
     
     private void Start()
     {

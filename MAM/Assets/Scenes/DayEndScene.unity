@@ -1318,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d96b14967877d84d9d6878425aee656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sceneName: "\uB9C8\uBB34\uB9AC"
   _teamProjectProgressSetter: {fileID: 912784646}
   _submitButtonSetter: {fileID: 1095541490}
   _calenderUpdater: {fileID: 0}
