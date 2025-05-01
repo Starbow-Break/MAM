@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f847be6ed4a2d438491657d23ce0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: "\uD300 \uC120\uD0DD"
+  _sceneName: Team
   _controller: {fileID: 763482318}
   _teamButtonSetter: {fileID: 581482346}
   _studentButtonSetter: {fileID: 736666565}

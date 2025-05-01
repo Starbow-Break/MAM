@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182403499e1723f48b9306a6972dd90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: "\uBC1C\uD45C"
+  _sceneName: Present
   _teamGradeButtonSetter: {fileID: 590145266}
   _presentSkillRaiseSetter: {fileID: 760962049}
   _presentSceneCharacterSetter: {fileID: 2072587983}

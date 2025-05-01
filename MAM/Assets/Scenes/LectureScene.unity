@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2627582ab7ea47f4fa90d420c5e26c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: "\uAC15\uC758"
+  _sceneName: Lecture
   _miniGameController: {fileID: 898293386}
   _lectureResultSetter: {fileID: 1040050023}
 --- !u!4 &588403167
@@ -6432,9 +6432,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2364184205512512769, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6100965409387797934}
-    - targetCorrespondingSourceObject: {fileID: 6297589203238453495, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: bb73272c7f0780841b4c8b6eac98a6ed, type: 3}
 --- !u!114 &6100965409387797931 stripped
 MonoBehaviour:

@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ContestScene.unity
     guid: a4290f3bfd0b903409b83320d979d3c1
+  - enabled: 1
+    path: Assets/Scenes/CalendarScene.unity
+    guid: d1a0e304665e25f469fa1c19ac55f7c7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

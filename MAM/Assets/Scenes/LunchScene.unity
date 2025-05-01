@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0eb7a2bd095c41499536df943a9a078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: "\uC810\uC2EC"
+  _sceneName: Lunch
   _controller: {fileID: 1777671418}
   _restaurantButtonSetter: {fileID: 1465138524}
   _studentButtonSetter: {fileID: 264230407}
