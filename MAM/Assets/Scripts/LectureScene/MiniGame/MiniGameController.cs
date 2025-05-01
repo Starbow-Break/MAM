@@ -32,6 +32,8 @@ public class MiniGameController : MonoBehaviour
         _currentMiniGame.Initialize(difficulty);
         _uiUpdater.gameObject.SetActive(true);
         _currentMiniGame.StartGame();
+        
+        GameManager.AudioManager.PauseBGM();
     }
 
     public IEnumerator ShowGrade(float score)
@@ -48,5 +50,6 @@ public class MiniGameController : MonoBehaviour
         yield return new WaitUntil(()=> isClicked);
 
         _uiUpdater.gameObject.SetActive(false);
+        GameManager.AudioManager.ResumeBGM();
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditorInternal;
 
 public static class TeamProjectProgressHelper
 {
@@ -8,6 +9,10 @@ public static class TeamProjectProgressHelper
     
     public static float ApplyDayEnd(Team team)
     {
+        //왠지 모르게 14번째팀이 들어 올때가 있었음
+        if (team.Member1 == null || team.Member2 == null)
+            return 0;
+        
         float newProgress = GetRaisedTeamProjectProgress(team);
         team.ProjectProgress = newProgress;
         return newProgress;

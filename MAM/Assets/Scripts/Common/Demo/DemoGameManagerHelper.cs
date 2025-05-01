@@ -7,6 +7,7 @@ public class DemoGameManagerHelper : MonoBehaviour
     private void Start()
     {
         SetEventSystem();
+        SetAudioListener();
     }
 
     //이벤트시스템 생성
@@ -15,6 +16,15 @@ public class DemoGameManagerHelper : MonoBehaviour
         if (FindFirstObjectByType<EventSystem>() == null)
         {
             var obj = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+        }
+    }
+
+    private void SetAudioListener()
+    {
+        if (FindFirstObjectByType<AudioListener>() == null)
+        {
+            var audioObj = new GameObject("AudioListener");
+            audioObj.AddComponent<AudioListener>();
         }
     }
 
@@ -36,6 +46,5 @@ public class DemoGameManagerHelper : MonoBehaviour
         }
         
         GameManager.TeamManager.SetTeams(teams);
-        
     }
 }
