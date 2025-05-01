@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicDatas:
   - musicTitle: Music
-    Level1ChartPath: Assets/CSharpMiniGameData/ChartData/music_level1.json
-    Level2ChartPath: Assets/CSharpMiniGameData/ChartData/music_level2.json
-    Level3ChartPath: Assets/CSharpMiniGameData/ChartData/music_level3.json
+    musicClip: {fileID: 8300000, guid: b6f194c930b646948a835fc6a64ab964, type: 3}
+    Level1ChartPath: CSharpMiniGameData/ChartData/Music_Level1.json
+    Level2ChartPath: CSharpMiniGameData/ChartData/Music_Level2.json
+    Level3ChartPath: CSharpMiniGameData/ChartData/Music_Level3.json

@@ -5,6 +5,7 @@ using UnityEngine;
 public struct MusicData
 {
     public string musicTitle;
+    public AudioClip musicClip;
     public string Level1ChartPath;
     public string Level2ChartPath;
     public string Level3ChartPath;

@@ -22,6 +22,7 @@ public class TeamGradeButtonViewer
 
     public void ShowButton()
     {
+        _updater.transform.SetAsFirstSibling();
         _updater.gameObject.SetActive(true);
     }
 }

@@ -52,7 +52,8 @@ public class CSharpMiniGame: AMiniGame
     private ChartData GetChartDataFromTable(int difficulty)
     {
         MusicData musicData = _musicDataTable.GetMusicDataRandomly();
-        ChartData chartData = ChartDataParser.Parse(musicData.GetChartPath(_difficulty));
+        ChartData chartData = ChartDataParser.Parse(musicData.GetChartPath(difficulty));
+        chartData.MusicClip = musicData.musicClip;
         return chartData;
     }
 
