@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c0253eaafa6f640be0aa0b140cd294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: "\uC790\uC2B5"
+  _sceneName: SelfStudy
   _studentClickPopupSetter: {fileID: 140451465}
   _characterSetter: {fileID: 405047798}
   _toHomeButton: {fileID: 973371465}
