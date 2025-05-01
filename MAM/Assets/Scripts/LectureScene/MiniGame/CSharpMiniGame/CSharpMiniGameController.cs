@@ -132,12 +132,12 @@ public class CSharpMiniGameController : MonoBehaviour
     {
         CSharpMiniGame.VisualizeCountSetter.SetCount(data.Count);
         CSharpMiniGame.JudgeLineSetter.SetColor(data.Color);
-        CSharpMiniGame.SpeechBubbleSetter.Show($"If {data.Count}", data.LifeTime);
+        CSharpMiniGame.SpeechBubbleSetter.Show(data);
     }
 
     private void ShowForNoteGuide(EventQueueData data)
     {
-        CSharpMiniGame.SpeechBubbleSetter.Show($"For {data.Count}", data.LifeTime);
+        CSharpMiniGame.SpeechBubbleSetter.Show(data);
     }
     #endregion
     
