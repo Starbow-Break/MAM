@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class DemoStartButton : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
     [SerializeField]private Button _button;
 
