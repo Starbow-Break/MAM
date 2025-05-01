@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private RestaurantTable _restaurantTable = null;
     [SerializeField] private CommonHUDManager _commonHUDManager = null;
     [SerializeField] private CutsceneManager _cutsceneManager = null;
+    [SerializeField] private AudioManager _audioManager = null;
     
     public static FlowManager FlowManager => Instance._flowManager;
     public static StudentManager StudentManager => Instance._studentManager;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     public static RestaurantTable RestaurantTable => Instance._restaurantTable;
     public static CommonHUDManager HUDManager => Instance._commonHUDManager;
     public static CutsceneManager CutsceneManager => Instance._cutsceneManager;
+    public static AudioManager AudioManager => Instance._audioManager;
 
     public bool IsTestMode = false;
     
@@ -51,5 +53,7 @@ public class GameManager : MonoBehaviour
         _commonHUDManager.Initialize();
         _cutsceneManager.Initialize();
         _flowManager.GameStart();
+        
+        _audioManager.PlayBGM();
     }
 }

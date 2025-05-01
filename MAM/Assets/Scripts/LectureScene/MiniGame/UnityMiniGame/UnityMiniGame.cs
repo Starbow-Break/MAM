@@ -6,6 +6,7 @@ public class UnityMiniGame : AMiniGame
     [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
     [SerializeField] private UnityScreenController _screenController = null;
     [SerializeField] private UnityWindowInputHandler _inputHandler = null;
+    [SerializeField] private UnityMiniGameAudioController _audio = null;
     
     private int _correctSetCount = 0;
     private MiniGameCharacterController _characterCon = null;
@@ -34,6 +35,8 @@ public class UnityMiniGame : AMiniGame
         _characterCon.SetInstructorTalking(true);
         _inputHandler.IsOnDelay = false;
         _uiUpdater.ShowTime();
+        _audio.PlayBGM();
+        
         StartCoroutine(ProcessGame());
     }
 
@@ -51,7 +54,7 @@ public class UnityMiniGame : AMiniGame
 
         EndGame();
     }
-
+    
     private void OnCompleteSet()
     {
         _characterCon.PlayInstructorEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
@@ -61,12 +64,15 @@ public class UnityMiniGame : AMiniGame
         _correctSetCount++;
         _uiUpdater.SetScore(_correctSetCount);
         
+        _audio.PlayCorrectSetSound();
+        
         StartCoroutine(DelaySetAndSetCues());
     }
 
     private void OnCorrectInput(EUnityWindowType type)
     {
         _screenController.HighLightWindow(type);
+        _audio.PlayButtonPressSound();
     }
 
     private void OnWrongInput()
@@ -74,6 +80,8 @@ public class UnityMiniGame : AMiniGame
         _characterCon.PlayInstructorEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _characterCon.PlayStudentsEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _screenController.ShowIncorrectImage();
+        
+        _audio.PlayWrongSetSound();
         
         StartCoroutine(DelaySetAndSetCues());
     }
@@ -91,6 +99,7 @@ public class UnityMiniGame : AMiniGame
     protected override void EndGame()
     {
         StopAllCoroutines();
+        _audio.StopBGM();
         _characterCon.SetInstructorTalking(false);
         _score = Mathf.Clamp(_correctSetCount * _baseScore, 0, 100);
         base.EndGame();

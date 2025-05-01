@@ -4,7 +4,6 @@ using UnityEngine.Serialization;
 public class DayEndSubmitButtonSetter : MonoBehaviour
 {
     [SerializeField] private SubmitButtonUpdater _updater;
-    [FormerlySerializedAs("_calender")] [SerializeField] private CalendarUpdater calendar;
 
     public void Initialize()
     {
