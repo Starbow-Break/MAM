@@ -9,12 +9,15 @@ public class PresentSceneManager : ASceneManager<PresentSceneManager>
     [SerializeField] private DemoGameManagerHelper _demoGameManagerHelper = null;
 
     public static PresentSkillRaiseSetter SkillRaiseSetter => Instance._presentSkillRaiseSetter;
+    public static TeamGradeButtonSetter ButtonSetter => Instance._teamGradeButtonSetter;
     
     private void Start()
     {
         Initialize();
         
         _teamGradeButtonSetter.ShowButtons();
+        
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Present);
     }
 
     private void Initialize()

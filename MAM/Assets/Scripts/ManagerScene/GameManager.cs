@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             yield break;
         
         _flowManager.LoadTitle();
+        _audioManager.PlayBGM();
     }
 
     public void StartGame()
@@ -53,7 +54,5 @@ public class GameManager : MonoBehaviour
         _commonHUDManager.Initialize();
         _cutsceneManager.Initialize();
         _flowManager.GameStart();
-        
-        _audioManager.PlayBGM();
     }
 }
