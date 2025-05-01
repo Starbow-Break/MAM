@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TeamGradeButtonSetter : MonoBehaviour
@@ -13,6 +14,8 @@ public class TeamGradeButtonSetter : MonoBehaviour
     private RadioButtonGroup _teamGradeButtonGroup = null;
 
     private float _showButtonDelay = 1f;
+    
+    public UnityAction<Team> ActOnShowTeamButton { get; set; }
     
     public void Initialize()
     {
@@ -59,6 +62,7 @@ public class TeamGradeButtonSetter : MonoBehaviour
         foreach (TeamGradeButtonViewer viewer in _viewers)
         {
             viewer.ShowButton();
+            ActOnShowTeamButton?.Invoke(viewer.Team);
             yield return new WaitForSeconds(_showButtonDelay);
         }
         

@@ -7,5 +7,6 @@ public enum ECutsceneName
     Whip,
     Help,
     Lunch,
-    Sleep
+    Sleep,
+    Present,
 }

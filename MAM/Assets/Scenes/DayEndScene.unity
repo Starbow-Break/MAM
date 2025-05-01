@@ -1288,7 +1288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _updater: {fileID: 511984524}
-  calendar: {fileID: 0}
 --- !u!1 &1199127199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1320,6 @@ MonoBehaviour:
   _sceneName: Recap
   _teamProjectProgressSetter: {fileID: 912784646}
   _submitButtonSetter: {fileID: 1095541490}
-  calendarUpdater: {fileID: 0}
 --- !u!4 &1199127201
 Transform:
   m_ObjectHideFlags: 0
@@ -2632,7 +2630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3372549, g: 0.3372549, b: 0.35686275, a: 0.79607844}
+  m_Color: {r: 0.3372549, g: 0.3372549, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
