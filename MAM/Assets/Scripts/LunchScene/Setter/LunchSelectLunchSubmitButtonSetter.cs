@@ -7,14 +7,14 @@ public class LunchSelectLunchSubmitButtonSetter : MonoBehaviour
 
     private void OnEnable()
     {
-        LunchSceneManager.Controller.OnChangeRestaurant += () => UpdateUI();
-        LunchSceneManager.Controller.OnChangeStudent += () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant += UpdateUI;
+        LunchSceneManager.Controller.OnChangeStudent += UpdateUI;
     }
 
     private void OnDisable()
     {
-        LunchSceneManager.Controller.OnChangeRestaurant -= () => UpdateUI();
-        LunchSceneManager.Controller.OnChangeStudent -= () => UpdateUI();
+        LunchSceneManager.Controller.OnChangeRestaurant -= UpdateUI;
+        LunchSceneManager.Controller.OnChangeStudent -= UpdateUI;
     }
 
     public void Initialize()
@@ -32,7 +32,7 @@ public class LunchSelectLunchSubmitButtonSetter : MonoBehaviour
     
     private void OnClick()
     {
-        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Lunch);
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Lunch);
         GameManager.CutsceneManager.ActOnCutSceneEnd += OnEndCutscene;
     }
 

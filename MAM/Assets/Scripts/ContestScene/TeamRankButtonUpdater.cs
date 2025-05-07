@@ -27,24 +27,16 @@ public class TeamRankButtonUpdater : MonoBehaviour
     public void SetTeam(ContestTeam team)
     {
         _team = team;
-        SetTeamMemberImage(0, team.Members[0].CharacterIcon);
-        SetTeamMemberImage(1, team.Members[1].CharacterIcon);
-        SetTeamMemberName(0, team.Members[0].CharacterName);
-        SetTeamMemberName(1, team.Members[1].CharacterName);
+        
+        _teamMemberImages[0].sprite = team.Members[0].CharacterIcon;
+        _teamMemeberNames[0].text = team.Members[0].CharacterName;
+
+        _teamMemberImages[1].sprite = team.Members[1].CharacterIcon;
+        _teamMemeberNames[1].text = team.Members[1].CharacterName;
         
         SetGrade(team.ProjectScore);
     }
     
-    private void SetTeamMemberImage(int imageIndex, Sprite sprite)
-    {
-        _teamMemberImages[imageIndex].sprite = sprite;
-    }
-
-    private void SetTeamMemberName(int imageIndex, string memberName)
-    {
-        _teamMemeberNames[imageIndex].text = memberName;
-    }
-
     private void SetGrade(float score)
     {
         _gradeText.text = Mathf.Floor(score).ToString();

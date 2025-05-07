@@ -6,10 +6,10 @@ public class JudgeLineUpdater : MonoBehaviour
 
     public void SetLineColor(Color color)
     {
-        Gradient gradient = new Gradient();
+        var gradient = new Gradient();
         gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) },
-            new GradientAlphaKey[] { new GradientAlphaKey(color.a, 0.0f), new GradientAlphaKey(color.a, 1.0f) }
+            new[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) },
+            new[] { new GradientAlphaKey(color.a, 0.0f), new GradientAlphaKey(color.a, 1.0f) }
         );
         _lineRenderer.colorGradient = gradient;
     }

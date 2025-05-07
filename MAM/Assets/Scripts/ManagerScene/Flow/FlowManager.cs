@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Debug = System.Diagnostics.Debug;
 
 public class FlowManager : MonoBehaviour
 {
@@ -15,16 +14,14 @@ public class FlowManager : MonoBehaviour
     private int _currentProject = 1;
     
     public int CurrentDay {get {return _currentDay;}}
-    public int CurrentProject {get {return _currentProject;}}
+    public int CurrentProject => _currentProject;
     public UnityAction ActOnSceneSwitch{ get; set; }    //씬언로드전 마지막행동
     public UnityAction ActOnNewDayStart { get; set; }   //새 하루 시작할때
     public UnityAction ActOnNewProjectStart{ get; set; }    //새프로잭트시작할때 팀선정 전
     
     private void Start()
     {
-        if (_demoNextSceneButton == null)
-            return;
-        _demoNextSceneButton.onClick.AddListener(ToNextScene);
+        _demoNextSceneButton?.onClick.AddListener(ToNextScene);
     }
 
     public void LoadTitle() => _sceneController.LoadTitle();

@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Serialization;
 
 public class CutsceneRegister : MonoBehaviour
 {
     [SerializeField] private PlayableDirector _director;
-    [SerializeField] private ECutsceneName _cutsceneName;
+    [FormerlySerializedAs("_cutsceneName")] [SerializeField] private ECutsceneType cutsceneType;
 
     protected virtual void Awake()
     {
-        GameManager.CutsceneManager.RegisterCutscene(_cutsceneName, _director);
+        GameManager.CutsceneManager.RegisterCutscene(cutsceneType, _director);
     }
 
     protected virtual void OnDestroy()
     {
-        GameManager.CutsceneManager.UnregisterCutscene(_cutsceneName);
+        GameManager.CutsceneManager.UnregisterCutscene(cutsceneType);
     }
 }

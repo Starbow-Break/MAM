@@ -7,7 +7,7 @@ public static class ConstantCurve
         float order = 2 * intensity + 1;
         return Mathf.Pow(x, order);
     }
-    
+
     public static float PolyEaseInOut(int intensity, float x)
     {
         float order = 2 * intensity + 1;

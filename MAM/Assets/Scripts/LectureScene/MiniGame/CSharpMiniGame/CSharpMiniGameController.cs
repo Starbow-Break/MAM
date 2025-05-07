@@ -1,20 +1,19 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CSharpMiniGameController : MonoBehaviour
 {
-    [SerializeField] NoteSpawner _noteSpawner;
+    [SerializeField] private NoteSpawner _noteSpawner;
     [SerializeField] private AudioSource _music;
     [SerializeField] private CSharpMiniGameSFXAudio _sfxAudio;
-    
-    private float startTime;
     private float currentScoreWeight;
     private float maxScoreWeight;
 
     public UnityAction<JudgeInfo> OnJudge;
     public UnityAction OnPlayChartEnded;
+
+    private float startTime;
 
     private void OnEnable()
     {
@@ -25,28 +24,23 @@ public class CSharpMiniGameController : MonoBehaviour
     {
         CSharpMiniGame.Input.OnKeyDown -= () => OnHit();
     }
-    
+
     private void SetChartData(ChartData chartData)
     {
         maxScoreWeight = CSharpMiniGameScoreHelper.GetTotalMaxWeight(chartData);
-        
+
         CSharpMiniGameQueue.ClearAllQueues();
-        ChartQueueData chartQueueData = ChartQueueDataGenerator.Generate(chartData);
+        var chartQueueData = ChartQueueDataGenerator.Generate(chartData);
         foreach (var eventQueueData in chartQueueData.EventQueueDatas)
-        {
             CSharpMiniGameQueue.EventQueue.Enqueue(eventQueueData);
-        }
         foreach (var judgeQueueData in chartQueueData.JudgeQueueDatas)
-        {
             CSharpMiniGameQueue.JudgeQueue.Enqueue(judgeQueueData);
-        }
         foreach (var soundQueueData in chartQueueData.SoundQueueDatas)
-        {
             CSharpMiniGameQueue.SoundQueue.Enqueue(soundQueueData);
-        }
     }
-    
+
     #region Play Chart
+
     public void Play(ChartData chartData)
     {
         currentScoreWeight = 0f;
@@ -73,59 +67,50 @@ public class CSharpMiniGameController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         _music.PlayOneShot(musicClip);
     }
-    
+
     private IEnumerator PlayChartSequence(float delay)
     {
         startTime = Time.time + delay;
-        
+
         var eventQueue = CSharpMiniGameQueue.EventQueue;
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var soundQueue = CSharpMiniGameQueue.SoundQueue;
-        
+
         while (
-            eventQueue.Count > 0 || judgeQueue.Count > 0 
-            || soundQueue.Count > 0 || _music.isPlaying)
+            eventQueue.Count > 0 || judgeQueue.Count > 0
+                                 || soundQueue.Count > 0 || _music.isPlaying)
         {
-            float playTime = Time.time - startTime;
-            
+            var playTime = Time.time - startTime;
+
             while (soundQueue.Count > 0 && soundQueue.Peek().Time <= playTime)
             {
                 var soundQueueData = soundQueue.Dequeue();
                 Debug.Log(soundQueueData.SoundType);
                 _sfxAudio.PlaySFX(soundQueueData.SoundType);
             }
-            
+
             ResolveNoHit();
-            
+
             while (eventQueue.Count > 0 && eventQueue.Peek().Time <= playTime)
             {
                 var eventQueueData = eventQueue.Dequeue();
                 if (eventQueueData.EventType == EEventType.Visualize)
-                {
                     ShowNoteGuide(eventQueueData);
-                }
                 else
-                {
                     _noteSpawner.SpawnNote(eventQueueData);
-                }
             }
-            
+
             yield return null;
         }
-        
+
         OnPlayChartEnded?.Invoke();
     }
 
     private void ShowNoteGuide(EventQueueData data)
     {
         if (data.NoteType == ENoteType.If)
-        {
             ShowIfNoteGuide(data);
-        }
-        else if (data.NoteType == ENoteType.For)
-        {
-            ShowForNoteGuide(data);
-        }
+        else if (data.NoteType == ENoteType.For) ShowForNoteGuide(data);
     }
 
     private void ShowIfNoteGuide(EventQueueData data)
@@ -139,19 +124,22 @@ public class CSharpMiniGameController : MonoBehaviour
     {
         CSharpMiniGame.SpeechBubbleSetter.Show(data);
     }
+
     #endregion
-    
+
     #region Judge
-    private EJudge CalculateCurrentJudge() {
+
+    private EJudge CalculateCurrentJudge()
+    {
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
 
-        float playTime = Time.time - startTime;
+        var playTime = Time.time - startTime;
         var judgeData = judgeQueue.Peek();
-        float delta = playTime - judgeData.Time;
-        bool isHit = judgeData.isHit;
+        var delta = playTime - judgeData.Time;
+        var isHit = judgeData.isHit;
 
-        EJudge judge = CSharpMiniGameJudgeHelper.Judge(delta, isHit);
-        
+        var judge = CSharpMiniGameJudgeHelper.Judge(delta, isHit);
+
         return judge;
     }
 
@@ -160,25 +148,22 @@ public class CSharpMiniGameController : MonoBehaviour
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
 
-        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0)
-        {
-            return;
-        }
+        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0) return;
 
-        bool isHit = judgeQueue.Peek().isHit;
-        EJudge judge = CalculateCurrentJudge();
+        var isHit = judgeQueue.Peek().isHit;
+        var judge = CalculateCurrentJudge();
 
         if ((isHit && judge == EJudge.Miss) || (!isHit && judge == EJudge.Perfect))
         {
             currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
-            float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            var score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
             CSharpMiniGame.Instance.Score = score;
             LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
-            
+
             var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
-            SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
-            JudgeInfo judgeInfo = new JudgeInfo(
+            var noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
+            var judgeInfo = new JudgeInfo(
                 judge,
                 judgeQueueData.Type,
                 judgeQueueData.isHit,
@@ -190,34 +175,31 @@ public class CSharpMiniGameController : MonoBehaviour
             NotePoolManager.Instance.ReleaseNote(judgeQueueData.Type, currentNote);
 
             Debug.Log($"{judge}");
-            
+
             OnJudge?.Invoke(judgeInfo);
-        } 
+        }
     }
-    
+
     private void OnHit()
     {
         var judgeQueue = CSharpMiniGameQueue.JudgeQueue;
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
 
-        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0)
-        {
-            return;
-        }
+        if (judgeQueue.Count <= 0 || noteQueue.Count <= 0) return;
 
-        EJudge judge = CalculateCurrentJudge();
+        var judge = CalculateCurrentJudge();
 
         if (judge != EJudge.None)
         {
             currentScoreWeight += CSharpMiniGameScoreHelper.GetJudgeScoreWeight(judge);
-            float score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
+            var score = Mathf.Floor(currentScoreWeight / maxScoreWeight * 10000f) / 100f;
             CSharpMiniGame.Instance.Score = score;
             LectureSceneManager.MiniGameController.UIUpdater.SetScore(score);
-            
+
             var judgeQueueData = judgeQueue.Dequeue();
             var currentNote = noteQueue.Dequeue();
-            SpriteRenderer noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
-            JudgeInfo judgeInfo = new JudgeInfo(
+            var noteRenderer = currentNote.GetComponentInChildren<SpriteRenderer>();
+            var judgeInfo = new JudgeInfo(
                 judge,
                 judgeQueueData.Type,
                 judgeQueueData.isHit,
@@ -233,5 +215,6 @@ public class CSharpMiniGameController : MonoBehaviour
             OnJudge?.Invoke(judgeInfo);
         }
     }
+
     #endregion
 }

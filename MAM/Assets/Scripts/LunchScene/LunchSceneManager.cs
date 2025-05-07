@@ -14,6 +14,7 @@ public class LunchSceneManager : ASceneManager<LunchSceneManager>
     {
         [field: SerializeField]
         public EUIObjectType uiType { get; private set; }
+        
         [field: SerializeField]
         public GameObject uiObject { get; private set; }
     }

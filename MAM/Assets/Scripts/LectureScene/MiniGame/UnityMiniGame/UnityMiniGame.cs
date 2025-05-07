@@ -3,27 +3,26 @@ using UnityEngine;
 
 public class UnityMiniGame : AMiniGame
 {
-    [SerializeField] private UnityWindowCueManager _unityWindowCueManager = null;
-    [SerializeField] private UnityScreenController _screenController = null;
-    [SerializeField] private UnityWindowInputHandler _inputHandler = null;
-    [SerializeField] private UnityMiniGameAudioController _audio = null;
-    
-    private int _correctSetCount = 0;
-    private MiniGameCharacterController _characterCon = null;
-    private MiniGameUIUpdater _uiUpdater = null;
-
     private static readonly float _gameTime = 60; //초
     private static readonly float _delayBetweenSets = 0.3f;
     private static readonly int _baseCueCount = 3;
     private static readonly int _baseScore = 7;
+    [SerializeField] private UnityWindowCueManager _unityWindowCueManager;
+    [SerializeField] private UnityScreenController _screenController;
+    [SerializeField] private UnityWindowInputHandler _inputHandler;
+    [SerializeField] private UnityMiniGameAudioController _audio;
+    private MiniGameCharacterController _characterCon;
+
+    private int _correctSetCount;
+    private MiniGameUIUpdater _uiUpdater;
 
     public override void Initialize(int difficulty)
     {
         base.Initialize(difficulty);
-        
+
         _unityWindowCueManager.InitializeCues(_baseCueCount + difficulty, OnCompleteSet);
         _inputHandler.Initialize(_unityWindowCueManager, OnCorrectInput, OnWrongInput);
-        
+
         _characterCon = LectureSceneManager.MiniGameController.CharacterController;
         _uiUpdater = LectureSceneManager.MiniGameController.UIUpdater;
     }
@@ -36,14 +35,13 @@ public class UnityMiniGame : AMiniGame
         _inputHandler.IsOnDelay = false;
         _uiUpdater.ShowTime();
         _audio.PlayBGM();
-        
+
         StartCoroutine(ProcessGame());
     }
 
     private IEnumerator ProcessGame()
     {
-
-        float currentTime = _gameTime;
+        var currentTime = _gameTime;
 
         while (currentTime > 0)
         {
@@ -54,7 +52,7 @@ public class UnityMiniGame : AMiniGame
 
         EndGame();
     }
-    
+
     private void OnCompleteSet()
     {
         _characterCon.PlayInstructorEmote(EEmoteType.BlueExclamation, _delayBetweenSets);
@@ -63,9 +61,9 @@ public class UnityMiniGame : AMiniGame
         _screenController.ShowCorrectImage();
         _correctSetCount++;
         _uiUpdater.SetScore(_correctSetCount);
-        
+
         _audio.PlayCorrectSetSound();
-        
+
         StartCoroutine(DelaySetAndSetCues());
     }
 
@@ -80,9 +78,9 @@ public class UnityMiniGame : AMiniGame
         _characterCon.PlayInstructorEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _characterCon.PlayStudentsEmote(EEmoteType.RedExclamation, _delayBetweenSets);
         _screenController.ShowIncorrectImage();
-        
+
         _audio.PlayWrongSetSound();
-        
+
         StartCoroutine(DelaySetAndSetCues());
     }
 
@@ -91,7 +89,7 @@ public class UnityMiniGame : AMiniGame
         _inputHandler.IsOnDelay = true;
         yield return new WaitForSeconds(_delayBetweenSets);
         _inputHandler.IsOnDelay = false;
-        
+
         _unityWindowCueManager.SetRandomCues();
         _screenController.ShowIdleImage();
     }
@@ -104,5 +102,4 @@ public class UnityMiniGame : AMiniGame
         _score = Mathf.Clamp(_correctSetCount * _baseScore, 0, 100);
         base.EndGame();
     }
-
 }

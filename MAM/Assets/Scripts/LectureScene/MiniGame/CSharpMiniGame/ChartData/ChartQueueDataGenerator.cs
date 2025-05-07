@@ -4,20 +4,18 @@ using UnityEngine;
 
 public static class ChartQueueDataGenerator
 {
-    
     private static readonly Color DefaultColor = Color.green;
     private static readonly Color[] IfNoteColors = { Color.red, Color.blue };
-    
+
     public static ChartQueueData Generate(ChartData chartData)
     {
-        ChartQueueData chartQueueData = new ChartQueueData();
+        var chartQueueData = new ChartQueueData();
 
-        float bpm = chartData.Bpm;
-        float offset = chartData.Offset;
-        float delay = chartData.Delay;
+        var bpm = chartData.Bpm;
+        var offset = chartData.Offset;
+        var delay = chartData.Delay;
 
         foreach (var noteData in chartData.Notes)
-        {
             switch (noteData.NoteType)
             {
                 case ENoteType.Normal:
@@ -26,22 +24,22 @@ public static class ChartQueueDataGenerator
                     chartQueueData.EventQueueDatas.Add(spawnData);
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
-                    
-                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
 
-                    SoundQueueData spawnSoundData = new SoundQueueData();
+                    var soundQueueData = new List<SoundQueueData>();
+
+                    var spawnSoundData = new SoundQueueData();
                     spawnSoundData.Time = spawnData.Time;
                     spawnSoundData.SoundType = ESoundType.NoteSpawn;
                     soundQueueData.Add(spawnSoundData);
 
                     foreach (var data in judgeDatas)
                     {
-                        SoundQueueData soundData = new SoundQueueData();
+                        var soundData = new SoundQueueData();
                         soundData.Time = data.Time;
                         soundData.SoundType = ESoundType.Hit;
                         soundQueueData.Add(soundData);
                     }
-                    
+
                     chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
                     break;
                 }
@@ -50,41 +48,39 @@ public static class ChartQueueDataGenerator
                     var visualizeData = GenerateBaseVisualizeData(bpm, offset, noteData);
                     visualizeData.Color = noteData.Color;
                     chartQueueData.EventQueueDatas.Add(visualizeData);
-                    
-                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
-                    
-                    for(int i = 0; i < noteData.Pattern.Length; i++)
+
+                    var soundQueueData = new List<SoundQueueData>();
+
+                    for (var i = 0; i < noteData.Pattern.Length; i++)
                     {
                         var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                         spawnData.Time += 60f / bpm * 2 * i;
-                        
+
                         Debug.Log(noteData.Color);
-                        int colorIndex = (Array.IndexOf(IfNoteColors, noteData.Color) + (noteData.Pattern[i] == '1' ? 0 : 1)) % 2;
-                        Color color = IfNoteColors[colorIndex];
+                        var colorIndex = (Array.IndexOf(IfNoteColors, noteData.Color) +
+                                          (noteData.Pattern[i] == '1' ? 0 : 1)) % 2;
+                        var color = IfNoteColors[colorIndex];
                         spawnData.Color = color;
                         chartQueueData.EventQueueDatas.Add(spawnData);
-                        
-                        SoundQueueData spawnSoundData = new SoundQueueData();
+
+                        var spawnSoundData = new SoundQueueData();
                         spawnSoundData.Time = spawnData.Time;
                         spawnSoundData.SoundType = ESoundType.NoteSpawn;
                         soundQueueData.Add(spawnSoundData);
                     }
-                    
+
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
-                    for (int i = 0; i < noteData.Pattern.Length; i++)
-                    {
-                        judgeDatas[i].isHit = noteData.Pattern[i] == '1';
-                    }
+                    for (var i = 0; i < noteData.Pattern.Length; i++) judgeDatas[i].isHit = noteData.Pattern[i] == '1';
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
 
                     foreach (var data in judgeDatas)
                     {
-                        SoundQueueData soundData = new SoundQueueData();
+                        var soundData = new SoundQueueData();
                         soundData.Time = data.Time;
                         soundData.SoundType = ESoundType.Hit;
                         soundQueueData.Add(soundData);
                     }
-                    
+
                     chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
 
                     break;
@@ -96,44 +92,40 @@ public static class ChartQueueDataGenerator
                     var spawnData = GenerateBaseSpawnData(bpm, offset, noteData);
                     chartQueueData.EventQueueDatas.Add(spawnData);
                     var judgeDatas = GenerateJudgeDatas(bpm, offset, noteData);
-                    for (int i = 0; i < noteData.Count - 1; i++)
-                    {
-                        judgeDatas[i].Type = ENoteType.ForBullet;
-                    }
+                    for (var i = 0; i < noteData.Count - 1; i++) judgeDatas[i].Type = ENoteType.ForBullet;
                     chartQueueData.JudgeQueueDatas.AddRange(judgeDatas);
-                    
-                    List<SoundQueueData> soundQueueData = new List<SoundQueueData>();
 
-                    SoundQueueData spawnSoundData = new SoundQueueData();
+                    var soundQueueData = new List<SoundQueueData>();
+
+                    var spawnSoundData = new SoundQueueData();
                     spawnSoundData.Time = spawnData.Time;
                     spawnSoundData.SoundType = ESoundType.NoteSpawn;
                     soundQueueData.Add(spawnSoundData);
 
                     foreach (var data in judgeDatas)
                     {
-                        SoundQueueData soundData = new SoundQueueData();
+                        var soundData = new SoundQueueData();
                         soundData.Time = data.Time;
                         soundData.SoundType = ESoundType.Hit;
                         soundQueueData.Add(soundData);
                     }
-                    
+
                     chartQueueData.SoundQueueDatas.AddRange(soundQueueData);
 
-                    break;    
+                    break;
                 }
             }
-        }
-        
+
         chartQueueData.EventQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
         chartQueueData.JudgeQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
         chartQueueData.SoundQueueDatas.Sort((a, b) => a.Time.CompareTo(b.Time));
-        
+
         return chartQueueData;
     }
 
     private static EventQueueData GenerateBaseVisualizeData(float bpm, float offset, NoteData noteData)
     {
-        EventQueueData data = new EventQueueData();
+        var data = new EventQueueData();
         data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Visualize;
         data.NoteType = noteData.NoteType;
@@ -143,11 +135,11 @@ public static class ChartQueueDataGenerator
 
         return data;
     }
-    
+
     private static EventQueueData GenerateBaseSpawnData(float bpm, float offset, NoteData noteData)
     {
-        EventQueueData data = new EventQueueData();
-        
+        var data = new EventQueueData();
+
         data.Time = (noteData.Time - 1) * 60f / bpm + offset;
         data.EventType = EEventType.Spawn;
         data.NoteType = noteData.NoteType;
@@ -157,15 +149,15 @@ public static class ChartQueueDataGenerator
 
         return data;
     }
-    
+
     private static List<JudgeQueueData> GenerateJudgeDatas(float bpm, float offset, NoteData noteData)
     {
-        List<JudgeQueueData> datas = new List<JudgeQueueData>();
+        var datas = new List<JudgeQueueData>();
 
-        float add = 0f;
-        for (int i = 0; i < noteData.Count; i++)
+        var add = 0f;
+        for (var i = 0; i < noteData.Count; i++)
         {
-            JudgeQueueData data = new JudgeQueueData();
+            var data = new JudgeQueueData();
             data.Time = noteData.Time * 60f / bpm + offset + add;
             data.Type = noteData.NoteType;
             data.isHit = true;
@@ -179,11 +171,10 @@ public static class ChartQueueDataGenerator
                     add += 60f / bpm;
                     break;
             }
-            
+
             datas.Add(data);
         }
 
         return datas;
     }
-
 }

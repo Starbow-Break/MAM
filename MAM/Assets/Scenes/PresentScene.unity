@@ -2834,6 +2834,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1394216289}
     m_Modifications:
+    - target: {fileID: 2267058885619680394, guid: d214253de47a38d4ca8a4b4cca90b544, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 163.1417
+      objectReference: {fileID: 0}
     - target: {fileID: 2858956249494926248, guid: d214253de47a38d4ca8a4b4cca90b544, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2921,6 +2925,10 @@ PrefabInstance:
     - target: {fileID: 5434505990833928338, guid: d214253de47a38d4ca8a4b4cca90b544, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217403613269277331, guid: d214253de47a38d4ca8a4b4cca90b544, type: 3}
+      propertyPath: m_text
+      value: Team 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

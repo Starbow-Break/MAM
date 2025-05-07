@@ -3,21 +3,26 @@ using UnityEngine;
 
 public class IfNoteUpdater : ANoteUpdater
 {
-    [SerializeField] APeriodicRotator _rotator;
-    [SerializeField, Min(0)] private int _moveIntensity = 4;
-    
+    [SerializeField] private APeriodicRotator _rotator;
+    [SerializeField] [Min(0)] private int _moveIntensity = 4;
+
+    private void OnDisable()
+    {
+        _rotator.Stop();
+    }
+
     public void SetColor(Color color)
     {
         ModelRenderer.color = color;
     }
-    
+
     protected override IEnumerator ActSequence()
     {
         var noteQueue = CSharpMiniGameQueue.NoteQueue;
         noteQueue.Enqueue(this);
-        
+
         PlayRotator();
-        
+
         yield return MoveSequence(_arriveTime);
     }
 
@@ -27,23 +32,15 @@ public class IfNoteUpdater : ANoteUpdater
         _rotator.Play();
     }
 
-    private void OnDisable()
-    {
-        _rotator.Stop();
-    }
-
     private IEnumerator MoveSequence(float duration)
     {
-        float currentTime = 0.0f;
+        var currentTime = 0.0f;
         while (true)
         {
             currentTime += Time.deltaTime;
-            if (currentTime >= duration)
-            {
-                SetActive(false);
-            }
-            float normalizedTime = currentTime / duration;
-            float value = MoveCurve(normalizedTime);
+            if (currentTime >= duration) SetActive(false);
+            var normalizedTime = currentTime / duration;
+            var value = MoveCurve(normalizedTime);
             transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
             yield return null;
         }

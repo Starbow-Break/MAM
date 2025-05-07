@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D.Animation;
 
 public class ContestTeamSetter : MonoBehaviour
 {
@@ -14,6 +13,13 @@ public class ContestTeamSetter : MonoBehaviour
         //학생들 전환
         foreach (Team team in GameManager.TeamManager.GetTeams())
         {
+            if(team == null)
+                continue;
+            if(team.Member1 == null)
+                continue;
+            if(team.Member2 == null)
+                continue;
+            
             ContestCharacterData member1 = new ContestCharacterData(team.Member1);
             ContestCharacterData member2 = new ContestCharacterData(team.Member2);
             float score = team.ProjectProgress;
@@ -44,12 +50,11 @@ public class ContestTeamSetter : MonoBehaviour
 
     private ContestCharacterData GenerateRandomCharacter(int index, int memberNum)
     {
-        string id = _table.BaseID + index.ToString() + memberNum.ToString();
-        _table.GetRandomLibraryAndIcon(out var libraryAsset, out var sprite);
+        string id = $"{_table.BaseID}{index}{memberNum}";
         string randomName = _table.GetRandomName();
+        _table.GetRandomLibraryAndIcon(out var libraryAsset, out var sprite);
         
         ContestCharacterData character = new ContestCharacterData(id, randomName, sprite, libraryAsset);
-        
         return character;
     }
 }

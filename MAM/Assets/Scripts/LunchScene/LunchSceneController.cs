@@ -1,21 +1,23 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class LunchSceneController : MonoBehaviour
 {
-    [SerializeField, Min(1)] private int _maxSelectedStudent = 6;   // 최대로 선택 가능한 학생 수
-
-    private Restaurant _selectedRestaurant = null;
     private List<Student> _selectedStudents = new();
-    
-    public UnityAction OnChangeRestaurant { get; set; }
-    public UnityAction OnChangeStudent { get; set; }
-
     public List<Student> SelectedStudents => _selectedStudents;
+    
+    private Restaurant _selectedRestaurant = null;
     public Restaurant SelectedRestaurant => _selectedRestaurant;
+
+    public event Action OnChangeRestaurant;
+    public event Action OnChangeStudent;
+
     public int MaxSelectedStudent => _maxSelectedStudent;
     public int SelectedStudentCount => _selectedStudents.Count;
+
+    [SerializeField, Min(1)] private int _maxSelectedStudent = 6;   // 최대로 선택 가능한 학생 수
 
     #region Query
 

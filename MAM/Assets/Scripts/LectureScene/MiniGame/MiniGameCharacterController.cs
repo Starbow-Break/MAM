@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public enum EEmoteType
@@ -10,15 +9,12 @@ public enum EEmoteType
 
 public class MiniGameCharacterController : MonoBehaviour
 {
-    [SerializeField] private StudentCharacter _instructor = null;
-    [SerializeField] private StudentCharacter[] _students = null;
+    [SerializeField] private StudentCharacter _instructor;
+    [SerializeField] private StudentCharacter[] _students;
 
     public void Start()
     {
-        foreach (StudentCharacter student in _students)
-        {
-            student.Animator.TurnBack();
-        }
+        foreach (var student in _students) student.Animator.TurnBack();
     }
 
     public void SetInstructorTalking(bool isTalking)
@@ -41,10 +37,7 @@ public class MiniGameCharacterController : MonoBehaviour
 
     public void PlayStudentsEmote(EEmoteType emoteType, float duration = 0.3f)
     {
-        for (int i = 0; i < _students.Length; i++)
-        {
-            PlayEmote(_students[i], emoteType, duration);
-        }
+        for (var i = 0; i < _students.Length; i++) PlayEmote(_students[i], emoteType, duration);
     }
 
     public void PlayInstructorEmote(EEmoteType emoteType, float duration = 0.3f)

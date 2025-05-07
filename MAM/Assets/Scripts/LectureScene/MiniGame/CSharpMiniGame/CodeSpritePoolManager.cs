@@ -5,7 +5,7 @@ public class CodeSpritePoolManager : MonoBehaviour
 {
     [SerializeField] private List<SpriteRendererPool> _poolList;
 
-    private Dictionary<string, SpriteRendererPool> _pools = new();
+    private readonly Dictionary<string, SpriteRendererPool> _pools = new();
 
     public static CodeSpritePoolManager Instance { get; private set; }
 
@@ -15,28 +15,23 @@ public class CodeSpritePoolManager : MonoBehaviour
         {
             Instance = this;
         }
-        else {
-            if (Instance != this)
-            {
-                Destroy(gameObject);
-            }
-        } 
+        else
+        {
+            if (Instance != this) Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        foreach(var pool in _poolList)
-        {
-            _pools.Add(pool.PrefabName, pool);
-        }
+        foreach (var pool in _poolList) _pools.Add(pool.PrefabName, pool);
     }
 
     public SpriteRenderer Spawn(string name, Vector3 position, Quaternion rotation, Transform parent)
     {
-        SpriteRenderer sr = _pools[name].Get();
+        var sr = _pools[name].Get();
         sr.transform.position = position;
         sr.transform.rotation = rotation;
-        sr.transform.SetParent(parent, worldPositionStays: true);
+        sr.transform.SetParent(parent, true);
 
         return sr;
     }

@@ -27,7 +27,7 @@ public class TeamProjectProgressUpdater : MonoBehaviour
     // 프로젝트 진행률 세팅
     public void SetProgress(float progress)
     {
-        _progressText.text = $"{progress.ToString("f2")}%";
+        _progressText.text = $"{progress:f2}%";
         _progressbar.value = progress;
     }
 

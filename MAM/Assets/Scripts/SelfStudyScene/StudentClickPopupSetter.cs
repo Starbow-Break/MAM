@@ -54,9 +54,9 @@ public class StudentClickPopupSetter : MonoBehaviour
         
         //나중에 컷씬
         if (actionType == EAffinityType.Carrot)
-            GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Carrot);
+            GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Carrot);
         else if (actionType == EAffinityType.Whip)
-            GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Whip);
+            GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Whip);
 
         _isCutscenePlaying = true;
         
@@ -71,7 +71,7 @@ public class StudentClickPopupSetter : MonoBehaviour
         Team team = GameManager.TeamManager.GetTeam(_selectedStudent);
         team.GotHelped = true;
         
-        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Help);
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Help);
         
         ClosePopup();
     }

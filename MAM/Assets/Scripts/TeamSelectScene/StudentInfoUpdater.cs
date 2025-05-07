@@ -6,12 +6,13 @@ public class StudentInfoUpdater : MonoBehaviour
 {
     [Header("Student")]
     [SerializeField] private Image _icon;   // 학생 아이콘
-    [SerializeField] private TextMeshProUGUI _name; // 학생 이름
+    [SerializeField] private TMP_Text _name; // 학생 이름
 
     [Header("Status")]
-    [SerializeField] private TextMeshProUGUI _unity;    // 유니티 스텟
-    [SerializeField] private TextMeshProUGUI _cSharp;   // C# 스텟
-    [SerializeField] private TextMeshProUGUI _intimacy; // 친밀도
+    [SerializeField] private TMP_Text _unity;    // 유니티 스텟
+    [SerializeField] private TMP_Text _cSharp;   // C# 스텟
+    [SerializeField] private TMP_Text _intimacy; // 친밀도
+    
     [SerializeField] private StudentInfoMBTIUpdater _mbtiUpdater; // MBTI
     [SerializeField] private StudentInfoFavRestaurantUpdater _favRestaurantUpdater;    // 선호 식당
     [SerializeField] private StudentInfoAffinityUpdater _affinityUpdater; // 기호
@@ -30,9 +31,11 @@ public class StudentInfoUpdater : MonoBehaviour
         {
             _icon.sprite = student.Icon;
             _name.text = student.Name;
+            
             _unity.text = Mathf.FloorToInt(student.GetSkillLevel(ESkillType.Unity)).ToString();
             _cSharp.text = Mathf.FloorToInt(student.GetSkillLevel(ESkillType.CSharp)).ToString();
             _intimacy.text = Mathf.FloorToInt(student.Intimacy).ToString();
+            
             _mbtiUpdater.SetStudentMBTI(student);
             _favRestaurantUpdater.SetStudentFavRestaurant(student);
             _affinityUpdater.SetStudentAffinity(student);

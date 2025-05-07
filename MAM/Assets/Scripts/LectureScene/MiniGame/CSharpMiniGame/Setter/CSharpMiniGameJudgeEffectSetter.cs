@@ -4,7 +4,7 @@ public class CSharpMiniGameJudgeEffectSetter : MonoBehaviour
 {
     [SerializeField] private JudgeEffectUpdater _updater;
     [SerializeField] private Sprite _missHitSprite;
-    
+
     public void OnEnable()
     {
         CSharpMiniGame.Controller.OnJudge += judgeInfo => ShowEffect(judgeInfo);
@@ -19,11 +19,11 @@ public class CSharpMiniGameJudgeEffectSetter : MonoBehaviour
     {
         _updater.SetSpriteEnabled(false);
     }
-    
+
     public void ShowEffect(JudgeInfo judgeInfo)
     {
-        EJudge judge = judgeInfo.Judge;
-        if(judgeInfo.IsHit)
+        var judge = judgeInfo.Judge;
+        if (judgeInfo.IsHit)
         {
             if (!(judge == EJudge.None || judge == EJudge.Miss))
             {

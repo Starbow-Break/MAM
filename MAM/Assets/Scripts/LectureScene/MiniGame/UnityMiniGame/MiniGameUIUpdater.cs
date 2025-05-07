@@ -1,19 +1,18 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MiniGameUIUpdater : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _time = null;
-    [SerializeField] private TextMeshProUGUI _score = null;
-    [SerializeField] private GameObject _timePanel = null;
+    [SerializeField] private TextMeshProUGUI _time;
+    [SerializeField] private TextMeshProUGUI _score;
+    [SerializeField] private GameObject _timePanel;
 
-    [SerializeField] private TextMeshProUGUI _gradeText = null;
-    [SerializeField] private Button _clickBlockButton = null;
-    
-    [SerializeField] private Button _skipButton = null;
-    
+    [SerializeField] private TextMeshProUGUI _gradeText;
+    [SerializeField] private Button _clickBlockButton;
+
+    [SerializeField] private Button _skipButton;
+
     public Button SkipButton => _skipButton;
     public Button ClickBlockButton => _clickBlockButton;
 
@@ -24,7 +23,7 @@ public class MiniGameUIUpdater : MonoBehaviour
         _clickBlockButton.gameObject.SetActive(false);
         _gradeText.gameObject.SetActive(false);
     }
-    
+
     public void SetScore(float score)
     {
         _score.text = score.ToString();

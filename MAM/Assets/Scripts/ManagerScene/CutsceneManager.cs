@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 
 public class CutsceneManager : MonoBehaviour
 {
-    private Dictionary<ECutsceneName, PlayableDirector> _cutscenes = new Dictionary<ECutsceneName, PlayableDirector>();
+    private Dictionary<ECutsceneType, PlayableDirector> _cutscenes = new Dictionary<ECutsceneType, PlayableDirector>();
     private PlayableDirector _currentCutscene;
     
     public UnityAction ActOnCutSceneStart { get; set; }
@@ -28,28 +28,28 @@ public class CutsceneManager : MonoBehaviour
         return _currentCutscene.state == PlayState.Playing;
     }
 
-    public void RegisterCutscene(ECutsceneName cutsceneName, PlayableDirector cutscene)
+    public void RegisterCutscene(ECutsceneType cutsceneType, PlayableDirector cutscene)
     {
-        if (_cutscenes.TryAdd(cutsceneName, cutscene) == false)
+        if (_cutscenes.TryAdd(cutsceneType, cutscene) == false)
         {
             Debug.LogWarning("Cutscene already registered");
         }
     }
 
-    public void UnregisterCutscene(ECutsceneName cutsceneName)
+    public void UnregisterCutscene(ECutsceneType cutsceneType)
     {
-        _cutscenes.Remove(cutsceneName);
+        _cutscenes.Remove(cutsceneType);
     }
 
-    public void PlayCutscene(ECutsceneName cutsceneName)
+    public void PlayCutscene(ECutsceneType cutsceneType)
     {
-        _currentCutscene = _cutscenes[cutsceneName];
-        
-        if (_currentCutscene == null)
+        if (_cutscenes.ContainsKey(cutsceneType))
         {
-            Debug.LogWarning(cutsceneName + " is not registered");
+            Debug.LogWarning(cutsceneType + " is not registered");
             return;
         }
+        
+        _currentCutscene = _cutscenes[cutsceneType];
 
         _currentCutscene.stopped += OnCutSceneEnd;
         _currentCutscene.Play();

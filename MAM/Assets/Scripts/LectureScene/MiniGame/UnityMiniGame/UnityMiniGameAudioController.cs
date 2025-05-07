@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class UnityMiniGameAudioController : MonoBehaviour
 {
-    [SerializeField] private AudioSource _bgmAudioSource = null;
-    [SerializeField] private AudioSource _buttonAudioSource = null;
-    [SerializeField] private AudioSource _effectAudioSource = null;
-    
-    [SerializeField] private AudioClip _buttonPressClip = null;
-    [SerializeField] private AudioClip _correctSetClip = null;
-    [SerializeField] private AudioClip _wrongSetClip = null;
+    [SerializeField] private AudioSource _bgmAudioSource;
+    [SerializeField] private AudioSource _buttonAudioSource;
+    [SerializeField] private AudioSource _effectAudioSource;
+
+    [SerializeField] private AudioClip _buttonPressClip;
+    [SerializeField] private AudioClip _correctSetClip;
+    [SerializeField] private AudioClip _wrongSetClip;
 
     public void PlayBGM()
     {
@@ -19,6 +19,7 @@ public class UnityMiniGameAudioController : MonoBehaviour
     {
         _bgmAudioSource.Stop();
     }
+
     public void PlayButtonPressSound()
     {
         _buttonAudioSource.Stop();

@@ -1,7 +1,3 @@
-using UnityEngine;
-
-public static class UnityMiniGameLevelScoreHelper 
+public static class UnityMiniGameLevelScoreHelper
 {
-    
-
 }
