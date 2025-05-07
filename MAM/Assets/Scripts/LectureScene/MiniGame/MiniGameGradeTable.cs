@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public struct MiniGameGradeData
 {
     public string Grade;
@@ -12,18 +13,14 @@ public struct MiniGameGradeData
 [CreateAssetMenu(fileName = "MiniGameGradeTable", menuName = "Scriptable Object/MiniGameGradeTable")]
 public class MiniGameGradeTable : ScriptableObject
 {
-    [Header("내림차순 정렬")]
-    public List<MiniGameGradeData> GradeDatas = new List<MiniGameGradeData>();
+    [Header("내림차순 정렬")] public List<MiniGameGradeData> GradeDatas = new();
 
     public void GetGradeData(float score, out string grade, out Color color)
     {
-        MiniGameGradeData data = GradeDatas.Find(grade => grade.Score <= score);
+        var data = GradeDatas.Find(grade => grade.Score <= score);
 
-        if (data.Equals(default(MiniGameGradeData)))
-        {
-            data = GradeDatas[GradeDatas.Count - 1];
-        }
-        
+        if (data.Equals(default(MiniGameGradeData))) data = GradeDatas[GradeDatas.Count - 1];
+
         grade = data.Grade;
         color = data.TextColor;
     }

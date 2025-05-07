@@ -1,3 +1,3 @@
-using UnityEngine;
-
-public class NotePool : Pool<ANoteUpdater> { }
+public class NotePool : Pool<ANoteUpdater>
+{
+}

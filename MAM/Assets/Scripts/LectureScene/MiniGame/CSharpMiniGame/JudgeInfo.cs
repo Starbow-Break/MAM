@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class JudgeInfo
 {
-    public EJudge Judge;
-    public ENoteType NoteType;
     public bool IsHit;
-    public Sprite NoteSprite;
+    public EJudge Judge;
     public Color NoteColor;
     public Quaternion NoteRotation;
-    public Vector3 NoteScale;   
+    public Vector3 NoteScale;
+    public Sprite NoteSprite;
+    public ENoteType NoteType;
 
     public JudgeInfo(
         EJudge judge,

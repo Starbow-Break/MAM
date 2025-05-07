@@ -1,3 +1,5 @@
 using UnityEngine;
 
-public class SpriteRendererPool : Pool<SpriteRenderer> { }
+public class SpriteRendererPool : Pool<SpriteRenderer>
+{
+}

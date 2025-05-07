@@ -1,13 +1,12 @@
-using System.Collections;
 using UnityEngine;
 
 public class SpeechBubbleSetter : MonoBehaviour
 {
-    [SerializeField] SpeechBubbleUpdater _updater;
+    [SerializeField] private SpeechBubbleUpdater _updater;
+    private readonly string ForFormat = "{0}번!";
+    private readonly string IfBlue = "파란색만";
 
     private readonly string IfRed = "빨간색만";
-    private readonly string IfBlue = "파란색만";
-    private readonly string ForFormat = "{0}번!";
 
     private ENoteType _triggerNoteType = ENoteType.Normal;
 
@@ -27,24 +26,18 @@ public class SpeechBubbleSetter : MonoBehaviour
     {
         _updater.SetActive(false);
     }
-    
+
     public void Show(EventQueueData data)
     {
         _updater.SetActive(true);
         _triggerNoteType = data.NoteType;
-        string text = "";
-        if(data.NoteType == ENoteType.If)
+        var text = "";
+        if (data.NoteType == ENoteType.If)
         {
-            if(data.Color == Color.red)
-            {
-                text = IfRed;
-            }
-            if(data.Color == Color.blue)
-            {
-                text = IfBlue;
-            }
+            if (data.Color == Color.red) text = IfRed;
+            if (data.Color == Color.blue) text = IfBlue;
         }
-        else if(data.NoteType == ENoteType.For)
+        else if (data.NoteType == ENoteType.For)
         {
             text = string.Format(ForFormat, data.Count);
         }
@@ -59,17 +52,11 @@ public class SpeechBubbleSetter : MonoBehaviour
 
     private void OnVisualizeCountSetterChanged(int value)
     {
-        if(_triggerNoteType == ENoteType.If && value <= 0)
-        {
-            Hide();
-        }
+        if (_triggerNoteType == ENoteType.If && value <= 0) Hide();
     }
 
     private void OnForNodeJudge(JudgeInfo judgeInfo)
     {
-        if(_triggerNoteType == ENoteType.For && judgeInfo.NoteType == ENoteType.For)
-        {
-            Hide();
-        }
+        if (_triggerNoteType == ENoteType.For && judgeInfo.NoteType == ENoteType.For) Hide();
     }
 }

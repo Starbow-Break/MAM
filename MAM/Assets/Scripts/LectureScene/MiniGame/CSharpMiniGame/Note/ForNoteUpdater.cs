@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class ForNoteUpdater : ANoteUpdater
 {
-    [SerializeField] TextMeshPro _countText;
-    [SerializeField] APeriodicRotator _rotator;
-    [SerializeField, Min(0)] private int _moveIntensity = 4;
+    [SerializeField] private TextMeshPro _countText;
+    [SerializeField] private APeriodicRotator _rotator;
+    [SerializeField] [Min(0)] private int _moveIntensity = 4;
     [SerializeField] private ForNoteBulletSpawner _bulletSpawner;
-    
+
     private int _count = 3; // 박자
+
+    private void OnDisable()
+    {
+        _rotator.Stop();
+    }
 
     protected override IEnumerator ActSequence()
     {
         PlayRotator();
-        
+
         while (_count > 0)
         {
             if (_count > 1)
@@ -28,6 +33,7 @@ public class ForNoteUpdater : ANoteUpdater
                 noteQueue.Enqueue(this);
                 yield return MoveSequence(_arriveTime);
             }
+
             Discount();
         }
     }
@@ -38,24 +44,16 @@ public class ForNoteUpdater : ANoteUpdater
         _rotator.Play();
     }
 
-    private void OnDisable()
-    {
-        _rotator.Stop();
-    }
-    
     protected IEnumerator MoveSequence(float duration)
     {
-        float currentTime = 0.0f;
-        
+        var currentTime = 0.0f;
+
         while (true)
         {
             currentTime += Time.deltaTime;
-            if (currentTime >= duration)
-            {
-                SetActive(false);
-            }
-            float normalizedTime = currentTime / duration;
-            float value = MoveCurve(normalizedTime);
+            if (currentTime >= duration) SetActive(false);
+            var normalizedTime = currentTime / duration;
+            var value = MoveCurve(normalizedTime);
             transform.position = Vector3.LerpUnclamped(_destination, _arrival, value);
             yield return null;
         }

@@ -13,9 +13,9 @@ public class TeamRankButtonSetter : MonoBehaviour
 
     private RadioButtonGroup _buttonGroup = null;
     
-    private float _showButtonDelay = 1f;
-    private static readonly int _buttonCount = 5;
-    
+    private const float _showButtonDelay = 1f;
+    private static readonly int _buttonCount;
+
     public void Initialize()
     {
         List<ContestTeam> contestTeams = ContestSceneManager.Teams;

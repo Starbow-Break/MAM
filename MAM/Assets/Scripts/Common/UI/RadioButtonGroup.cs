@@ -27,7 +27,7 @@ public class RadioButtonGroup
 
     private void SetSelectedButton(int selectedIndex)
     {
-        //눌렀던거 다시누를때
+        // 눌렀던 거 다시 누를 때
         if (SelectedButton == _buttons[selectedIndex])
         {
             SelectedButton.PlayDeSelectAnimation();
@@ -36,7 +36,7 @@ public class RadioButtonGroup
         }
         else
         {
-            //다른거누를때
+            // 다른 거 누를 때
             if(SelectedButton != null)
                 SelectedButton.PlayDeSelectAnimation();
         
@@ -50,7 +50,7 @@ public class RadioButtonGroup
 
     public void EnableAllButtons()
     {
-        foreach (SimpleRadioButton button in _buttons)
+        foreach (var button in _buttons)
         {
             button.enabled = true;
         }
@@ -58,7 +58,7 @@ public class RadioButtonGroup
 
     public void DisableAllButtons()
     {
-        foreach (SimpleRadioButton button in _buttons)
+        foreach (var button in _buttons)
         {
             button.enabled = false;
         }

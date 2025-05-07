@@ -1,8 +1,7 @@
-using UnityEngine;
-
-public enum ECutsceneName
+public enum ECutsceneType
 {
     None = 0,
+    
     Carrot,
     Whip,
     Help,

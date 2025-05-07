@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class UnityWindowCueUpdater : MonoBehaviour
 {
-   // [SerializeField] private Image _icon;
+    // [SerializeField] private Image _icon;
 }

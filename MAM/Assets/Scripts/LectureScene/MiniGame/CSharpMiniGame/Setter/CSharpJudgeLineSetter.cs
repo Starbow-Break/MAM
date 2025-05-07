@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CSharpJudgeLineSetter : MonoBehaviour
 {
-
     [SerializeField] private JudgeLineUpdater _updater;
     [SerializeField] private Color _defaultColor;
 
@@ -28,10 +27,7 @@ public class CSharpJudgeLineSetter : MonoBehaviour
 
     private void OnVisualizeCountValueChanged(int value)
     {
-        if (value <= 0)
-        {
-            SetDefaultColor();
-        }
+        if (value <= 0) SetDefaultColor();
     }
 
     private void SetDefaultColor()

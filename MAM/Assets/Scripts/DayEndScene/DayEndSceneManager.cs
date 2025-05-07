@@ -17,7 +17,7 @@ public class DayEndSceneManager : ASceneManager<DayEndSceneManager>
 
     private void PlayCutScene()
     {
-        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Sleep);
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Sleep);
         GameManager.CutsceneManager.ActOnCutSceneEnd += OnCutSceneEnd;
     }
 

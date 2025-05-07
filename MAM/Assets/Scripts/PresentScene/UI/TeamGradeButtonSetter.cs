@@ -24,6 +24,13 @@ public class TeamGradeButtonSetter : MonoBehaviour
 
         foreach (var team in teams)
         {
+            if(team == null)
+                continue;
+            if(team.Member1 == null)
+                continue;
+            if(team.Member2 == null)
+                continue;
+            
             TeamGradeButtonUpdater newUpdater = Instantiate(_originalUpdater, _contentTransform);
             TeamGradeButtonViewer newViewer = new TeamGradeButtonViewer();
             newViewer.Initialize(newUpdater, team);

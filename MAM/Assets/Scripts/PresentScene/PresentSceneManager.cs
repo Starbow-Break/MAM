@@ -17,7 +17,7 @@ public class PresentSceneManager : ASceneManager<PresentSceneManager>
         
         _teamGradeButtonSetter.ShowButtons();
         
-        GameManager.CutsceneManager.PlayCutscene(ECutsceneName.Present);
+        GameManager.CutsceneManager.PlayCutscene(ECutsceneType.Present);
     }
 
     private void Initialize()

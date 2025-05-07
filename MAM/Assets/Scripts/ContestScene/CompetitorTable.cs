@@ -19,16 +19,16 @@ public struct CompetitorScoreRange
 [CreateAssetMenu(fileName = "New CompetitorTable", menuName = "Scriptable Object/CompetitorTable")]
 public class CompetitorTable : ScriptableObject
 {
-    public List<SpriteLibIconSet> SpriteLibraryAssets = new List<SpriteLibIconSet>();
+    public List<SpriteLibIconSet> SpriteLibraryAssets = new();
 
-    public List<CompetitorScoreRange> CompetitorScores = new List<CompetitorScoreRange>();
+    public List<CompetitorScoreRange> CompetitorScores = new();
 
     public AnimationCurve ScoreDistributionCurve;
 
     public string BaseID = "Competitor";
 
-    public List<string> LastNames = new List<string>();
-    public List<string> FirstNames = new List<string>();
+    public List<string> LastNames = new();
+    public List<string> FirstNames = new();
     
     public int CompetitorCount = 5;
     
@@ -36,7 +36,7 @@ public class CompetitorTable : ScriptableObject
     {
         index = Mathf.Clamp(index, 0, CompetitorScores.Count);
         
-        float rand= Random.value;
+        float rand = Random.value;
         float curveValue = ScoreDistributionCurve.Evaluate(rand);
         
         float min = CompetitorScores[index].Min;

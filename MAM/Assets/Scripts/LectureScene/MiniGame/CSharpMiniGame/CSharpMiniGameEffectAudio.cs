@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CSharpMiniGameSFXAudio : MonoBehaviour
 {
-    [Header("SFX")]
-    [SerializeField] private AudioSource _noteSpawn;
+    [Header("SFX")] [SerializeField] private AudioSource _noteSpawn;
+
     [SerializeField] private AudioSource _hit;
 
     public void PlaySFX(ESoundType soundType)
