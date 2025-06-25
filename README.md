@@ -44,7 +44,7 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/cccab7e7-6c12-4871-8398-884535489716" width="30%" height="30%"/>
   <img src="https://github.com/user-attachments/assets/216ac72f-f566-4898-a64a-ecb7c1d8f768" width="30%" height="30%"/>
-  <img src="https://github.com/user-attachments/assets/8c2b2ba4-9a87-48d8-8543-ce8ab45111c6" width="30%" height="30%"/>
+  <img src="https://github.com/user-attachments/assets/86762367-62d7-45e9-92c5-5c175fdc315d" width="30%" height="30%"/>
 <p align="center">
 
 ### 점심 시간
