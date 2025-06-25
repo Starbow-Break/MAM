@@ -27,8 +27,8 @@
 - 각 아이콘의 순서에 맞게 방향키 또는 스페이스 바를 순서대로 누르는 미니게임입니다.
 - 가운데에 있는 아이콘이 나오면 스베이스 바를, 나머지 아이콘은 각 아이콘의 위치에 해당하는 방향키를 누르면 됩니다.
 
-<img src="https://github.com/user-attachments/assets/a73545b2-2340-4fe7-b3fe-1ec90e5bf888" width="70%" height="70%"/>
-<img src="https://github.com/user-attachments/assets/361b4269-052d-4d95-9026-8607b3b03a59" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/a73545b2-2340-4fe7-b3fe-1ec90e5bf888" width="35%" height="35%"/>
+<img src="https://github.com/user-attachments/assets/361b4269-052d-4d95-9026-8607b3b03a59" width="35%" height="35%"/>
 
 #### C# 미니게임
 
@@ -38,9 +38,9 @@
   - 삼각형 노트 : 말풍선에서 언급하는 색에 해당하는 노트만 처리해야 합니다.
   - 사각형 노트 : 말풍선에서 언급하는 횟수만큼 한 박자 간격으로 처리하면 됩니다.
  
-<img src="https://github.com/user-attachments/assets/cccab7e7-6c12-4871-8398-884535489716" width="70%" height="70%"/>
-<img src="https://github.com/user-attachments/assets/e05fe48d-085b-4d7c-b814-87443ed66cd9" width="70%" height="70%"/>
-<img src="https://github.com/user-attachments/assets/8c2b2ba4-9a87-48d8-8543-ce8ab45111c6" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/cccab7e7-6c12-4871-8398-884535489716" width="23%" height="23%"/>
+<img src="https://github.com/user-attachments/assets/e05fe48d-085b-4d7c-b814-87443ed66cd9" width="23%" height="23%"/>
+<img src="https://github.com/user-attachments/assets/8c2b2ba4-9a87-48d8-8543-ce8ab45111c6" width="23%" height="23%"/>
 
 ### 점심 시간
 
@@ -57,9 +57,9 @@
 - 학생을 선택해서 칭찬하거나 혼내거나 도와줄 수 있습니다. 선택한 행동과 학생들의 성향에 따라 학생들의 능력치가 변합니다.
 - 최대 3번 행동할 수 있습니다.
   
-<img src="https://github.com/user-attachments/assets/05aa99bb-76c8-4ae8-b325-2470ef9732ef" width="70%" height="70%"/>
-<img src="https://github.com/user-attachments/assets/1a99843f-b00c-45be-98dc-15b063bd7274" width="70%" height="70%"/>
-<img src="https://github.com/user-attachments/assets/05f85074-6e54-4a7d-9417-a4ed4bbb8926" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/05aa99bb-76c8-4ae8-b325-2470ef9732ef" width="23%" height="23%"/>
+<img src="https://github.com/user-attachments/assets/1a99843f-b00c-45be-98dc-15b063bd7274" width="23%" height="23%"/>
+<img src="https://github.com/user-attachments/assets/05f85074-6e54-4a7d-9417-a4ed4bbb8926" width="23%" height="23%"/>
 
 ### 하루 정산
 
