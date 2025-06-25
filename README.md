@@ -16,7 +16,7 @@
 - 편성할 팀을 선택하면 학생 목록이 나타나고 학생을 선택하면 선택된 학생이 팀에 배정됩니다.
 - 학생 목록에서 마우스 호버시 각 학생의 정보가 표시 됩니다. 특정 정보들은 학생들의 친밀도가 일정 이상 상승해야 볼 수 있습니다.
 
-  <img src="https://github.com/user-attachments/assets/72bac50b-35ff-4b16-9f35-f41f86f6180b" width="70%" height="70%"/>
+  <img src="https://github.com/user-attachments/assets/0db87fbc-aa31-4910-892b-fdf9f8090c1a" width="70%" height="70%"/>
 
 ### 강의
 
@@ -27,7 +27,8 @@
 - 각 아이콘의 순서에 맞게 방향키 또는 스페이스 바를 순서대로 누르는 미니게임입니다.
 - 가운데에 있는 아이콘이 나오면 스베이스 바를, 나머지 아이콘은 각 아이콘의 위치에 해당하는 방향키를 누르면 됩니다.
 
-<정답 이미지> <오답 이미지>
+<img src="https://github.com/user-attachments/assets/a73545b2-2340-4fe7-b3fe-1ec90e5bf888" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/361b4269-052d-4d95-9026-8607b3b03a59" width="70%" height="70%"/>
 
 #### C# 미니게임
 
@@ -37,7 +38,9 @@
   - 삼각형 노트 : 말풍선에서 언급하는 색에 해당하는 노트만 처리해야 합니다.
   - 사각형 노트 : 말풍선에서 언급하는 횟수만큼 한 박자 간격으로 처리하면 됩니다.
  
-<노트 이미지 3가지>
+<img src="https://github.com/user-attachments/assets/cccab7e7-6c12-4871-8398-884535489716" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/e05fe48d-085b-4d7c-b814-87443ed66cd9" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/8c2b2ba4-9a87-48d8-8543-ce8ab45111c6" width="70%" height="70%"/>
 
 ### 점심 시간
 
