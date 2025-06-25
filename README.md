@@ -46,35 +46,37 @@
 
 - 가고싶은 식당과 같이 식사할 학생을 최대 6명 선택합니다.
 
-<선택>
+<img src="https://github.com/user-attachments/assets/5b04e182-71d2-4074-bf6b-3b4875dde911" width="70%" height="70%"/>
 
 - 선택된 학생들은 각 학생들의 선호 식당을 반영하여 호감도가 상승합니다.
 
-<호감도 상승>
+<img src="https://github.com/user-attachments/assets/845e78cf-b762-4a3a-916f-df86013bc911" width="70%" height="70%"/>
 
 ### 자습
 
 - 학생을 선택해서 칭찬하거나 혼내거나 도와줄 수 있습니다. 선택한 행동과 학생들의 성향에 따라 학생들의 능력치가 변합니다.
 - 최대 3번 행동할 수 있습니다.
   
-<행동 3가지>
+<img src="https://github.com/user-attachments/assets/05aa99bb-76c8-4ae8-b325-2470ef9732ef" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/1a99843f-b00c-45be-98dc-15b063bd7274" width="70%" height="70%"/>
+<img src="https://github.com/user-attachments/assets/05f85074-6e54-4a7d-9417-a4ed4bbb8926" width="70%" height="70%"/>
 
 ### 하루 정산
 
 - 하루가 마무리되면서 각 팀의 프로젝트 진행률이 공개됩니다.
 
-<프로젝트 진행률>
+<img src="https://github.com/user-attachments/assets/e83bc3c0-e5b0-4d65-82fd-816f791acda3" width="70%" height="70%"/>
 
 - 다음 하루가 진행되기 전 발표 / 대회까지 남은 기간을 보여줍니다.
 
-<일정>
+<img src="https://github.com/user-attachments/assets/3aff1e68-0889-45a5-be14-c37f7a6027f9" width="70%" height="70%"/>
 
 ### 발표 / 대회
 
 - 발표/대회 날이 되면 발표/대회를 진행합니다.
 - 각 팀의 프로젝트 진행률에 따라 각 팀의 성적이 부여됩니다.
       
-<발표>
+<img src="https://github.com/user-attachments/assets/05aa99bb-76c8-4ae8-b325-2470ef9732ef" width="70%" height="70%"/>
 
 ## 기술 스택
 
