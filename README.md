@@ -92,7 +92,7 @@
 - 각 팀의 프로젝트 진행률에 따라 각 팀의 성적이 부여됩니다.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/05aa99bb-76c8-4ae8-b325-2470ef9732ef" width="60%" height="60%"/>
+  <img src="https://github.com/user-attachments/assets/4ddcaec0-1ee3-4ee9-8fe1-3bd2c4395510" width="60%" height="60%"/>
 </p>
 
 ## 기술 스택
